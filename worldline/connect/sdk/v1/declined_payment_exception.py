@@ -10,23 +10,23 @@ class DeclinedPaymentException(DeclinedTransactionException):
     Represents an error response from a create payment call.
     """
 
-    def __init__(self, status_code, response_body, errors):
-        if errors is not None:
-            super(DeclinedPaymentException, self).__init__(status_code, response_body, errors.error_id, errors.errors,
-                                                           DeclinedPaymentException.__create_message(errors))
+    def __init__(self, status_code, response_body, response):
+        if response is not None:
+            super(DeclinedPaymentException, self).__init__(status_code, response_body, response.error_id, response.errors,
+                                                           DeclinedPaymentException.__create_message(response))
         else:
             super(DeclinedPaymentException, self).__init__(status_code, response_body, None, None,
-                                                           DeclinedPaymentException.__create_message(errors))
-        self.__errors = errors
+                                                           DeclinedPaymentException.__create_message(response))
+        self.__response = response
 
     @staticmethod
-    def __create_message(errors):
-        if errors is not None and errors.payment_result is not None:
-            payment = errors.payment_result.payment
+    def __create_message(response):
+        if response is not None and response.payment_result is not None:
+            payment = response.payment_result.payment
         else:
             payment = None
         if payment is not None:
-            return "declined payment '" + payment.id + "' with status '" + payment.status + "'"
+            return "declined payment '%s' with status '%s'" % (payment.id, payment.status)
         else:
             return "the Worldline Global Collect platform returned a declined payment response"
 
@@ -35,7 +35,7 @@ class DeclinedPaymentException(DeclinedTransactionException):
         """
         :return: The result of creating a payment if available, otherwise None.
         """
-        if self.__errors is None:
+        if self.__response is None:
             return None
         else:
-            return self.__errors.payment_result
+            return self.__response.payment_result

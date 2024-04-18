@@ -33,9 +33,9 @@ class FraudFields(DataObject):
     def addresses_are_identical(self):
         """
         | Indicates that invoice and shipping addresses are equal.
-        
+
         Type: bool
-        
+
         Deprecated; For risk assessments there is no replacement. For other calls, use Order.shipping.addressIndicator instead
         """
         return self.__addresses_are_identical
@@ -48,7 +48,7 @@ class FraudFields(DataObject):
     def black_list_data(self):
         """
         | Additional black list input
-        
+
         Type: str
         """
         return self.__black_list_data
@@ -61,9 +61,9 @@ class FraudFields(DataObject):
     def card_owner_address(self):
         """
         | The address that belongs to the owner of the card
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address.Address`
-        
+
         Deprecated; This should be the same as Order.customer.billingAddress
         """
         return self.__card_owner_address
@@ -76,7 +76,7 @@ class FraudFields(DataObject):
     def customer_ip_address(self):
         """
         | The IP Address of the customer that is making the payment. The '+' character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.
-        
+
         Type: str
         """
         return self.__customer_ip_address
@@ -93,9 +93,9 @@ class FraudFields(DataObject):
         * automatically - All fields filled automatically
         * automatically-but-modified - All fields filled automatically, but some fields were modified manually
         * manually - All fields were entered manually
-        
+
         Type: str
-        
+
         Deprecated; Use Order.customer.device.defaultFormFill instead
         """
         return self.__default_form_fill
@@ -108,9 +108,9 @@ class FraudFields(DataObject):
     def device_fingerprint_activated(self):
         """
         | Indicates that the device fingerprint has been used while processing the order.
-        
+
         Type: bool
-        
+
         Deprecated; No replacement
         """
         return self.__device_fingerprint_activated
@@ -123,9 +123,9 @@ class FraudFields(DataObject):
     def device_fingerprint_transaction_id(self):
         """
         | One must set the deviceFingerprintTransactionId received by the response of the endpoint /{merchant}/products/{paymentProductId}/deviceFingerprint
-        
+
         Type: str
-        
+
         Deprecated; Use Order.customer.device.deviceFingerprintTransactionId instead
         """
         return self.__device_fingerprint_transaction_id
@@ -168,7 +168,7 @@ class FraudFields(DataObject):
         * secretarys-day - Secretary's Day
         * chinese-new-year - Chinese New Year
         * hanukkah - Hanukkah
-        
+
         Type: str
         """
         return self.__gift_card_type
@@ -181,7 +181,7 @@ class FraudFields(DataObject):
     def gift_message(self):
         """
         | Gift message
-        
+
         Type: str
         """
         return self.__gift_message
@@ -197,9 +197,9 @@ class FraudFields(DataObject):
         
         * true - The customer has forgotten their password
         * false - The customer has not forgotten their password
-        
+
         Type: bool
-        
+
         Deprecated; Use Order.customer.account.hasForgottenPassword instead
         """
         return self.__has_forgotten_pwd
@@ -215,9 +215,9 @@ class FraudFields(DataObject):
         
         * true - The customer has used a password to gain access
         * false - The customer has not used a password to gain access
-        
+
         Type: bool
-        
+
         Deprecated; Use Order.customer.account.hasPassword instead
         """
         return self.__has_password
@@ -233,9 +233,9 @@ class FraudFields(DataObject):
         
         * true - The customer is a known returning customer
         * false - The customer is new/unknown customer
-        
+
         Type: bool
-        
+
         Deprecated; Use Order.customer.isPreviousCustomer instead
         """
         return self.__is_previous_customer
@@ -248,7 +248,7 @@ class FraudFields(DataObject):
     def order_timezone(self):
         """
         | Timezone in which the order was placed. The '+' character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.
-        
+
         Type: str
         """
         return self.__order_timezone
@@ -261,9 +261,9 @@ class FraudFields(DataObject):
     def ship_comments(self):
         """
         | Comments included during shipping
-        
+
         Type: str
-        
+
         Deprecated; Use Order.shipping.comments instead
         """
         return self.__ship_comments
@@ -276,9 +276,9 @@ class FraudFields(DataObject):
     def shipment_tracking_number(self):
         """
         | Shipment tracking number
-        
+
         Type: str
-        
+
         Deprecated; Use Order.shipping.trackingNumber instead
         """
         return self.__shipment_tracking_number
@@ -291,9 +291,9 @@ class FraudFields(DataObject):
     def shipping_details(self):
         """
         | Details on how the order is shipped to the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraud_fields_shipping_details.FraudFieldsShippingDetails`
-        
+
         Deprecated; No replacement
         """
         return self.__shipping_details
@@ -306,7 +306,7 @@ class FraudFields(DataObject):
     def user_data(self):
         """
         | Array of up to 16 userData properties, each with a max length of 256 characters, that can be used for fraudscreening
-        
+
         Type: list[str]
         """
         return self.__user_data
@@ -319,9 +319,9 @@ class FraudFields(DataObject):
     def website(self):
         """
         | The website from which the purchase was made
-        
+
         Type: str
-        
+
         Deprecated; Use Merchant.websiteUrl instead
         """
         return self.__website

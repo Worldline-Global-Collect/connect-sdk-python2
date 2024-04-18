@@ -21,7 +21,7 @@ class CustomerAccountRiskAssessment(DataObject):
         
         * true - The customer has forgotten their password
         * false - The customer has not forgotten their password
-        
+
         Type: bool
         """
         return self.__has_forgotten_password
@@ -37,7 +37,7 @@ class CustomerAccountRiskAssessment(DataObject):
         
         * true - The customer has used a password to gain access
         * false - The customer has not used a password to gain access
-        
+
         Type: bool
         """
         return self.__has_password

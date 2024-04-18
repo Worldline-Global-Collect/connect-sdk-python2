@@ -20,7 +20,7 @@ class PaymentAccountOnFile(DataObject):
         | The date (YYYYMMDD) when the payment account on file was first created.
         
         | In case a token is used for the transaction we will use the creation date of the token in our system in case you leave this property empty.
-        
+
         Type: str
         """
         return self.__create_date
@@ -33,7 +33,7 @@ class PaymentAccountOnFile(DataObject):
     def number_of_card_on_file_creation_attempts_last24_hours(self):
         """
         | Number of attempts made to add new card to the customer account in the last 24 hours
-        
+
         Type: int
         """
         return self.__number_of_card_on_file_creation_attempts_last24_hours

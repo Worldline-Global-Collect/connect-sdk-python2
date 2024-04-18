@@ -20,7 +20,7 @@ class DisputeStatusOutput(DataObject):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_cancellable
@@ -96,7 +96,7 @@ class DisputeStatusOutput(DataObject):
         
         
         | Please see Statuses <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html> for a full overview of possible values.
-        
+
         Type: str
         """
         return self.__status_category
@@ -109,7 +109,7 @@ class DisputeStatusOutput(DataObject):
     def status_code(self):
         """
         | Numeric status code of the legacy API. It is returned to ease the migration from the legacy APIs to Worldline Connect. You should not write new business logic based on this property as it will be deprecated in a future version of the API. The value can also be found in the GlobalCollect Payment Console, in the Ogone BackOffice and in report files.
-        
+
         Type: int
         """
         return self.__status_code
@@ -123,7 +123,7 @@ class DisputeStatusOutput(DataObject):
         """
         | Date and time of payment
         | Format: YYYYMMDDHH24MISS
-        
+
         Type: str
         """
         return self.__status_code_change_date_time

@@ -20,7 +20,7 @@ class PaymentProductField(DataObject):
     def data_restrictions(self):
         """
         | Object containing data restrictions that apply to this field, like minimum and/or maximum length
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product_field_data_restrictions.PaymentProductFieldDataRestrictions`
         """
         return self.__data_restrictions
@@ -33,7 +33,7 @@ class PaymentProductField(DataObject):
     def display_hints(self):
         """
         | Object containing display hints for this field, like the order, mask, preferred keyboard
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product_field_display_hints.PaymentProductFieldDisplayHints`
         """
         return self.__display_hints
@@ -46,7 +46,7 @@ class PaymentProductField(DataObject):
     def id(self):
         """
         | The ID of the field
-        
+
         Type: str
         """
         return self.__id
@@ -66,7 +66,7 @@ class PaymentProductField(DataObject):
         * expirydate - Expiration date in the format MMYY
         * integer - An integer
         * boolean - A boolean
-        
+
         Type: str
         """
         return self.__type
@@ -79,7 +79,7 @@ class PaymentProductField(DataObject):
     def used_for_lookup(self):
         """
         | Indicates that the product can be used in a get customer details <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/products/customerDetails.html> call and that when that call is done the field should be supplied as (one of the) key(s) with a valid value.
-        
+
         Type: bool
         """
         return self.__used_for_lookup

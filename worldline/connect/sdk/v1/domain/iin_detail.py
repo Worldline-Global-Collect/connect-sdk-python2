@@ -21,7 +21,7 @@ class IINDetail(DataObject):
         
         * true - The payment product is allowed in the submitted context.
         * false - The payment product is not allowed in the submitted context. Note that in this case, none of the brands of the card will be allowed in the submitted context.
-        
+
         Type: bool
         """
         return self.__is_allowed_in_context
@@ -35,7 +35,7 @@ class IINDetail(DataObject):
         """
         | Payment product identifier
         | Please see payment products <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/paymentproducts.html> for a full overview of possible values.
-        
+
         Type: int
         """
         return self.__payment_product_id

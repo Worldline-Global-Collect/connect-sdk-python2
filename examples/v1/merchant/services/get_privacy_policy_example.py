@@ -13,10 +13,10 @@ class GetPrivacyPolicyExample(object):
     def example(self):
         with self.__get_client() as client:
             query = PrivacypolicyParams()
-            query.locale = "en_US"
+            query.locale = 'en_US'
             query.payment_product_id = 771
 
-            response = client.v1().merchant("merchantId").services().privacypolicy(query)
+            response = client.v1().merchant('merchantId').services().privacypolicy(query)
 
     @staticmethod
     def __get_client():

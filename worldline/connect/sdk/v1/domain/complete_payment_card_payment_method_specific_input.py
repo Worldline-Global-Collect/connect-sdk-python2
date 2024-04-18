@@ -15,7 +15,7 @@ class CompletePaymentCardPaymentMethodSpecificInput(DataObject):
     def card(self):
         """
         | Object containing card details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_without_cvv.CardWithoutCvv`
         """
         return self.__card

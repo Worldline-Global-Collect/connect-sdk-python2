@@ -11,7 +11,7 @@ class BlockMandateExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").mandates().block("42268d8067df43e18a50a2ebf4bdb729")
+            response = client.v1().merchant('merchantId').mandates().block('42268d8067df43e18a50a2ebf4bdb729')
 
     @staticmethod
     def __get_client():

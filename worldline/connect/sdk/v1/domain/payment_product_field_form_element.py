@@ -22,7 +22,7 @@ class PaymentProductFieldFormElement(DataObject):
         * currency - Currency fields should be split into two fields, with the second one being specifically for the cents
         * boolean - Boolean fields should offer the customer a choice, like accepting the terms and conditions of a product.
         * date - let the customer pick a date.
-        
+
         Type: str
         """
         return self.__type
@@ -35,7 +35,7 @@ class PaymentProductFieldFormElement(DataObject):
     def value_mapping(self):
         """
         | An array of values and displayNames that should be used to populate the list object in the GUI
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.value_mapping_element.ValueMappingElement`]
         """
         return self.__value_mapping

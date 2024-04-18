@@ -16,7 +16,7 @@ class CardEssentials(DataObject):
     def card_number(self):
         """
         | The complete credit/debit card number
-        
+
         Type: str
         """
         return self.__card_number
@@ -29,7 +29,7 @@ class CardEssentials(DataObject):
     def cardholder_name(self):
         """
         | The card holder's name on the card.
-        
+
         Type: str
         """
         return self.__cardholder_name
@@ -43,7 +43,7 @@ class CardEssentials(DataObject):
         """
         | Expiry date of the card
         | Format: MMYY
-        
+
         Type: str
         """
         return self.__expiry_date

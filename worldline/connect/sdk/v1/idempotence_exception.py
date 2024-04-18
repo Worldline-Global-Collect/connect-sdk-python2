@@ -7,8 +7,7 @@ from api_exception import ApiException
 
 class IdempotenceException(ApiException):
     """
-    Represents an error response from the Worldline Global Collect platform when an
-    idempotent request failed because the first request has not finished yet.
+    Represents an error response from the Worldline Global Collect platform when an idempotent request failed because the first request has not finished yet.
     """
 
     def __init__(self, idempotence_key, idempotence_request_timestamp,

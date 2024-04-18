@@ -10,7 +10,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class FindPayoutsParams(ParamRequest):
     """
     Query parameters for Find payouts
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payouts/find.html
     """
 
@@ -23,7 +23,7 @@ class FindPayoutsParams(ParamRequest):
     def merchant_reference(self):
         """
         | Your unique transaction reference to filter on.
-        
+
         Type: str
         """
         return self.__merchant_reference
@@ -36,7 +36,7 @@ class FindPayoutsParams(ParamRequest):
     def merchant_order_id(self):
         """
         | Your order identifier to filter on.
-        
+
         Type: long
         """
         return self.__merchant_order_id
@@ -49,7 +49,7 @@ class FindPayoutsParams(ParamRequest):
     def offset(self):
         """
         | The zero-based index of the first payout in the result. If omitted, the offset will be 0.
-        
+
         Type: int
         """
         return self.__offset
@@ -62,7 +62,7 @@ class FindPayoutsParams(ParamRequest):
     def limit(self):
         """
         | The maximum number of payouts to return, with a maximum of 100. If omitted, the limit will be 10.
-        
+
         Type: int
         """
         return self.__limit

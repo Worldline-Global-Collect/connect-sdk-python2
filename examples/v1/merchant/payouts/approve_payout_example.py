@@ -13,9 +13,9 @@ class ApprovePayoutExample(object):
     def example(self):
         with self.__get_client() as client:
             body = ApprovePayoutRequest()
-            body.date_payout = "20150102"
+            body.date_payout = '20150102'
 
-            response = client.v1().merchant("merchantId").payouts().approve("payoutId", body)
+            response = client.v1().merchant('merchantId').payouts().approve('payoutId', body)
 
     @staticmethod
     def __get_client():

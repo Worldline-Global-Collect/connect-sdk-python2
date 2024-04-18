@@ -19,7 +19,7 @@ class CreatePaymentResult(DataObject):
     def creation_output(self):
         """
         | Object containing the details of the created payment
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_creation_output.PaymentCreationOutput`
         """
         return self.__creation_output
@@ -32,7 +32,7 @@ class CreatePaymentResult(DataObject):
     def merchant_action(self):
         """
         | Object that contains the action, including the needed data, that you should perform next, like showing instruction, showing the transaction results or redirect to a third party to complete the payment
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.merchant_action.MerchantAction`
         """
         return self.__merchant_action
@@ -45,7 +45,7 @@ class CreatePaymentResult(DataObject):
     def payment(self):
         """
         | Object that holds the payment related properties
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment.Payment`
         """
         return self.__payment

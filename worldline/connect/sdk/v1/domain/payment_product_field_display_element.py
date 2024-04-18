@@ -17,7 +17,7 @@ class PaymentProductFieldDisplayElement(DataObject):
     def id(self):
         """
         | The ID of the display element.
-        
+
         Type: str
         """
         return self.__id
@@ -30,7 +30,7 @@ class PaymentProductFieldDisplayElement(DataObject):
     def label(self):
         """
         | The label of the display element.
-        
+
         Type: str
         """
         return self.__label
@@ -49,7 +49,7 @@ class PaymentProductFieldDisplayElement(DataObject):
         * PERCENTAGE - as a number with a percentage sign
         * INTEGER - as an integer
         * URI - as a link
-        
+
         Type: str
         """
         return self.__type
@@ -62,7 +62,7 @@ class PaymentProductFieldDisplayElement(DataObject):
     def value(self):
         """
         | the value of the display element.
-        
+
         Type: str
         """
         return self.__value

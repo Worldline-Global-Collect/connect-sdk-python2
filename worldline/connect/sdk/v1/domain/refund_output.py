@@ -27,7 +27,7 @@ class RefundOutput(OrderOutput):
     def amount_paid(self):
         """
         | Amount paid
-        
+
         Type: long
         """
         return self.__amount_paid
@@ -40,7 +40,7 @@ class RefundOutput(OrderOutput):
     def bank_refund_method_specific_output(self):
         """
         | Object containing specific bank refund details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_bank_method_specific_output.RefundBankMethodSpecificOutput`
         """
         return self.__bank_refund_method_specific_output
@@ -53,7 +53,7 @@ class RefundOutput(OrderOutput):
     def card_refund_method_specific_output(self):
         """
         | Object containing specific card refund details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_card_method_specific_output.RefundCardMethodSpecificOutput`
         """
         return self.__card_refund_method_specific_output
@@ -66,7 +66,7 @@ class RefundOutput(OrderOutput):
     def cash_refund_method_specific_output(self):
         """
         | Object containing specific cash refund details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_cash_method_specific_output.RefundCashMethodSpecificOutput`
         """
         return self.__cash_refund_method_specific_output
@@ -79,7 +79,7 @@ class RefundOutput(OrderOutput):
     def e_invoice_refund_method_specific_output(self):
         """
         | Object containing specific e-invoice refund details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_e_invoice_method_specific_output.RefundEInvoiceMethodSpecificOutput`
         """
         return self.__e_invoice_refund_method_specific_output
@@ -92,7 +92,7 @@ class RefundOutput(OrderOutput):
     def e_wallet_refund_method_specific_output(self):
         """
         | Object containing specific eWallet refund details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_e_wallet_method_specific_output.RefundEWalletMethodSpecificOutput`
         """
         return self.__e_wallet_refund_method_specific_output
@@ -105,7 +105,7 @@ class RefundOutput(OrderOutput):
     def mobile_refund_method_specific_output(self):
         """
         | Object containing specific mobile refund details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_mobile_method_specific_output.RefundMobileMethodSpecificOutput`
         """
         return self.__mobile_refund_method_specific_output
@@ -127,7 +127,7 @@ class RefundOutput(OrderOutput):
         * eInvoice
         * invoice
         * redirect
-        
+
         Type: str
         """
         return self.__payment_method

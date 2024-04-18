@@ -26,20 +26,21 @@ class CapturesClient(ApiResource):
     def get(self, capture_id, context=None):
         """
         Resource /{merchantId}/captures/{captureId} - Get capture
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/captures/get.html
 
         :param capture_id:  str
         :param context:     :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.capture_response.CaptureResponse`
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         path_context = {
             "captureId": capture_id,
@@ -61,22 +62,23 @@ class CapturesClient(ApiResource):
     def refund(self, capture_id, body, context=None):
         """
         Resource /{merchantId}/captures/{captureId}/refund - Create Refund
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/captures/refund.html
 
         :param capture_id:  str
         :param body:        :class:`worldline.connect.sdk.v1.domain.refund_request.RefundRequest`
         :param context:     :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.refund_response.RefundResponse`
-        :raise: DeclinedRefundException if the Worldline Global Collect platform declined / rejected the refund. The refund result will be available from the exception.
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise DeclinedRefundException: if the Worldline Global Collect platform declined / rejected the refund. The refund result will be available from the exception.
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         path_context = {
             "captureId": capture_id,

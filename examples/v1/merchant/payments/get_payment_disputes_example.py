@@ -11,7 +11,7 @@ class GetPaymentDisputesExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").payments().disputes("paymentId")
+            response = client.v1().merchant('merchantId').payments().disputes('paymentId')
 
     @staticmethod
     def __get_client():

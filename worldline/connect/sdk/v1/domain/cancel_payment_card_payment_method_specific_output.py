@@ -24,7 +24,7 @@ class CancelPaymentCardPaymentMethodSpecificOutput(DataObject):
         * 0, 8 or 11 - Reversal request submitted
         * 5 or 55 - Reversal request declined or referred
         * empty or 98 - The provider did not provide a response
-        
+
         Type: str
         """
         return self.__void_response_id

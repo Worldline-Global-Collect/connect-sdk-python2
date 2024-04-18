@@ -15,7 +15,7 @@ class RefundEWalletMethodSpecificOutput(RefundMethodSpecificOutput):
     def payment_product840_specific_output(self):
         """
         | PayPal (payment product 840) specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_payment_product840_specific_output.RefundPaymentProduct840SpecificOutput`
         """
         return self.__payment_product840_specific_output

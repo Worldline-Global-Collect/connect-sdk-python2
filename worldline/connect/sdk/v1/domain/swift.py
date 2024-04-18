@@ -23,7 +23,7 @@ class Swift(DataObject):
     def bic(self):
         """
         | The BIC is the Business Identifier Code, also known as SWIFT or Bank Identifier code. It is a code with an internationally agreed format to Identify a specific bank or even branch. The BIC contains 8 or 11 positions: the first 4 contain the bank code, followed by the country code and location code.
-        
+
         Type: str
         """
         return self.__bic
@@ -36,7 +36,7 @@ class Swift(DataObject):
     def category(self):
         """
         | SWIFT category
-        
+
         Type: str
         """
         return self.__category
@@ -50,7 +50,7 @@ class Swift(DataObject):
         """
         | Clearing House Interbank Payments System (CHIPS) UID
         | CHIPS is one half of the primary US network of large-value domestic and international payments.
-        
+
         Type: str
         """
         return self.__chips_uid
@@ -63,7 +63,7 @@ class Swift(DataObject):
     def extra_info(self):
         """
         | SWIFT extra information
-        
+
         Type: str
         """
         return self.__extra_info
@@ -76,7 +76,7 @@ class Swift(DataObject):
     def po_box_country(self):
         """
         | Institution PO Box country
-        
+
         Type: str
         """
         return self.__po_box_country
@@ -89,7 +89,7 @@ class Swift(DataObject):
     def po_box_location(self):
         """
         | Institution PO Box location
-        
+
         Type: str
         """
         return self.__po_box_location
@@ -102,7 +102,7 @@ class Swift(DataObject):
     def po_box_number(self):
         """
         | Institution PO Box number
-        
+
         Type: str
         """
         return self.__po_box_number
@@ -115,7 +115,7 @@ class Swift(DataObject):
     def po_box_zip(self):
         """
         | Institution PO Box ZIP
-        
+
         Type: str
         """
         return self.__po_box_zip
@@ -128,7 +128,7 @@ class Swift(DataObject):
     def routing_bic(self):
         """
         | Payment routing BIC
-        
+
         Type: str
         """
         return self.__routing_bic
@@ -141,7 +141,7 @@ class Swift(DataObject):
     def services(self):
         """
         | SWIFT services
-        
+
         Type: str
         """
         return self.__services

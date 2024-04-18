@@ -21,21 +21,21 @@ class UpdateTokenExample(object):
     def example(self):
         with self.__get_client() as client:
             billing_address = Address()
-            billing_address.additional_info = "b"
-            billing_address.city = "Monument Valley"
-            billing_address.country_code = "US"
-            billing_address.house_number = "13"
-            billing_address.state = "Utah"
-            billing_address.street = "Desertroad"
-            billing_address.zip = "84536"
+            billing_address.additional_info = 'b'
+            billing_address.city = 'Monument Valley'
+            billing_address.country_code = 'US'
+            billing_address.house_number = '13'
+            billing_address.state = 'Utah'
+            billing_address.street = 'Desertroad'
+            billing_address.zip = '84536'
 
             company_information = CompanyInformation()
-            company_information.name = "Acme Labs"
+            company_information.name = 'Acme Labs'
 
             name = PersonalNameToken()
-            name.first_name = "Wile"
-            name.surname = "Coyote"
-            name.surname_prefix = "E."
+            name.first_name = 'Wile'
+            name.surname = 'Coyote'
+            name.surname_prefix = 'E.'
 
             personal_information = PersonalInformationToken()
             personal_information.name = name
@@ -43,14 +43,14 @@ class UpdateTokenExample(object):
             customer = CustomerToken()
             customer.billing_address = billing_address
             customer.company_information = company_information
-            customer.merchant_customer_id = "1234"
+            customer.merchant_customer_id = '1234'
             customer.personal_information = personal_information
 
             card_without_cvv = CardWithoutCvv()
-            card_without_cvv.card_number = "4567350000427977"
-            card_without_cvv.cardholder_name = "Wile E. Coyote"
-            card_without_cvv.expiry_date = "1299"
-            card_without_cvv.issue_number = "12"
+            card_without_cvv.card_number = '4567350000427977'
+            card_without_cvv.cardholder_name = 'Wile E. Coyote'
+            card_without_cvv.expiry_date = '1299'
+            card_without_cvv.issue_number = '12'
 
             data = TokenCardData()
             data.card_without_cvv = card_without_cvv
@@ -63,7 +63,7 @@ class UpdateTokenExample(object):
             body.card = card
             body.payment_product_id = 1
 
-            client.v1().merchant("merchantId").tokens().update("tokenId", body)
+            client.v1().merchant('merchantId').tokens().update('tokenId', body)
 
     @staticmethod
     def __get_client():

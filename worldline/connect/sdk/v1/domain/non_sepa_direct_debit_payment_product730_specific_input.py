@@ -18,7 +18,7 @@ class NonSepaDirectDebitPaymentProduct730SpecificInput(DataObject):
     def bank_account_bban(self):
         """
         | Object containing account holder name and bank account information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_bban.BankAccountBban`
         """
         return self.__bank_account_bban

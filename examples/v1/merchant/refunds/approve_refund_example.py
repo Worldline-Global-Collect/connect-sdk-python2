@@ -15,7 +15,7 @@ class ApproveRefundExample(object):
             body = ApproveRefundRequest()
             body.amount = 199
 
-            client.v1().merchant("merchantId").refunds().approve("refundId", body)
+            client.v1().merchant('merchantId').refunds().approve('refundId', body)
 
     @staticmethod
     def __get_client():

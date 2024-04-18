@@ -19,9 +19,9 @@ class FraudFieldsShippingDetails(DataObject):
     def method_details(self):
         """
         | Details regarding the shipping method
-        
+
         Type: str
-        
+
         Deprecated; No replacement
         """
         return self.__method_details
@@ -34,9 +34,9 @@ class FraudFieldsShippingDetails(DataObject):
     def method_speed(self):
         """
         | Shipping method speed indicator
-        
+
         Type: int
-        
+
         Deprecated; No replacement
         """
         return self.__method_speed
@@ -49,9 +49,9 @@ class FraudFieldsShippingDetails(DataObject):
     def method_type(self):
         """
         | Shipping method type indicator
-        
+
         Type: int
-        
+
         Deprecated; No replacement
         """
         return self.__method_type

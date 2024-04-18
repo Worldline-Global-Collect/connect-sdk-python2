@@ -28,7 +28,7 @@ class GPayThreeDSecure(DataObject):
         * full-screen
         
         | .
-        
+
         Type: str
         """
         return self.__challenge_canvas_size
@@ -46,7 +46,7 @@ class GPayThreeDSecure(DataObject):
         * no-challenge-requested - you prefer the cardholder not to be challenged
         * challenge-requested - you prefer the customer to be challenged
         * challenge-required - you require the customer to be challenged
-        
+
         Type: str
         """
         return self.__challenge_indicator
@@ -65,7 +65,7 @@ class GPayThreeDSecure(DataObject):
         * transaction-risk-analysis - You have determined that this transaction is of low risk and are willing to take the liability. Please note that your fraud rate needs to stay below thresholds to allow your use of this exemption.
         * low-value - The value of the transaction is below 30 EUR. Please note that the issuer will still require every 5th low-value transaction pithing 24 hours to be strongly authenticated. The issuer will also keep track of the cumulative amount authorized on the card. When this exceeds 100 EUR strong customer authentication is also required.
         * whitelist - You have been whitelisted by the customer at the issuer.
-        
+
         Type: str
         """
         return self.__exemption_request
@@ -78,7 +78,7 @@ class GPayThreeDSecure(DataObject):
     def redirection_data(self):
         """
         | Object containing browser specific redirection related data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirection_data.RedirectionData`
         """
         return self.__redirection_data
@@ -94,7 +94,7 @@ class GPayThreeDSecure(DataObject):
         * false = 3D Secure authentication will not be skipped for this transaction.
         
         | Note: This is only possible if your account in our system is setup for 3D Secure authentication and if your configuration in our system allows you to override it per transaction.
-        
+
         Type: bool
         """
         return self.__skip_authentication

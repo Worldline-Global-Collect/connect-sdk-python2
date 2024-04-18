@@ -18,7 +18,7 @@ class InstallmentOptionsResponse(DataObject):
     def installment_options(self):
         """
         | Array containing installment options their details and characteristics
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.installment_options.InstallmentOptions`]
         """
         return self.__installment_options

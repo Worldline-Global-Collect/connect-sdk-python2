@@ -25,20 +25,21 @@ class MandatesClient(ApiResource):
     def create(self, body, context=None):
         """
         Resource /{merchantId}/mandates - Create mandate
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/mandates/create.html
 
         :param body:     :class:`worldline.connect.sdk.v1.domain.create_mandate_request.CreateMandateRequest`
         :param context:  :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.create_mandate_response.CreateMandateResponse`
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         uri = self._instantiate_uri("/v1/{merchantId}/mandates", None)
         try:
@@ -58,21 +59,22 @@ class MandatesClient(ApiResource):
     def create_with_mandate_reference(self, unique_mandate_reference, body, context=None):
         """
         Resource /{merchantId}/mandates/{uniqueMandateReference} - Create mandate with mandatereference
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/mandates/createWithMandateReference.html
 
         :param unique_mandate_reference:  str
         :param body:                      :class:`worldline.connect.sdk.v1.domain.create_mandate_request.CreateMandateRequest`
         :param context:                   :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.create_mandate_response.CreateMandateResponse`
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         path_context = {
             "uniqueMandateReference": unique_mandate_reference,
@@ -95,20 +97,21 @@ class MandatesClient(ApiResource):
     def get(self, unique_mandate_reference, context=None):
         """
         Resource /{merchantId}/mandates/{uniqueMandateReference} - Get mandate
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/mandates/get.html
 
         :param unique_mandate_reference:  str
         :param context:                   :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.get_mandate_response.GetMandateResponse`
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         path_context = {
             "uniqueMandateReference": unique_mandate_reference,
@@ -130,20 +133,21 @@ class MandatesClient(ApiResource):
     def block(self, unique_mandate_reference, context=None):
         """
         Resource /{merchantId}/mandates/{uniqueMandateReference}/block - Block mandate
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/mandates/block.html
 
         :param unique_mandate_reference:  str
         :param context:                   :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.get_mandate_response.GetMandateResponse`
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         path_context = {
             "uniqueMandateReference": unique_mandate_reference,
@@ -166,20 +170,21 @@ class MandatesClient(ApiResource):
     def unblock(self, unique_mandate_reference, context=None):
         """
         Resource /{merchantId}/mandates/{uniqueMandateReference}/unblock - Unblock mandate
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/mandates/unblock.html
 
         :param unique_mandate_reference:  str
         :param context:                   :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.get_mandate_response.GetMandateResponse`
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         path_context = {
             "uniqueMandateReference": unique_mandate_reference,
@@ -202,20 +207,21 @@ class MandatesClient(ApiResource):
     def revoke(self, unique_mandate_reference, context=None):
         """
         Resource /{merchantId}/mandates/{uniqueMandateReference}/revoke - Revoke mandate
-        
+
         See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/mandates/revoke.html
 
         :param unique_mandate_reference:  str
         :param context:                   :class:`worldline.connect.sdk.call_context.CallContext`
         :return: :class:`worldline.connect.sdk.v1.domain.get_mandate_response.GetMandateResponse`
-        :raise: ValidationException if the request was not correct and couldn't be processed (HTTP status code 400)
-        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)
-        :raise: ReferenceException if an object was attempted to be referenced that doesn't exist or has been removed,
+        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)
+        :raise ValidationException: if the request was not correct and couldn't be processed (HTTP status code 400)
+        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)
+        :raise ReferenceException: if an object was attempted to be referenced that doesn't exist or has been removed,
                    or there was a conflict (HTTP status code 404, 409 or 410)
-        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,
+        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,
                    the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,
                    or the service that you're trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)
-        :raise: ApiException if the Worldline Global Collect platform returned any other error
+        :raise ApiException: if the Worldline Global Collect platform returned any other error
         """
         path_context = {
             "uniqueMandateReference": unique_mandate_reference,

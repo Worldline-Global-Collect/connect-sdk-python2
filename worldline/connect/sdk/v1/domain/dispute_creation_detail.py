@@ -16,7 +16,7 @@ class DisputeCreationDetail(DataObject):
     def dispute_creation_date(self):
         """
         | The date and time of creation of this dispute, in yyyyMMddHHmmss format.
-        
+
         Type: str
         """
         return self.__dispute_creation_date
@@ -29,7 +29,7 @@ class DisputeCreationDetail(DataObject):
     def dispute_originator(self):
         """
         | The originator of this dispute, which is either Worldline or you as our client.
-        
+
         Type: str
         """
         return self.__dispute_originator
@@ -42,7 +42,7 @@ class DisputeCreationDetail(DataObject):
     def user_name(self):
         """
         | The user account name of the dispute creator.
-        
+
         Type: str
         """
         return self.__user_name

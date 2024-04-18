@@ -19,40 +19,40 @@ class CreateMandateExample(object):
     def example(self):
         with self.__get_client() as client:
             bank_account_iban = BankAccountIban()
-            bank_account_iban.iban = "DE46720200700359736690"
+            bank_account_iban.iban = 'DE46720200700359736690'
 
             contact_details = MandateContactDetails()
-            contact_details.email_address = "wile.e.coyote@acmelabs.com"
+            contact_details.email_address = 'wile.e.coyote@acmelabs.com'
 
             mandate_address = MandateAddress()
-            mandate_address.city = "Monumentenvallei"
-            mandate_address.country_code = "NL"
-            mandate_address.street = "Woestijnweg"
-            mandate_address.zip = "1337XD"
+            mandate_address.city = 'Monumentenvallei'
+            mandate_address.country_code = 'NL'
+            mandate_address.street = 'Woestijnweg'
+            mandate_address.zip = '1337XD'
 
             name = MandatePersonalName()
-            name.first_name = "Wile"
-            name.surname = "Coyote"
+            name.first_name = 'Wile'
+            name.surname = 'Coyote'
 
             personal_information = MandatePersonalInformation()
             personal_information.name = name
-            personal_information.title = "Miss"
+            personal_information.title = 'Miss'
 
             customer = MandateCustomer()
             customer.bank_account_iban = bank_account_iban
-            customer.company_name = "Acme labs"
+            customer.company_name = 'Acme labs'
             customer.contact_details = contact_details
             customer.mandate_address = mandate_address
             customer.personal_information = personal_information
 
             body = CreateMandateRequest()
             body.customer = customer
-            body.customer_reference = "idonthaveareference"
-            body.language = "nl"
-            body.recurrence_type = "UNIQUE"
-            body.signature_type = "UNSIGNED"
+            body.customer_reference = 'idonthaveareference'
+            body.language = 'nl'
+            body.recurrence_type = 'UNIQUE'
+            body.signature_type = 'UNSIGNED'
 
-            response = client.v1().merchant("merchantId").mandates().create(body)
+            response = client.v1().merchant('merchantId').mandates().create(body)
 
     @staticmethod
     def __get_client():

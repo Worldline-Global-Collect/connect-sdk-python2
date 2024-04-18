@@ -20,7 +20,7 @@ class RedirectionData(DataObject):
         | The URL that the customer is redirect to after the payment flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.
         | Note: The provided URL should be absolute and contain the protocol to use, e.g. http:// or https://. For use on mobile devices a custom protocol can be used in the form of *protocol*://. This protocol must be registered on the device first.
         | URLs without a protocol will be rejected.
-        
+
         Type: str
         """
         return self.__return_url
@@ -39,7 +39,7 @@ class RedirectionData(DataObject):
         
         | By specifying a specific variant you can force the use of another variant than the default. This allows you to test out the effect of certain changes to your MyCheckout payment pages in a controlled manner. Please note that you need to specify the ID instead of the name of the variant.
         | Note: In case you have defined a Dynamic 3D Secure rule that takes the variant into account this will only work if you explicitly specify the ID using this property.
-        
+
         Type: str
         """
         return self.__variant

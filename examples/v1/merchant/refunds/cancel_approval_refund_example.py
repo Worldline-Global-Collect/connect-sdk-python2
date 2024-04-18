@@ -11,7 +11,7 @@ class CancelApprovalRefundExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            client.v1().merchant("merchantId").refunds().cancelapproval("refundId")
+            client.v1().merchant('merchantId').refunds().cancelapproval('refundId')
 
     @staticmethod
     def __get_client():

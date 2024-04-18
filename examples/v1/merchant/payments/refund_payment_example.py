@@ -24,45 +24,45 @@ class RefundPaymentExample(object):
         with self.__get_client() as client:
             amount_of_money = AmountOfMoney()
             amount_of_money.amount = 1
-            amount_of_money.currency_code = "EUR"
+            amount_of_money.currency_code = 'EUR'
 
             bank_account_iban = BankAccountIban()
-            bank_account_iban.iban = "NL53INGB0000000036"
+            bank_account_iban.iban = 'NL53INGB0000000036'
 
             bank_refund_method_specific_input = BankRefundMethodSpecificInput()
             bank_refund_method_specific_input.bank_account_iban = bank_account_iban
 
             name = PersonalName()
-            name.surname = "Coyote"
+            name.surname = 'Coyote'
 
             address = AddressPersonal()
-            address.country_code = "US"
+            address.country_code = 'US'
             address.name = name
 
             contact_details = ContactDetailsBase()
-            contact_details.email_address = "wile.e.coyote@acmelabs.com"
-            contact_details.email_message_type = "html"
+            contact_details.email_address = 'wile.e.coyote@acmelabs.com'
+            contact_details.email_message_type = 'html'
 
             customer = RefundCustomer()
             customer.address = address
             customer.contact_details = contact_details
 
             refund_references = RefundReferences()
-            refund_references.merchant_reference = "AcmeOrder0001"
+            refund_references.merchant_reference = 'AcmeOrder0001'
 
             body = RefundRequest()
             body.amount_of_money = amount_of_money
             body.bank_refund_method_specific_input = bank_refund_method_specific_input
             body.customer = customer
-            body.refund_date = "20140306"
+            body.refund_date = '20140306'
             body.refund_references = refund_references
 
             try:
-                response = client.v1().merchant("merchantId").payments().refund("paymentId", body)
+                response = client.v1().merchant('merchantId').payments().refund('paymentId', body)
             except DeclinedRefundException as e:
                 self.handle_declined_refund(e.refund_result)
             except ApiException as e:
-                self.handle_api_errors(e.errors)
+                self.handle_error_response(e.error_id, e.errors)
 
     @staticmethod
     def __get_client():
@@ -78,6 +78,6 @@ class RefundPaymentExample(object):
         pass
 
     @staticmethod
-    def handle_api_errors(errors):
-        # handle the errors here
+    def handle_error_response(error_id, errors):
+        # handle the error response here
         pass

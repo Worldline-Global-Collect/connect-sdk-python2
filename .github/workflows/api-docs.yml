@@ -18,7 +18,7 @@ jobs:
       image: python:2.7.18-buster
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: code
           persist-credentials: false
@@ -27,7 +27,7 @@ jobs:
       - name: Build API docs
         run: sphinx-build . docs
         working-directory: code
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: docs
           path: code/docs
@@ -37,12 +37,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: ['api-docs']
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: docs
           path: code/docs
       - name: Checkout pages
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: pages

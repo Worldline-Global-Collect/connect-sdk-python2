@@ -11,7 +11,7 @@ class CancelPayoutExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            client.v1().merchant("merchantId").payouts().cancel("payoutId")
+            client.v1().merchant('merchantId').payouts().cancel('payoutId')
 
     @staticmethod
     def __get_client():

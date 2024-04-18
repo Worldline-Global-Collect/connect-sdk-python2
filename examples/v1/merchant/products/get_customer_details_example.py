@@ -16,16 +16,16 @@ class GetCustomerDetailsExample(object):
             values = []
 
             value1 = KeyValuePair()
-            value1.key = "fiscalNumber"
-            value1.value = "01234567890"
+            value1.key = 'fiscalNumber'
+            value1.value = '01234567890'
 
             values.append(value1)
 
             body = GetCustomerDetailsRequest()
-            body.country_code = "SE"
+            body.country_code = 'SE'
             body.values = values
 
-            response = client.v1().merchant("merchantId").products().customer_details(9000, body)
+            response = client.v1().merchant('merchantId').products().customer_details(9000, body)
 
     @staticmethod
     def __get_client():

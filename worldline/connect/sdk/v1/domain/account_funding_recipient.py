@@ -24,7 +24,7 @@ class AccountFundingRecipient(DataObject):
     def account_number(self):
         """
         | Should be populated with the value of the corresponding accountNumberType of the recipient.
-        
+
         Type: str
         """
         return self.__account_number
@@ -44,7 +44,7 @@ class AccountFundingRecipient(DataObject):
         * iban = International Bank Account Number, is a standard international numbering system for identifying bank accounts.
         * bicNumber = Bank Identification Code is a number that is used to identify a specific bank.
         * giftCard = Gift card is a type of prepaid card that contains a specific amount of money that can be used at participating stores and marketplaces.
-        
+
         Type: str
         """
         return self.__account_number_type
@@ -57,7 +57,7 @@ class AccountFundingRecipient(DataObject):
     def address(self):
         """
         | Object containing the address details of the recipient of an account funding transaction.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address.Address`
         """
         return self.__address
@@ -71,7 +71,7 @@ class AccountFundingRecipient(DataObject):
         """
         | The date of birth of the recipient
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__date_of_birth
@@ -84,7 +84,7 @@ class AccountFundingRecipient(DataObject):
     def name(self):
         """
         | Object containing the name details of the recipient of an account funding transaction.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.afr_name.AfrName`
         """
         return self.__name
@@ -97,7 +97,7 @@ class AccountFundingRecipient(DataObject):
     def partial_pan(self):
         """
         | Either partialPan or accountnumber is required for merchants that use Merchant Category Code (MCC) 6012 for transactions involving UK costumers.
-        
+
         Type: str
         """
         return self.__partial_pan

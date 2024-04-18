@@ -17,7 +17,7 @@ class MandateContactDetails(DataObject):
     def email_address(self):
         """
         | Email address of the customer
-        
+
         Type: str
         """
         return self.__email_address

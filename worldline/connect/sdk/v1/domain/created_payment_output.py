@@ -26,7 +26,7 @@ class CreatedPaymentOutput(DataObject):
     def displayed_data(self):
         """
         | Object that contains the action, including the needed data, that you should perform next, like showing instruction, showing the transaction results or redirect to a third party to complete the payment
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.displayed_data.DisplayedData`
         """
         return self.__displayed_data
@@ -39,7 +39,7 @@ class CreatedPaymentOutput(DataObject):
     def is_checked_remember_me(self):
         """
         | Indicates whether the customer ticked the "Remember my details for future purchases" checkbox on the MyCheckout hosted payment pages
-        
+
         Type: bool
         """
         return self.__is_checked_remember_me
@@ -52,7 +52,7 @@ class CreatedPaymentOutput(DataObject):
     def payment(self):
         """
         | Object that holds the payment data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment.Payment`
         """
         return self.__payment
@@ -65,7 +65,7 @@ class CreatedPaymentOutput(DataObject):
     def payment_creation_references(self):
         """
         | Object containing the created references
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_creation_references.PaymentCreationReferences`
         """
         return self.__payment_creation_references
@@ -116,9 +116,9 @@ class CreatedPaymentOutput(DataObject):
         
         
         | Please see Statuses <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html> for a full overview of possible values.
-        
+
         Type: str
-        
+
         Deprecated; Use Payment.statusOutput.statusCategory instead
         """
         return self.__payment_status_category
@@ -131,7 +131,7 @@ class CreatedPaymentOutput(DataObject):
     def tokenization_succeeded(self):
         """
         | If the payment was attempted to be tokenized, indicates if tokenization was successful or not.
-        
+
         Type: bool
         """
         return self.__tokenization_succeeded
@@ -144,7 +144,7 @@ class CreatedPaymentOutput(DataObject):
     def tokens(self):
         """
         | This property contains the tokens that are associated with the hosted checkout session/customer. You can use the tokens listed in this list for a future checkout of the same customer.
-        
+
         Type: str
         """
         return self.__tokens

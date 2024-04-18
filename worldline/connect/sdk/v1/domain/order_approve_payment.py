@@ -19,7 +19,7 @@ class OrderApprovePayment(DataObject):
     def additional_input(self):
         """
         | Object containing additional input on the order
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.additional_order_input_airline_data.AdditionalOrderInputAirlineData`
         """
         return self.__additional_input
@@ -32,7 +32,7 @@ class OrderApprovePayment(DataObject):
     def customer(self):
         """
         | Object containing data related to the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_approve_payment.CustomerApprovePayment`
         """
         return self.__customer
@@ -45,7 +45,7 @@ class OrderApprovePayment(DataObject):
     def references(self):
         """
         | Object that holds all reference properties that are linked to this transaction
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order_references_approve_payment.OrderReferencesApprovePayment`
         """
         return self.__references

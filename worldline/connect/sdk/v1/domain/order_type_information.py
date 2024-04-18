@@ -26,7 +26,7 @@ class OrderTypeInformation(DataObject):
         * storedValueDigitalWallet = When funding is being used to load the funds into a stored value digital wallet.
         * fundingGiftCardForPersonalUse = When funding a gift card for personal use.
         * fundingGiftCardForSomeoneElse = When funding a gift card for someone else.
-        
+
         Type: str
         """
         return self.__funding_type
@@ -42,7 +42,7 @@ class OrderTypeInformation(DataObject):
         
         * physical
         * digital
-        
+
         Type: str
         """
         return self.__purchase_type
@@ -61,7 +61,7 @@ class OrderTypeInformation(DataObject):
         * account-funding = The purpose of the transaction is to fund an account
         * quasi-cash = The purpose of the transaction is to buy a quasi cash type product that is representative of actual cash such as money orders, traveler's checks, foreign currency, lottery tickets or casino gaming chips
         * prepaid-activation-or-load = The purpose of the transaction is to activate or load a prepaid card
-        
+
         Type: str
         """
         return self.__transaction_type
@@ -77,7 +77,7 @@ class OrderTypeInformation(DataObject):
         
         * private
         * commercial
-        
+
         Type: str
         """
         return self.__usage_type

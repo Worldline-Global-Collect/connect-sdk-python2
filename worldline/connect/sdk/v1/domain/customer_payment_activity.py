@@ -19,7 +19,7 @@ class CustomerPaymentActivity(DataObject):
     def number_of_payment_attempts_last24_hours(self):
         """
         | Number of payment attempts (so including unsuccessful ones) made by this customer with you in the last 24 hours
-        
+
         Type: int
         """
         return self.__number_of_payment_attempts_last24_hours
@@ -32,7 +32,7 @@ class CustomerPaymentActivity(DataObject):
     def number_of_payment_attempts_last_year(self):
         """
         | Number of payment attempts (so including unsuccessful ones) made by this customer with you in the last 12 months
-        
+
         Type: int
         """
         return self.__number_of_payment_attempts_last_year
@@ -45,7 +45,7 @@ class CustomerPaymentActivity(DataObject):
     def number_of_purchases_last6_months(self):
         """
         | Number of successful purchases made by this customer with you in the last 6 months
-        
+
         Type: int
         """
         return self.__number_of_purchases_last6_months

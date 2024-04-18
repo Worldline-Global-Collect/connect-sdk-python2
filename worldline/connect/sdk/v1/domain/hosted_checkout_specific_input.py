@@ -28,7 +28,7 @@ class HostedCheckoutSpecificInput(DataObject):
         * false - Only payment products that support one-off payments will be shown.
         
         | The default value for this property is false.
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -41,7 +41,7 @@ class HostedCheckoutSpecificInput(DataObject):
     def locale(self):
         """
         | Locale to use to present the MyCheckout payment pages to the customer. Please make sure that a language pack is configured for the locale you are submitting. If you submit a locale that is not setup on your account we will use the default language pack for your account. You can easily upload additional language packs and set the default language pack in the Configuration Center.
-        
+
         Type: str
         """
         return self.__locale
@@ -54,7 +54,7 @@ class HostedCheckoutSpecificInput(DataObject):
     def payment_product_filters(self):
         """
         | Contains the payment product ids and payment product groups that will be used for manipulating the payment products available for the payment to the customer.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product_filters_hosted_checkout.PaymentProductFiltersHostedCheckout`
         """
         return self.__payment_product_filters
@@ -72,7 +72,7 @@ class HostedCheckoutSpecificInput(DataObject):
         
         | The data in this object is only meant for displaying recurring payments-related data on your checkout page.
         | You still need to submit all the recurring payment-related data in the corresponding payment product-specific input. (example: cardPaymentMethodSpecificInput.recurring and cardPaymentMethodSpecificInput.isRecurring)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData`
         """
         return self.__recurring_payments_data
@@ -87,7 +87,7 @@ class HostedCheckoutSpecificInput(DataObject):
         | This flag affects the status of a Hosted Checkout when a customer presses the cancel button and is returned to you as a result.
         | If set to true, then the status will be CANCELLED_BY_CONSUMER. If set to false, then the status will be IN_PROGRESS.
         | The default value is false. This flag was added to introduce the additional CANCELLED_BY_CONSUMER state as a non-breaking change.
-        
+
         Type: bool
         """
         return self.__return_cancel_state
@@ -102,7 +102,7 @@ class HostedCheckoutSpecificInput(DataObject):
         | The URL that the customer is redirect to after the payment flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.
         | Note: The provided URL should be absolute and contain the protocol to use, e.g. http:// or https://. For use on mobile devices a custom protocol can be used in the form of *protocol*://. This protocol must be registered on the device first.
         | URLs without a protocol will be rejected.
-        
+
         Type: str
         """
         return self.__return_url
@@ -118,7 +118,7 @@ class HostedCheckoutSpecificInput(DataObject):
         * false - MyCheckout will redirect the customer back to the provided returnUrl when this is possible.
         
         | The default value for this property is true.
-        
+
         Type: bool
         """
         return self.__show_result_page
@@ -131,7 +131,7 @@ class HostedCheckoutSpecificInput(DataObject):
     def tokens(self):
         """
         | String containing comma separated tokens (no spaces) associated with the customer of this hosted checkout. Valid tokens will be used to present the customer the option to re-use previously used payment details. This means the customer for instance does not have to re-enter their card details again, which a big plus when the customer is using their mobile phone to complete the checkout.
-        
+
         Type: str
         """
         return self.__tokens
@@ -144,7 +144,7 @@ class HostedCheckoutSpecificInput(DataObject):
     def validate_shopping_cart(self):
         """
         | By default, validation is done for all the information required to display the shopping cart. Set this value to false if you would like to turn that feature off for a hosted checkout on the Ogone Payment Platform, in which case the rendering of the shopping cart will be skipped if any required information is missing. Use this when you want fraud-checks to be performed on the shopping cart, but do not want to suply all data needed for displaying it in the hosted checkout. The default value for this property is true.
-        
+
         Type: bool
         """
         return self.__validate_shopping_cart
@@ -157,7 +157,7 @@ class HostedCheckoutSpecificInput(DataObject):
     def variant(self):
         """
         | Using the Configuration Center it is possible to create multiple variations of your MyCheckout payment pages. By specifying a specific variant you can force the use of another variant then the default. This allows you to test out the effect of certain changes to your MyCheckout payment pages in a controlled manner. Please note that you need to specify the ID of the variant.
-        
+
         Type: str
         """
         return self.__variant

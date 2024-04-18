@@ -11,7 +11,7 @@ class CancelApprovalPayoutExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            client.v1().merchant("merchantId").payouts().cancelapproval("payoutId")
+            client.v1().merchant('merchantId').payouts().cancelapproval('payoutId')
 
     @staticmethod
     def __get_client():

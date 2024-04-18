@@ -19,7 +19,7 @@ class GiftCardPurchase(DataObject):
     def amount_of_money(self):
         """
         | Object containing information on an amount of money
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -32,7 +32,7 @@ class GiftCardPurchase(DataObject):
     def number_of_gift_cards(self):
         """
         | Number of gift cards that are purchased through this transaction
-        
+
         Type: int
         """
         return self.__number_of_gift_cards

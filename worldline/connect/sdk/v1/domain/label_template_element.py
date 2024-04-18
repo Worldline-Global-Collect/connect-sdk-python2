@@ -15,7 +15,7 @@ class LabelTemplateElement(DataObject):
     def attribute_key(self):
         """
         | Name of the attribute that is shown to the customer on selection pages or screens
-        
+
         Type: str
         """
         return self.__attribute_key
@@ -29,7 +29,7 @@ class LabelTemplateElement(DataObject):
         """
         | Regular mask for the attributeKey
         | Note: The mask is optional as not every field has a mask
-        
+
         Type: str
         """
         return self.__mask

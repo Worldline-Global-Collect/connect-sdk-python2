@@ -21,35 +21,30 @@ class ResponseHeaderTest(unittest.TestCase):
 
     def test_get_disposition_filename(self):
         """Tests that get_disposition_filename works as expected"""
-        test_data = {}
-        test_data["attachment; filename=testfile"] = "testfile"
-        test_data["attachment; filename=\"testfile\""] = "testfile"
-        test_data["attachment; filename=\"testfile"] = "\"testfile"
-        test_data["attachment; filename=testfile\""] = "testfile\""
-        test_data["attachment; filename='testfile'"] = "testfile"
-        test_data["attachment; filename='testfile"] = "'testfile"
-        test_data["attachment; filename=testfile'"] = "testfile'"
-
-        test_data["filename=testfile"] = "testfile"
-        test_data["filename=\"testfile\""] = "testfile"
-        test_data["filename=\"testfile"] = "\"testfile"
-        test_data["filename=testfile\""] = "testfile\""
-        test_data["filename='testfile'"] = "testfile"
-        test_data["filename='testfile"] = "'testfile"
-        test_data["filename=testfile'"] = "testfile'"
-
-        test_data["attachment; filename=testfile; x=y"] = "testfile"
-        test_data["attachment; filename=\"testfile\"; x=y"] = "testfile"
-        test_data["attachment; filename=\"testfile; x=y"] = "\"testfile"
-        test_data["attachment; filename=testfile\"; x=y"] = "testfile\""
-        test_data["attachment; filename='testfile'; x=y"] = "testfile"
-        test_data["attachment; filename='testfile; x=y"] = "'testfile"
-        test_data["attachment; filename=testfile'; x=y"] = "testfile'"
-
-        test_data["attachment"] = None
-
-        test_data["filename=\""] = "\""
-        test_data["filename='"] = "'"
+        test_data = {"attachment; filename=testfile": "testfile",
+                     "attachment; filename=\"testfile\"": "testfile",
+                     "attachment; filename=\"testfile": "\"testfile",
+                     "attachment; filename=testfile\"": "testfile\"",
+                     "attachment; filename='testfile'": "testfile",
+                     "attachment; filename='testfile": "'testfile",
+                     "attachment; filename=testfile'": "testfile'",
+                     "filename=testfile": "testfile",
+                     "filename=\"testfile\"": "testfile",
+                     "filename=\"testfile": "\"testfile",
+                     "filename=testfile\"": "testfile\"",
+                     "filename='testfile'": "testfile",
+                     "filename='testfile": "'testfile",
+                     "filename=testfile'": "testfile'",
+                     "attachment; filename=testfile; x=y": "testfile",
+                     "attachment; filename=\"testfile\"; x=y": "testfile",
+                     "attachment; filename=\"testfile; x=y": "\"testfile",
+                     "attachment; filename=testfile\"; x=y": "testfile\"",
+                     "attachment; filename='testfile'; x=y": "testfile",
+                     "attachment; filename='testfile; x=y": "'testfile",
+                     "attachment; filename=testfile'; x=y": "testfile'",
+                     "attachment": None,
+                     "filename=\"": "\"",
+                     "filename='": "'"}
 
         for value, expected in test_data.iteritems():
             headers = {"Content-Disposition": value}

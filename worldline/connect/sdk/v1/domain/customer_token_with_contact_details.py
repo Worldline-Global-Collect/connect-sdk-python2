@@ -15,7 +15,7 @@ class CustomerTokenWithContactDetails(CustomerToken):
     def contact_details(self):
         """
         | Object containing contact details like email address and phone number
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.contact_details_token.ContactDetailsToken`
         """
         return self.__contact_details

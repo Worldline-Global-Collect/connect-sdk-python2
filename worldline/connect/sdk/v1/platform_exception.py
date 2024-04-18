@@ -7,8 +7,7 @@ from api_exception import ApiException
 
 class PlatformException(ApiException):
     """
-    Represents an error response from the Worldline Global Collect platform when something
-    went wrong at the Worldline Global Collect platform or further downstream.
+    Represents an error response from the Worldline Global Collect platform when something went wrong at the Worldline Global Collect platform or further downstream.
     """
 
     def __init__(self, status_code, response_body, error_id, errors,

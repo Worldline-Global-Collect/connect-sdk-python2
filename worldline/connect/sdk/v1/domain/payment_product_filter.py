@@ -15,7 +15,7 @@ class PaymentProductFilter(DataObject):
     def groups(self):
         """
         | List containing all payment product groups that should either be restricted to in or excluded from the payment context. Currently, there is only one group, called 'cards'.
-        
+
         Type: list[str]
         """
         return self.__groups
@@ -28,7 +28,7 @@ class PaymentProductFilter(DataObject):
     def products(self):
         """
         | List containing all payment product ids that should either be restricted to in or excluded from the payment context.
-        
+
         Type: list[int]
         """
         return self.__products

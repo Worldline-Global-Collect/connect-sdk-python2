@@ -17,7 +17,7 @@ class OrderOutput(DataObject):
     def amount_of_money(self):
         """
         | Object containing amount and ISO currency code attributes
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -30,7 +30,7 @@ class OrderOutput(DataObject):
     def references(self):
         """
         | Object that holds all reference properties that are linked to this transaction
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_references.PaymentReferences`
         """
         return self.__references

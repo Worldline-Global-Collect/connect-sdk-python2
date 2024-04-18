@@ -17,7 +17,7 @@ class BankData(DataObject):
     def new_bank_name(self):
         """
         | Bank name, matching the bank code of the request
-        
+
         Type: str
         """
         return self.__new_bank_name
@@ -30,7 +30,7 @@ class BankData(DataObject):
     def reformatted_account_number(self):
         """
         | Reformatted account number according to local clearing rules
-        
+
         Type: str
         """
         return self.__reformatted_account_number
@@ -43,7 +43,7 @@ class BankData(DataObject):
     def reformatted_bank_code(self):
         """
         | Reformatted bank code according to local clearing rules
-        
+
         Type: str
         """
         return self.__reformatted_bank_code
@@ -56,7 +56,7 @@ class BankData(DataObject):
     def reformatted_branch_code(self):
         """
         | Reformatted branch code according to local clearing rules
-        
+
         Type: str
         """
         return self.__reformatted_branch_code

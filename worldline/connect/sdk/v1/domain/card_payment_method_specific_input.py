@@ -24,7 +24,7 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
     def card(self):
         """
         | Object containing card details. The card details will be ignored in case the property networkTokenData is present.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card.Card`
         """
         return self.__card
@@ -37,9 +37,9 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
     def external_cardholder_authentication_data(self):
         """
         | Object containing 3D secure details.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.external_cardholder_authentication_data.ExternalCardholderAuthenticationData`
-        
+
         Deprecated; Use threeDSecure.externalCardholderAuthenticationData instead
         """
         return self.__external_cardholder_authentication_data
@@ -55,7 +55,7 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
         
         * true - This is recurring
         * false - This is one-off
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -72,7 +72,7 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
         
         * delayedCharges - Delayed charges are performed to process a supplemental account charge after original services have been rendered and respective payment has been processed. This is typically used in hotel, cruise lines and vehicle rental environments to perform a supplemental payment after the original services are rendered.
         * noShow - Cardholders can use their cards to make a guaranteed reservation with certain merchant segments. A guaranteed reservation ensures that the reservation will be honored and allows a merchant to perform a No Show transaction to charge the cardholder a penalty according to the merchant’s cancellation policy. For merchants that accept token-based payment credentials to guarantee a reservation, it is necessary to perform a customer initiated (Account Verification) at the time of reservation to be able perform a No Show transaction later.
-        
+
         Type: str
         """
         return self.__merchant_initiated_reason_indicator
@@ -85,7 +85,7 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
     def network_token_data(self):
         """
         | Object holding data that describes a network token
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.scheme_token_data.SchemeTokenData`
         """
         return self.__network_token_data
@@ -100,9 +100,9 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
         | The URL that the customer is redirect to after the payment flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.
         | Note: The provided URL should be absolute and contain the protocol to use, e.g. http:// or https://. For use on mobile devices a custom protocol can be used in the form of *protocol*://. This protocol must be registered on the device first.
         | URLs without a protocol will be rejected.
-        
+
         Type: str
-        
+
         Deprecated; Use threeDSecure.redirectionData.returnUrl instead
         """
         return self.__return_url
@@ -115,7 +115,7 @@ class CardPaymentMethodSpecificInput(AbstractCardPaymentMethodSpecificInput):
     def three_d_secure(self):
         """
         | Object containing specific data regarding 3-D Secure
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.three_d_secure.ThreeDSecure`
         """
         return self.__three_d_secure

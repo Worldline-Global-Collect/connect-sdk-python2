@@ -29,7 +29,7 @@ class Order(DataObject):
     def additional_input(self):
         """
         | Object containing additional input on the order
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.additional_order_input.AdditionalOrderInput`
         """
         return self.__additional_input
@@ -42,7 +42,7 @@ class Order(DataObject):
     def amount_of_money(self):
         """
         | Object containing amount and ISO currency code attributes
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -55,7 +55,7 @@ class Order(DataObject):
     def customer(self):
         """
         | Object containing the details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer.Customer`
         """
         return self.__customer
@@ -68,9 +68,9 @@ class Order(DataObject):
     def items(self):
         """
         | Shopping cart data
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.line_item.LineItem`]
-        
+
         Deprecated; Use shoppingCart.items instead
         """
         return self.__items
@@ -83,7 +83,7 @@ class Order(DataObject):
     def references(self):
         """
         | Object that holds all reference properties that are linked to this transaction
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order_references.OrderReferences`
         """
         return self.__references
@@ -96,9 +96,9 @@ class Order(DataObject):
     def seller(self):
         """
         | Object containing seller details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.seller.Seller`
-        
+
         Deprecated; Use Merchant.seller instead
         """
         return self.__seller
@@ -111,7 +111,7 @@ class Order(DataObject):
     def shipping(self):
         """
         | Object containing information regarding shipping / delivery
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.shipping.Shipping`
         """
         return self.__shipping
@@ -124,7 +124,7 @@ class Order(DataObject):
     def shopping_cart(self):
         """
         | Shopping cart data, including items and specific amounts.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.shopping_cart.ShoppingCart`
         """
         return self.__shopping_cart

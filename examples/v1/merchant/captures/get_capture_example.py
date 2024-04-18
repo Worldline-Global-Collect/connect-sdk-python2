@@ -11,7 +11,7 @@ class GetCaptureExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").captures().get("captureId")
+            response = client.v1().merchant('merchantId').captures().get('captureId')
 
     @staticmethod
     def __get_client():

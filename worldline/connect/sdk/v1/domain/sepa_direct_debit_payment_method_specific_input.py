@@ -23,7 +23,7 @@ class SepaDirectDebitPaymentMethodSpecificInput(AbstractSepaDirectDebitPaymentMe
         """
         | Changed date for direct debit collection. Only relevant for legacy SEPA Direct Debit.
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__date_collect
@@ -36,7 +36,7 @@ class SepaDirectDebitPaymentMethodSpecificInput(AbstractSepaDirectDebitPaymentMe
     def direct_debit_text(self):
         """
         | Description of the transaction that will appear on the customer bank statement to aid the customer in recognizing the transaction. Only relevant for legacy SEPA Direct Debit.
-        
+
         Type: str
         """
         return self.__direct_debit_text
@@ -52,7 +52,7 @@ class SepaDirectDebitPaymentMethodSpecificInput(AbstractSepaDirectDebitPaymentMe
         
         * true - This is recurring
         * false - This is one-off
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -65,7 +65,7 @@ class SepaDirectDebitPaymentMethodSpecificInput(AbstractSepaDirectDebitPaymentMe
     def payment_product771_specific_input(self):
         """
         | Object containing information specific to SEPA Direct Debit
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.sepa_direct_debit_payment_product771_specific_input.SepaDirectDebitPaymentProduct771SpecificInput`
         """
         return self.__payment_product771_specific_input
@@ -82,7 +82,7 @@ class SepaDirectDebitPaymentMethodSpecificInput(AbstractSepaDirectDebitPaymentMe
         * first = This transaction is the first of a series of recurring transactions
         * recurring = This transaction is a subsequent transaction in a series of recurring transactions
         * last = This transaction is the last transaction of a series of recurring transactions
-        
+
         Type: str
         """
         return self.__recurring_payment_sequence_indicator
@@ -96,7 +96,7 @@ class SepaDirectDebitPaymentMethodSpecificInput(AbstractSepaDirectDebitPaymentMe
         """
         * true - The payment requires approval before the funds will be captured using the Approve payment or Capture payment API.
         * false - The payment does not require approval, and the funds will be captured automatically.
-        
+
         Type: bool
         """
         return self.__requires_approval
@@ -109,7 +109,7 @@ class SepaDirectDebitPaymentMethodSpecificInput(AbstractSepaDirectDebitPaymentMe
     def token(self):
         """
         | ID of the token that holds previously stored SEPA Direct Debit account and mandate data. Only relevant for legacy SEPA Direct Debit.
-        
+
         Type: str
         """
         return self.__token
@@ -125,7 +125,7 @@ class SepaDirectDebitPaymentMethodSpecificInput(AbstractSepaDirectDebitPaymentMe
         
         * true - Tokenize the transaction
         * false - Do not tokenize the transaction, unless it would be tokenized by other means such as auto-tokenization of recurring payments.
-        
+
         Type: bool
         """
         return self.__tokenize

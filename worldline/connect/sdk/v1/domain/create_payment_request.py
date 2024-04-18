@@ -38,7 +38,7 @@ class CreatePaymentRequest(DataObject):
     def bank_transfer_payment_method_specific_input(self):
         """
         | Object containing the specific input details for bank transfer payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_transfer_payment_method_specific_input.BankTransferPaymentMethodSpecificInput`
         """
         return self.__bank_transfer_payment_method_specific_input
@@ -51,7 +51,7 @@ class CreatePaymentRequest(DataObject):
     def card_payment_method_specific_input(self):
         """
         | Object containing the specific input details for card payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_payment_method_specific_input.CardPaymentMethodSpecificInput`
         """
         return self.__card_payment_method_specific_input
@@ -64,7 +64,7 @@ class CreatePaymentRequest(DataObject):
     def cash_payment_method_specific_input(self):
         """
         | Object containing the specific input details for cash payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_method_specific_input.CashPaymentMethodSpecificInput`
         """
         return self.__cash_payment_method_specific_input
@@ -77,7 +77,7 @@ class CreatePaymentRequest(DataObject):
     def direct_debit_payment_method_specific_input(self):
         """
         | Object containing the specific input details for direct debit payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.non_sepa_direct_debit_payment_method_specific_input.NonSepaDirectDebitPaymentMethodSpecificInput`
         """
         return self.__direct_debit_payment_method_specific_input
@@ -90,7 +90,7 @@ class CreatePaymentRequest(DataObject):
     def e_invoice_payment_method_specific_input(self):
         """
         | Object containing the specific input details for e-invoice payments.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.e_invoice_payment_method_specific_input.EInvoicePaymentMethodSpecificInput`
         """
         return self.__e_invoice_payment_method_specific_input
@@ -104,7 +104,7 @@ class CreatePaymentRequest(DataObject):
         """
         | Data that was encrypted client side containing all customer entered data elements like card data.
         | Note: Because this data can only be submitted once to our system and contains encrypted card data you should not store it. As the data was captured within the context of a client session you also need to submit it to us before the session has expired.
-        
+
         Type: str
         """
         return self.__encrypted_customer_input
@@ -117,7 +117,7 @@ class CreatePaymentRequest(DataObject):
     def fraud_fields(self):
         """
         | Object containing additional data that will be used to assess the risk of fraud
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraud_fields.FraudFields`
         """
         return self.__fraud_fields
@@ -130,7 +130,7 @@ class CreatePaymentRequest(DataObject):
     def invoice_payment_method_specific_input(self):
         """
         | Object containing the specific input details for invoice payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.invoice_payment_method_specific_input.InvoicePaymentMethodSpecificInput`
         """
         return self.__invoice_payment_method_specific_input
@@ -143,7 +143,7 @@ class CreatePaymentRequest(DataObject):
     def merchant(self):
         """
         | Object containing information on you, the merchant
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.merchant.Merchant`
         """
         return self.__merchant
@@ -161,7 +161,7 @@ class CreatePaymentRequest(DataObject):
         
         * For Apple Pay, the encrypted payment data is the PKPayment <https://developer.apple.com/documentation/passkit/pkpayment>.token.paymentData object passed as a string (with all quotation marks escaped).
         * For Google Pay, the encrypted payment data can be found in property paymentMethodData.tokenizationData.token of the PaymentData <https://developers.google.com/android/reference/com/google/android/gms/wallet/PaymentData>.toJson() result.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput`
         """
         return self.__mobile_payment_method_specific_input
@@ -175,7 +175,7 @@ class CreatePaymentRequest(DataObject):
         """
         | Order object containing order related data
         | Please note that this object is required to be able to submit the amount.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order.Order`
         """
         return self.__order
@@ -188,7 +188,7 @@ class CreatePaymentRequest(DataObject):
     def redirect_payment_method_specific_input(self):
         """
         | Object containing the specific input details for payments that involve redirects to 3rd parties to complete, like iDeal and PayPal
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_method_specific_input.RedirectPaymentMethodSpecificInput`
         """
         return self.__redirect_payment_method_specific_input
@@ -201,7 +201,7 @@ class CreatePaymentRequest(DataObject):
     def sepa_direct_debit_payment_method_specific_input(self):
         """
         | Object containing the specific input details for SEPA direct debit payments
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.sepa_direct_debit_payment_method_specific_input.SepaDirectDebitPaymentMethodSpecificInput`
         """
         return self.__sepa_direct_debit_payment_method_specific_input

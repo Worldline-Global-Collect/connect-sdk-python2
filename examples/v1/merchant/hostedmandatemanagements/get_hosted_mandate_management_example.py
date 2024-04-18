@@ -11,7 +11,7 @@ class GetHostedMandateManagementExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").hostedmandatemanagements().get("hostedMandateManagementId")
+            response = client.v1().merchant('merchantId').hostedmandatemanagements().get('hostedMandateManagementId')
 
     @staticmethod
     def __get_client():

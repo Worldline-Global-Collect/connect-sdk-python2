@@ -10,7 +10,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class PrivacypolicyParams(ParamRequest):
     """
     Query parameters for Get privacy policy
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/services/privacypolicy.html
     """
 
@@ -21,7 +21,7 @@ class PrivacypolicyParams(ParamRequest):
     def locale(self):
         """
         | Locale in which the privacy policy should be returned. Uses your default locale when none is provided.
-        
+
         Type: str
         """
         return self.__locale
@@ -34,7 +34,7 @@ class PrivacypolicyParams(ParamRequest):
     def payment_product_id(self):
         """
         | ID of the payment product for which you wish to retrieve the privacy policy. When no ID is provided you will receive all privacy policies for your payment products.
-        
+
         Type: int
         """
         return self.__payment_product_id

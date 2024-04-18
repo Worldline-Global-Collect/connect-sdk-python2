@@ -14,7 +14,7 @@ class AbstractOrderStatus(DataObject):
     def id(self):
         """
         | Every payment entity resource has an identifier or pointer associated with it. This id can be used to uniquely reach the resource.
-        
+
         Type: str
         """
         return self.__id

@@ -16,7 +16,7 @@ class EInvoicePaymentMethodSpecificInput(AbstractEInvoicePaymentMethodSpecificIn
     def accepted_terms_and_conditions(self):
         """
         | Indicates that the customer has read and accepted the terms and conditions of the product before proceeding with the payment. This must be done before the payment can continue. An URL to the terms and conditions can be retrieved with Get payment product <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/products/get.html>.
-        
+
         Type: bool
         """
         return self.__accepted_terms_and_conditions
@@ -29,7 +29,7 @@ class EInvoicePaymentMethodSpecificInput(AbstractEInvoicePaymentMethodSpecificIn
     def payment_product9000_specific_input(self):
         """
         | Object that holds the specific data for AfterPay Installments (payment product 9000).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.e_invoice_payment_product9000_specific_input.EInvoicePaymentProduct9000SpecificInput`
         """
         return self.__payment_product9000_specific_input

@@ -15,7 +15,7 @@ class PaymentProduct3201SpecificOutput(DataObject):
     def card(self):
         """
         | Object containing card details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_essentials.CardEssentials`
         """
         return self.__card

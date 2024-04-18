@@ -17,7 +17,7 @@ class TokenCardData(DataObject):
     def card_without_cvv(self):
         """
         | Object containing the card details (without CVV)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_without_cvv.CardWithoutCvv`
         """
         return self.__card_without_cvv
@@ -31,7 +31,7 @@ class TokenCardData(DataObject):
         """
         | Date of the first transaction (for ATOS)
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__first_transaction_date
@@ -44,7 +44,7 @@ class TokenCardData(DataObject):
     def provider_reference(self):
         """
         | Reference of the provider (of the first transaction) - used to store the ATOS Transaction Certificate
-        
+
         Type: str
         """
         return self.__provider_reference

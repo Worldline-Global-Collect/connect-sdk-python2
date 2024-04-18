@@ -17,7 +17,7 @@ class ValueMappingElement(DataObject):
     def display_elements(self):
         """
         | List of extra data of the value.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.payment_product_field_display_element.PaymentProductFieldDisplayElement`]
         """
         return self.__display_elements
@@ -30,9 +30,9 @@ class ValueMappingElement(DataObject):
     def display_name(self):
         """
         | Key name
-        
+
         Type: str
-        
+
         Deprecated; Use displayElements instead with ID 'displayName'
         """
         return self.__display_name
@@ -45,7 +45,7 @@ class ValueMappingElement(DataObject):
     def value(self):
         """
         | Value corresponding to the key
-        
+
         Type: str
         """
         return self.__value

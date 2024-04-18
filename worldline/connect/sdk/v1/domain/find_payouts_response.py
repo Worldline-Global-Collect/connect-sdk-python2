@@ -18,7 +18,7 @@ class FindPayoutsResponse(DataObject):
     def limit(self):
         """
         | The limit you used in the request.
-        
+
         Type: int
         """
         return self.__limit
@@ -31,7 +31,7 @@ class FindPayoutsResponse(DataObject):
     def offset(self):
         """
         | The offset you used in the request.
-        
+
         Type: int
         """
         return self.__offset
@@ -44,7 +44,7 @@ class FindPayoutsResponse(DataObject):
     def payouts(self):
         """
         | A list of payouts that matched your filter, starting at the given offset and limited to the given limit.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.payout_result.PayoutResult`]
         """
         return self.__payouts
@@ -57,7 +57,7 @@ class FindPayoutsResponse(DataObject):
     def total_count(self):
         """
         | The total number of payouts that matched your filter.
-        
+
         Type: int
         """
         return self.__total_count

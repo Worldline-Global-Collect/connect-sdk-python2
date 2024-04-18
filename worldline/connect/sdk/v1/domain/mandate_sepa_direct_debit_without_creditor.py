@@ -22,7 +22,7 @@ class MandateSepaDirectDebitWithoutCreditor(DataObject):
     def bank_account_iban(self):
         """
         | Object containing Account holder and IBAN information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban`
         """
         return self.__bank_account_iban
@@ -35,7 +35,7 @@ class MandateSepaDirectDebitWithoutCreditor(DataObject):
     def customer_contract_identifier(self):
         """
         | Identifies the contract between customer and merchant
-        
+
         Type: str
         """
         return self.__customer_contract_identifier
@@ -48,7 +48,7 @@ class MandateSepaDirectDebitWithoutCreditor(DataObject):
     def debtor(self):
         """
         | Object containing information on the debtor
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.debtor.Debtor`
         """
         return self.__debtor
@@ -62,7 +62,7 @@ class MandateSepaDirectDebitWithoutCreditor(DataObject):
         """
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -75,7 +75,7 @@ class MandateSepaDirectDebitWithoutCreditor(DataObject):
     def mandate_approval(self):
         """
         | Object containing the details of the mandate approval
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_approval.MandateApproval`
         """
         return self.__mandate_approval
@@ -91,7 +91,7 @@ class MandateSepaDirectDebitWithoutCreditor(DataObject):
         
         * do-not-send - Do not send a pre-notification
         * send-on-first-collection - Send a pre-notification
-        
+
         Type: str
         """
         return self.__pre_notification

@@ -14,7 +14,7 @@ class PersonalName(PersonalNameBase):
     def title(self):
         """
         | Title of customer
-        
+
         Type: str
         """
         return self.__title

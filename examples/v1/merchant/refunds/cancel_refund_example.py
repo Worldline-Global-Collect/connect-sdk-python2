@@ -11,7 +11,7 @@ class CancelRefundExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            client.v1().merchant("merchantId").refunds().cancel("refundId")
+            client.v1().merchant('merchantId').refunds().cancel('refundId')
 
     @staticmethod
     def __get_client():

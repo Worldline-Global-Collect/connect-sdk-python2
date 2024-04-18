@@ -10,7 +10,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class DeleteTokenParams(ParamRequest):
     """
     Query parameters for Delete token
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/tokens/delete.html
     """
 
@@ -21,7 +21,7 @@ class DeleteTokenParams(ParamRequest):
         """
         | Date of the mandate cancellation
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__mandate_cancel_date

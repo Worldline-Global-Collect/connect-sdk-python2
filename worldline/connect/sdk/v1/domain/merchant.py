@@ -18,7 +18,7 @@ class Merchant(DataObject):
     def configuration_id(self):
         """
         | In case your account has been setup with multiple configurations you can use this property to identify the one you would like to use for the transaction. Note that you can only submit preconfigured values in combination with the Worldline Online Payments Acceptance platform. In case no value is supplied a default value of 0 will be submitted to the Worldline Online Payments Acceptance platform. The Worldline Online Payments Acceptance platform internally refers to this as a PosId.
-        
+
         Type: str
         """
         return self.__configuration_id
@@ -31,7 +31,7 @@ class Merchant(DataObject):
     def contact_website_url(self):
         """
         | URL to find contact or support details to contact in case of questions.
-        
+
         Type: str
         """
         return self.__contact_website_url
@@ -44,7 +44,7 @@ class Merchant(DataObject):
     def seller(self):
         """
         | Object containing seller details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.seller.Seller`
         """
         return self.__seller
@@ -57,7 +57,7 @@ class Merchant(DataObject):
     def website_url(self):
         """
         | The website from which the purchase was made. The '+' character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.
-        
+
         Type: str
         """
         return self.__website_url

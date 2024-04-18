@@ -15,7 +15,7 @@ class ApprovePayoutRequest(DataObject):
         """
         | The desired date for the payout
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__date_payout

@@ -17,7 +17,7 @@ class PaymentCreationOutput(PaymentCreationReferences):
     def is_checked_remember_me(self):
         """
         | Indicates whether the customer ticked the "Remember my details for future purchases" checkbox on the MyCheckout hosted payment pages
-        
+
         Type: bool
         """
         return self.__is_checked_remember_me
@@ -33,7 +33,7 @@ class PaymentCreationOutput(PaymentCreationReferences):
         
         * true - A new token was created
         * false - A token with the same card number already exists and is returned. Please note that the existing token has not been updated. When you want to update other data then the card number, you need to update data stored in the token explicitly, as data is never updated during the creation of a token.
-        
+
         Type: bool
         """
         return self.__is_new_token
@@ -46,7 +46,7 @@ class PaymentCreationOutput(PaymentCreationReferences):
     def token(self):
         """
         | ID of the token
-        
+
         Type: str
         """
         return self.__token
@@ -59,7 +59,7 @@ class PaymentCreationOutput(PaymentCreationReferences):
     def tokenization_succeeded(self):
         """
         | Indicates if tokenization was successful or not. If this value is false, then the token and isNewToken properties will not be set.
-        
+
         Type: bool
         """
         return self.__tokenization_succeeded

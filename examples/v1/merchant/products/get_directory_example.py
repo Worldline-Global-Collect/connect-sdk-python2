@@ -13,10 +13,10 @@ class GetDirectoryExample(object):
     def example(self):
         with self.__get_client() as client:
             query = DirectoryParams()
-            query.country_code = "NL"
-            query.currency_code = "EUR"
+            query.country_code = 'NL'
+            query.currency_code = 'EUR'
 
-            response = client.v1().merchant("merchantId").products().directory(809, query)
+            response = client.v1().merchant('merchantId').products().directory(809, query)
 
     @staticmethod
     def __get_client():

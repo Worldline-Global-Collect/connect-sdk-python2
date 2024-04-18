@@ -16,7 +16,7 @@ class ErrorResponse(DataObject):
     def error_id(self):
         """
         | Unique reference, for debugging purposes, of this error response
-        
+
         Type: str
         """
         return self.__error_id
@@ -29,7 +29,7 @@ class ErrorResponse(DataObject):
     def errors(self):
         """
         | List of one or more errors
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.api_error.APIError`]
         """
         return self.__errors

@@ -18,7 +18,7 @@ class Frequency(DataObject):
     def interval(self):
         """
         | The interval between recurring payments specified as days, weeks, quarters, or years.
-        
+
         Type: str
         """
         return self.__interval
@@ -31,7 +31,7 @@ class Frequency(DataObject):
     def interval_frequency(self):
         """
         | The number of days, weeks, months, quarters, or years between recurring payments.
-        
+
         Type: int
         """
         return self.__interval_frequency

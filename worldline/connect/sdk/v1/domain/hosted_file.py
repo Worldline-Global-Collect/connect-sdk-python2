@@ -20,7 +20,7 @@ class HostedFile(DataObject):
     def file_name(self):
         """
         | The name of the file.
-        
+
         Type: str
         """
         return self.__file_name
@@ -33,7 +33,7 @@ class HostedFile(DataObject):
     def file_size(self):
         """
         | The size of the file in bytes.
-        
+
         Type: str
         """
         return self.__file_size
@@ -46,7 +46,7 @@ class HostedFile(DataObject):
     def file_type(self):
         """
         | The type of the file.
-        
+
         Type: str
         """
         return self.__file_type
@@ -59,7 +59,7 @@ class HostedFile(DataObject):
     def id(self):
         """
         | The numeric identifier of the file.
-        
+
         Type: str
         """
         return self.__id

@@ -17,7 +17,7 @@ class AdditionalOrderInputAirlineData(DataObject):
     def airline_data(self):
         """
         | Object that holds airline specific data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.airline_data.AirlineData`
         """
         return self.__airline_data
@@ -30,7 +30,7 @@ class AdditionalOrderInputAirlineData(DataObject):
     def lodging_data(self):
         """
         | Object that holds lodging specific data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.lodging_data.LodgingData`
         """
         return self.__lodging_data

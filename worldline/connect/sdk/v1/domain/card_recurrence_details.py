@@ -16,7 +16,7 @@ class CardRecurrenceDetails(DataObject):
     def end_date(self):
         """
         | Date in YYYYMMDD after which there will be no further charges. If no value is provided we will set a default value of five years after we processed the first recurring transaction.
-        
+
         Type: str
         """
         return self.__end_date
@@ -29,7 +29,7 @@ class CardRecurrenceDetails(DataObject):
     def min_frequency(self):
         """
         | Minimum number of days between authorizations. If no value is provided we will set a default value of 30 days.
-        
+
         Type: int
         """
         return self.__min_frequency
@@ -47,7 +47,7 @@ class CardRecurrenceDetails(DataObject):
         
         
         | Note: For any first of a recurring the system will automatically create a token as you will need to use a token for any subsequent recurring transactions. In case a token already exists this is indicated in the response with a value of False for the isNewToken property in the response.
-        
+
         Type: str
         """
         return self.__recurring_payment_sequence_indicator

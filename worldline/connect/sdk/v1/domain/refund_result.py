@@ -18,7 +18,7 @@ class RefundResult(AbstractOrderStatus):
     def refund_output(self):
         """
         | Object containing refund details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_output.RefundOutput`
         """
         return self.__refund_output
@@ -42,7 +42,7 @@ class RefundResult(AbstractOrderStatus):
         
         
         | Please see Statuses <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html> for a full overview of possible values.
-        
+
         Type: str
         """
         return self.__status
@@ -56,7 +56,7 @@ class RefundResult(AbstractOrderStatus):
         """
         | This object has the numeric representation of the current refund status, timestamp of last status change and performable action on the current refund resource.
         | In case of a rejected refund, detailed error information is listed.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order_status_output.OrderStatusOutput`
         """
         return self.__status_output

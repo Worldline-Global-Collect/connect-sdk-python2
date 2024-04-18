@@ -20,7 +20,7 @@ class PaymentApprovalResponse(DataObject):
     def card_payment_method_specific_output(self):
         """
         | Object containing additional card payment method specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.approve_payment_card_payment_method_specific_output.ApprovePaymentCardPaymentMethodSpecificOutput`
         """
         return self.__card_payment_method_specific_output
@@ -33,7 +33,7 @@ class PaymentApprovalResponse(DataObject):
     def mobile_payment_method_specific_output(self):
         """
         | Object containing additional mobile payment method specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.approve_payment_mobile_payment_method_specific_output.ApprovePaymentMobilePaymentMethodSpecificOutput`
         """
         return self.__mobile_payment_method_specific_output
@@ -46,7 +46,7 @@ class PaymentApprovalResponse(DataObject):
     def payment(self):
         """
         | Object that holds the payment data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment.Payment`
         """
         return self.__payment
@@ -60,9 +60,9 @@ class PaymentApprovalResponse(DataObject):
         """
         | Object containing additional payment method specific details
         | Deprecated: this property does not support different outputs for payment methods other than cards. Please use cardPaymentMethodSpecificOutput instead.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.approve_payment_card_payment_method_specific_output.ApprovePaymentCardPaymentMethodSpecificOutput`
-        
+
         Deprecated; Use cardPaymentMethodSpecificOutput instead
         """
         return self.__payment_method_specific_output

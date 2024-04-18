@@ -17,7 +17,7 @@ class MandateApproval(DataObject):
         """
         | The date when the mandate was signed
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__mandate_signature_date
@@ -30,7 +30,7 @@ class MandateApproval(DataObject):
     def mandate_signature_place(self):
         """
         | The city where the mandate was signed
-        
+
         Type: str
         """
         return self.__mandate_signature_place
@@ -44,7 +44,7 @@ class MandateApproval(DataObject):
         """
         * true = Mandate is signed
         * false = Mandate is not signed
-        
+
         Type: bool
         """
         return self.__mandate_signed

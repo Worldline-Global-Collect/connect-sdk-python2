@@ -24,6 +24,6 @@ class Marshaller(object):
 
         :param response_json: the json body that should be unmarshalled
         :param type_class: The class to which the response_json should be unmarshalled
-        :raise: MarshallerSyntaxException if the JSON is not a valid representation for an object of the given type
+        :raise MarshallerSyntaxException: if the JSON is not a valid representation for an object of the given type
         """
         raise NotImplementedError

@@ -11,7 +11,7 @@ class DeleteHostedCheckoutExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            client.v1().merchant("merchantId").hostedcheckouts().delete("hostedCheckoutId")
+            client.v1().merchant('merchantId').hostedcheckouts().delete('hostedCheckoutId')
 
     @staticmethod
     def __get_client():

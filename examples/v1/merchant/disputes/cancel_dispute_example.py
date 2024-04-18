@@ -11,7 +11,7 @@ class CancelDisputeExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").disputes().cancel("disputeId")
+            response = client.v1().merchant('merchantId').disputes().cancel('disputeId')
 
     @staticmethod
     def __get_client():

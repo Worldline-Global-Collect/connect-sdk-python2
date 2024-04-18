@@ -14,7 +14,7 @@ class InvoicePaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput):
     def additional_reference(self):
         """
         | Your (additional) reference identifier for this transaction. Data supplied in this property will also be returned in our report files, allowing you to reconcile the incoming funds.
-        
+
         Type: str
         """
         return self.__additional_reference

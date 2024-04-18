@@ -25,7 +25,7 @@ class OrderLineDetails(DataObject):
     def discount_amount(self):
         """
         | Discount on the line item, with the last two digits implied as decimal places
-        
+
         Type: long
         """
         return self.__discount_amount
@@ -38,7 +38,7 @@ class OrderLineDetails(DataObject):
     def google_product_category_id(self):
         """
         | The Google product category ID for the item.
-        
+
         Type: long
         """
         return self.__google_product_category_id
@@ -51,7 +51,7 @@ class OrderLineDetails(DataObject):
     def line_amount_total(self):
         """
         | Total amount for the line item
-        
+
         Type: long
         """
         return self.__line_amount_total
@@ -64,7 +64,7 @@ class OrderLineDetails(DataObject):
     def product_category(self):
         """
         | The category of the product (i.e. home appliance). This property can be used for fraud screening on the Ogone Platform.
-        
+
         Type: str
         """
         return self.__product_category
@@ -78,7 +78,7 @@ class OrderLineDetails(DataObject):
         """
         | Product or UPC Code, left justified
         | Note: Must not be all spaces or all zeros
-        
+
         Type: str
         """
         return self.__product_code
@@ -91,7 +91,7 @@ class OrderLineDetails(DataObject):
     def product_name(self):
         """
         | The name of the product. The '+' character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.
-        
+
         Type: str
         """
         return self.__product_name
@@ -104,7 +104,7 @@ class OrderLineDetails(DataObject):
     def product_price(self):
         """
         | The price of one unit of the product, the value should be zero or greater
-        
+
         Type: long
         """
         return self.__product_price
@@ -117,7 +117,7 @@ class OrderLineDetails(DataObject):
     def product_sku(self):
         """
         | Product SKU number
-        
+
         Type: str
         """
         return self.__product_sku
@@ -131,7 +131,7 @@ class OrderLineDetails(DataObject):
         """
         | Code used to classify items that are purchased
         | Note: Must not be all spaces or all zeros
-        
+
         Type: str
         """
         return self.__product_type
@@ -145,7 +145,7 @@ class OrderLineDetails(DataObject):
         """
         | Quantity of the units being purchased, should be greater than zero
         | Note: Must not be all spaces or all zeros
-        
+
         Type: long
         """
         return self.__quantity
@@ -158,7 +158,7 @@ class OrderLineDetails(DataObject):
     def tax_amount(self):
         """
         | Tax on the line item, with the last two digits implied as decimal places
-        
+
         Type: long
         """
         return self.__tax_amount
@@ -171,7 +171,7 @@ class OrderLineDetails(DataObject):
     def unit(self):
         """
         | Indicates the line item unit of measure; for example: each, kit, pair, gallon, month, etc.
-        
+
         Type: str
         """
         return self.__unit

@@ -15,7 +15,7 @@ class RiskAssessmentResponse(DataObject):
     def results(self):
         """
         | Object that contains the results of the performed fraudchecks
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.result_do_risk_assessment.ResultDoRiskAssessment`]
         """
         return self.__results

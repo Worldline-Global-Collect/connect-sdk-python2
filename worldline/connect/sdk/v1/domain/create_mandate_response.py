@@ -17,7 +17,7 @@ class CreateMandateResponse(DataObject):
     def mandate(self):
         """
         | Object containing information on a mandate
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_response.MandateResponse`
         """
         return self.__mandate
@@ -30,7 +30,7 @@ class CreateMandateResponse(DataObject):
     def merchant_action(self):
         """
         | Object that contains the action, including the needed data, that you should perform next, showing the redirect to a third party to complete the payment or like showing instructions
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_merchant_action.MandateMerchantAction`
         """
         return self.__merchant_action

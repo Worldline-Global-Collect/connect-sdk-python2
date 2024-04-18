@@ -13,7 +13,7 @@ class LoggingCapable(object):
         """
         Turns on logging using the given communicator logger.
 
-        :raise: ValueError If the given communicator logger is None.
+        :raise ValueError: If the given communicator logger is None.
         """
         raise NotImplementedError
 

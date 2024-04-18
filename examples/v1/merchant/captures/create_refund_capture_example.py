@@ -18,21 +18,21 @@ class CreateRefundCaptureExample(object):
         with self.__get_client() as client:
             amount_of_money = AmountOfMoney()
             amount_of_money.amount = 500
-            amount_of_money.currency_code = "EUR"
+            amount_of_money.currency_code = 'EUR'
 
             refund_references = RefundReferences()
-            refund_references.merchant_reference = "AcmeOrder0001"
+            refund_references.merchant_reference = 'AcmeOrder0001'
 
             body = RefundRequest()
             body.amount_of_money = amount_of_money
             body.refund_references = refund_references
 
             try:
-                response = client.v1().merchant("merchantId").captures().refund("captureId", body)
+                response = client.v1().merchant('merchantId').captures().refund('captureId', body)
             except DeclinedRefundException as e:
                 self.handle_declined_refund(e.refund_result)
             except ApiException as e:
-                self.handle_api_errors(e.errors)
+                self.handle_error_response(e.error_id, e.errors)
 
     @staticmethod
     def __get_client():
@@ -48,6 +48,6 @@ class CreateRefundCaptureExample(object):
         pass
 
     @staticmethod
-    def handle_api_errors(errors):
-        # handle the errors here
+    def handle_error_response(error_id, errors):
+        # handle the error response here
         pass

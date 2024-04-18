@@ -11,7 +11,7 @@ class GetPaymentExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").payments().get("paymentId")
+            response = client.v1().merchant('merchantId').payments().get('paymentId')
 
     @staticmethod
     def __get_client():

@@ -13,15 +13,15 @@ class GetPaymentProductGroupsExample(object):
     def example(self):
         with self.__get_client() as client:
             query = FindProductgroupsParams()
-            query.country_code = "US"
-            query.currency_code = "USD"
-            query.locale = "en_US"
+            query.country_code = 'US'
+            query.currency_code = 'USD'
+            query.locale = 'en_US'
             query.amount = 1000
             query.is_recurring = True
             query.is_installments = True
-            query.add_hide("fields")
+            query.add_hide('fields')
 
-            response = client.v1().merchant("merchantId").productgroups().find(query)
+            response = client.v1().merchant('merchantId').productgroups().find(query)
 
     @staticmethod
     def __get_client():

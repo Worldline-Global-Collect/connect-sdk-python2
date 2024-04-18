@@ -14,7 +14,7 @@ class PaymentProduct771SpecificOutput(DataObject):
     def mandate_reference(self):
         """
         | Unique reference to a Mandate
-        
+
         Type: str
         """
         return self.__mandate_reference

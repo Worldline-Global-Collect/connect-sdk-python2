@@ -21,7 +21,7 @@ class RedirectPaymentProduct863SpecificInput(DataObject):
         * nativeInApp - used in mobile apps that use the WeChat Pay SDK.
         * javaScriptAPI - used for WeChat official accounts. Requires the QQ browser to function.
         * miniProgram - used for Mini Programs.
-        
+
         Type: str
         """
         return self.__integration_type
@@ -34,7 +34,7 @@ class RedirectPaymentProduct863SpecificInput(DataObject):
     def open_id(self):
         """
         | An openId of a customer.
-        
+
         Type: str
         """
         return self.__open_id

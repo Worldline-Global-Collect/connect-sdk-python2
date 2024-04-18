@@ -18,7 +18,7 @@ class CustomerApprovePayment(DataObject):
         * none - The account that was used to place the order is a guest account or no account was used at all
         * created - The customer account was created during this transaction
         * existing - The customer account was an already existing account prior to this transaction
-        
+
         Type: str
         """
         return self.__account_type

@@ -17,7 +17,7 @@ class GetPrivacyPolicyResponse(DataObject):
     def html_content(self):
         """
         | HTML content to be displayed to the user
-        
+
         Type: str
         """
         return self.__html_content

@@ -14,7 +14,7 @@ class TestConnection(DataObject):
     def result(self):
         """
         | OK result on the connection to the payment engine.
-        
+
         Type: str
         """
         return self.__result

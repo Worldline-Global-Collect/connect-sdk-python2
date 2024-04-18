@@ -29,7 +29,7 @@ class AdditionalOrderInput(DataObject):
     def account_funding_recipient(self):
         """
         | Object containing specific data regarding the recipient of an account funding transaction
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.account_funding_recipient.AccountFundingRecipient`
         """
         return self.__account_funding_recipient
@@ -42,7 +42,7 @@ class AdditionalOrderInput(DataObject):
     def airline_data(self):
         """
         | Object that holds airline specific data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.airline_data.AirlineData`
         """
         return self.__airline_data
@@ -55,7 +55,7 @@ class AdditionalOrderInput(DataObject):
     def installments(self):
         """
         | Object containing data related to installments which can be used for card payments and only with some acquirers. In case you send in the details of this object, only the combination of card products and acquirers that do support installments will be shown on the MyCheckout hosted payment pages.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.installments.Installments`
         """
         return self.__installments
@@ -68,9 +68,9 @@ class AdditionalOrderInput(DataObject):
     def level3_summary_data(self):
         """
         | Object that holds Level3 summary data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.level3_summary_data.Level3SummaryData`
-        
+
         Deprecated; Use Order.shoppingCart.amountBreakdown instead
         """
         return self.__level3_summary_data
@@ -83,9 +83,9 @@ class AdditionalOrderInput(DataObject):
     def loan_recipient(self):
         """
         | Object containing specific data regarding the recipient of a loan in the UK
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.loan_recipient.LoanRecipient`
-        
+
         Deprecated; No replacement
         """
         return self.__loan_recipient
@@ -98,7 +98,7 @@ class AdditionalOrderInput(DataObject):
     def lodging_data(self):
         """
         | Object that holds lodging specific data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.lodging_data.LodgingData`
         """
         return self.__lodging_data
@@ -111,9 +111,9 @@ class AdditionalOrderInput(DataObject):
     def number_of_installments(self):
         """
         | The number of installments in which this transaction will be paid, which can be used for card payments. Only used with some acquirers. In case you send in the details of this object, only the combination of card products and acquirers that do support installments will be shown on the MyCheckout hosted payment pages.
-        
+
         Type: long
-        
+
         Deprecated; Use installments.numberOfInstallments instead
         """
         return self.__number_of_installments
@@ -127,7 +127,7 @@ class AdditionalOrderInput(DataObject):
         """
         | Date and time of order
         | Format: YYYYMMDDHH24MISS
-        
+
         Type: str
         """
         return self.__order_date
@@ -140,7 +140,7 @@ class AdditionalOrderInput(DataObject):
     def type_information(self):
         """
         | Object that holds the purchase and usage type indicators
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order_type_information.OrderTypeInformation`
         """
         return self.__type_information

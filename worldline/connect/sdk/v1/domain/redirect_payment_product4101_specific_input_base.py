@@ -17,7 +17,7 @@ class RedirectPaymentProduct4101SpecificInputBase(AbstractRedirectPaymentProduct
     def display_name(self):
         """
         | The merchant name as shown to the customer in some payment applications.
-        
+
         Type: str
         """
         return self.__display_name

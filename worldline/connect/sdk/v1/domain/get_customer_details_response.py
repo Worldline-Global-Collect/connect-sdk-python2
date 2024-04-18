@@ -26,7 +26,7 @@ class GetCustomerDetailsResponse(DataObject):
     def city(self):
         """
         | The city in which the customer resides.
-        
+
         Type: str
         """
         return self.__city
@@ -39,7 +39,7 @@ class GetCustomerDetailsResponse(DataObject):
     def country(self):
         """
         | The country in which the customer resides.
-        
+
         Type: str
         """
         return self.__country
@@ -52,7 +52,7 @@ class GetCustomerDetailsResponse(DataObject):
     def email_address(self):
         """
         | The email address registered to the customer.
-        
+
         Type: str
         """
         return self.__email_address
@@ -65,7 +65,7 @@ class GetCustomerDetailsResponse(DataObject):
     def first_name(self):
         """
         | The first name of the customer
-        
+
         Type: str
         """
         return self.__first_name
@@ -78,7 +78,7 @@ class GetCustomerDetailsResponse(DataObject):
     def fiscal_number(self):
         """
         | The fiscal number (SSN) for the customer.
-        
+
         Type: str
         """
         return self.__fiscal_number
@@ -91,7 +91,7 @@ class GetCustomerDetailsResponse(DataObject):
     def language_code(self):
         """
         | The code of the language used by the customer.
-        
+
         Type: str
         """
         return self.__language_code
@@ -104,7 +104,7 @@ class GetCustomerDetailsResponse(DataObject):
     def phone_number(self):
         """
         | The phone number registered to the customer.
-        
+
         Type: str
         """
         return self.__phone_number
@@ -117,7 +117,7 @@ class GetCustomerDetailsResponse(DataObject):
     def street(self):
         """
         | The street on which the customer resides.
-        
+
         Type: str
         """
         return self.__street
@@ -130,7 +130,7 @@ class GetCustomerDetailsResponse(DataObject):
     def surname(self):
         """
         | The surname or family name of the customer.
-        
+
         Type: str
         """
         return self.__surname
@@ -143,7 +143,7 @@ class GetCustomerDetailsResponse(DataObject):
     def zip(self):
         """
         | The ZIP or postal code for the area in which the customer resides.
-        
+
         Type: str
         """
         return self.__zip

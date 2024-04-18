@@ -15,7 +15,7 @@ class PersonalInformationRiskAssessment(DataObject):
     def name(self):
         """
         | Object containing the name details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.personal_name_risk_assessment.PersonalNameRiskAssessment`
         """
         return self.__name

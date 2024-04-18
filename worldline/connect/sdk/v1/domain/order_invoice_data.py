@@ -17,7 +17,7 @@ class OrderInvoiceData(DataObject):
     def additional_data(self):
         """
         | Additional data for printed invoices
-        
+
         Type: str
         """
         return self.__additional_data
@@ -31,7 +31,7 @@ class OrderInvoiceData(DataObject):
         """
         | Date and time on invoice
         | Format: YYYYMMDDHH24MISS
-        
+
         Type: str
         """
         return self.__invoice_date
@@ -44,7 +44,7 @@ class OrderInvoiceData(DataObject):
     def invoice_number(self):
         """
         | Your invoice number (on printed invoice) that is also returned in our report files
-        
+
         Type: str
         """
         return self.__invoice_number
@@ -57,7 +57,7 @@ class OrderInvoiceData(DataObject):
     def text_qualifiers(self):
         """
         | Array of 3 text qualifiers, each with a max length of 10 characters
-        
+
         Type: list[str]
         """
         return self.__text_qualifiers

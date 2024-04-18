@@ -10,7 +10,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class FindProductsParams(ParamRequest):
     """
     Query parameters for Get payment products
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/products/find.html
     """
 
@@ -26,7 +26,7 @@ class FindProductsParams(ParamRequest):
     def country_code(self):
         """
         | ISO 3166-1 alpha-2 country code
-        
+
         Type: str
         """
         return self.__country_code
@@ -39,7 +39,7 @@ class FindProductsParams(ParamRequest):
     def currency_code(self):
         """
         | Three-letter ISO currency code representing the currency for the amount
-        
+
         Type: str
         """
         return self.__currency_code
@@ -52,7 +52,7 @@ class FindProductsParams(ParamRequest):
     def locale(self):
         """
         | Locale used in the GUI towards the consumer. Please make sure that a language pack is configured for the locale you are submitting. If you submit a locale that is not setup on your account we will use the default language pack for your account. You can easily upload additional language packs and set the default language pack in the Configuration Center.
-        
+
         Type: str
         """
         return self.__locale
@@ -65,7 +65,7 @@ class FindProductsParams(ParamRequest):
     def amount(self):
         """
         | Amount in cents and always having 2 decimals
-        
+
         Type: long
         """
         return self.__amount
@@ -83,7 +83,7 @@ class FindProductsParams(ParamRequest):
         * false
         
         | If this is omitted all payment products are returned.
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -101,7 +101,7 @@ class FindProductsParams(ParamRequest):
         * false
         
         | If this is omitted all payment products are returned.
-        
+
         Type: bool
         """
         return self.__is_installments
@@ -121,7 +121,7 @@ class FindProductsParams(ParamRequest):
         * productsWithoutFields - Don't return products that require any additional data to be captured
         * productsWithoutInstructions - Don't return products that show instructions
         * productsWithRedirects - Don't return products that require a redirect to a 3rd party. Note that products that involve potential redirects related to 3D Secure authentication are not hidden
-        
+
         Type: list[str]
         """
         return self.__hide

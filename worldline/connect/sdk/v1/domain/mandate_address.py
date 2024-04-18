@@ -21,7 +21,7 @@ class MandateAddress(DataObject):
     def city(self):
         """
         | City
-        
+
         Type: str
         """
         return self.__city
@@ -34,7 +34,7 @@ class MandateAddress(DataObject):
     def country_code(self):
         """
         | ISO 3166-1 alpha-2 country code
-        
+
         Type: str
         """
         return self.__country_code
@@ -47,7 +47,7 @@ class MandateAddress(DataObject):
     def house_number(self):
         """
         | House number
-        
+
         Type: str
         """
         return self.__house_number
@@ -60,7 +60,7 @@ class MandateAddress(DataObject):
     def street(self):
         """
         | Streetname
-        
+
         Type: str
         """
         return self.__street
@@ -73,7 +73,7 @@ class MandateAddress(DataObject):
     def zip(self):
         """
         | Zip code
-        
+
         Type: str
         """
         return self.__zip

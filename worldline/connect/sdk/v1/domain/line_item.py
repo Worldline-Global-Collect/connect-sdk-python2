@@ -22,7 +22,7 @@ class LineItem(DataObject):
         """
         | Object containing amount and ISO currency code attributes
         | Note: make sure you submit the amount and currency code for each line item
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -35,7 +35,7 @@ class LineItem(DataObject):
     def invoice_data(self):
         """
         | Object containing the line items of the invoice or shopping cart. The '+' character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.line_item_invoice_data.LineItemInvoiceData`
         """
         return self.__invoice_data
@@ -48,9 +48,9 @@ class LineItem(DataObject):
     def level3_interchange_information(self):
         """
         | Object containing additional information that when supplied can have a beneficial effect on the discountrates
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.line_item_level3_interchange_information.LineItemLevel3InterchangeInformation`
-        
+
         Deprecated; Use orderLineDetails instead
         """
         return self.__level3_interchange_information
@@ -63,7 +63,7 @@ class LineItem(DataObject):
     def order_line_details(self):
         """
         | Object containing additional information that when supplied can have a beneficial effect on the discountrates
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order_line_details.OrderLineDetails`
         """
         return self.__order_line_details

@@ -25,7 +25,7 @@ class RecurringPaymentsData(DataObject):
     def recurring_interval(self):
         """
         | The object containing the frequency and interval between recurring payments.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.frequency.Frequency`
         """
         return self.__recurring_interval
@@ -38,7 +38,7 @@ class RecurringPaymentsData(DataObject):
     def trial_information(self):
         """
         | The object containing data of the trial period: no-cost or discounted time-constrained trial subscription period. 
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.trial_information.TrialInformation`
         """
         return self.__trial_information

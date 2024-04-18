@@ -13,12 +13,12 @@ class FindPayoutsExample(object):
     def example(self):
         with self.__get_client() as client:
             query = FindPayoutsParams()
-            query.merchant_reference = "AcmeOrder0001"
+            query.merchant_reference = 'AcmeOrder0001'
             query.merchant_order_id = 123456
             query.offset = 0
             query.limit = 10
 
-            response = client.v1().merchant("merchantId").payouts().find(query)
+            response = client.v1().merchant('merchantId').payouts().find(query)
 
     @staticmethod
     def __get_client():

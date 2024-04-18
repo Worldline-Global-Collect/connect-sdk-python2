@@ -18,7 +18,7 @@ class SepaDirectDebitPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOu
     def fraud_results(self):
         """
         | Object containing the results of the fraud screening
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraud_results.FraudResults`
         """
         return self.__fraud_results
@@ -31,7 +31,7 @@ class SepaDirectDebitPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOu
     def payment_product771_specific_output(self):
         """
         | Output that is SEPA Direct Debit specific (i.e. the used mandate)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product771_specific_output.PaymentProduct771SpecificOutput`
         """
         return self.__payment_product771_specific_output
@@ -44,7 +44,7 @@ class SepaDirectDebitPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOu
     def token(self):
         """
         | ID of the token. This property is populated for the GlobalCollect payment platform when the payment was done with a token or when the payment was tokenized.
-        
+
         Type: str
         """
         return self.__token

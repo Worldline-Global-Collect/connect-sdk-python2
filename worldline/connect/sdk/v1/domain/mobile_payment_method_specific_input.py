@@ -28,7 +28,7 @@ class MobilePaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput):
         * SALE - The payment creation results in an authorization that is already captured at the moment of approval.
         
         | Only used with some acquirers, ingnored for acquirers that don't support this. In case the acquirer doesn't allow this to be specified the authorizationMode is 'unspecified', which behaves similar to a final authorization.
-        
+
         Type: str
         """
         return self.__authorization_mode
@@ -41,7 +41,7 @@ class MobilePaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput):
     def customer_reference(self):
         """
         | Reference of the customer for the payment (purchase order #, etc.). Only used with some acquirers.
-        
+
         Type: str
         """
         return self.__customer_reference
@@ -54,7 +54,7 @@ class MobilePaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput):
     def decrypted_payment_data(self):
         """
         | The payment data if you do the decryption of the encrypted payment data yourself.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.decrypted_payment_data.DecryptedPaymentData`
         """
         return self.__decrypted_payment_data
@@ -73,7 +73,7 @@ class MobilePaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput):
         
         * For Apple Pay, the encrypted payment data is the PKPayment <https://developer.apple.com/documentation/passkit/pkpayment>.token.paymentData object passed as a string (with all quotation marks escaped).
         * For Google Pay, the encrypted payment data can be found in property paymentMethodData.tokenizationData.token of the PaymentData <https://developers.google.com/android/reference/com/google/android/gms/wallet/PaymentData>.toJson() result.
-        
+
         Type: str
         """
         return self.__encrypted_payment_data
@@ -86,7 +86,7 @@ class MobilePaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput):
     def payment_product320_specific_input(self):
         """
         | Object containing information specific to Google Pay
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input.MobilePaymentProduct320SpecificInput`
         """
         return self.__payment_product320_specific_input
@@ -100,7 +100,7 @@ class MobilePaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput):
         """
         * true = the payment requires approval before the funds will be captured using the Capture payment <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payments/approve.html> API
         * false = the payment does not require approval, and the funds will be captured automatically
-        
+
         Type: bool
         """
         return self.__requires_approval
@@ -116,7 +116,7 @@ class MobilePaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput):
         * false = Fraud scoring will not be skipped for this transaction
         
         | Note: This is only possible if your account in our system is setup for Fraud scoring and if your configuration in our system allows you to override it per transaction.
-        
+
         Type: bool
         """
         return self.__skip_fraud_service

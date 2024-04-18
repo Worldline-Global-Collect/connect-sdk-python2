@@ -19,9 +19,9 @@ class Level3SummaryData(DataObject):
     def discount_amount(self):
         """
         | Discount on the entire transaction, with the last 2 digits are implied decimal places
-        
+
         Type: long
-        
+
         Deprecated; Use ShoppingCart.amountBreakdown with type DISCOUNT instead
         """
         return self.__discount_amount
@@ -34,9 +34,9 @@ class Level3SummaryData(DataObject):
     def duty_amount(self):
         """
         | Duty on the entire transaction, with the last 2 digits are implied decimal places
-        
+
         Type: long
-        
+
         Deprecated; Use ShoppingCart.amountBreakdown with type DUTY instead
         """
         return self.__duty_amount
@@ -49,9 +49,9 @@ class Level3SummaryData(DataObject):
     def shipping_amount(self):
         """
         | Shippingcost on the entire transaction, with the last 2 digits are implied decimal places
-        
+
         Type: long
-        
+
         Deprecated; Use ShoppingCart.amountBreakdown with type SHIPPING instead
         """
         return self.__shipping_amount

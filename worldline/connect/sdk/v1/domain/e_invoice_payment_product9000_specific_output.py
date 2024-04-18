@@ -14,7 +14,7 @@ class EInvoicePaymentProduct9000SpecificOutput(DataObject):
     def installment_id(self):
         """
         | The ID of the installment plan used for the payment.
-        
+
         Type: str
         """
         return self.__installment_id

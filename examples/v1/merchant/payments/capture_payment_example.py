@@ -15,7 +15,7 @@ class CapturePaymentExample(object):
             body = CapturePaymentRequest()
             body.amount = 2980
 
-            response = client.v1().merchant("merchantId").payments().capture("paymentId", body)
+            response = client.v1().merchant('merchantId').payments().capture('paymentId', body)
 
     @staticmethod
     def __get_client():

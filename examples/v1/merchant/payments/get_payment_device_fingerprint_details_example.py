@@ -11,7 +11,7 @@ class GetPaymentDeviceFingerprintDetailsExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").payments().devicefingerprint("paymentId")
+            response = client.v1().merchant('merchantId').payments().devicefingerprint('paymentId')
 
     @staticmethod
     def __get_client():

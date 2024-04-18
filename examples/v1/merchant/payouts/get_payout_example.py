@@ -11,7 +11,7 @@ class GetPayoutExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").payouts().get("payoutId")
+            response = client.v1().merchant('merchantId').payouts().get('payoutId')
 
     @staticmethod
     def __get_client():

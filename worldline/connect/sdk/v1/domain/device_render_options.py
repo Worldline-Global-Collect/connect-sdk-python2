@@ -25,7 +25,7 @@ class DeviceRenderOptions(DataObject):
         * native = The app supports only a native user interface
         * html = The app supports only an HTML user interface
         * both = Both Native and HTML user interfaces are supported by the app
-        
+
         Type: str
         """
         return self.__sdk_interface
@@ -46,9 +46,9 @@ class DeviceRenderOptions(DataObject):
         * multi-select = Select multiple options
         * oob = Out of ounds
         * html-other = HTML Other (only valid when cardPaymentMethodSpecificInput.threeDSecure.sdkData.deviceRenderOptions.sdkInterface is set to html)
-        
+
         Type: str
-        
+
         Deprecated; Use deviceRenderOptions.sdkUiTypes instead
         """
         return self.__sdk_ui_type
@@ -69,7 +69,7 @@ class DeviceRenderOptions(DataObject):
         * multi-select = Select multiple options
         * oob = Out of ounds
         * html-other = HTML Other (only valid when cardPaymentMethodSpecificInput.threeDSecure.sdkData.deviceRenderOptions.sdkInterface is set to html)
-        
+
         Type: list[str]
         """
         return self.__sdk_ui_types

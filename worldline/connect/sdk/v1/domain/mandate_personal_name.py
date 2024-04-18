@@ -15,7 +15,7 @@ class MandatePersonalName(DataObject):
     def first_name(self):
         """
         | Given name(s) or first name(s) of the customer
-        
+
         Type: str
         """
         return self.__first_name
@@ -28,7 +28,7 @@ class MandatePersonalName(DataObject):
     def surname(self):
         """
         | Surname(s) or last name(s) of the customer
-        
+
         Type: str
         """
         return self.__surname

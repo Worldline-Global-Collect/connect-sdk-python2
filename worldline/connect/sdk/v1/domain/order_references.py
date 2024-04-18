@@ -55,7 +55,7 @@ class OrderReferences(DataObject):
         * 1504 Konbini - 80 characters
         
         | All other payment products don't support a descriptor.
-        
+
         Type: str
         """
         return self.__descriptor
@@ -68,7 +68,7 @@ class OrderReferences(DataObject):
     def invoice_data(self):
         """
         | Object containing additional invoice data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.order_invoice_data.OrderInvoiceData`
         """
         return self.__invoice_data
@@ -82,7 +82,7 @@ class OrderReferences(DataObject):
         """
         | Your order identifier
         | Note: This does not need to have a unique value for each transaction. This allows your to link multiple transactions to the same logical order in your system.
-        
+
         Type: long
         """
         return self.__merchant_order_id
@@ -95,7 +95,7 @@ class OrderReferences(DataObject):
     def merchant_reference(self):
         """
         | Note that the maximum length of this field for transactions processed on the GlobalCollect platform is 30. Note that the maximum length of this field for transactions processed on the WL Online Payment Acceptance Platform platform is 50. Your unique reference of the transaction that is also returned in our report files. This is almost always used for your reconciliation of our report files.
-        
+
         Type: str
         """
         return self.__merchant_reference
@@ -108,7 +108,7 @@ class OrderReferences(DataObject):
     def provider_id(self):
         """
         | Provides an additional means of reconciliation for Gateway merchants
-        
+
         Type: str
         """
         return self.__provider_id
@@ -121,7 +121,7 @@ class OrderReferences(DataObject):
     def provider_merchant_id(self):
         """
         | Provides an additional means of reconciliation, this is the MerchantId used at the provider
-        
+
         Type: str
         """
         return self.__provider_merchant_id

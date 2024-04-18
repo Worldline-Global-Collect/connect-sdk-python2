@@ -19,7 +19,7 @@ class PayoutRecipient(DataObject):
     def first_name(self):
         """
         | Given name(s) or first name(s) of the customer
-        
+
         Type: str
         """
         return self.__first_name
@@ -32,7 +32,7 @@ class PayoutRecipient(DataObject):
     def surname(self):
         """
         | Surname(s) or last name(s) of the customer
-        
+
         Type: str
         """
         return self.__surname
@@ -45,7 +45,7 @@ class PayoutRecipient(DataObject):
     def surname_prefix(self):
         """
         | Middle name - In between first name and surname - of the customer
-        
+
         Type: str
         """
         return self.__surname_prefix

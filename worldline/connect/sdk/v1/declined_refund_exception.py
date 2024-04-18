@@ -10,23 +10,23 @@ class DeclinedRefundException(DeclinedTransactionException):
     Represents an error response from a refund call.
     """
 
-    def __init__(self, status_code, response_body, errors):
-        if errors is not None:
-            super(DeclinedRefundException, self).__init__(status_code, response_body, errors.error_id, errors.errors,
-                                                          DeclinedRefundException.__create_message(errors))
+    def __init__(self, status_code, response_body, response):
+        if response is not None:
+            super(DeclinedRefundException, self).__init__(status_code, response_body, response.error_id, response.errors,
+                                                          DeclinedRefundException.__create_message(response))
         else:
             super(DeclinedRefundException, self).__init__(status_code, response_body, None, None,
-                                                          DeclinedRefundException.__create_message(errors))
-        self.__errors = errors
+                                                          DeclinedRefundException.__create_message(response))
+        self.__response = response
 
     @staticmethod
-    def __create_message(errors):
-        if errors is not None:
-            refund = errors.refund_result
+    def __create_message(response):
+        if response is not None:
+            refund_result = response.refund_result
         else:
-            refund = None
-        if refund is not None:
-            return "declined refund '" + refund.id + "' with status '" + refund.status + "'"
+            refund_result = None
+        if refund_result is not None:
+            return "declined refund '%s' with status '%s'" % (refund_result.id, refund_result.status)
         else:
             return "the Worldline Global Collect platform returned a declined refund response"
 
@@ -35,7 +35,7 @@ class DeclinedRefundException(DeclinedTransactionException):
         """
         :return: The result of creating a refund if available, otherwise None.
         """
-        if self.__errors is None:
+        if self.__response is None:
             return None
         else:
-            return self.__errors.refund_result
+            return self.__response.refund_result

@@ -17,7 +17,7 @@ class RedirectPaymentMethodSpecificInputBase(AbstractRedirectPaymentMethodSpecif
     def payment_product4101_specific_input(self):
         """
         | Object containing specific input required for payment product 4101 (UPI)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product4101_specific_input_base.RedirectPaymentProduct4101SpecificInputBase`
         """
         return self.__payment_product4101_specific_input
@@ -30,7 +30,7 @@ class RedirectPaymentMethodSpecificInputBase(AbstractRedirectPaymentMethodSpecif
     def payment_product840_specific_input(self):
         """
         | Object containing specific input required for PayPal payments (Payment product ID 840)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product840_specific_input_base.RedirectPaymentProduct840SpecificInputBase`
         """
         return self.__payment_product840_specific_input

@@ -15,7 +15,7 @@ class CreatePaymentProductSessionResponse(DataObject):
     def payment_product_session302_specific_output(self):
         """
         | Object containing the Apple Pay session object.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_product_session302_specific_output.MobilePaymentProductSession302SpecificOutput`
         """
         return self.__payment_product_session302_specific_output

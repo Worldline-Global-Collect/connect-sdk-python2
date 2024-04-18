@@ -15,15 +15,15 @@ class GetInstallmentsInfoExample(object):
         with self.__get_client() as client:
             amount_of_money = AmountOfMoney()
             amount_of_money.amount = 123
-            amount_of_money.currency_code = "EUR"
+            amount_of_money.currency_code = 'EUR'
 
             body = GetInstallmentRequest()
             body.amount_of_money = amount_of_money
-            body.bin = "123455"
-            body.country_code = "NL"
+            body.bin = '123455'
+            body.country_code = 'NL'
             body.payment_product_id = 123
 
-            response = client.v1().merchant("merchantId").installments().get_installments_info(body)
+            response = client.v1().merchant('merchantId').installments().get_installments_info(body)
 
     @staticmethod
     def __get_client():

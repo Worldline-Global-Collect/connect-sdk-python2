@@ -21,9 +21,9 @@ class LoanRecipient(DataObject):
     def account_number(self):
         """
         | Should be filled with the last 10 digits of the bank account number of the recipient of the loan.
-        
+
         Type: str
-        
+
         Deprecated; No replacement
         """
         return self.__account_number
@@ -37,9 +37,9 @@ class LoanRecipient(DataObject):
         """
         | The date of birth of the customer of the recipient of the loan.
         | Format: YYYYMMDD
-        
+
         Type: str
-        
+
         Deprecated; No replacement
         """
         return self.__date_of_birth
@@ -52,9 +52,9 @@ class LoanRecipient(DataObject):
     def partial_pan(self):
         """
         | Should be filled with the first 6 and last 4 digits of the PAN number of the recipient of the loan.
-        
+
         Type: str
-        
+
         Deprecated; No replacement
         """
         return self.__partial_pan
@@ -67,9 +67,9 @@ class LoanRecipient(DataObject):
     def surname(self):
         """
         | Surname of the recipient of the loan.
-        
+
         Type: str
-        
+
         Deprecated; No replacement
         """
         return self.__surname
@@ -82,9 +82,9 @@ class LoanRecipient(DataObject):
     def zip(self):
         """
         | Zip code of the recipient of the loan
-        
+
         Type: str
-        
+
         Deprecated; No replacement
         """
         return self.__zip

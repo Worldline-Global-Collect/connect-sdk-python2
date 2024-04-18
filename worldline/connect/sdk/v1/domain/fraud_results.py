@@ -24,7 +24,7 @@ class FraudResults(DataObject):
         * denied - Based on the checks performed the transaction should be rejected
         * no-advice - No fraud check was requested/performed
         * error - The fraud check resulted in an error and the fraud check was thus not performed
-        
+
         Type: str
         """
         return self.__fraud_service_result
@@ -37,7 +37,7 @@ class FraudResults(DataObject):
     def in_auth(self):
         """
         | Object containing device fingerprinting details from InAuth
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.in_auth.InAuth`
         """
         return self.__in_auth
@@ -50,7 +50,7 @@ class FraudResults(DataObject):
     def microsoft_fraud_protection(self):
         """
         | This object contains the results of Microsoft Fraud Protection risk assessment. Microsoft collects transaction data points and uses Adaptive AI that continuously learns to protect you against payment fraud, and the device fingerprinting details from the Microsoft Device Fingerprinting service.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.microsoft_fraud_results.MicrosoftFraudResults`
         """
         return self.__microsoft_fraud_protection

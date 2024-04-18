@@ -19,7 +19,7 @@ class ThirdPartyStatusResponse(DataObject):
         * INITIALIZED - Authentication in progress
         * AUTHORIZED - Payment in progress
         * COMPLETED - The customer has completed the payment at the third party
-        
+
         Type: str
         """
         return self.__third_party_status

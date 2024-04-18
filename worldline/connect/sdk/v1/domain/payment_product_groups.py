@@ -15,7 +15,7 @@ class PaymentProductGroups(DataObject):
     def payment_product_groups(self):
         """
         | Array containing payment product groups and their characteristics
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.payment_product_group.PaymentProductGroup`]
         """
         return self.__payment_product_groups

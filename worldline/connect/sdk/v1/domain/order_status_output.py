@@ -22,7 +22,7 @@ class OrderStatusOutput(DataObject):
     def errors(self):
         """
         | Custom object contains the set of errors
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.api_error.APIError`]
         """
         return self.__errors
@@ -38,7 +38,7 @@ class OrderStatusOutput(DataObject):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_cancellable
@@ -54,7 +54,7 @@ class OrderStatusOutput(DataObject):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_retriable
@@ -67,7 +67,7 @@ class OrderStatusOutput(DataObject):
     def provider_raw_output(self):
         """
         | This is the raw response returned by the acquirer. This property contains unprocessed data directly returned by the acquirer. It's recommended for data analysis only due to its dynamic nature, which may undergo future changes.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.key_value_pair.KeyValuePair`]
         """
         return self.__provider_raw_output
@@ -143,7 +143,7 @@ class OrderStatusOutput(DataObject):
         
         
         | Please see Statuses <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html> for a full overview of possible values.
-        
+
         Type: str
         """
         return self.__status_category
@@ -156,7 +156,7 @@ class OrderStatusOutput(DataObject):
     def status_code(self):
         """
         | Numeric status code of the legacy API. It is returned to ease the migration from the legacy APIs to Worldline Connect. You should not write new business logic based on this property as it will be deprecated in a future version of the API. The value can also be found in the GlobalCollect Payment Console, in the Ogone BackOffice and in report files.
-        
+
         Type: int
         """
         return self.__status_code
@@ -170,7 +170,7 @@ class OrderStatusOutput(DataObject):
         """
         | Date and time of payment
         | Format: YYYYMMDDHH24MISS
-        
+
         Type: str
         """
         return self.__status_code_change_date_time

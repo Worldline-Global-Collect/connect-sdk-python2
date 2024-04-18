@@ -22,7 +22,7 @@ class BankTransferPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
     def bank_account_bban(self):
         """
         | Object containing account holder name and bank account information. This property can only be used for payouts in the UK.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_bban.BankAccountBban`
         """
         return self.__bank_account_bban
@@ -35,7 +35,7 @@ class BankTransferPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
     def bank_account_iban(self):
         """
         | Object containing account holder and IBAN information.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban`
         """
         return self.__bank_account_iban
@@ -48,9 +48,9 @@ class BankTransferPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
     def customer(self):
         """
         | Object containing the details of the customer.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payout_customer.PayoutCustomer`
-        
+
         Deprecated; Moved to PayoutDetails
         """
         return self.__customer
@@ -64,7 +64,7 @@ class BankTransferPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
         """
         | Date of the payout sent to the bank by us.
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__payout_date
@@ -77,7 +77,7 @@ class BankTransferPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
     def payout_text(self):
         """
         | Text to be printed on the bank account statement of the beneficiary. The maximum allowed length might differ per country. The data will be automatically truncated to the maximum allowed length.
-        
+
         Type: str
         """
         return self.__payout_text
@@ -90,7 +90,7 @@ class BankTransferPayoutMethodSpecificInput(AbstractPayoutMethodSpecificInput):
     def swift_code(self):
         """
         | The BIC is the Business Identifier Code, also known as SWIFT or Bank Identifier code. It is a code with an internationally agreed format to Identify a specific bank. The BIC contains 8 or 11 positions: the first 4 contain the bank code, followed by the country code and location code.
-        
+
         Type: str
         """
         return self.__swift_code

@@ -15,7 +15,7 @@ class PersonalInformationToken(DataObject):
     def name(self):
         """
         | Given name(s) or first name(s) of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.personal_name_token.PersonalNameToken`
         """
         return self.__name

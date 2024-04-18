@@ -15,7 +15,7 @@ class AddressPersonal(Address):
     def name(self):
         """
         | Object that holds the name elements
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.personal_name.PersonalName`
         """
         return self.__name

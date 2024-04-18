@@ -17,7 +17,7 @@ class CreateHostedMandateManagementRequest(DataObject):
     def create_mandate_info(self):
         """
         | Object containing partial information needed for the creation of the mandate. The recurrencetype, signature type of the mandate and reference to the customer are mandatory. You can also supply any personal information you already know about the customer so they have to fill in less details.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.hosted_mandate_info.HostedMandateInfo`
         """
         return self.__create_mandate_info
@@ -30,7 +30,7 @@ class CreateHostedMandateManagementRequest(DataObject):
     def hosted_mandate_management_specific_input(self):
         """
         | Object containing hosted mandate management specific data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.hosted_mandate_management_specific_input.HostedMandateManagementSpecificInput`
         """
         return self.__hosted_mandate_management_specific_input

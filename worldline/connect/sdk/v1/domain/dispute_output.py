@@ -26,7 +26,7 @@ class DisputeOutput(DataObject):
     def amount_of_money(self):
         """
         | Object containing amount and ISO currency code attributes
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -39,7 +39,7 @@ class DisputeOutput(DataObject):
     def contact_person(self):
         """
         | The name of the person on your side who can be contacted regarding this dispute.
-        
+
         Type: str
         """
         return self.__contact_person
@@ -52,7 +52,7 @@ class DisputeOutput(DataObject):
     def creation_details(self):
         """
         | Object containing various details related to this dispute’s creation.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.dispute_creation_detail.DisputeCreationDetail`
         """
         return self.__creation_details
@@ -65,7 +65,7 @@ class DisputeOutput(DataObject):
     def email_address(self):
         """
         | The email address of the contact person.
-        
+
         Type: str
         """
         return self.__email_address
@@ -78,7 +78,7 @@ class DisputeOutput(DataObject):
     def files(self):
         """
         | An array containing all files related to this dispute.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.hosted_file.HostedFile`]
         """
         return self.__files
@@ -91,7 +91,7 @@ class DisputeOutput(DataObject):
     def reference(self):
         """
         | A collection of reference information related to this dispute.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.dispute_reference.DisputeReference`
         """
         return self.__reference
@@ -104,7 +104,7 @@ class DisputeOutput(DataObject):
     def reply_to(self):
         """
         | The email address to which the reply message will be sent.
-        
+
         Type: str
         """
         return self.__reply_to
@@ -117,7 +117,7 @@ class DisputeOutput(DataObject):
     def request_message(self):
         """
         | The message sent from you to Worldline.
-        
+
         Type: str
         """
         return self.__request_message
@@ -130,7 +130,7 @@ class DisputeOutput(DataObject):
     def response_message(self):
         """
         | The return message sent from the GlobalCollect platform to you.
-        
+
         Type: str
         """
         return self.__response_message

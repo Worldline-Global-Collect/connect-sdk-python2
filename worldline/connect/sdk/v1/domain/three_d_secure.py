@@ -20,7 +20,7 @@ class ThreeDSecure(AbstractThreeDSecure):
     def external_cardholder_authentication_data(self):
         """
         | Object containing 3D secure details.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.external_cardholder_authentication_data.ExternalCardholderAuthenticationData`
         """
         return self.__external_cardholder_authentication_data
@@ -33,7 +33,7 @@ class ThreeDSecure(AbstractThreeDSecure):
     def redirection_data(self):
         """
         | Object containing browser specific redirection related data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirection_data.RedirectionData`
         """
         return self.__redirection_data

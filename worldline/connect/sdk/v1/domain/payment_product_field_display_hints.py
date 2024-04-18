@@ -26,7 +26,7 @@ class PaymentProductFieldDisplayHints(DataObject):
         """
         * true - Indicates that this field is advised to be captured to increase the success rates even though it isn't marked as required. Please note that making the field required could hurt the success rates negatively. This boolean only indicates our advise to always show this field to the customer.
         * false - Indicates that this field is not to be shown unless it is a required field.
-        
+
         Type: bool
         """
         return self.__always_show
@@ -39,7 +39,7 @@ class PaymentProductFieldDisplayHints(DataObject):
     def display_order(self):
         """
         | The order in which the fields should be shown (ascending)
-        
+
         Type: int
         """
         return self.__display_order
@@ -52,7 +52,7 @@ class PaymentProductFieldDisplayHints(DataObject):
     def form_element(self):
         """
         | Object detailing the type of form element that should be used to present the field
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product_field_form_element.PaymentProductFieldFormElement`
         """
         return self.__form_element
@@ -65,7 +65,7 @@ class PaymentProductFieldDisplayHints(DataObject):
     def label(self):
         """
         | Label/Name of the field to be used in the user interface
-        
+
         Type: str
         """
         return self.__label
@@ -78,7 +78,7 @@ class PaymentProductFieldDisplayHints(DataObject):
     def link(self):
         """
         | Link that should be used to replace the '{link}' variable in the label.
-        
+
         Type: str
         """
         return self.__link
@@ -94,7 +94,7 @@ class PaymentProductFieldDisplayHints(DataObject):
         | * is used for wildcards (and also chars)
         | 9 is used for numbers
         | Everything outside {{ and }} is used as-is.
-        
+
         Type: str
         """
         return self.__mask
@@ -108,7 +108,7 @@ class PaymentProductFieldDisplayHints(DataObject):
         """
         * true - The data in this field should be obfuscated as it is entered, just like a password field
         * false - The data in this field does not need to be obfuscated
-        
+
         Type: bool
         """
         return self.__obfuscate
@@ -121,7 +121,7 @@ class PaymentProductFieldDisplayHints(DataObject):
     def placeholder_label(self):
         """
         | A placeholder value for the form element
-        
+
         Type: str
         """
         return self.__placeholder_label
@@ -139,7 +139,7 @@ class PaymentProductFieldDisplayHints(DataObject):
         * StringKeyboard - Keyboard that is used to enter strings
         * IntegerKeyboard - Keyboard that is used to enter only numerical values
         * EmailAddressKeyboard - Keyboard that allows easier entry of email addresses
-        
+
         Type: str
         """
         return self.__preferred_input_type
@@ -152,7 +152,7 @@ class PaymentProductFieldDisplayHints(DataObject):
     def tooltip(self):
         """
         | Object that contains an optional tooltip to assist the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product_field_tooltip.PaymentProductFieldTooltip`
         """
         return self.__tooltip

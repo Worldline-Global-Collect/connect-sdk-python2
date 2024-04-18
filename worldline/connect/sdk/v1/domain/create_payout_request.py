@@ -34,9 +34,9 @@ class CreatePayoutRequest(DataObject):
     def amount_of_money(self):
         """
         | Object containing amount and ISO currency code attributes
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
-        
+
         Deprecated; Moved to PayoutDetails
         """
         return self.__amount_of_money
@@ -49,9 +49,9 @@ class CreatePayoutRequest(DataObject):
     def bank_account_bban(self):
         """
         | Object containing account holder name and bank account information. This property can only be used for payouts in the UK.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_bban.BankAccountBban`
-        
+
         Deprecated; Moved to BankTransferPayoutMethodSpecificInput
         """
         return self.__bank_account_bban
@@ -64,9 +64,9 @@ class CreatePayoutRequest(DataObject):
     def bank_account_iban(self):
         """
         | Object containing account holder and IBAN information.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban`
-        
+
         Deprecated; Moved to BankTransferPayoutMethodSpecificInput
         """
         return self.__bank_account_iban
@@ -79,7 +79,7 @@ class CreatePayoutRequest(DataObject):
     def bank_transfer_payout_method_specific_input(self):
         """
         | Object containing the specific input details for bank transfer payouts.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_transfer_payout_method_specific_input.BankTransferPayoutMethodSpecificInput`
         """
         return self.__bank_transfer_payout_method_specific_input
@@ -92,7 +92,7 @@ class CreatePayoutRequest(DataObject):
     def card_payout_method_specific_input(self):
         """
         | Object containing the specific input details for card payouts.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_payout_method_specific_input.CardPayoutMethodSpecificInput`
         """
         return self.__card_payout_method_specific_input
@@ -105,9 +105,9 @@ class CreatePayoutRequest(DataObject):
     def customer(self):
         """
         | Object containing the details of the customer.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payout_customer.PayoutCustomer`
-        
+
         Deprecated; Moved to PayoutDetails
         """
         return self.__customer
@@ -120,7 +120,7 @@ class CreatePayoutRequest(DataObject):
     def merchant(self):
         """
         | Object containing information on you, the merchant
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payout_merchant.PayoutMerchant`
         """
         return self.__merchant
@@ -134,9 +134,9 @@ class CreatePayoutRequest(DataObject):
         """
         | Date of the payout sent to the bank by us
         | Format: YYYYMMDD
-        
+
         Type: str
-        
+
         Deprecated; Moved to BankTransferPayoutMethodSpecificInput
         """
         return self.__payout_date
@@ -149,7 +149,7 @@ class CreatePayoutRequest(DataObject):
     def payout_details(self):
         """
         | Object containing the details for Create Payout Request
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payout_details.PayoutDetails`
         """
         return self.__payout_details
@@ -162,9 +162,9 @@ class CreatePayoutRequest(DataObject):
     def payout_text(self):
         """
         | Text to be printed on the bank account statement of the beneficiary. The maximum allowed length might differ per country. The data will be automatically truncated to the maximum allowed length.
-        
+
         Type: str
-        
+
         Deprecated; Moved to BankTransferPayoutMethodSpecificInput
         """
         return self.__payout_text
@@ -177,9 +177,9 @@ class CreatePayoutRequest(DataObject):
     def references(self):
         """
         | Object that holds all reference properties that are linked to this transaction
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payout_references.PayoutReferences`
-        
+
         Deprecated; Moved to PayoutDetails
         """
         return self.__references
@@ -192,9 +192,9 @@ class CreatePayoutRequest(DataObject):
     def swift_code(self):
         """
         | The BIC is the Business Identifier Code, also known as SWIFT or Bank Identifier code. It is a code with an internationally agreed format to Identify a specific bank. The BIC contains 8 or 11 positions: the first 4 contain the bank code, followed by the country code and location code.
-        
+
         Type: str
-        
+
         Deprecated; Moved to BankTransferPayoutMethodSpecificInput
         """
         return self.__swift_code

@@ -19,7 +19,7 @@ class ValidationBankAccountOutput(DataObject):
     def checks(self):
         """
         | Array of checks performed with the results of each check
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.validation_bank_account_check.ValidationBankAccountCheck`]
         """
         return self.__checks
@@ -32,7 +32,7 @@ class ValidationBankAccountOutput(DataObject):
     def new_bank_name(self):
         """
         | Bank name, matching the bank code of the request
-        
+
         Type: str
         """
         return self.__new_bank_name
@@ -45,7 +45,7 @@ class ValidationBankAccountOutput(DataObject):
     def reformatted_account_number(self):
         """
         | Reformatted account number according to local clearing rules
-        
+
         Type: str
         """
         return self.__reformatted_account_number
@@ -58,7 +58,7 @@ class ValidationBankAccountOutput(DataObject):
     def reformatted_bank_code(self):
         """
         | Reformatted bank code according to local clearing rules
-        
+
         Type: str
         """
         return self.__reformatted_bank_code
@@ -71,7 +71,7 @@ class ValidationBankAccountOutput(DataObject):
     def reformatted_branch_code(self):
         """
         | Reformatted branch code according to local clearing rules
-        
+
         Type: str
         """
         return self.__reformatted_branch_code

@@ -18,19 +18,19 @@ class CreateHostedCheckoutExample(object):
     def example(self):
         with self.__get_client() as client:
             hosted_checkout_specific_input = HostedCheckoutSpecificInput()
-            hosted_checkout_specific_input.locale = "en_GB"
-            hosted_checkout_specific_input.variant = "testVariant"
+            hosted_checkout_specific_input.locale = 'en_GB'
+            hosted_checkout_specific_input.variant = 'testVariant'
 
             amount_of_money = AmountOfMoney()
             amount_of_money.amount = 2345
-            amount_of_money.currency_code = "USD"
+            amount_of_money.currency_code = 'USD'
 
             billing_address = Address()
-            billing_address.country_code = "US"
+            billing_address.country_code = 'US'
 
             customer = Customer()
             customer.billing_address = billing_address
-            customer.merchant_customer_id = "1234"
+            customer.merchant_customer_id = '1234'
 
             order = Order()
             order.amount_of_money = amount_of_money
@@ -40,7 +40,7 @@ class CreateHostedCheckoutExample(object):
             body.hosted_checkout_specific_input = hosted_checkout_specific_input
             body.order = order
 
-            response = client.v1().merchant("merchantId").hostedcheckouts().create(body)
+            response = client.v1().merchant('merchantId').hostedcheckouts().create(body)
 
     @staticmethod
     def __get_client():

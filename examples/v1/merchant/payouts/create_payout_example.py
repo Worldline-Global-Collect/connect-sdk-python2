@@ -25,38 +25,38 @@ class CreatePayoutExample(object):
     def example(self):
         with self.__get_client() as client:
             bank_account_iban = BankAccountIban()
-            bank_account_iban.account_holder_name = "Wile E. Coyote"
-            bank_account_iban.iban = "IT60X0542811101000000123456"
+            bank_account_iban.account_holder_name = 'Wile E. Coyote'
+            bank_account_iban.iban = 'IT60X0542811101000000123456'
 
             bank_transfer_payout_method_specific_input = BankTransferPayoutMethodSpecificInput()
             bank_transfer_payout_method_specific_input.bank_account_iban = bank_account_iban
-            bank_transfer_payout_method_specific_input.payout_date = "20150102"
-            bank_transfer_payout_method_specific_input.payout_text = "Payout Acme"
-            bank_transfer_payout_method_specific_input.swift_code = "swift"
+            bank_transfer_payout_method_specific_input.payout_date = '20150102'
+            bank_transfer_payout_method_specific_input.payout_text = 'Payout Acme'
+            bank_transfer_payout_method_specific_input.swift_code = 'swift'
 
             amount_of_money = AmountOfMoney()
             amount_of_money.amount = 2345
-            amount_of_money.currency_code = "EUR"
+            amount_of_money.currency_code = 'EUR'
 
             address = Address()
-            address.city = "Burbank"
-            address.country_code = "US"
-            address.house_number = "411"
-            address.state = "California"
-            address.street = "N Hollywood Way"
-            address.zip = "91505"
+            address.city = 'Burbank'
+            address.country_code = 'US'
+            address.house_number = '411'
+            address.state = 'California'
+            address.street = 'N Hollywood Way'
+            address.zip = '91505'
 
             company_information = CompanyInformation()
-            company_information.name = "Acme Labs"
+            company_information.name = 'Acme Labs'
 
             contact_details = ContactDetailsBase()
-            contact_details.email_address = "wile.e.coyote@acmelabs.com"
+            contact_details.email_address = 'wile.e.coyote@acmelabs.com'
 
             name = PersonalName()
-            name.first_name = "Wile"
-            name.surname = "Coyote"
-            name.surname_prefix = "E."
-            name.title = "Mr."
+            name.first_name = 'Wile'
+            name.surname = 'Coyote'
+            name.surname_prefix = 'E.'
+            name.title = 'Mr.'
 
             customer = PayoutCustomer()
             customer.address = address
@@ -65,7 +65,7 @@ class CreatePayoutExample(object):
             customer.name = name
 
             references = PayoutReferences()
-            references.merchant_reference = "AcmeOrder001"
+            references.merchant_reference = 'AcmeOrder001'
 
             payout_details = PayoutDetails()
             payout_details.amount_of_money = amount_of_money
@@ -77,11 +77,11 @@ class CreatePayoutExample(object):
             body.payout_details = payout_details
 
             try:
-                response = client.v1().merchant("merchantId").payouts().create(body)
+                response = client.v1().merchant('merchantId').payouts().create(body)
             except DeclinedPayoutException as e:
                 self.handle_declined_payout(e.payout_result)
             except ApiException as e:
-                self.handle_api_errors(e.errors)
+                self.handle_error_response(e.error_id, e.errors)
 
     @staticmethod
     def __get_client():
@@ -97,6 +97,6 @@ class CreatePayoutExample(object):
         pass
 
     @staticmethod
-    def handle_api_errors(errors):
-        # handle the errors here
+    def handle_error_response(error_id, errors):
+        # handle the error response here
         pass

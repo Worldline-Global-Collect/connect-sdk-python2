@@ -13,9 +13,9 @@ class DeleteTokenExample(object):
     def example(self):
         with self.__get_client() as client:
             query = DeleteTokenParams()
-            query.mandate_cancel_date = "20150102"
+            query.mandate_cancel_date = '20150102'
 
-            client.v1().merchant("merchantId").tokens().delete("tokenId", query)
+            client.v1().merchant('merchantId').tokens().delete('tokenId', query)
 
     @staticmethod
     def __get_client():

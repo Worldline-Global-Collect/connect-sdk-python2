@@ -11,7 +11,7 @@ class ProcessChallengedPaymentExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").payments().processchallenged("paymentId")
+            response = client.v1().merchant('merchantId').payments().processchallenged('paymentId')
 
     @staticmethod
     def __get_client():

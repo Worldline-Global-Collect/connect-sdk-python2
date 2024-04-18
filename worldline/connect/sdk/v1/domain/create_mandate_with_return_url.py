@@ -14,7 +14,7 @@ class CreateMandateWithReturnUrl(CreateMandateBase):
     def return_url(self):
         """
         | Return URL to use if the mandate signing requires redirection.
-        
+
         Type: str
         """
         return self.__return_url

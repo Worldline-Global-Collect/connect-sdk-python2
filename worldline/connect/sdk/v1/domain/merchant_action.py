@@ -38,7 +38,7 @@ class MerchantAction(DataObject):
         * SHOW_TRANSACTION_RESULTS - The customer needs to be shown the transaction results using the details found in showData
         * MOBILE_THREEDS_CHALLENGE - The customer needs to complete a challenge as part of the 3D Secure authentication inside your mobile app. The details contained in mobileThreeDSecureChallengeParameters need to be provided to the EMVco certified Mobile SDK as a challengeParameters object.
         * CALL_THIRD_PARTY - The merchant needs to call a third party using the data found in thirdPartyData
-        
+
         Type: str
         """
         return self.__action_type
@@ -51,7 +51,7 @@ class MerchantAction(DataObject):
     def form_fields(self):
         """
         | Populated only when the actionType of the merchantAction is SHOW_FORM. In this case, this property contains the list of fields to render, in the format that is also used in the response of Get payment product <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/products/get.html>.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.payment_product_field.PaymentProductField`]
         """
         return self.__form_fields
@@ -64,7 +64,7 @@ class MerchantAction(DataObject):
     def mobile_three_d_secure_challenge_parameters(self):
         """
         | Populated only when the actionType of the merchantAction is MOBILE_THREEDS_CHALLENGE. In this case, this object contains the list of properties to provide to the EMVco certified Mobile SDK as a challengeParameters object.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mobile_three_d_secure_challenge_parameters.MobileThreeDSecureChallengeParameters`
         """
         return self.__mobile_three_d_secure_challenge_parameters
@@ -77,7 +77,7 @@ class MerchantAction(DataObject):
     def redirect_data(self):
         """
         | Object containing all data needed to redirect the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_data.RedirectData`
         """
         return self.__redirect_data
@@ -103,7 +103,7 @@ class MerchantAction(DataObject):
         | You can offer a link to a customer to see an instructions page for a payment done earlier. Because of the size of the instructionsRenderingData this will need to be set in a web form as a value of a hidden field. Before presenting the link you need to obtain a clientSessionId by creating a session using the S2S API. You will need to use the MyCheckout hosted payment pages domain hosted in the same region as the API domain used for the createClientSession call.
         
         | The instructionsRenderingData is a String blob that is presented to you via the Server API as part of the merchantAction (if available, and non-redirect) in the JSON return values for the createPayment call or the getHostedCheckoutStatus call (merchantAction inside createdPaymentOutput when available).You are responsible to store the instructionsRenderingData blob in order to be able to present the instructions page at a later time, when this information might no longer be available through Server API calls.
-        
+
         Type: str
         """
         return self.__rendering_data
@@ -126,7 +126,7 @@ class MerchantAction(DataObject):
         
         * desktopQRCode - contains a QR code that can be used to complete the payment in the WeChat app. In this case, the key QRCODE contains a base64 encoded PNG image. By prepending 'data:image/png;base64,' this value can be used as the source of an HTML inline image on a desktop or tablet (intended to be scanned by a mobile device with the WeChat app).
         * urlIntent - contains a URL intent that can be used to complete the payment in the WeChat app. In this case, the key URLINTENT contains a URL intent that can be used as the link of an 'open the app' button on a mobile device.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.key_value_pair.KeyValuePair`]
         """
         return self.__show_data
@@ -140,7 +140,7 @@ class MerchantAction(DataObject):
         """
         | This is returned for the CALL_THIRD_PARTY actionType.
         | The payment product specific field of the payment product used for the payment will be populated with the third party data that should be used when calling the third party.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.third_party_data.ThirdPartyData`
         """
         return self.__third_party_data

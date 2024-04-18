@@ -18,7 +18,7 @@ class FindRefundsResponse(DataObject):
     def limit(self):
         """
         | The limit you used in the request.
-        
+
         Type: int
         """
         return self.__limit
@@ -31,7 +31,7 @@ class FindRefundsResponse(DataObject):
     def offset(self):
         """
         | The offset you used in the request.
-        
+
         Type: int
         """
         return self.__offset
@@ -44,7 +44,7 @@ class FindRefundsResponse(DataObject):
     def refunds(self):
         """
         | A list of refunds that matched your filter, starting at the given offset and limited to the given limit.
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.refund_result.RefundResult`]
         """
         return self.__refunds
@@ -57,7 +57,7 @@ class FindRefundsResponse(DataObject):
     def total_count(self):
         """
         | The total number of refunds that matched your filter.
-        
+
         Type: int
         """
         return self.__total_count

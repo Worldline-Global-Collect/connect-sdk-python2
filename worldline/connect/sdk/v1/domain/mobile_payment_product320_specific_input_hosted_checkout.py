@@ -17,7 +17,7 @@ class MobilePaymentProduct320SpecificInputHostedCheckout(DataObject):
     def merchant_name(self):
         """
         | Used as an input for the Google Pay payment sheet. Provide your company name in a human readable form.
-        
+
         Type: str
         """
         return self.__merchant_name
@@ -30,7 +30,7 @@ class MobilePaymentProduct320SpecificInputHostedCheckout(DataObject):
     def merchant_origin(self):
         """
         | Used as an input for the Google Pay payment sheet. Provide the url of your webshop. For international (non-ASCII) domains, please use Punycode <https://en.wikipedia.org/wiki/Punycode>.
-        
+
         Type: str
         """
         return self.__merchant_origin
@@ -43,7 +43,7 @@ class MobilePaymentProduct320SpecificInputHostedCheckout(DataObject):
     def three_d_secure(self):
         """
         | Object containing specific data regarding 3-D Secure
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.g_pay_three_d_secure.GPayThreeDSecure`
         """
         return self.__three_d_secure

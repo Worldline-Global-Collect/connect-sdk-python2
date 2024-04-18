@@ -11,7 +11,7 @@ class GetFileExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            headers, chunks = client.v1().merchant("merchantId").files().get_file("fileId")
+            headers, chunks = client.v1().merchant('merchantId').files().get_file('fileId')
             # make sure all chunks are read
             for chunk in chunks:
                 # use the chunk

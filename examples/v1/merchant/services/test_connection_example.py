@@ -11,7 +11,7 @@ class TestConnectionExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").services().testconnection()
+            response = client.v1().merchant('merchantId').services().testconnection()
 
     @staticmethod
     def __get_client():

@@ -31,7 +31,7 @@ class CustomerAccount(DataObject):
     def authentication(self):
         """
         | Object containing data on the authentication used by the customer to access their account
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_account_authentication.CustomerAccountAuthentication`
         """
         return self.__authentication
@@ -44,7 +44,7 @@ class CustomerAccount(DataObject):
     def change_date(self):
         """
         | The last date (YYYYMMDD) on which the customer made changes to their account with you. These are changes to billing & shipping address details, new payment account (tokens), or new users(s) added.
-        
+
         Type: str
         """
         return self.__change_date
@@ -61,7 +61,7 @@ class CustomerAccount(DataObject):
         | false = the customer didn't change anything to their account during this checkout/n
         
         | The changes ment here are changes to billing & shipping address details, new payment account (tokens), or new users(s) added.
-        
+
         Type: bool
         """
         return self.__changed_during_checkout
@@ -74,7 +74,7 @@ class CustomerAccount(DataObject):
     def create_date(self):
         """
         | The date (YYYYMMDD) on which the customer created their account with you
-        
+
         Type: str
         """
         return self.__create_date
@@ -91,7 +91,7 @@ class CustomerAccount(DataObject):
         | true = you have experienced suspicious activity (including previous fraud) on the customer account used for this transaction
         
         | false = you have experienced no suspicious activity (including previous fraud) on the customer account used for this transaction
-        
+
         Type: bool
         """
         return self.__had_suspicious_activity
@@ -107,7 +107,7 @@ class CustomerAccount(DataObject):
         
         * true - The customer has forgotten their password
         * false - The customer has not forgotten their password
-        
+
         Type: bool
         """
         return self.__has_forgotten_password
@@ -123,7 +123,7 @@ class CustomerAccount(DataObject):
         
         * true - The customer has used a password to gain access
         * false - The customer has not used a password to gain access
-        
+
         Type: bool
         """
         return self.__has_password
@@ -136,7 +136,7 @@ class CustomerAccount(DataObject):
     def password_change_date(self):
         """
         | The last date (YYYYMMDD) on which the customer changed their password for the account used in this transaction
-        
+
         Type: str
         """
         return self.__password_change_date
@@ -153,7 +153,7 @@ class CustomerAccount(DataObject):
         | true = the customer made changes to their password of the account used during this checkout
         
         | alse = the customer didn't change anything to their password of the account used during this checkout
-        
+
         Type: bool
         """
         return self.__password_changed_during_checkout
@@ -166,7 +166,7 @@ class CustomerAccount(DataObject):
     def payment_account_on_file(self):
         """
         | Object containing information on the payment account data on file (tokens)
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_account_on_file.PaymentAccountOnFile`
         """
         return self.__payment_account_on_file
@@ -183,7 +183,7 @@ class CustomerAccount(DataObject):
         * not-applicable = the card used doesn't support multiple card products
         * credit = the card used is a credit card
         * debit = the card used is a debit card
-        
+
         Type: str
         """
         return self.__payment_account_on_file_type
@@ -196,7 +196,7 @@ class CustomerAccount(DataObject):
     def payment_activity(self):
         """
         | Object containing data on the purchase history of the customer with you
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.customer_payment_activity.CustomerPaymentActivity`
         """
         return self.__payment_activity

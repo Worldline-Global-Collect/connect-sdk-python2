@@ -14,7 +14,7 @@ class GetDeviceFingerprintForGroupsExample(object):
         with self.__get_client() as client:
             body = DeviceFingerprintRequest()
 
-            response = client.v1().merchant("merchantId").productgroups().device_fingerprint("cards", body)
+            response = client.v1().merchant('merchantId').productgroups().device_fingerprint('cards', body)
 
     @staticmethod
     def __get_client():

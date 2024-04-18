@@ -15,7 +15,7 @@ class SepaDirectDebitPaymentMethodSpecificInputBase(AbstractSepaDirectDebitPayme
     def payment_product771_specific_input(self):
         """
         | Object containing information specific to SEPA Direct Debit
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.sepa_direct_debit_payment_product771_specific_input_base.SepaDirectDebitPaymentProduct771SpecificInputBase`
         """
         return self.__payment_product771_specific_input

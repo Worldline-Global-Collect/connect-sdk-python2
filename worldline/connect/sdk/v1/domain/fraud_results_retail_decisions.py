@@ -17,7 +17,7 @@ class FraudResultsRetailDecisions(DataObject):
         """
         | Result of the fraud service.
         | Provides additional information about the fraud result
-        
+
         Type: str
         """
         return self.__fraud_code
@@ -30,7 +30,7 @@ class FraudResultsRetailDecisions(DataObject):
     def fraud_neural(self):
         """
         | Returns the raw score of the neural
-        
+
         Type: str
         """
         return self.__fraud_neural
@@ -44,7 +44,7 @@ class FraudResultsRetailDecisions(DataObject):
         """
         | Result of the fraud service
         | Represent sets of fraud rules returned during the evaluation of the transaction
-        
+
         Type: str
         """
         return self.__fraud_rcf

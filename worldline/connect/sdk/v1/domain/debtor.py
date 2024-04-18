@@ -27,7 +27,7 @@ class Debtor(DataObject):
     def additional_address_info(self):
         """
         | Additional information about the debtor's address, like Suite II, Apartment 2a
-        
+
         Type: str
         """
         return self.__additional_address_info
@@ -40,7 +40,7 @@ class Debtor(DataObject):
     def city(self):
         """
         | City of the debtor's address
-        
+
         Type: str
         """
         return self.__city
@@ -53,7 +53,7 @@ class Debtor(DataObject):
     def country_code(self):
         """
         | ISO 3166-1 alpha-2 country code of the debtor's address
-        
+
         Type: str
         """
         return self.__country_code
@@ -66,7 +66,7 @@ class Debtor(DataObject):
     def first_name(self):
         """
         | Debtor first name
-        
+
         Type: str
         """
         return self.__first_name
@@ -79,7 +79,7 @@ class Debtor(DataObject):
     def house_number(self):
         """
         | House number of the debtor's address
-        
+
         Type: str
         """
         return self.__house_number
@@ -92,7 +92,7 @@ class Debtor(DataObject):
     def state(self):
         """
         | State of debtor address
-        
+
         Type: str
         """
         return self.__state
@@ -109,7 +109,7 @@ class Debtor(DataObject):
         
         * The maximum length for 3-D Secure version 2 is AN3.
         * The maximum length for paymentProductId 1503 (Boleto) is AN2.
-        
+
         Type: str
         """
         return self.__state_code
@@ -122,7 +122,7 @@ class Debtor(DataObject):
     def street(self):
         """
         | Street of debtor's address
-        
+
         Type: str
         """
         return self.__street
@@ -135,7 +135,7 @@ class Debtor(DataObject):
     def surname(self):
         """
         | Debtor's last name
-        
+
         Type: str
         """
         return self.__surname
@@ -148,7 +148,7 @@ class Debtor(DataObject):
     def surname_prefix(self):
         """
         | Prefix of the debtor's last name
-        
+
         Type: str
         """
         return self.__surname_prefix
@@ -161,7 +161,7 @@ class Debtor(DataObject):
     def zip(self):
         """
         | ZIP code of the debtor's address
-        
+
         Type: str
         """
         return self.__zip

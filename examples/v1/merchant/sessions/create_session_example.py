@@ -13,16 +13,16 @@ class CreateSessionExample(object):
     def example(self):
         with self.__get_client() as client:
             tokens = []
-            tokens.append("126166b16ed04b3ab85fb06da1d7a167")
-            tokens.append("226166b16ed04b3ab85fb06da1d7a167")
-            tokens.append("122c5b4d-dd40-49f0-b7c9-3594212167a9")
-            tokens.append("326166b16ed04b3ab85fb06da1d7a167")
-            tokens.append("426166b16ed04b3ab85fb06da1d7a167")
+            tokens.append('126166b16ed04b3ab85fb06da1d7a167')
+            tokens.append('226166b16ed04b3ab85fb06da1d7a167')
+            tokens.append('122c5b4d-dd40-49f0-b7c9-3594212167a9')
+            tokens.append('326166b16ed04b3ab85fb06da1d7a167')
+            tokens.append('426166b16ed04b3ab85fb06da1d7a167')
 
             body = SessionRequest()
             body.tokens = tokens
 
-            response = client.v1().merchant("merchantId").sessions().create(body)
+            response = client.v1().merchant('merchantId').sessions().create(body)
 
     @staticmethod
     def __get_client():

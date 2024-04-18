@@ -15,7 +15,7 @@ class RiskAssessmentCard(RiskAssessment):
     def card(self):
         """
         | Object containing Card object
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card.Card`
         """
         return self.__card

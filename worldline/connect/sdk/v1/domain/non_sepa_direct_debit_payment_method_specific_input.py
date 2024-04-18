@@ -25,7 +25,7 @@ class NonSepaDirectDebitPaymentMethodSpecificInput(AbstractPaymentMethodSpecific
         """
         | Direct Debit payment collection date
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__date_collect
@@ -38,7 +38,7 @@ class NonSepaDirectDebitPaymentMethodSpecificInput(AbstractPaymentMethodSpecific
     def direct_debit_text(self):
         """
         | Descriptor intended to identify the transaction on the customer's bank statement
-        
+
         Type: str
         """
         return self.__direct_debit_text
@@ -54,7 +54,7 @@ class NonSepaDirectDebitPaymentMethodSpecificInput(AbstractPaymentMethodSpecific
         
         * true - This is recurring
         * false - This is one-off
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -67,7 +67,7 @@ class NonSepaDirectDebitPaymentMethodSpecificInput(AbstractPaymentMethodSpecific
     def payment_product705_specific_input(self):
         """
         | Object containing UK Direct Debit specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.non_sepa_direct_debit_payment_product705_specific_input.NonSepaDirectDebitPaymentProduct705SpecificInput`
         """
         return self.__payment_product705_specific_input
@@ -80,7 +80,7 @@ class NonSepaDirectDebitPaymentMethodSpecificInput(AbstractPaymentMethodSpecific
     def payment_product730_specific_input(self):
         """
         | Object containing ACH specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.non_sepa_direct_debit_payment_product730_specific_input.NonSepaDirectDebitPaymentProduct730SpecificInput`
         """
         return self.__payment_product730_specific_input
@@ -95,7 +95,7 @@ class NonSepaDirectDebitPaymentMethodSpecificInput(AbstractPaymentMethodSpecific
         * first = This transaction is the first of a series of recurring transactions
         * recurring = This transaction is a subsequent transaction in a series of recurring transactions
         * last = This transaction is the last transaction of a series of recurring transactions
-        
+
         Type: str
         """
         return self.__recurring_payment_sequence_indicator
@@ -109,7 +109,7 @@ class NonSepaDirectDebitPaymentMethodSpecificInput(AbstractPaymentMethodSpecific
         """
         * true - The payment requires approval before the funds will be captured using the Approve payment or Capture payment API.
         * false - The payment does not require approval, and the funds will be captured automatically.
-        
+
         Type: bool
         """
         return self.__requires_approval
@@ -122,7 +122,7 @@ class NonSepaDirectDebitPaymentMethodSpecificInput(AbstractPaymentMethodSpecific
     def token(self):
         """
         | ID of the stored token that contains the bank account details to be debited
-        
+
         Type: str
         """
         return self.__token
@@ -138,7 +138,7 @@ class NonSepaDirectDebitPaymentMethodSpecificInput(AbstractPaymentMethodSpecific
         
         * true - Tokenize the transaction
         * false - Do not tokenize the transaction, unless it would be tokenized by other means such as auto-tokenization of recurring payments.
-        
+
         Type: bool
         """
         return self.__tokenize

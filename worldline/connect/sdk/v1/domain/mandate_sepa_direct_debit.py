@@ -15,7 +15,7 @@ class MandateSepaDirectDebit(MandateSepaDirectDebitWithMandateId):
     def creditor(self):
         """
         | Object containing information on the creditor
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.creditor.Creditor`
         """
         return self.__creditor

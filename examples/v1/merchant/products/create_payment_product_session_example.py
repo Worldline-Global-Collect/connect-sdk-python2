@@ -14,14 +14,14 @@ class CreatePaymentProductSessionExample(object):
     def example(self):
         with self.__get_client() as client:
             payment_product_session302_specific_input = MobilePaymentProductSession302SpecificInput()
-            payment_product_session302_specific_input.display_name = "Worldline"
-            payment_product_session302_specific_input.domain_name = "pay1.checkout.worldline-solutions.com"
-            payment_product_session302_specific_input.validation_url = "<VALIDATION URL RECEIVED FROM APPLE>"
+            payment_product_session302_specific_input.display_name = 'Worldline'
+            payment_product_session302_specific_input.domain_name = 'pay1.checkout.worldline-solutions.com'
+            payment_product_session302_specific_input.validation_url = '<VALIDATION URL RECEIVED FROM APPLE>'
 
             body = CreatePaymentProductSessionRequest()
             body.payment_product_session302_specific_input = payment_product_session302_specific_input
 
-            response = client.v1().merchant("merchantId").products().sessions(302, body)
+            response = client.v1().merchant('merchantId').products().sessions(302, body)
 
     @staticmethod
     def __get_client():

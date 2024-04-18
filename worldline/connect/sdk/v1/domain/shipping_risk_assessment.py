@@ -20,7 +20,7 @@ class ShippingRiskAssessment(DataObject):
     def address(self):
         """
         | Object containing address information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.address_personal.AddressPersonal`
         """
         return self.__address
@@ -33,7 +33,7 @@ class ShippingRiskAssessment(DataObject):
     def comments(self):
         """
         | Comments included during shipping
-        
+
         Type: str
         """
         return self.__comments
@@ -46,7 +46,7 @@ class ShippingRiskAssessment(DataObject):
     def tracking_number(self):
         """
         | Shipment tracking number
-        
+
         Type: str
         """
         return self.__tracking_number

@@ -15,7 +15,7 @@ class KeyValuePair(DataObject):
     def key(self):
         """
         | Name of the key or property
-        
+
         Type: str
         """
         return self.__key
@@ -28,7 +28,7 @@ class KeyValuePair(DataObject):
     def value(self):
         """
         | Value of the key or property
-        
+
         Type: str
         """
         return self.__value

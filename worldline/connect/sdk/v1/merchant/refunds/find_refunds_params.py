@@ -10,7 +10,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class FindRefundsParams(ParamRequest):
     """
     Query parameters for Find refunds
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/refunds/find.html
     """
 
@@ -24,7 +24,7 @@ class FindRefundsParams(ParamRequest):
     def hosted_checkout_id(self):
         """
         | Your hosted checkout identifier to filter on.
-        
+
         Type: str
         """
         return self.__hosted_checkout_id
@@ -37,7 +37,7 @@ class FindRefundsParams(ParamRequest):
     def merchant_reference(self):
         """
         | Your unique transaction reference to filter on.
-        
+
         Type: str
         """
         return self.__merchant_reference
@@ -50,7 +50,7 @@ class FindRefundsParams(ParamRequest):
     def merchant_order_id(self):
         """
         | Your order identifier to filter on.
-        
+
         Type: long
         """
         return self.__merchant_order_id
@@ -63,7 +63,7 @@ class FindRefundsParams(ParamRequest):
     def offset(self):
         """
         | The zero-based index of the first refund in the result. If omitted, the offset will be 0.
-        
+
         Type: int
         """
         return self.__offset
@@ -76,7 +76,7 @@ class FindRefundsParams(ParamRequest):
     def limit(self):
         """
         | The maximum number of refunds to return, with a maximum of 100. If omitted, the limit will be 10.
-        
+
         Type: int
         """
         return self.__limit

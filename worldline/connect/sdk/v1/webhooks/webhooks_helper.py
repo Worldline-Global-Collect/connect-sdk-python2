@@ -22,8 +22,8 @@ class WebhooksHelper(object):
         """
         Unmarshals the given body, while also validating it using the given request headers.
 
-        :raise: SignatureValidationException: If the body could not be validated successfully.
-        :raise: ApiVersionMismatchException: If the resulting event has an API
+        :raise SignatureValidationException: If the body could not be validated successfully.
+        :raise ApiVersionMismatchException: If the resulting event has an API
          version that this version of the SDK does not support.
         :return: The body unmarshalled as a WebhooksEvent.
         """

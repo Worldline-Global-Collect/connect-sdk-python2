@@ -16,7 +16,7 @@ class RefundCardMethodSpecificOutput(RefundMethodSpecificOutput):
     def authorisation_code(self):
         """
         | Card Authorization code as returned by the acquirer
-        
+
         Type: str
         """
         return self.__authorisation_code
@@ -29,7 +29,7 @@ class RefundCardMethodSpecificOutput(RefundMethodSpecificOutput):
     def card(self):
         """
         | Object containing card details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.card_essentials.CardEssentials`
         """
         return self.__card

@@ -26,7 +26,7 @@ class ResultDoRiskAssessment(DataObject):
         * ddFraudCheck - Check performed for German market via InterCard
         * validationbankAccount - Bank account details are algorithmically checked if they could exist
         * globalcollectBlacklistCheckDD - Checked against the blacklist on the GlobalCollect platform
-        
+
         Type: str
         """
         return self.__category
@@ -45,7 +45,7 @@ class ResultDoRiskAssessment(DataObject):
         * denied - Based on the checks performed the transaction should be rejected
         * no-advice - No fraud check was requested/performed
         * error - The fraud check resulted in an error and the fraud check was thus not performed
-        
+
         Type: str
         """
         return self.__result
@@ -58,7 +58,7 @@ class ResultDoRiskAssessment(DataObject):
     def retaildecisions_cc_fraud_check_output(self):
         """
         | Object containing the results of the fraud checks performed by Retail Decisions
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.retail_decisions_cc_fraud_check_output.RetailDecisionsCCFraudCheckOutput`
         """
         return self.__retaildecisions_cc_fraud_check_output
@@ -71,7 +71,7 @@ class ResultDoRiskAssessment(DataObject):
     def validation_bank_account_output(self):
         """
         | Object containing the results of the fraud checks performed on the bank account data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.validation_bank_account_output.ValidationBankAccountOutput`
         """
         return self.__validation_bank_account_output

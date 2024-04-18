@@ -24,7 +24,7 @@ class Installments(DataObject):
         """
         | The amount that will be paid per installment. The total amount of amountOfMoneyPerInstallment x numberOfInstallments can not be higher than the total amount of this transaction, although we will not validate that.
         | For the payment product IDs BC Card (paymentProductId 8590), Hana Card (paymentProductId 8591), Hyundai Card (paymentProductId 8592), KB Card (paymentProductId 8593), Lotte Card (paymentProductId 8594), NH Card (paymentProductId 8595), Samsung Card (paymentProductId 8596) and Shinhan Card (paymentProductId 8597), this property is not used as the value is decided by the issuer.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money_per_installment
@@ -37,7 +37,7 @@ class Installments(DataObject):
     def amount_of_money_total(self):
         """
         | Object containing the total amount and ISO currency code attributes
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money_total
@@ -58,7 +58,7 @@ class Installments(DataObject):
         
         
         | For the payment product IDs BC Card (paymentProductId 8590), Hana Card (paymentProductId 8591), Hyundai Card (paymentProductId 8592), KB Card (paymentProductId 8593), Lotte Card (paymentProductId 8594), NH Card (paymentProductId 8595), Samsung Card (paymentProductId 8596) and Shinhan Card (paymentProductId 8597), only the value monthly is valid.
-        
+
         Type: str
         """
         return self.__frequency_of_installments
@@ -76,7 +76,7 @@ class Installments(DataObject):
         * **46**No-interest, 6 month Installmentplan
         * **49**No-interest, 9 month Installmentplan
         * **52**No-interest, 12 month Installmentplan
-        
+
         Type: int
         """
         return self.__installment_plan_code
@@ -90,7 +90,7 @@ class Installments(DataObject):
         """
         | The interest rate paid for installments expressed in percentage. So for example 5.75 means 5.75%
         | For the payment product IDs BC Card (paymentProductId 8590), Hana Card (paymentProductId 8591), Hyundai Card (paymentProductId 8592), KB Card (paymentProductId 8593), Lotte Card (paymentProductId 8594), NH Card (paymentProductId 8595), Samsung Card (paymentProductId 8596) and Shinhan Card (paymentProductId 8597), this property is not used as the value is decided by the issuer.
-        
+
         Type: str
         """
         return self.__interest_rate
@@ -104,7 +104,7 @@ class Installments(DataObject):
         """
         | The number of installments in which this transaction will be paid, which can be used for card payments at supported acquirers, or with specific payment products. Only used with some acquirers. In case you send in the details of this object, only the payment products (or  combination of card products and acquirers) that support installments will be shown on the MyCheckout hosted payment pages. If this property is not provided the customer will not see details on the installment plan in a HostedCheckout.
         | For the payment product IDs BC Card (paymentProductId 8590), Hana Card (paymentProductId 8591), Hyundai Card (paymentProductId 8592), KB Card (paymentProductId 8593), Lotte Card (paymentProductId 8594), NH Card (paymentProductId 8595), Samsung Card (paymentProductId 8596) and Shinhan Card (paymentProductId 8597), there is a maximum of 12 installments.
-        
+
         Type: long
         """
         return self.__number_of_installments

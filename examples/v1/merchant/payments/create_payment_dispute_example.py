@@ -15,16 +15,16 @@ class CreatePaymentDisputeExample(object):
         with self.__get_client() as client:
             amount_of_money = AmountOfMoney()
             amount_of_money.amount = 1234
-            amount_of_money.currency_code = "USD"
+            amount_of_money.currency_code = 'USD'
 
             body = CreateDisputeRequest()
             body.amount_of_money = amount_of_money
-            body.contact_person = "Wile Coyote"
-            body.email_address = "wile.e.coyote@acmelabs.com"
-            body.reply_to = "r.runner@acmelabs.com"
-            body.request_message = "This is the message from the merchant to GlobalCollect. It is a a freeform text field."
+            body.contact_person = 'Wile Coyote'
+            body.email_address = 'wile.e.coyote@acmelabs.com'
+            body.reply_to = 'r.runner@acmelabs.com'
+            body.request_message = 'This is the message from the merchant to GlobalCollect. It is a a freeform text field.'
 
-            response = client.v1().merchant("merchantId").payments().dispute("paymentId", body)
+            response = client.v1().merchant('merchantId').payments().dispute('paymentId', body)
 
     @staticmethod
     def __get_client():

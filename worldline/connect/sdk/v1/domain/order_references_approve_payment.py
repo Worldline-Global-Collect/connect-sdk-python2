@@ -14,7 +14,7 @@ class OrderReferencesApprovePayment(DataObject):
     def merchant_reference(self):
         """
         | Your (unique) reference for the transaction that you can use to reconcile our report files
-        
+
         Type: str
         """
         return self.__merchant_reference

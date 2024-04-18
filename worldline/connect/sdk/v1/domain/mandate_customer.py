@@ -22,7 +22,7 @@ class MandateCustomer(DataObject):
     def bank_account_iban(self):
         """
         | Object containing IBAN information
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban`
         """
         return self.__bank_account_iban
@@ -35,7 +35,7 @@ class MandateCustomer(DataObject):
     def company_name(self):
         """
         | Name of company, as a customer
-        
+
         Type: str
         """
         return self.__company_name
@@ -48,7 +48,7 @@ class MandateCustomer(DataObject):
     def contact_details(self):
         """
         | Object containing contact details like email address and phone number
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_contact_details.MandateContactDetails`
         """
         return self.__contact_details
@@ -61,7 +61,7 @@ class MandateCustomer(DataObject):
     def mandate_address(self):
         """
         | Object containing billing address details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_address.MandateAddress`
         """
         return self.__mandate_address
@@ -74,7 +74,7 @@ class MandateCustomer(DataObject):
     def personal_information(self):
         """
         | Object containing personal information of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_personal_information.MandatePersonalInformation`
         """
         return self.__personal_information

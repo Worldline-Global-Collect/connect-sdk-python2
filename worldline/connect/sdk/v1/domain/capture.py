@@ -18,7 +18,7 @@ class Capture(AbstractOrderStatus):
     def capture_output(self):
         """
         | Object containing capture details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.capture_output.CaptureOutput`
         """
         return self.__capture_output
@@ -40,7 +40,7 @@ class Capture(AbstractOrderStatus):
         
         
         | Please see Statuses <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html> for a full overview of possible values.
-        
+
         Type: str
         """
         return self.__status
@@ -54,7 +54,7 @@ class Capture(AbstractOrderStatus):
         """
         | This object has the numeric representation of the current capture status, timestamp of last status change and performable action on the current payment resource.
         | In case of failed payments and negative scenarios, detailed error information is listed.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.capture_status_output.CaptureStatusOutput`
         """
         return self.__status_output

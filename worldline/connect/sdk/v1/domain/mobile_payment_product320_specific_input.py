@@ -17,7 +17,7 @@ class MobilePaymentProduct320SpecificInput(DataObject):
         """
         | The card holder's name on the card.
         | The encrypted payment data can be found in property paymentMethodData.tokenizationData.info.billingAddress.name of the PaymentData <https://developers.google.com/android/reference/com/google/android/gms/wallet/PaymentData>.toJson() result.
-        
+
         Type: str
         """
         return self.__cardholder_name
@@ -30,7 +30,7 @@ class MobilePaymentProduct320SpecificInput(DataObject):
     def three_d_secure(self):
         """
         | Object containing specific data regarding 3-D Secure
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.g_pay_three_d_secure.GPayThreeDSecure`
         """
         return self.__three_d_secure

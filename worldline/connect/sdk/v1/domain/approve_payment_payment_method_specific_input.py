@@ -16,7 +16,7 @@ class ApprovePaymentPaymentMethodSpecificInput(DataObject):
         """
         | The desired date for the collection
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__date_collect
@@ -29,7 +29,7 @@ class ApprovePaymentPaymentMethodSpecificInput(DataObject):
     def token(self):
         """
         | Token containing tokenized bank account details
-        
+
         Type: str
         """
         return self.__token

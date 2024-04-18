@@ -11,7 +11,7 @@ class GetHostedCheckoutExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").hostedcheckouts().get("hostedCheckoutId")
+            response = client.v1().merchant('merchantId').hostedcheckouts().get('hostedCheckoutId')
 
     @staticmethod
     def __get_client():

@@ -11,7 +11,7 @@ class GetTokenExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").tokens().get("tokenId")
+            response = client.v1().merchant('merchantId').tokens().get('tokenId')
 
     @staticmethod
     def __get_client():

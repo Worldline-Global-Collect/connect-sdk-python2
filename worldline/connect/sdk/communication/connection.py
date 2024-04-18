@@ -19,7 +19,7 @@ class Connection(LoggingCapable, ObfuscationCapable):
         :param request_headers: An optional sequence of request headers.
         :return: The response from the Worldline Global Collect platform as a tuple with
          the status code, headers and a generator of body chunks
-        :raise: CommunicationException when an exception occurred communicating
+        :raise CommunicationException: when an exception occurred communicating
          with the Worldline Global Collect platform
         """
         raise NotImplementedError
@@ -33,7 +33,7 @@ class Connection(LoggingCapable, ObfuscationCapable):
         :param request_headers: An optional sequence of request headers.
         :return: The response from the Worldline Global Collect platform as a tuple with
          the status code, headers and a generator of body chunks
-        :raise: CommunicationException when an exception occurred communicating
+        :raise CommunicationException: when an exception occurred communicating
          with the Worldline Global Collect platform
         """
         raise NotImplementedError
@@ -48,7 +48,7 @@ class Connection(LoggingCapable, ObfuscationCapable):
         :param body: The optional body to send.
         :return: The response from the Worldline Global Collect platform as a tuple with
          the status code, headers and a generator of body chunks
-        :raise: CommunicationException when an exception occurred communicating
+        :raise CommunicationException: when an exception occurred communicating
          with the Worldline Global Collect platform
         """
         raise NotImplementedError
@@ -63,7 +63,7 @@ class Connection(LoggingCapable, ObfuscationCapable):
         :param body: The optional body to send.
         :return: The response from the Worldline Global Collect platform as a tuple with
          the status code, headers and a generator of body chunks
-        :raise: CommunicationException when an exception occurred communicating
+        :raise CommunicationException: when an exception occurred communicating
          with the Worldline Global Collect platform
         """
         raise NotImplementedError

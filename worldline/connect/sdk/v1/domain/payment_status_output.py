@@ -19,7 +19,7 @@ class PaymentStatusOutput(OrderStatusOutput):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_authorized
@@ -35,7 +35,7 @@ class PaymentStatusOutput(OrderStatusOutput):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__is_refundable
@@ -57,7 +57,7 @@ class PaymentStatusOutput(OrderStatusOutput):
         * NOT_PARTICIPATING: the cardholder has not set up their card for 2-step 3D Secure.
         
         | Note that this status will only be set for payments that make use of 2-step 3D Secure.
-        
+
         Type: str
         """
         return self.__three_d_secure_status

@@ -14,10 +14,10 @@ from worldline.connect.sdk.v1.v1_client import V1Client
 class Client(ApiResource, LoggingCapable, ObfuscationCapable):
     """
     Worldline Global Collect platform client.
-    
+
     This client and all its child clients are bound to one specific value for the X-GCS-ClientMetaInfo header.
     To get a new client with a different header value, use with_client_meta_info.
-    
+
     Thread-safe.
     """
 
@@ -33,7 +33,7 @@ class Client(ApiResource, LoggingCapable, ObfuscationCapable):
         """
         :param client_meta_info: JSON string containing the metadata for the client
         :return: a new Client which uses the passed metadata for the X-GCS-ClientMetaInfo header.
-        :raise: MarshallerSyntaxException if the given clientMetaInfo is not a valid JSON string
+        :raise MarshallerSyntaxException: if the given clientMetaInfo is not a valid JSON string
         """
         if self._client_meta_info is None and client_meta_info is None:
             return self

@@ -15,7 +15,7 @@ class BoletoBancarioRequirednessValidator(DataObject):
         """
         | When performing a payment with Boleto Bancario, some values are only required when the fiscalnumber has a specific length. The length the fiscalnumber has to have to make the field required is defined here.
         | For example the CompanyName is required when the fiscalnumber is a CNPJ. The firstname and surname are required when the fiscalnumber is a CPF.
-        
+
         Type: int
         """
         return self.__fiscal_number_length

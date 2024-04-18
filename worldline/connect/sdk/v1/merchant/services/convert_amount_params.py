@@ -10,7 +10,7 @@ from worldline.connect.sdk.communication.request_param import RequestParam
 class ConvertAmountParams(ParamRequest):
     """
     Query parameters for Convert amount
-    
+
     See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/services/convertAmount.html
     """
 
@@ -22,7 +22,7 @@ class ConvertAmountParams(ParamRequest):
     def source(self):
         """
         | Three-letter ISO currency code representing the source currency
-        
+
         Type: str
         """
         return self.__source
@@ -35,7 +35,7 @@ class ConvertAmountParams(ParamRequest):
     def target(self):
         """
         | Three-letter ISO currency code representing the target currency
-        
+
         Type: str
         """
         return self.__target
@@ -48,7 +48,7 @@ class ConvertAmountParams(ParamRequest):
     def amount(self):
         """
         | Amount to be converted in cents and always having 2 decimals
-        
+
         Type: long
         """
         return self.__amount

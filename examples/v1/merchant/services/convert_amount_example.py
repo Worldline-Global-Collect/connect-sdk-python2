@@ -13,11 +13,11 @@ class ConvertAmountExample(object):
     def example(self):
         with self.__get_client() as client:
             query = ConvertAmountParams()
-            query.source = "EUR"
-            query.target = "USD"
+            query.source = 'EUR'
+            query.target = 'USD'
             query.amount = 100
 
-            response = client.v1().merchant("merchantId").services().convert_amount(query)
+            response = client.v1().merchant('merchantId').services().convert_amount(query)
 
     @staticmethod
     def __get_client():

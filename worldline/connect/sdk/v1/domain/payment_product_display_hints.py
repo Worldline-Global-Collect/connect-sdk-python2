@@ -16,7 +16,7 @@ class PaymentProductDisplayHints(DataObject):
     def display_order(self):
         """
         | Determines the order in which the payment products and groups should be shown (sorted ascending)
-        
+
         Type: int
         """
         return self.__display_order
@@ -29,7 +29,7 @@ class PaymentProductDisplayHints(DataObject):
     def label(self):
         """
         | Name of the field based on the locale that was included in the request
-        
+
         Type: str
         """
         return self.__label
@@ -42,7 +42,7 @@ class PaymentProductDisplayHints(DataObject):
     def logo(self):
         """
         | Partial URL that you can reference for the image of this payment product. You can use our server-side resize functionality by appending '?size={{width}}x{{height}}' to the full URL, where width and height are specified in pixels. The resized image will always keep its correct aspect ratio.
-        
+
         Type: str
         """
         return self.__logo

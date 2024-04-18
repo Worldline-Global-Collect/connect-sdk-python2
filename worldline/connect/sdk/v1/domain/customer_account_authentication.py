@@ -25,7 +25,7 @@ class CustomerAccountAuthentication(DataObject):
         * fido-authentication, then this element can carry the FIDO attestation data (including the signature).
         * fido-authentication-with-signed-assurance-data, then this element can carry FIDO Attestation data with the FIDO assurance data signed.
         * src-assurance-data, then this element can carry the SRC assurance data
-        
+
         Type: str
         """
         return self.__data
@@ -48,7 +48,7 @@ class CustomerAccountAuthentication(DataObject):
         * fido-authentication = the customer logged in using a FIDO authenticator
         * fido-authentication-with-signed-assurance-data = the customer logged in using a FIDO authenticator which also provides signed assurance data
         * src-assurance-data = the customer authenticated themselves during a Secure Remote Commerce session
-        
+
         Type: str
         """
         return self.__method
@@ -61,7 +61,7 @@ class CustomerAccountAuthentication(DataObject):
     def utc_timestamp(self):
         """
         | Timestamp (YYYYMMDDHHmm) of the authentication of the customer to their account with you
-        
+
         Type: str
         """
         return self.__utc_timestamp

@@ -11,7 +11,7 @@ class GetDisputeExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").disputes().get("disputeId")
+            response = client.v1().merchant('merchantId').disputes().get('disputeId')
 
     @staticmethod
     def __get_client():

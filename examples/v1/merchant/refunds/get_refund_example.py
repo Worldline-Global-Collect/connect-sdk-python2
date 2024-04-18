@@ -11,7 +11,7 @@ class GetRefundExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").refunds().get("refundId")
+            response = client.v1().merchant('merchantId').refunds().get('refundId')
 
     @staticmethod
     def __get_client():

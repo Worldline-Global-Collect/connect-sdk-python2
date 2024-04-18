@@ -13,9 +13,9 @@ class IINDetailsExample(object):
     def example(self):
         with self.__get_client() as client:
             body = GetIINDetailsRequest()
-            body.bin = "4567350000427977"
+            body.bin = '4567350000427977'
 
-            response = client.v1().merchant("merchantId").services().get_iin_details(body)
+            response = client.v1().merchant('merchantId').services().get_iin_details(body)
 
     @staticmethod
     def __get_client():

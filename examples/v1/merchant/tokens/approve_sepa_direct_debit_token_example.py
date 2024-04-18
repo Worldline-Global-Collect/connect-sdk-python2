@@ -13,11 +13,11 @@ class ApproveSepaDirectDebitTokenExample(object):
     def example(self):
         with self.__get_client() as client:
             body = ApproveTokenRequest()
-            body.mandate_signature_date = "20150201"
-            body.mandate_signature_place = "Monument Valley"
+            body.mandate_signature_date = '20150201'
+            body.mandate_signature_place = 'Monument Valley'
             body.mandate_signed = True
 
-            client.v1().merchant("merchantId").tokens().approvesepadirectdebit("tokenId", body)
+            client.v1().merchant('merchantId').tokens().approvesepadirectdebit('tokenId', body)
 
     @staticmethod
     def __get_client():

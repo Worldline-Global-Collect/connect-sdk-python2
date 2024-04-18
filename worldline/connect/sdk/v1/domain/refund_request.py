@@ -22,7 +22,7 @@ class RefundRequest(DataObject):
     def amount_of_money(self):
         """
         | Object containing amount and ISO currency code attributes
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -35,7 +35,7 @@ class RefundRequest(DataObject):
     def bank_refund_method_specific_input(self):
         """
         | Object containing the specific input details for a bank refund
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_refund_method_specific_input.BankRefundMethodSpecificInput`
         """
         return self.__bank_refund_method_specific_input
@@ -48,7 +48,7 @@ class RefundRequest(DataObject):
     def customer(self):
         """
         | Object containing the details of the customer
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_customer.RefundCustomer`
         """
         return self.__customer
@@ -62,7 +62,7 @@ class RefundRequest(DataObject):
         """
         | Refund date
         | Format: YYYYMMDD
-        
+
         Type: str
         """
         return self.__refund_date
@@ -75,7 +75,7 @@ class RefundRequest(DataObject):
     def refund_references(self):
         """
         | Object that holds all reference properties that are linked to this refund
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_references.RefundReferences`
         """
         return self.__refund_references

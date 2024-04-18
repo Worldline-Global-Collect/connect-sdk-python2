@@ -28,7 +28,7 @@ class TrialInformation(DataObject):
         | Note:
         
         | The property order.amountOfMoney should be populated with the amount to be paid during or for the trial period (no-cost or discounted time-constrained trial subscription period).
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money_after_trial
@@ -41,7 +41,7 @@ class TrialInformation(DataObject):
     def end_date(self):
         """
         | The date that the trial period ends in YYYYMMDD format.
-        
+
         Type: str
         """
         return self.__end_date
@@ -56,7 +56,7 @@ class TrialInformation(DataObject):
         | The property specifying if there will be recurring charges throughout the trial period (when the trial period involves a temporary discounted rate).
         | True = there will be recurring charges during the trial period
         | False = there will not be recurring charges during the trial period
-        
+
         Type: bool
         """
         return self.__is_recurring
@@ -69,7 +69,7 @@ class TrialInformation(DataObject):
     def trial_period(self):
         """
         | The object containing information on the trial period duration and the interval between payments during that period.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.trial_period.TrialPeriod`
         """
         return self.__trial_period
@@ -88,7 +88,7 @@ class TrialInformation(DataObject):
         | This object should only be populated if the frequency of recurring payments between the trial and regular periods is different.
         
         | If you do not populated this object, then the same interval frequency and interval of recurringPaymentsData.recurringInterval will be used
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.frequency.Frequency`
         """
         return self.__trial_period_recurring

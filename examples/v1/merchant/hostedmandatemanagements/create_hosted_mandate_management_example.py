@@ -15,20 +15,20 @@ class CreateHostedMandateManagementExample(object):
     def example(self):
         with self.__get_client() as client:
             create_mandate_info = HostedMandateInfo()
-            create_mandate_info.customer_reference = "idonthaveareference"
-            create_mandate_info.recurrence_type = "RECURRING"
-            create_mandate_info.signature_type = "UNSIGNED"
+            create_mandate_info.customer_reference = 'idonthaveareference'
+            create_mandate_info.recurrence_type = 'RECURRING'
+            create_mandate_info.signature_type = 'UNSIGNED'
 
             hosted_mandate_management_specific_input = HostedMandateManagementSpecificInput()
-            hosted_mandate_management_specific_input.locale = "fr_FR"
-            hosted_mandate_management_specific_input.return_url = "http://www.example.com"
-            hosted_mandate_management_specific_input.variant = "101"
+            hosted_mandate_management_specific_input.locale = 'fr_FR'
+            hosted_mandate_management_specific_input.return_url = 'http://www.example.com'
+            hosted_mandate_management_specific_input.variant = '101'
 
             body = CreateHostedMandateManagementRequest()
             body.create_mandate_info = create_mandate_info
             body.hosted_mandate_management_specific_input = hosted_mandate_management_specific_input
 
-            response = client.v1().merchant("merchantId").hostedmandatemanagements().create(body)
+            response = client.v1().merchant('merchantId').hostedmandatemanagements().create(body)
 
     @staticmethod
     def __get_client():

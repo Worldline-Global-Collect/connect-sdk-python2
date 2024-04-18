@@ -19,7 +19,7 @@ class CreateTokenResponse(DataObject):
         
         * true - A new token was created
         * false - A token with the same card number already exists and is returned. Please note that the existing token has not been updated. When you want to update other data then the card number, you need to use the update API call, as data is never updated during the creation of a token.
-        
+
         Type: bool
         """
         return self.__is_new_token
@@ -32,7 +32,7 @@ class CreateTokenResponse(DataObject):
     def original_payment_id(self):
         """
         | The initial Payment ID of the transaction from which the token has been created
-        
+
         Type: str
         """
         return self.__original_payment_id
@@ -45,7 +45,7 @@ class CreateTokenResponse(DataObject):
     def token(self):
         """
         | ID of the token
-        
+
         Type: str
         """
         return self.__token

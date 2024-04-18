@@ -18,7 +18,7 @@ class BankRefundMethodSpecificInput(DataObject):
     def bank_account_bban(self):
         """
         | Object that holds the Basic Bank Account Number (BBAN) data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_bban_refund.BankAccountBbanRefund`
         """
         return self.__bank_account_bban
@@ -31,7 +31,7 @@ class BankRefundMethodSpecificInput(DataObject):
     def bank_account_iban(self):
         """
         | Object that holds the International Bank Account Number (IBAN) data
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban`
         """
         return self.__bank_account_iban
@@ -44,7 +44,7 @@ class BankRefundMethodSpecificInput(DataObject):
     def country_code(self):
         """
         | ISO 3166-1 alpha-2 country code of the country where money will be refunded to
-        
+
         Type: str
         """
         return self.__country_code

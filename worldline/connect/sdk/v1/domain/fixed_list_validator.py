@@ -14,7 +14,7 @@ class FixedListValidator(DataObject):
     def allowed_values(self):
         """
         | List of the allowed values that the field will be validated against
-        
+
         Type: list[str]
         """
         return self.__allowed_values

@@ -13,12 +13,12 @@ class GetNetworksExample(object):
     def example(self):
         with self.__get_client() as client:
             query = NetworksParams()
-            query.country_code = "US"
-            query.currency_code = "USD"
+            query.country_code = 'US'
+            query.currency_code = 'USD'
             query.amount = 1000
             query.is_recurring = True
 
-            response = client.v1().merchant("merchantId").products().networks(320, query)
+            response = client.v1().merchant('merchantId').products().networks(320, query)
 
     @staticmethod
     def __get_client():

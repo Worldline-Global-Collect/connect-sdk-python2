@@ -16,7 +16,7 @@ class SessionRequest(DataObject):
     def payment_product_filters(self):
         """
         | Restrict the payment products available for payment completion by restricting to and excluding certain payment products and payment product groups.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product_filters_client_session.PaymentProductFiltersClientSession`
         """
         return self.__payment_product_filters
@@ -29,7 +29,7 @@ class SessionRequest(DataObject):
     def tokens(self):
         """
         | List of previously stored tokens linked to the customer that wants to checkout.
-        
+
         Type: list[str]
         """
         return self.__tokens

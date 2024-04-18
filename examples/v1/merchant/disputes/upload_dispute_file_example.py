@@ -17,7 +17,7 @@ class UploadDisputeFileExample(object):
             with open("file.pdf", "rb") as file_content:
                 body.file = UploadableFile("file.pdf", file_content, "application/pdf")
 
-                response = client.v1().merchant("merchantId").disputes().upload_file("disputeId", body)
+                response = client.v1().merchant('merchantId').disputes().upload_file('disputeId', body)
 
     @staticmethod
     def __get_client():

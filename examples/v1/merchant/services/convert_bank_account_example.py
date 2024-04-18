@@ -14,14 +14,14 @@ class ConvertBankAccountExample(object):
     def example(self):
         with self.__get_client() as client:
             bank_account_bban = BankAccountBban()
-            bank_account_bban.account_number = "0532013000"
-            bank_account_bban.bank_code = "37040044"
-            bank_account_bban.country_code = "DE"
+            bank_account_bban.account_number = '0532013000'
+            bank_account_bban.bank_code = '37040044'
+            bank_account_bban.country_code = 'DE'
 
             body = BankDetailsRequest()
             body.bank_account_bban = bank_account_bban
 
-            response = client.v1().merchant("merchantId").services().bankaccount(body)
+            response = client.v1().merchant('merchantId').services().bankaccount(body)
 
     @staticmethod
     def __get_client():

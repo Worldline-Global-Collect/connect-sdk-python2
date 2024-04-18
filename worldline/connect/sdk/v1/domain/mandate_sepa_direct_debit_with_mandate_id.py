@@ -14,7 +14,7 @@ class MandateSepaDirectDebitWithMandateId(MandateSepaDirectDebitWithoutCreditor)
     def mandate_id(self):
         """
         | Unique mandate identifier
-        
+
         Type: str
         """
         return self.__mandate_id

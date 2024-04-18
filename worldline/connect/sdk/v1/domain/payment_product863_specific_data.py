@@ -18,7 +18,7 @@ class PaymentProduct863SpecificData(DataObject):
         * desktopQRCode - used on desktops, the customer opens the WeChat app by scanning a QR code.
         * urlIntent - used in mobile apps or on mobile web pages, the customer opens the WeChat app using a URL intent.
         * nativeInApp - used in mobile apps that use the WeChat Pay SDK.
-        
+
         Type: list[str]
         """
         return self.__integration_types

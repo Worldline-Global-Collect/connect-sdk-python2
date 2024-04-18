@@ -14,7 +14,7 @@ class CardWithoutCvv(CardEssentials):
     def issue_number(self):
         """
         | Issue number on the card (if applicable)
-        
+
         Type: str
         """
         return self.__issue_number

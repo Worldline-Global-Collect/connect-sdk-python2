@@ -17,7 +17,7 @@ class PaymentProduct836SpecificOutput(DataObject):
         
         * 0 - You should wait for the transaction to be reported as paid before shipping any goods.
         * 1 - You can ship the goods. In case the transaction is not reported as paid you can initiate a claims process with SofortBank.
-        
+
         Type: str
         """
         return self.__security_indicator

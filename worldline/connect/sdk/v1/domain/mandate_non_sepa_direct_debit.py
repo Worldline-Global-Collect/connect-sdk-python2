@@ -17,7 +17,7 @@ class MandateNonSepaDirectDebit(DataObject):
     def payment_product705_specific_data(self):
         """
         | Object containing specific data for Direct Debit UK
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_non_sepa_direct_debit_payment_product705_specific_data.TokenNonSepaDirectDebitPaymentProduct705SpecificData`
         """
         return self.__payment_product705_specific_data
@@ -30,7 +30,7 @@ class MandateNonSepaDirectDebit(DataObject):
     def payment_product730_specific_data(self):
         """
         | Object containing specific data for ACH
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.token_non_sepa_direct_debit_payment_product730_specific_data.TokenNonSepaDirectDebitPaymentProduct730SpecificData`
         """
         return self.__payment_product730_specific_data

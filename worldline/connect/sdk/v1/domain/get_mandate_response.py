@@ -15,7 +15,7 @@ class GetMandateResponse(DataObject):
     def mandate(self):
         """
         | Object containing information on a mandate.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.mandate_response.MandateResponse`
         """
         return self.__mandate

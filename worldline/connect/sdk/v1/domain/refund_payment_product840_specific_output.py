@@ -18,7 +18,7 @@ class RefundPaymentProduct840SpecificOutput(DataObject):
     def customer_account(self):
         """
         | Object containing the PayPal account details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.refund_payment_product840_customer_account.RefundPaymentProduct840CustomerAccount`
         """
         return self.__customer_account

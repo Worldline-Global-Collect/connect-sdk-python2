@@ -18,7 +18,7 @@ class PaymentErrorResponse(DataObject):
     def error_id(self):
         """
         | Unique reference, for debugging purposes, of this error response
-        
+
         Type: str
         """
         return self.__error_id
@@ -31,7 +31,7 @@ class PaymentErrorResponse(DataObject):
     def errors(self):
         """
         | List of one or more errors
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.api_error.APIError`]
         """
         return self.__errors
@@ -44,7 +44,7 @@ class PaymentErrorResponse(DataObject):
     def payment_result(self):
         """
         | Object that contains details on the created payment in case one has been created
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.create_payment_result.CreatePaymentResult`
         """
         return self.__payment_result

@@ -20,7 +20,7 @@ class EInvoicePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def fraud_results(self):
         """
         | Object containing the results of the fraud screening
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.fraud_results.FraudResults`
         """
         return self.__fraud_results
@@ -33,7 +33,7 @@ class EInvoicePaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def payment_product9000_specific_output(self):
         """
         | AfterPay Installments (payment product 9000) specific details
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.e_invoice_payment_product9000_specific_output.EInvoicePaymentProduct9000SpecificOutput`
         """
         return self.__payment_product9000_specific_output

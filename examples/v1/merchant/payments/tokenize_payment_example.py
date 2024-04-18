@@ -13,9 +13,9 @@ class TokenizePaymentExample(object):
     def example(self):
         with self.__get_client() as client:
             body = TokenizePaymentRequest()
-            body.alias = "Some alias"
+            body.alias = 'Some alias'
 
-            response = client.v1().merchant("merchantId").payments().tokenize("paymentId", body)
+            response = client.v1().merchant('merchantId').payments().tokenize('paymentId', body)
 
     @staticmethod
     def __get_client():

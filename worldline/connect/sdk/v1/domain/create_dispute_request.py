@@ -19,7 +19,7 @@ class CreateDisputeRequest(DataObject):
     def amount_of_money(self):
         """
         | The amount of money that is to be disputed.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`
         """
         return self.__amount_of_money
@@ -32,7 +32,7 @@ class CreateDisputeRequest(DataObject):
     def contact_person(self):
         """
         | The name of the person on your side who can be contacted regarding this dispute.
-        
+
         Type: str
         """
         return self.__contact_person
@@ -45,7 +45,7 @@ class CreateDisputeRequest(DataObject):
     def email_address(self):
         """
         | The email address of the contact person.
-        
+
         Type: str
         """
         return self.__email_address
@@ -58,7 +58,7 @@ class CreateDisputeRequest(DataObject):
     def reply_to(self):
         """
         | The email address to which the reply message will be sent.
-        
+
         Type: str
         """
         return self.__reply_to
@@ -71,7 +71,7 @@ class CreateDisputeRequest(DataObject):
     def request_message(self):
         """
         | The message sent from you to Worldline.
-        
+
         Type: str
         """
         return self.__request_message

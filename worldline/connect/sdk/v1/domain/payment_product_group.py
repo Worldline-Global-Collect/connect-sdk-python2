@@ -25,7 +25,7 @@ class PaymentProductGroup(DataObject):
     def accounts_on_file(self):
         """
         | Only populated in the Client API
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.account_on_file.AccountOnFile`]
         """
         return self.__accounts_on_file
@@ -41,7 +41,7 @@ class PaymentProductGroup(DataObject):
         
         * true - This payment supports installments
         * false - This payment does not support installments
-        
+
         Type: bool
         """
         return self.__allows_installments
@@ -57,7 +57,7 @@ class PaymentProductGroup(DataObject):
         
         * true
         * false
-        
+
         Type: bool
         """
         return self.__device_fingerprint_enabled
@@ -70,7 +70,7 @@ class PaymentProductGroup(DataObject):
     def display_hints(self):
         """
         | Object containing display hints like the order of the group when shown in a list, the name of the group and the logo. Note that the order of the group is the lowest order among the payment products that belong to the group.
-        
+
         Type: :class:`worldline.connect.sdk.v1.domain.payment_product_display_hints.PaymentProductDisplayHints`
         """
         return self.__display_hints
@@ -83,7 +83,7 @@ class PaymentProductGroup(DataObject):
     def fields(self):
         """
         | Object containing all the fields and their details that are associated with this payment product group. If you are not interested in the these fields you can have us filter them out (using hide=fields in the query-string)
-        
+
         Type: list[:class:`worldline.connect.sdk.v1.domain.payment_product_field.PaymentProductField`]
         """
         return self.__fields
@@ -96,7 +96,7 @@ class PaymentProductGroup(DataObject):
     def id(self):
         """
         | The ID of the payment product group in our system
-        
+
         Type: str
         """
         return self.__id

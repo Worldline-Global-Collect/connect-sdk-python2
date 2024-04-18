@@ -17,7 +17,7 @@ class RefundMethodSpecificOutput(DataObject):
         """
         | Refund product identifier
         | Please see refund products <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/refundproducts.html> for a full overview of possible values.
-        
+
         Type: int
         """
         return self.__refund_product_id
@@ -30,7 +30,7 @@ class RefundMethodSpecificOutput(DataObject):
     def total_amount_paid(self):
         """
         | Total paid amount (in cents and always with 2 decimals)
-        
+
         Type: long
         """
         return self.__total_amount_paid

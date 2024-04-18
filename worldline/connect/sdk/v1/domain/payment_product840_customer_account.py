@@ -26,7 +26,7 @@ class PaymentProduct840CustomerAccount(DataObject):
     def account_id(self):
         """
         | Username with which the PayPal account holder has registered at PayPal
-        
+
         Type: str
         """
         return self.__account_id
@@ -39,7 +39,7 @@ class PaymentProduct840CustomerAccount(DataObject):
     def billing_agreement_id(self):
         """
         | Identification of the PayPal recurring billing agreement
-        
+
         Type: str
         """
         return self.__billing_agreement_id
@@ -52,7 +52,7 @@ class PaymentProduct840CustomerAccount(DataObject):
     def company_name(self):
         """
         | Name of the company in case the PayPal account is owned by a business
-        
+
         Type: str
         """
         return self.__company_name
@@ -65,7 +65,7 @@ class PaymentProduct840CustomerAccount(DataObject):
     def contact_phone(self):
         """
         | The phone number of the PayPal account holder
-        
+
         Type: str
         """
         return self.__contact_phone
@@ -78,7 +78,7 @@ class PaymentProduct840CustomerAccount(DataObject):
     def country_code(self):
         """
         | Country where the PayPal account is located
-        
+
         Type: str
         """
         return self.__country_code
@@ -95,7 +95,7 @@ class PaymentProduct840CustomerAccount(DataObject):
         
         * verified - PayPal has verified the funding means for this account
         * unverified - PayPal has not verified the funding means for this account
-        
+
         Type: str
         """
         return self.__customer_account_status
@@ -113,7 +113,7 @@ class PaymentProduct840CustomerAccount(DataObject):
         * none - Status is unknown at PayPal
         * confirmed - The address has been confirmed
         * unconfirmed - The address has not been confirmed
-        
+
         Type: str
         """
         return self.__customer_address_status
@@ -126,7 +126,7 @@ class PaymentProduct840CustomerAccount(DataObject):
     def first_name(self):
         """
         | First name of the PayPal account holder
-        
+
         Type: str
         """
         return self.__first_name
@@ -139,7 +139,7 @@ class PaymentProduct840CustomerAccount(DataObject):
     def payer_id(self):
         """
         | The unique identifier of a PayPal account and will never change in the life cycle of a PayPal account
-        
+
         Type: str
         """
         return self.__payer_id
@@ -152,7 +152,7 @@ class PaymentProduct840CustomerAccount(DataObject):
     def surname(self):
         """
         | Surname of the PayPal account holder
-        
+
         Type: str
         """
         return self.__surname

@@ -14,7 +14,7 @@ class MobilePaymentProduct302SpecificInputHostedCheckout(DataObject):
     def business_name(self):
         """
         | Used as an input for the Apple Pay payment button. Your default business name is configured in the Configuration Center. In case you want to use another business name than the one configured in the Configuration Center, provide your company name in a human readable form.
-        
+
         Type: str
         """
         return self.__business_name

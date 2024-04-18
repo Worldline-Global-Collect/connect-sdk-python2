@@ -11,7 +11,7 @@ class SubmitDisputeExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            response = client.v1().merchant("merchantId").disputes().submit("disputeId")
+            response = client.v1().merchant('merchantId').disputes().submit('disputeId')
 
     @staticmethod
     def __get_client():
