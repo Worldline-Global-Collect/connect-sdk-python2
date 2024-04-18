@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.payment_product_field_display_hints &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.payment_product_field_display_hints &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -61,7 +61,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        * true - Indicates that this field is advised to be captured to increase the success rates even though it isn&#39;t marked as required. Please note that making the field required could hurt the success rates negatively. This boolean only indicates our advise to always show this field to the customer.</span>
 <span class="sd">        * false - Indicates that this field is not to be shown unless it is a required field.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__always_show</span>
@@ -74,7 +74,7 @@
     <span class="k">def</span> <span class="nf">display_order</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The order in which the fields should be shown (ascending)</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__display_order</span>
@@ -87,7 +87,7 @@
     <span class="k">def</span> <span class="nf">form_element</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object detailing the type of form element that should be used to present the field</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.payment_product_field_form_element.PaymentProductFieldFormElement`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__form_element</span>
@@ -100,7 +100,7 @@
     <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Label/Name of the field to be used in the user interface</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__label</span>
@@ -113,7 +113,7 @@
     <span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Link that should be used to replace the &#39;{link}&#39; variable in the label.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__link</span>
@@ -129,7 +129,7 @@
 <span class="sd">        | * is used for wildcards (and also chars)</span>
 <span class="sd">        | 9 is used for numbers</span>
 <span class="sd">        | Everything outside {{ and }} is used as-is.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mask</span>
@@ -143,7 +143,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        * true - The data in this field should be obfuscated as it is entered, just like a password field</span>
 <span class="sd">        * false - The data in this field does not need to be obfuscated</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__obfuscate</span>
@@ -156,7 +156,7 @@
     <span class="k">def</span> <span class="nf">placeholder_label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | A placeholder value for the form element</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__placeholder_label</span>
@@ -174,7 +174,7 @@
 <span class="sd">        * StringKeyboard - Keyboard that is used to enter strings</span>
 <span class="sd">        * IntegerKeyboard - Keyboard that is used to enter only numerical values</span>
 <span class="sd">        * EmailAddressKeyboard - Keyboard that allows easier entry of email addresses</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__preferred_input_type</span>
@@ -187,7 +187,7 @@
     <span class="k">def</span> <span class="nf">tooltip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object that contains an optional tooltip to assist the customer</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.payment_product_field_tooltip.PaymentProductFieldTooltip`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tooltip</span>

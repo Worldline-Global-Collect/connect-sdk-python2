@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.merchant.payouts.payouts_client &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.merchant.payouts.payouts_client &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
@@ -61,21 +61,22 @@
 <div class="viewcode-block" id="PayoutsClient.create"><a class="viewcode-back" href="../../../../../../../index.html#worldline.connect.sdk.v1.merchant.payouts.payouts_client.PayoutsClient.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Resource /{merchantId}/payouts - Create payout</span>
-<span class="sd">        </span>
+
 <span class="sd">        See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payouts/create.html</span>
 
 <span class="sd">        :param body:     :class:`worldline.connect.sdk.v1.domain.create_payout_request.CreatePayoutRequest`</span>
 <span class="sd">        :param context:  :class:`worldline.connect.sdk.call_context.CallContext`</span>
 <span class="sd">        :return: :class:`worldline.connect.sdk.v1.domain.payout_response.PayoutResponse`</span>
-<span class="sd">        :raise: DeclinedPayoutException if the Worldline Global Collect platform declined / rejected the payout. The payout result will be available from the exception.</span>
-<span class="sd">        :raise: ValidationException if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
-<span class="sd">        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)</span>
-<span class="sd">        :raise: ReferenceException if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
+<span class="sd">        :raise DeclinedPayoutException: if the Worldline Global Collect platform declined / rejected the payout. The payout result will be available from the exception.</span>
+<span class="sd">        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)</span>
+<span class="sd">        :raise ValidationException: if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
+<span class="sd">        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)</span>
+<span class="sd">        :raise ReferenceException: if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
 <span class="sd">                   or there was a conflict (HTTP status code 404, 409 or 410)</span>
-<span class="sd">        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,</span>
+<span class="sd">        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,</span>
 <span class="sd">                   the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,</span>
 <span class="sd">                   or the service that you&#39;re trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)</span>
-<span class="sd">        :raise: ApiException if the Worldline Global Collect platform returned any other error</span>
+<span class="sd">        :raise ApiException: if the Worldline Global Collect platform returned any other error</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_instantiate_uri</span><span class="p">(</span><span class="s2">&quot;/v1/</span><span class="si">{merchantId}</span><span class="s2">/payouts&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
@@ -95,20 +96,21 @@
 <div class="viewcode-block" id="PayoutsClient.find"><a class="viewcode-back" href="../../../../../../../index.html#worldline.connect.sdk.v1.merchant.payouts.payouts_client.PayoutsClient.find">[docs]</a>    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Resource /{merchantId}/payouts - Find payouts</span>
-<span class="sd">        </span>
+
 <span class="sd">        See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payouts/find.html</span>
 
 <span class="sd">        :param query:    :class:`worldline.connect.sdk.v1.merchant.payouts.find_payouts_params.FindPayoutsParams`</span>
 <span class="sd">        :param context:  :class:`worldline.connect.sdk.call_context.CallContext`</span>
 <span class="sd">        :return: :class:`worldline.connect.sdk.v1.domain.find_payouts_response.FindPayoutsResponse`</span>
-<span class="sd">        :raise: ValidationException if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
-<span class="sd">        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)</span>
-<span class="sd">        :raise: ReferenceException if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
+<span class="sd">        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)</span>
+<span class="sd">        :raise ValidationException: if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
+<span class="sd">        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)</span>
+<span class="sd">        :raise ReferenceException: if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
 <span class="sd">                   or there was a conflict (HTTP status code 404, 409 or 410)</span>
-<span class="sd">        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,</span>
+<span class="sd">        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,</span>
 <span class="sd">                   the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,</span>
 <span class="sd">                   or the service that you&#39;re trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)</span>
-<span class="sd">        :raise: ApiException if the Worldline Global Collect platform returned any other error</span>
+<span class="sd">        :raise ApiException: if the Worldline Global Collect platform returned any other error</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">uri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_instantiate_uri</span><span class="p">(</span><span class="s2">&quot;/v1/</span><span class="si">{merchantId}</span><span class="s2">/payouts&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
@@ -127,20 +129,21 @@
 <div class="viewcode-block" id="PayoutsClient.get"><a class="viewcode-back" href="../../../../../../../index.html#worldline.connect.sdk.v1.merchant.payouts.payouts_client.PayoutsClient.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payout_id</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Resource /{merchantId}/payouts/{payoutId} - Get payout</span>
-<span class="sd">        </span>
+
 <span class="sd">        See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payouts/get.html</span>
 
 <span class="sd">        :param payout_id:  str</span>
 <span class="sd">        :param context:    :class:`worldline.connect.sdk.call_context.CallContext`</span>
 <span class="sd">        :return: :class:`worldline.connect.sdk.v1.domain.payout_response.PayoutResponse`</span>
-<span class="sd">        :raise: ValidationException if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
-<span class="sd">        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)</span>
-<span class="sd">        :raise: ReferenceException if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
+<span class="sd">        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)</span>
+<span class="sd">        :raise ValidationException: if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
+<span class="sd">        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)</span>
+<span class="sd">        :raise ReferenceException: if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
 <span class="sd">                   or there was a conflict (HTTP status code 404, 409 or 410)</span>
-<span class="sd">        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,</span>
+<span class="sd">        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,</span>
 <span class="sd">                   the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,</span>
 <span class="sd">                   or the service that you&#39;re trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)</span>
-<span class="sd">        :raise: ApiException if the Worldline Global Collect platform returned any other error</span>
+<span class="sd">        :raise ApiException: if the Worldline Global Collect platform returned any other error</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">path_context</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">&quot;payoutId&quot;</span><span class="p">:</span> <span class="n">payout_id</span><span class="p">,</span>
@@ -162,21 +165,22 @@
 <div class="viewcode-block" id="PayoutsClient.approve"><a class="viewcode-back" href="../../../../../../../index.html#worldline.connect.sdk.v1.merchant.payouts.payouts_client.PayoutsClient.approve">[docs]</a>    <span class="k">def</span> <span class="nf">approve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payout_id</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Resource /{merchantId}/payouts/{payoutId}/approve - Approve payout</span>
-<span class="sd">        </span>
+
 <span class="sd">        See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payouts/approve.html</span>
 
 <span class="sd">        :param payout_id:  str</span>
 <span class="sd">        :param body:       :class:`worldline.connect.sdk.v1.domain.approve_payout_request.ApprovePayoutRequest`</span>
 <span class="sd">        :param context:    :class:`worldline.connect.sdk.call_context.CallContext`</span>
 <span class="sd">        :return: :class:`worldline.connect.sdk.v1.domain.payout_response.PayoutResponse`</span>
-<span class="sd">        :raise: ValidationException if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
-<span class="sd">        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)</span>
-<span class="sd">        :raise: ReferenceException if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
+<span class="sd">        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)</span>
+<span class="sd">        :raise ValidationException: if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
+<span class="sd">        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)</span>
+<span class="sd">        :raise ReferenceException: if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
 <span class="sd">                   or there was a conflict (HTTP status code 404, 409 or 410)</span>
-<span class="sd">        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,</span>
+<span class="sd">        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,</span>
 <span class="sd">                   the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,</span>
 <span class="sd">                   or the service that you&#39;re trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)</span>
-<span class="sd">        :raise: ApiException if the Worldline Global Collect platform returned any other error</span>
+<span class="sd">        :raise ApiException: if the Worldline Global Collect platform returned any other error</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">path_context</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">&quot;payoutId&quot;</span><span class="p">:</span> <span class="n">payout_id</span><span class="p">,</span>
@@ -199,20 +203,21 @@
 <div class="viewcode-block" id="PayoutsClient.cancel"><a class="viewcode-back" href="../../../../../../../index.html#worldline.connect.sdk.v1.merchant.payouts.payouts_client.PayoutsClient.cancel">[docs]</a>    <span class="k">def</span> <span class="nf">cancel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payout_id</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Resource /{merchantId}/payouts/{payoutId}/cancel - Cancel payout</span>
-<span class="sd">        </span>
+
 <span class="sd">        See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payouts/cancel.html</span>
 
 <span class="sd">        :param payout_id:  str</span>
 <span class="sd">        :param context:    :class:`worldline.connect.sdk.call_context.CallContext`</span>
 <span class="sd">        :return: None</span>
-<span class="sd">        :raise: ValidationException if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
-<span class="sd">        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)</span>
-<span class="sd">        :raise: ReferenceException if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
+<span class="sd">        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)</span>
+<span class="sd">        :raise ValidationException: if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
+<span class="sd">        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)</span>
+<span class="sd">        :raise ReferenceException: if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
 <span class="sd">                   or there was a conflict (HTTP status code 404, 409 or 410)</span>
-<span class="sd">        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,</span>
+<span class="sd">        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,</span>
 <span class="sd">                   the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,</span>
 <span class="sd">                   or the service that you&#39;re trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)</span>
-<span class="sd">        :raise: ApiException if the Worldline Global Collect platform returned any other error</span>
+<span class="sd">        :raise ApiException: if the Worldline Global Collect platform returned any other error</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">path_context</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">&quot;payoutId&quot;</span><span class="p">:</span> <span class="n">payout_id</span><span class="p">,</span>
@@ -235,20 +240,21 @@
 <div class="viewcode-block" id="PayoutsClient.cancelapproval"><a class="viewcode-back" href="../../../../../../../index.html#worldline.connect.sdk.v1.merchant.payouts.payouts_client.PayoutsClient.cancelapproval">[docs]</a>    <span class="k">def</span> <span class="nf">cancelapproval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payout_id</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Resource /{merchantId}/payouts/{payoutId}/cancelapproval - Undo approve payout</span>
-<span class="sd">        </span>
+
 <span class="sd">        See also https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payouts/cancelapproval.html</span>
 
 <span class="sd">        :param payout_id:  str</span>
 <span class="sd">        :param context:    :class:`worldline.connect.sdk.call_context.CallContext`</span>
 <span class="sd">        :return: None</span>
-<span class="sd">        :raise: ValidationException if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
-<span class="sd">        :raise: AuthorizationException if the request was not allowed (HTTP status code 403)</span>
-<span class="sd">        :raise: ReferenceException if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
+<span class="sd">        :raise IdempotenceException: if an idempotent request caused a conflict (HTTP status code 409)</span>
+<span class="sd">        :raise ValidationException: if the request was not correct and couldn&#39;t be processed (HTTP status code 400)</span>
+<span class="sd">        :raise AuthorizationException: if the request was not allowed (HTTP status code 403)</span>
+<span class="sd">        :raise ReferenceException: if an object was attempted to be referenced that doesn&#39;t exist or has been removed,</span>
 <span class="sd">                   or there was a conflict (HTTP status code 404, 409 or 410)</span>
-<span class="sd">        :raise: PlatformException if something went wrong at the Worldline Global Collect platform,</span>
+<span class="sd">        :raise PlatformException: if something went wrong at the Worldline Global Collect platform,</span>
 <span class="sd">                   the Worldline Global Collect platform was unable to process a message from a downstream partner/acquirer,</span>
 <span class="sd">                   or the service that you&#39;re trying to reach is temporary unavailable (HTTP status code 500, 502 or 503)</span>
-<span class="sd">        :raise: ApiException if the Worldline Global Collect platform returned any other error</span>
+<span class="sd">        :raise ApiException: if the Worldline Global Collect platform returned any other error</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">path_context</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">&quot;payoutId&quot;</span><span class="p">:</span> <span class="n">payout_id</span><span class="p">,</span>

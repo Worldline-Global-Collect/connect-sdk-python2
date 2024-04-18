@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.debtor &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.debtor &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -62,7 +62,7 @@
     <span class="k">def</span> <span class="nf">additional_address_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Additional information about the debtor&#39;s address, like Suite II, Apartment 2a</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__additional_address_info</span>
@@ -75,7 +75,7 @@
     <span class="k">def</span> <span class="nf">city</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | City of the debtor&#39;s address</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__city</span>
@@ -88,7 +88,7 @@
     <span class="k">def</span> <span class="nf">country_code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | ISO 3166-1 alpha-2 country code of the debtor&#39;s address</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__country_code</span>
@@ -101,7 +101,7 @@
     <span class="k">def</span> <span class="nf">first_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Debtor first name</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__first_name</span>
@@ -114,7 +114,7 @@
     <span class="k">def</span> <span class="nf">house_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | House number of the debtor&#39;s address</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__house_number</span>
@@ -127,7 +127,7 @@
     <span class="k">def</span> <span class="nf">state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | State of debtor address</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__state</span>
@@ -144,7 +144,7 @@
 <span class="sd">        </span>
 <span class="sd">        * The maximum length for 3-D Secure version 2 is AN3.</span>
 <span class="sd">        * The maximum length for paymentProductId 1503 (Boleto) is AN2.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__state_code</span>
@@ -157,7 +157,7 @@
     <span class="k">def</span> <span class="nf">street</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Street of debtor&#39;s address</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__street</span>
@@ -170,7 +170,7 @@
     <span class="k">def</span> <span class="nf">surname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Debtor&#39;s last name</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__surname</span>
@@ -183,7 +183,7 @@
     <span class="k">def</span> <span class="nf">surname_prefix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Prefix of the debtor&#39;s last name</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__surname_prefix</span>
@@ -196,7 +196,7 @@
     <span class="k">def</span> <span class="nf">zip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | ZIP code of the debtor&#39;s address</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__zip</span>

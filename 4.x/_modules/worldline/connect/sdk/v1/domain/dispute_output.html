@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.dispute_output &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.dispute_output &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -61,7 +61,7 @@
     <span class="k">def</span> <span class="nf">amount_of_money</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing amount and ISO currency code attributes</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__amount_of_money</span>
@@ -74,7 +74,7 @@
     <span class="k">def</span> <span class="nf">contact_person</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The name of the person on your side who can be contacted regarding this dispute.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__contact_person</span>
@@ -87,7 +87,7 @@
     <span class="k">def</span> <span class="nf">creation_details</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing various details related to this dispute’s creation.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.dispute_creation_detail.DisputeCreationDetail`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__creation_details</span>
@@ -100,7 +100,7 @@
     <span class="k">def</span> <span class="nf">email_address</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The email address of the contact person.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__email_address</span>
@@ -113,7 +113,7 @@
     <span class="k">def</span> <span class="nf">files</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | An array containing all files related to this dispute.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: list[:class:`worldline.connect.sdk.v1.domain.hosted_file.HostedFile`]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__files</span>
@@ -126,7 +126,7 @@
     <span class="k">def</span> <span class="nf">reference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | A collection of reference information related to this dispute.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.dispute_reference.DisputeReference`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__reference</span>
@@ -139,7 +139,7 @@
     <span class="k">def</span> <span class="nf">reply_to</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The email address to which the reply message will be sent.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__reply_to</span>
@@ -152,7 +152,7 @@
     <span class="k">def</span> <span class="nf">request_message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The message sent from you to Worldline.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__request_message</span>
@@ -165,7 +165,7 @@
     <span class="k">def</span> <span class="nf">response_message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The return message sent from the GlobalCollect platform to you.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__response_message</span>

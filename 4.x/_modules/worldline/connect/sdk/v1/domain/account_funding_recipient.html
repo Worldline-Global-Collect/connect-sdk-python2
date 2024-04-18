@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.account_funding_recipient &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.account_funding_recipient &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -59,7 +59,7 @@
     <span class="k">def</span> <span class="nf">account_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Should be populated with the value of the corresponding accountNumberType of the recipient.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__account_number</span>
@@ -79,7 +79,7 @@
 <span class="sd">        * iban = International Bank Account Number, is a standard international numbering system for identifying bank accounts.</span>
 <span class="sd">        * bicNumber = Bank Identification Code is a number that is used to identify a specific bank.</span>
 <span class="sd">        * giftCard = Gift card is a type of prepaid card that contains a specific amount of money that can be used at participating stores and marketplaces.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__account_number_type</span>
@@ -92,7 +92,7 @@
     <span class="k">def</span> <span class="nf">address</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the address details of the recipient of an account funding transaction.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.address.Address`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__address</span>
@@ -106,7 +106,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The date of birth of the recipient</span>
 <span class="sd">        | Format: YYYYMMDD</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__date_of_birth</span>
@@ -119,7 +119,7 @@
     <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the name details of the recipient of an account funding transaction.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.afr_name.AfrName`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span>
@@ -132,7 +132,7 @@
     <span class="k">def</span> <span class="nf">partial_pan</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Either partialPan or accountnumber is required for merchants that use Merchant Category Code (MCC) 6012 for transactions involving UK costumers.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__partial_pan</span>

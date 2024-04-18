@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.hosted_mandate_info &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.hosted_mandate_info &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -57,7 +57,7 @@
 <span class="sd">        | An alias for the mandate. This can be used to visually represent the mandate.</span>
 <span class="sd">        | Do not include any unobfuscated sensitive data in the alias.</span>
 <span class="sd">        | Default value if not provided is the obfuscated IBAN of the customer.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__alias</span>
@@ -70,7 +70,7 @@
     <span class="k">def</span> <span class="nf">customer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Customer object containing customer specific inputs</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.mandate_customer.MandateCustomer`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__customer</span>
@@ -83,7 +83,7 @@
     <span class="k">def</span> <span class="nf">customer_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The unique identifier of a customer</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__customer_reference</span>
@@ -99,7 +99,7 @@
 <span class="sd">        |  </span>
 <span class="sd">        * UNIQUE</span>
 <span class="sd">        * RECURRING</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__recurrence_type</span>
@@ -115,7 +115,7 @@
 <span class="sd">        |  </span>
 <span class="sd">        * UNSIGNED</span>
 <span class="sd">        * SMS</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__signature_type</span>
@@ -128,7 +128,7 @@
     <span class="k">def</span> <span class="nf">unique_mandate_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The unique identifier of the mandate</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__unique_mandate_reference</span>

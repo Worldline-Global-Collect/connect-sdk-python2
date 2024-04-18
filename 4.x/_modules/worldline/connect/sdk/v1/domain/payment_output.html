@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.payment_output &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.payment_output &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -70,7 +70,7 @@
     <span class="k">def</span> <span class="nf">amount_paid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Amount that has been paid</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: long</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__amount_paid</span>
@@ -83,7 +83,7 @@
     <span class="k">def</span> <span class="nf">amount_reversed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Amount that has been reversed</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: long</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__amount_reversed</span>
@@ -96,7 +96,7 @@
     <span class="k">def</span> <span class="nf">bank_transfer_payment_method_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the bank transfer payment method details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.bank_transfer_payment_method_specific_output.BankTransferPaymentMethodSpecificOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__bank_transfer_payment_method_specific_output</span>
@@ -109,7 +109,7 @@
     <span class="k">def</span> <span class="nf">card_payment_method_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the card payment method details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__card_payment_method_specific_output</span>
@@ -122,7 +122,7 @@
     <span class="k">def</span> <span class="nf">cash_payment_method_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the cash payment method details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_method_specific_output.CashPaymentMethodSpecificOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cash_payment_method_specific_output</span>
@@ -135,7 +135,7 @@
     <span class="k">def</span> <span class="nf">direct_debit_payment_method_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the non SEPA direct debit payment method details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.non_sepa_direct_debit_payment_method_specific_output.NonSepaDirectDebitPaymentMethodSpecificOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__direct_debit_payment_method_specific_output</span>
@@ -148,7 +148,7 @@
     <span class="k">def</span> <span class="nf">e_invoice_payment_method_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the e-invoice payment method details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.e_invoice_payment_method_specific_output.EInvoicePaymentMethodSpecificOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__e_invoice_payment_method_specific_output</span>
@@ -161,7 +161,7 @@
     <span class="k">def</span> <span class="nf">invoice_payment_method_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the invoice payment method details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.invoice_payment_method_specific_output.InvoicePaymentMethodSpecificOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__invoice_payment_method_specific_output</span>
@@ -174,7 +174,7 @@
     <span class="k">def</span> <span class="nf">mobile_payment_method_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the mobile payment method details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mobile_payment_method_specific_output</span>
@@ -196,7 +196,7 @@
 <span class="sd">        * eInvoice</span>
 <span class="sd">        * invoice</span>
 <span class="sd">        * redirect</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_method</span>
@@ -209,7 +209,7 @@
     <span class="k">def</span> <span class="nf">redirect_payment_method_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the redirect payment product details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_method_specific_output.RedirectPaymentMethodSpecificOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__redirect_payment_method_specific_output</span>
@@ -222,7 +222,7 @@
     <span class="k">def</span> <span class="nf">reversal_reason</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The reason description given for the reversedAmount property.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__reversal_reason</span>
@@ -235,7 +235,7 @@
     <span class="k">def</span> <span class="nf">sepa_direct_debit_payment_method_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing the SEPA direct debit details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.sepa_direct_debit_payment_method_specific_output.SepaDirectDebitPaymentMethodSpecificOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__sepa_direct_debit_payment_method_specific_output</span>

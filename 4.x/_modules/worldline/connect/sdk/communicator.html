@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.communicator &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.communicator &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
@@ -108,8 +108,8 @@
 <span class="sd">        :param request_headers: An optional list of request headers.</span>
 <span class="sd">        :param request_parameters: An optional set of request parameters.</span>
 <span class="sd">        :param context: The optional call context to use.</span>
-<span class="sd">        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform</span>
-<span class="sd">        :raise: ResponseException when an error response was received from the Worldline Global Collect platform</span>
+<span class="sd">        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform</span>
+<span class="sd">        :raise ResponseException: when an error response was received from the Worldline Global Collect platform</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">chunks</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_with_binary_response</span><span class="p">(</span><span class="n">relative_path</span><span class="p">,</span> <span class="n">request_headers</span><span class="p">,</span> <span class="n">request_parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_binary_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
@@ -123,8 +123,8 @@
 <span class="sd">        :param request_parameters: An optional set of request parameters.</span>
 <span class="sd">        :param response_type: The type of response to return.</span>
 <span class="sd">        :param context: The optional call context to use.</span>
-<span class="sd">        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform</span>
-<span class="sd">        :raise: ResponseException when an error response was received from the Worldline Global Collect platform</span>
+<span class="sd">        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform</span>
+<span class="sd">        :raise ResponseException: when an error response was received from the Worldline Global Collect platform</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">chunks</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_with_binary_response</span><span class="p">(</span><span class="n">relative_path</span><span class="p">,</span> <span class="n">request_headers</span><span class="p">,</span> <span class="n">request_parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">,</span> <span class="n">response_type</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
@@ -149,8 +149,8 @@
 <span class="sd">        :param request_headers: An optional list of request headers.</span>
 <span class="sd">        :param request_parameters: An optional set of request parameters.</span>
 <span class="sd">        :param context: The optional call context to use.</span>
-<span class="sd">        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform</span>
-<span class="sd">        :raise: ResponseException when an error response was received from the Worldline Global Collect platform</span>
+<span class="sd">        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform</span>
+<span class="sd">        :raise ResponseException: when an error response was received from the Worldline Global Collect platform</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">chunks</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_delete_with_binary_response</span><span class="p">(</span><span class="n">relative_path</span><span class="p">,</span> <span class="n">request_headers</span><span class="p">,</span> <span class="n">request_parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_binary_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
@@ -164,8 +164,8 @@
 <span class="sd">        :param request_parameters: An optional set of request parameters.</span>
 <span class="sd">        :param response_type: The type of response to return.</span>
 <span class="sd">        :param context: The optional call context to use.</span>
-<span class="sd">        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform</span>
-<span class="sd">        :raise: ResponseException when an error response was received from the Worldline Global Collect platform</span>
+<span class="sd">        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform</span>
+<span class="sd">        :raise ResponseException: when an error response was received from the Worldline Global Collect platform</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">chunks</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_delete_with_binary_response</span><span class="p">(</span><span class="n">relative_path</span><span class="p">,</span> <span class="n">request_headers</span><span class="p">,</span> <span class="n">request_parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">,</span> <span class="n">response_type</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
@@ -203,8 +203,8 @@
 <span class="sd">        :param request_parameters: An optional set of request parameters.</span>
 <span class="sd">        :param request_body: The optional request body to send.</span>
 <span class="sd">        :param context: The optional call context to use.</span>
-<span class="sd">        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform</span>
-<span class="sd">        :raise: ResponseException when an error response was received from the Worldline Global Collect platform</span>
+<span class="sd">        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform</span>
+<span class="sd">        :raise ResponseException: when an error response was received from the Worldline Global Collect platform</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">chunks</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_post_with_binary_response</span><span class="p">(</span><span class="n">relative_path</span><span class="p">,</span> <span class="n">request_headers</span><span class="p">,</span> <span class="n">request_parameters</span><span class="p">,</span> <span class="n">request_body</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_binary_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
@@ -219,8 +219,8 @@
 <span class="sd">        :param request_body: The optional request body to send.</span>
 <span class="sd">        :param response_type: The type of response to return.</span>
 <span class="sd">        :param context: The optional call context to use.</span>
-<span class="sd">        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform</span>
-<span class="sd">        :raise: ResponseException when an error response was received from the Worldline Global Collect platform</span>
+<span class="sd">        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform</span>
+<span class="sd">        :raise ResponseException: when an error response was received from the Worldline Global Collect platform</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">chunks</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_post_with_binary_response</span><span class="p">(</span><span class="n">relative_path</span><span class="p">,</span> <span class="n">request_headers</span><span class="p">,</span> <span class="n">request_parameters</span><span class="p">,</span> <span class="n">request_body</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">,</span> <span class="n">response_type</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
@@ -258,8 +258,8 @@
 <span class="sd">        :param request_parameters: An optional set of request parameters.</span>
 <span class="sd">        :param request_body: The optional request body to send.</span>
 <span class="sd">        :param context: The optional call context to use.</span>
-<span class="sd">        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform</span>
-<span class="sd">        :raise: ResponseException when an error response was received from the Worldline Global Collect platform</span>
+<span class="sd">        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform</span>
+<span class="sd">        :raise ResponseException: when an error response was received from the Worldline Global Collect platform</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">chunks</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_put_with_binary_response</span><span class="p">(</span><span class="n">relative_path</span><span class="p">,</span> <span class="n">request_headers</span><span class="p">,</span> <span class="n">request_parameters</span><span class="p">,</span> <span class="n">request_body</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_binary_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>
@@ -274,8 +274,8 @@
 <span class="sd">        :param request_body: The optional request body to send.</span>
 <span class="sd">        :param response_type: The type of response to return.</span>
 <span class="sd">        :param context: The optional call context to use.</span>
-<span class="sd">        :raise: CommunicationException when an exception occurred communicating with the Worldline Global Collect platform</span>
-<span class="sd">        :raise: ResponseException when an error response was received from the Worldline Global Collect platform</span>
+<span class="sd">        :raise CommunicationException: when an exception occurred communicating with the Worldline Global Collect platform</span>
+<span class="sd">        :raise ResponseException: when an error response was received from the Worldline Global Collect platform</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">chunks</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_put_with_binary_response</span><span class="p">(</span><span class="n">relative_path</span><span class="p">,</span> <span class="n">request_headers</span><span class="p">,</span> <span class="n">request_parameters</span><span class="p">,</span> <span class="n">request_body</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">,</span> <span class="n">response_type</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></div>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.payout_result &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.payout_result &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -53,7 +53,7 @@
     <span class="k">def</span> <span class="nf">payout_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing payout details</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.order_output.OrderOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payout_output</span>
@@ -78,7 +78,7 @@
 <span class="sd">        </span>
 <span class="sd">        </span>
 <span class="sd">        | Please see Statuses &lt;https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html&gt; for a full overview of possible values.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__status</span>
@@ -92,7 +92,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | This object has the numeric representation of the current payout status, timestamp of last status change and performable action on the current payout resource.</span>
 <span class="sd">        | In case of a rejected payout, detailed error information is listed.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.order_status_output.OrderStatusOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__status_output</span>

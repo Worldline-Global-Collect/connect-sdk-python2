@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.trial_information &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.trial_information &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -63,7 +63,7 @@
 <span class="sd">        | Note:</span>
 <span class="sd">        </span>
 <span class="sd">        | The property order.amountOfMoney should be populated with the amount to be paid during or for the trial period (no-cost or discounted time-constrained trial subscription period).</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.amount_of_money.AmountOfMoney`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__amount_of_money_after_trial</span>
@@ -76,7 +76,7 @@
     <span class="k">def</span> <span class="nf">end_date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The date that the trial period ends in YYYYMMDD format.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__end_date</span>
@@ -91,7 +91,7 @@
 <span class="sd">        | The property specifying if there will be recurring charges throughout the trial period (when the trial period involves a temporary discounted rate).</span>
 <span class="sd">        | True = there will be recurring charges during the trial period</span>
 <span class="sd">        | False = there will not be recurring charges during the trial period</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__is_recurring</span>
@@ -104,7 +104,7 @@
     <span class="k">def</span> <span class="nf">trial_period</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The object containing information on the trial period duration and the interval between payments during that period.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.trial_period.TrialPeriod`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__trial_period</span>
@@ -123,7 +123,7 @@
 <span class="sd">        | This object should only be populated if the frequency of recurring payments between the trial and regular periods is different.</span>
 <span class="sd">        </span>
 <span class="sd">        | If you do not populated this object, then the same interval frequency and interval of recurringPaymentsData.recurringInterval will be used</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.frequency.Frequency`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__trial_period_recurring</span>

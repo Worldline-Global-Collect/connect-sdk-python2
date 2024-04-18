@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -63,7 +63,7 @@
 <span class="sd">        * SALE - The payment creation results in an authorization that is already captured at the moment of approval.</span>
 <span class="sd">        </span>
 <span class="sd">        | Only used with some acquirers, ingnored for acquirers that don&#39;t support this. In case the acquirer doesn&#39;t allow this to be specified the authorizationMode is &#39;unspecified&#39;, which behaves similar to a final authorization.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__authorization_mode</span>
@@ -76,7 +76,7 @@
     <span class="k">def</span> <span class="nf">customer_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Reference of the customer for the payment (purchase order #, etc.). Only used with some acquirers.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__customer_reference</span>
@@ -89,7 +89,7 @@
     <span class="k">def</span> <span class="nf">decrypted_payment_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | The payment data if you do the decryption of the encrypted payment data yourself.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.decrypted_payment_data.DecryptedPaymentData`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__decrypted_payment_data</span>
@@ -108,7 +108,7 @@
 <span class="sd">        </span>
 <span class="sd">        * For Apple Pay, the encrypted payment data is the PKPayment &lt;https://developer.apple.com/documentation/passkit/pkpayment&gt;.token.paymentData object passed as a string (with all quotation marks escaped).</span>
 <span class="sd">        * For Google Pay, the encrypted payment data can be found in property paymentMethodData.tokenizationData.token of the PaymentData &lt;https://developers.google.com/android/reference/com/google/android/gms/wallet/PaymentData&gt;.toJson() result.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__encrypted_payment_data</span>
@@ -121,7 +121,7 @@
     <span class="k">def</span> <span class="nf">payment_product320_specific_input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Object containing information specific to Google Pay</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input.MobilePaymentProduct320SpecificInput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product320_specific_input</span>
@@ -135,7 +135,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        * true = the payment requires approval before the funds will be captured using the Capture payment &lt;https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payments/approve.html&gt; API</span>
 <span class="sd">        * false = the payment does not require approval, and the funds will be captured automatically</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__requires_approval</span>
@@ -151,7 +151,7 @@
 <span class="sd">        * false = Fraud scoring will not be skipped for this transaction</span>
 <span class="sd">        </span>
 <span class="sd">        | Note: This is only possible if your account in our system is setup for Fraud scoring and if your configuration in our system allows you to override it per transaction.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__skip_fraud_service</span>

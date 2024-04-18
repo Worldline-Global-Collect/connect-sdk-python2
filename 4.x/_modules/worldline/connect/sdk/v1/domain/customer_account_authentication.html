@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.customer_account_authentication &#8212; connect-sdk-python2 4.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.customer_account_authentication &#8212; connect-sdk-python2 4.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -60,7 +60,7 @@
 <span class="sd">        * fido-authentication, then this element can carry the FIDO attestation data (including the signature).</span>
 <span class="sd">        * fido-authentication-with-signed-assurance-data, then this element can carry FIDO Attestation data with the FIDO assurance data signed.</span>
 <span class="sd">        * src-assurance-data, then this element can carry the SRC assurance data</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__data</span>
@@ -83,7 +83,7 @@
 <span class="sd">        * fido-authentication = the customer logged in using a FIDO authenticator</span>
 <span class="sd">        * fido-authentication-with-signed-assurance-data = the customer logged in using a FIDO authenticator which also provides signed assurance data</span>
 <span class="sd">        * src-assurance-data = the customer authenticated themselves during a Secure Remote Commerce session</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__method</span>
@@ -96,7 +96,7 @@
     <span class="k">def</span> <span class="nf">utc_timestamp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | Timestamp (YYYYMMDDHHmm) of the authentication of the customer to their account with you</span>
-<span class="sd">        </span>
+
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__utc_timestamp</span>
