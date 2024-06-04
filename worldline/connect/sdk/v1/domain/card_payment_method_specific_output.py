@@ -18,6 +18,7 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     __card = None
     __fraud_results = None
     __initial_scheme_transaction_id = None
+    __network_token_used = None
     __scheme_transaction_id = None
     __three_d_secure_results = None
     __token = None
@@ -76,6 +77,19 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
         self.__initial_scheme_transaction_id = value
 
     @property
+    def network_token_used(self):
+        """
+        | Indicates if a network token was used during the payment.
+
+        Type: bool
+        """
+        return self.__network_token_used
+
+    @network_token_used.setter
+    def network_token_used(self, value):
+        self.__network_token_used = value
+
+    @property
     def scheme_transaction_id(self):
         """
         | The unique scheme transactionId of this transaction.
@@ -125,6 +139,8 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             dictionary['fraudResults'] = self.fraud_results.to_dictionary()
         if self.initial_scheme_transaction_id is not None:
             dictionary['initialSchemeTransactionId'] = self.initial_scheme_transaction_id
+        if self.network_token_used is not None:
+            dictionary['networkTokenUsed'] = self.network_token_used
         if self.scheme_transaction_id is not None:
             dictionary['schemeTransactionId'] = self.scheme_transaction_id
         if self.three_d_secure_results is not None:
@@ -149,6 +165,8 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             self.fraud_results = value.from_dictionary(dictionary['fraudResults'])
         if 'initialSchemeTransactionId' in dictionary:
             self.initial_scheme_transaction_id = dictionary['initialSchemeTransactionId']
+        if 'networkTokenUsed' in dictionary:
+            self.network_token_used = dictionary['networkTokenUsed']
         if 'schemeTransactionId' in dictionary:
             self.scheme_transaction_id = dictionary['schemeTransactionId']
         if 'threeDSecureResults' in dictionary:

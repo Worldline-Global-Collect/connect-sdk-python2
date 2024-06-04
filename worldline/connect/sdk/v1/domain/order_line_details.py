@@ -11,6 +11,7 @@ class OrderLineDetails(DataObject):
     __discount_amount = None
     __google_product_category_id = None
     __line_amount_total = None
+    __naics_commodity_code = None
     __product_category = None
     __product_code = None
     __product_name = None
@@ -59,6 +60,19 @@ class OrderLineDetails(DataObject):
     @line_amount_total.setter
     def line_amount_total(self, value):
         self.__line_amount_total = value
+
+    @property
+    def naics_commodity_code(self):
+        """
+        | The UNSPC commodity code of the item.
+
+        Type: str
+        """
+        return self.__naics_commodity_code
+
+    @naics_commodity_code.setter
+    def naics_commodity_code(self, value):
+        self.__naics_commodity_code = value
 
     @property
     def product_category(self):
@@ -188,6 +202,8 @@ class OrderLineDetails(DataObject):
             dictionary['googleProductCategoryId'] = self.google_product_category_id
         if self.line_amount_total is not None:
             dictionary['lineAmountTotal'] = self.line_amount_total
+        if self.naics_commodity_code is not None:
+            dictionary['naicsCommodityCode'] = self.naics_commodity_code
         if self.product_category is not None:
             dictionary['productCategory'] = self.product_category
         if self.product_code is not None:
@@ -216,6 +232,8 @@ class OrderLineDetails(DataObject):
             self.google_product_category_id = dictionary['googleProductCategoryId']
         if 'lineAmountTotal' in dictionary:
             self.line_amount_total = dictionary['lineAmountTotal']
+        if 'naicsCommodityCode' in dictionary:
+            self.naics_commodity_code = dictionary['naicsCommodityCode']
         if 'productCategory' in dictionary:
             self.product_category = dictionary['productCategory']
         if 'productCode' in dictionary:
