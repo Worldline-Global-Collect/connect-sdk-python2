@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.order_line_details &#8212; connect-sdk-python2 4.0.1 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.order_line_details &#8212; connect-sdk-python2 4.1.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -46,6 +46,7 @@
     <span class="n">__discount_amount</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__google_product_category_id</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__line_amount_total</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__naics_commodity_code</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__product_category</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__product_code</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__product_name</span> <span class="o">=</span> <span class="kc">None</span>
@@ -94,6 +95,19 @@
     <span class="nd">@line_amount_total</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">line_amount_total</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__line_amount_total</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">naics_commodity_code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | The UNSPC commodity code of the item.</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__naics_commodity_code</span>
+
+    <span class="nd">@naics_commodity_code</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">naics_commodity_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__naics_commodity_code</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">product_category</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -223,6 +237,8 @@
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;googleProductCategoryId&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">google_product_category_id</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_amount_total</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;lineAmountTotal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_amount_total</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">naics_commodity_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;naicsCommodityCode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">naics_commodity_code</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_category</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productCategory&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_category</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">product_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -251,6 +267,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">google_product_category_id</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;googleProductCategoryId&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;lineAmountTotal&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">line_amount_total</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;lineAmountTotal&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;naicsCommodityCode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">naics_commodity_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;naicsCommodityCode&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;productCategory&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">product_category</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;productCategory&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;productCode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>

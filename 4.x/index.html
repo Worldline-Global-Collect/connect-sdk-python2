@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.0.1 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -5903,6 +5903,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <div class="line">Should be stored by the merchant to allow it to be submitted in future transactions.</div>
 </div>
 <p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.network_token_used">
+<code class="descname">network_token_used</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.network_token_used" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates if a network token was used during the payment.</div>
+</div>
+<p>Type: bool</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -14516,6 +14525,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.order_line_details.OrderLineDetails.naics_commodity_code">
+<code class="descname">naics_commodity_code</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.order_line_details.OrderLineDetails.naics_commodity_code" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The UNSPC commodity code of the item.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.order_line_details.OrderLineDetails.product_category">
 <code class="descname">product_category</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.order_line_details.OrderLineDetails.product_category" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -20325,6 +20343,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <div class="line">false = the shipping details have been used for other transactions in the past</div>
 </div>
 <p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.shipping.Shipping.shipped_from_zip">
+<code class="descname">shipped_from_zip</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.shipping.Shipping.shipped_from_zip" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The zip/postal code of the location from which the goods were shipped.</div>
+</div>
+<p>Type: str</p>
 </dd></dl>
 
 <dl class="method">
