@@ -39,7 +39,7 @@ class DecryptedPaymentData(DataObject):
     @property
     def cardholder_name(self):
         """
-        | Card holder's name on the card.
+        | The card holder's name on the card. Minimum length of 2, maximum length of 51 characters.
         
         * For Apple Pay, maps to the cardholderName property in the encrypted payment data.
         * For Google Pay this is not available in the encrypted payment data, and can be omitted.

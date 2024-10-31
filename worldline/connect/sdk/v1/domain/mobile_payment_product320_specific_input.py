@@ -15,7 +15,7 @@ class MobilePaymentProduct320SpecificInput(DataObject):
     @property
     def cardholder_name(self):
         """
-        | The card holder's name on the card.
+        | The card holder's name on the card. Minimum length of 2, maximum length of 51 characters.
         | The encrypted payment data can be found in property paymentMethodData.tokenizationData.info.billingAddress.name of the PaymentData <https://developers.google.com/android/reference/com/google/android/gms/wallet/PaymentData>.toJson() result.
 
         Type: str

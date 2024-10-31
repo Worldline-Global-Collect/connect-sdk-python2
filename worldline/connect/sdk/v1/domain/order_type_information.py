@@ -9,6 +9,7 @@ from worldline.connect.sdk.domain.data_object import DataObject
 class OrderTypeInformation(DataObject):
 
     __funding_type = None
+    __payment_code = None
     __purchase_type = None
     __transaction_type = None
     __usage_type = None
@@ -34,6 +35,101 @@ class OrderTypeInformation(DataObject):
     @funding_type.setter
     def funding_type(self, value):
         self.__funding_type = value
+
+    @property
+    def payment_code(self):
+        """
+        | Payment code to support account funding transactions. Possible values are:
+        
+        * accountManagement
+        * paymentAllowance
+        * settlementOfAnnuity
+        * unemploymentDisabilityBenefit
+        * businessExpenses
+        * bonusPayment
+        * busTransportRelatedBusiness
+        * cashManagementTransfer
+        * paymentOfCableTVBill
+        * governmentInstituteIssued
+        * creditCardPayment
+        * creditCardBill
+        * charity
+        * collectionPayment
+        * commercialPayment
+        * commission
+        * compensation
+        * copyright
+        * debitCardPayment
+        * deposit
+        * dividend
+        * studyFees
+        * electricityBill
+        * energies
+        * generalFees
+        * ferry
+        * foreignExchange
+        * gasBill
+        * unemployedCompensation
+        * governmentPayment
+        * healthInsurance
+        * reimbursementCreditCard
+        * reimbursementDebitCard
+        * carInsurancePremium
+        * insuranceClaim
+        * installment
+        * insurancePremium
+        * investmentPayment
+        * intraCompany
+        * interest
+        * incomeTax
+        * investment
+        * laborInsurance
+        * licenseFree
+        * lifeInsurance
+        * loan
+        * medicalServices
+        * mobilePersonToBusiness
+        * mobilePersonToPerson
+        * mobileTopUp
+        * notSpecified
+        * other
+        * anotherTelecomBill
+        * payroll
+        * pensionFundContribution
+        * pensionPayment
+        * telephoneBill
+        * propertyInsurance
+        * generalLease
+        * rent
+        * railwayPayment
+        * royalties
+        * salary
+        * savingsPayment
+        * securities
+        * socialSecurity
+        * study
+        * subscription
+        * supplierPayment
+        * taxRefund
+        * taxPayment
+        * telecommunicationsBill
+        * tradeServices
+        * treasuryPayment
+        * travelPayment
+        * utilityBill
+        * valueAddedTaxPayment
+        * withHolding
+        * waterBill
+        
+        | .
+
+        Type: str
+        """
+        return self.__payment_code
+
+    @payment_code.setter
+    def payment_code(self, value):
+        self.__payment_code = value
 
     @property
     def purchase_type(self):
@@ -90,6 +186,8 @@ class OrderTypeInformation(DataObject):
         dictionary = super(OrderTypeInformation, self).to_dictionary()
         if self.funding_type is not None:
             dictionary['fundingType'] = self.funding_type
+        if self.payment_code is not None:
+            dictionary['paymentCode'] = self.payment_code
         if self.purchase_type is not None:
             dictionary['purchaseType'] = self.purchase_type
         if self.transaction_type is not None:
@@ -102,6 +200,8 @@ class OrderTypeInformation(DataObject):
         super(OrderTypeInformation, self).from_dictionary(dictionary)
         if 'fundingType' in dictionary:
             self.funding_type = dictionary['fundingType']
+        if 'paymentCode' in dictionary:
+            self.payment_code = dictionary['paymentCode']
         if 'purchaseType' in dictionary:
             self.purchase_type = dictionary['purchaseType']
         if 'transactionType' in dictionary:

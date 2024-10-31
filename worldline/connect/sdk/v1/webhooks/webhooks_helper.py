@@ -14,7 +14,7 @@ class WebhooksHelper(object):
 
     def __init__(self, marshaller, secret_key_store):
         if marshaller is None:
-            raise ValueError("marshaller is requried")
+            raise ValueError("marshaller is required")
         self.__marshaller = marshaller
         self.__signature_validator = SignatureValidator(secret_key_store)
 

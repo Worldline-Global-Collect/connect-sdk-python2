@@ -137,7 +137,7 @@ class CommunicatorConfiguration(object):
         else:
             uri = scheme + "://" + host
         url = urlparse(uri)
-        if not url.scheme.lower() in ["http", "https"] or not url.netloc:
+        if url.scheme.lower() not in ["http", "https"] or not url.netloc:
             raise ValueError("Unable to construct endpoint URI")
         return url
 

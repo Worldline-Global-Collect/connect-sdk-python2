@@ -28,7 +28,7 @@ class CardEssentials(DataObject):
     @property
     def cardholder_name(self):
         """
-        | The card holder's name on the card.
+        | The card holder's name on the card. Minimum length of 2, maximum length of 51 characters.
 
         Type: str
         """
