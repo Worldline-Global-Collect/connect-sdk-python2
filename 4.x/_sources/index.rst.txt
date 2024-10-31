@@ -2501,13 +2501,6 @@ API Reference
     :special-members:
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
-.. automodule:: worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input
-    :members:
-    :show-inheritance:
-    :undoc-members:
-    :special-members:
-    :exclude-members: __dict__,__weakref__,__module__,__get__
-
 .. automodule:: worldline.connect.sdk.v1.domain.redirect_payment_product840_specific_input
     :members:
     :show-inheritance:

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.1.0 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.2.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -5622,7 +5622,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.card_essentials.CardEssentials.cardholder_name">
 <code class="descname">cardholder_name</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_essentials.CardEssentials.cardholder_name" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
-<div class="line">The card holder’s name on the card.</div>
+<div class="line">The card holder’s name on the card. Minimum length of 2, maximum length of 51 characters.</div>
 </div>
 <p>Type: str</p>
 </dd></dl>
@@ -6350,6 +6350,16 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.company_information.CompanyInformation">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.company_information.</code><code class="descname">CompanyInformation</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/company_information.html#CompanyInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.company_information.CompanyInformation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.company_information.CompanyInformation.date_of_incorporation">
+<code class="descname">date_of_incorporation</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.company_information.CompanyInformation.date_of_incorporation" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The date of incorporation is the specific date when the company was registered with the relevant authority.</div>
+<div class="line">Format: YYYYMMDD</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="worldline.connect.sdk.v1.domain.company_information.CompanyInformation.from_dictionary">
 <code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/company_information.html#CompanyInformation.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.company_information.CompanyInformation.from_dictionary" title="Permalink to this definition">¶</a></dt>
@@ -8840,7 +8850,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.decrypted_payment_data.DecryptedPaymentData.cardholder_name">
 <code class="descname">cardholder_name</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.decrypted_payment_data.DecryptedPaymentData.cardholder_name" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
-<div class="line">Card holder’s name on the card.</div>
+<div class="line">The card holder’s name on the card. Minimum length of 2, maximum length of 51 characters.</div>
 </div>
 <ul class="simple">
 <li>For Apple Pay, maps to the cardholderName property in the encrypted payment data.</li>
@@ -13380,6 +13390,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <li>SHOW_INSTRUCTIONS - The customer needs to be shown payment instruction using the details found in showData. Alternatively the instructions can be rendered by us using the instructionsRenderingData</li>
 <li>SHOW_TRANSACTION_RESULTS - The customer needs to be shown the transaction results using the details found in showData</li>
 <li>MOBILE_THREEDS_CHALLENGE - The customer needs to complete a challenge as part of the 3D Secure authentication inside your mobile app. The details contained in mobileThreeDSecureChallengeParameters need to be provided to the EMVco certified Mobile SDK as a challengeParameters object.</li>
+<li>INITIALIZE_INAPP_THREED_SECURE_SDK - You need to initialize the 3D in app SDK using the returned parameters. The details contained in mobileThreeDSecureChallengeParameters need to be provided to the EMVco certified Mobile SDK as an initializationParameters object.</li>
 <li>CALL_THIRD_PARTY - The merchant needs to call a third party using the data found in thirdPartyData</li>
 </ul>
 <p>Type: str</p>
@@ -13463,6 +13474,9 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <li>desktopQRCode - contains a QR code that can be used to complete the payment in the WeChat app. In this case, the key QRCODE contains a base64 encoded PNG image. By prepending ‘<a class="reference external" href="data:image/png;base64">data:image/png;base64</a>,’ this value can be used as the source of an HTML inline image on a desktop or tablet (intended to be scanned by a mobile device with the WeChat app).</li>
 <li>urlIntent - contains a URL intent that can be used to complete the payment in the WeChat app. In this case, the key URLINTENT contains a URL intent that can be used as the link of an ‘open the app’ button on a mobile device.</li>
 </ul>
+<div class="line-block">
+<div class="line">For SHOW_FORM, for payment product 740 (PromptPay), this contains a QR code image URL and a timestamp with the expiration date-time of the QR code. In this case, the key QRCODE_IMAGE_URL contains a URL that can be used as the source of an HTML inline image on a desktop. For tablets and mobile devices, it is advised to use the &amp;lt;a&amp;gt; download attribute, so the user can download the image on their device and upload it in their banking mobile application. The key COUNTDOWN_DATETIME, contains a date-time that the QR code will expire. The date-time is in UTC with format: YYYYMMDDHH24MISS. You are advised to show a countdown timer.</div>
+</div>
 <p>Type: list[<a class="reference internal" href="#worldline.connect.sdk.v1.domain.key_value_pair.KeyValuePair" title="worldline.connect.sdk.v1.domain.key_value_pair.KeyValuePair"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.key_value_pair.KeyValuePair</span></code></a>]</p>
 </dd></dl>
 
@@ -13898,7 +13912,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input.MobilePaymentProduct320SpecificInput.cardholder_name">
 <code class="descname">cardholder_name</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input.MobilePaymentProduct320SpecificInput.cardholder_name" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
-<div class="line">The card holder’s name on the card.</div>
+<div class="line">The card holder’s name on the card. Minimum length of 2, maximum length of 51 characters.</div>
 <div class="line">The encrypted payment data can be found in property paymentMethodData.tokenizationData.info.billingAddress.name of the PaymentData &lt;<a class="reference external" href="https://developers.google.com/android/reference/com/google/android/gms/wallet/PaymentData">https://developers.google.com/android/reference/com/google/android/gms/wallet/PaymentData</a>&gt;.toJson() result.</div>
 </div>
 <p>Type: str</p>
@@ -14995,6 +15009,99 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <li>fundingGiftCardForPersonalUse = When funding a gift card for personal use.</li>
 <li>fundingGiftCardForSomeoneElse = When funding a gift card for someone else.</li>
 </ul>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.order_type_information.OrderTypeInformation.payment_code">
+<code class="descname">payment_code</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.order_type_information.OrderTypeInformation.payment_code" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Payment code to support account funding transactions. Possible values are:</div>
+</div>
+<ul class="simple">
+<li>accountManagement</li>
+<li>paymentAllowance</li>
+<li>settlementOfAnnuity</li>
+<li>unemploymentDisabilityBenefit</li>
+<li>businessExpenses</li>
+<li>bonusPayment</li>
+<li>busTransportRelatedBusiness</li>
+<li>cashManagementTransfer</li>
+<li>paymentOfCableTVBill</li>
+<li>governmentInstituteIssued</li>
+<li>creditCardPayment</li>
+<li>creditCardBill</li>
+<li>charity</li>
+<li>collectionPayment</li>
+<li>commercialPayment</li>
+<li>commission</li>
+<li>compensation</li>
+<li>copyright</li>
+<li>debitCardPayment</li>
+<li>deposit</li>
+<li>dividend</li>
+<li>studyFees</li>
+<li>electricityBill</li>
+<li>energies</li>
+<li>generalFees</li>
+<li>ferry</li>
+<li>foreignExchange</li>
+<li>gasBill</li>
+<li>unemployedCompensation</li>
+<li>governmentPayment</li>
+<li>healthInsurance</li>
+<li>reimbursementCreditCard</li>
+<li>reimbursementDebitCard</li>
+<li>carInsurancePremium</li>
+<li>insuranceClaim</li>
+<li>installment</li>
+<li>insurancePremium</li>
+<li>investmentPayment</li>
+<li>intraCompany</li>
+<li>interest</li>
+<li>incomeTax</li>
+<li>investment</li>
+<li>laborInsurance</li>
+<li>licenseFree</li>
+<li>lifeInsurance</li>
+<li>loan</li>
+<li>medicalServices</li>
+<li>mobilePersonToBusiness</li>
+<li>mobilePersonToPerson</li>
+<li>mobileTopUp</li>
+<li>notSpecified</li>
+<li>other</li>
+<li>anotherTelecomBill</li>
+<li>payroll</li>
+<li>pensionFundContribution</li>
+<li>pensionPayment</li>
+<li>telephoneBill</li>
+<li>propertyInsurance</li>
+<li>generalLease</li>
+<li>rent</li>
+<li>railwayPayment</li>
+<li>royalties</li>
+<li>salary</li>
+<li>savingsPayment</li>
+<li>securities</li>
+<li>socialSecurity</li>
+<li>study</li>
+<li>subscription</li>
+<li>supplierPayment</li>
+<li>taxRefund</li>
+<li>taxPayment</li>
+<li>telecommunicationsBill</li>
+<li>tradeServices</li>
+<li>treasuryPayment</li>
+<li>travelPayment</li>
+<li>utilityBill</li>
+<li>valueAddedTaxPayment</li>
+<li>withHolding</li>
+<li>waterBill</li>
+</ul>
+<div class="line-block">
+<div class="line">.</div>
+</div>
 <p>Type: str</p>
 </dd></dl>
 
@@ -18064,15 +18171,6 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 </dd></dl>
 
 <dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.redirect_payment_method_specific_input.RedirectPaymentMethodSpecificInput.payment_product816_specific_input">
-<code class="descname">payment_product816_specific_input</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirect_payment_method_specific_input.RedirectPaymentMethodSpecificInput.payment_product816_specific_input" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">Object containing specific input required for German giropay payments (Payment product ID 816)</div>
-</div>
-<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput" title="worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput</span></code></a></p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.redirect_payment_method_specific_input.RedirectPaymentMethodSpecificInput.payment_product840_specific_input">
 <code class="descname">payment_product840_specific_input</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirect_payment_method_specific_input.RedirectPaymentMethodSpecificInput.payment_product840_specific_input" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -18385,34 +18483,6 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dl class="method">
 <dt id="worldline.connect.sdk.v1.domain.redirect_payment_product809_specific_input.RedirectPaymentProduct809SpecificInput.to_dictionary">
 <code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/redirect_payment_product809_specific_input.html#RedirectPaymentProduct809SpecificInput.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirect_payment_product809_specific_input.RedirectPaymentProduct809SpecificInput.to_dictionary" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<span class="target" id="module-worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input"></span><dl class="class">
-<dt id="worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput">
-<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.</code><code class="descname">RedirectPaymentProduct816SpecificInput</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/redirect_payment_product816_specific_input.html#RedirectPaymentProduct816SpecificInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
-<div class="line-block">
-<div class="line">Please find below specific input fields for payment product 816 (giropay)</div>
-</div>
-<dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput.bank_account_iban">
-<code class="descname">bank_account_iban</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput.bank_account_iban" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">Object containing the bank account details of the customer</div>
-</div>
-<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban" title="worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.bank_account_iban.BankAccountIban</span></code></a></p>
-</dd></dl>
-
-<dl class="method">
-<dt id="worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput.from_dictionary">
-<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/redirect_payment_product816_specific_input.html#RedirectPaymentProduct816SpecificInput.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput.from_dictionary" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput.to_dictionary">
-<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/redirect_payment_product816_specific_input.html#RedirectPaymentProduct816SpecificInput.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirect_payment_product816_specific_input.RedirectPaymentProduct816SpecificInput.to_dictionary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -19595,7 +19665,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.scheme_token_data.SchemeTokenData.cardholder_name">
 <code class="descname">cardholder_name</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.scheme_token_data.SchemeTokenData.cardholder_name" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
-<div class="line">The cardholder’s name on the card</div>
+<div class="line">The card holder’s name on the card. Minimum length of 2, maximum length of 51 characters.</div>
 </div>
 <p>Type: str</p>
 </dd></dl>
