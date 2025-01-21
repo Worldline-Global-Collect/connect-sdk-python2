@@ -14,6 +14,8 @@ class CreateMandateWithReturnUrl(CreateMandateBase):
     def return_url(self):
         """
         | Return URL to use if the mandate signing requires redirection.
+        | Note: The provided URL should be absolute and contain the https:// protocol. IP addresses are not supported, neither localhost. For use on mobile devices a custom protocol can be used in the form of *protocol*://. This protocol must be registered on the device first.
+        | URLs without a protocol will be rejected.
 
         Type: str
         """

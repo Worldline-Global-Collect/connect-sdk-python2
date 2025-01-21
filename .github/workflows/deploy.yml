@@ -21,11 +21,11 @@ jobs:
       - name: Install Twine and dependencies
         run: pip install twine requests==2.* requests-toolbelt==0.*
       - name: Build
-        run: python setup.py sdist --formats zip --dist-dir .
+        run: python setup.py sdist --formats gztar --dist-dir .
       - name: Verify
-        run: twine check "connect-sdk-python2-${SDK_VERSION}.zip"
+        run: twine check "connect-sdk-python2-${SDK_VERSION}.tar.gz"
       - name: Deploy
-        run: twine upload --username "${PYPI_USERNAME}" --password "${PYPI_PASSWORD}" "connect-sdk-python2-${SDK_VERSION}.zip"
+        run: twine upload --username "${PYPI_USERNAME}" --password "${PYPI_PASSWORD}" "connect-sdk-python2-${SDK_VERSION}.tar.gz"
         env:
           PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
           PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}

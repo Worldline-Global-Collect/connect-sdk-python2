@@ -13,6 +13,7 @@ class MicrosoftFraudResults(DataObject):
     __device_id = None
     __fraud_score = None
     __policy_applied = None
+    __reason_codes = None
     __true_ip_address = None
     __user_device_type = None
 
@@ -82,6 +83,19 @@ class MicrosoftFraudResults(DataObject):
         self.__policy_applied = value
 
     @property
+    def reason_codes(self):
+        """
+        | List of one or more reason codes.
+
+        Type: list[str]
+        """
+        return self.__reason_codes
+
+    @reason_codes.setter
+    def reason_codes(self, value):
+        self.__reason_codes = value
+
+    @property
     def true_ip_address(self):
         """
         | The true IP address as determined by Microsoft Device Fingerprinting.
@@ -119,6 +133,11 @@ class MicrosoftFraudResults(DataObject):
             dictionary['fraudScore'] = self.fraud_score
         if self.policy_applied is not None:
             dictionary['policyApplied'] = self.policy_applied
+        if self.reason_codes is not None:
+            dictionary['reasonCodes'] = []
+            for element in self.reason_codes:
+                if element is not None:
+                    dictionary['reasonCodes'].append(element)
         if self.true_ip_address is not None:
             dictionary['trueIpAddress'] = self.true_ip_address
         if self.user_device_type is not None:
@@ -137,6 +156,12 @@ class MicrosoftFraudResults(DataObject):
             self.fraud_score = dictionary['fraudScore']
         if 'policyApplied' in dictionary:
             self.policy_applied = dictionary['policyApplied']
+        if 'reasonCodes' in dictionary:
+            if not isinstance(dictionary['reasonCodes'], list):
+                raise TypeError('value \'{}\' is not a list'.format(dictionary['reasonCodes']))
+            self.reason_codes = []
+            for element in dictionary['reasonCodes']:
+                self.reason_codes.append(element)
         if 'trueIpAddress' in dictionary:
             self.true_ip_address = dictionary['trueIpAddress']
         if 'userDeviceType' in dictionary:
