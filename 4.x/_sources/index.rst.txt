@@ -1262,6 +1262,13 @@ API Reference
     :special-members:
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
+.. automodule:: worldline.connect.sdk.v1.domain.cybersource_decision_manager
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
 .. automodule:: worldline.connect.sdk.v1.domain.debtor
     :members:
     :show-inheritance:

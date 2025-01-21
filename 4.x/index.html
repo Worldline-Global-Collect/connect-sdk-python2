@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.2.0 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.3.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -5808,7 +5808,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <code class="descname">return_url</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_input.CardPaymentMethodSpecificInput.return_url" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The URL that the customer is redirect to after the payment flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.</div>
-<div class="line">Note: The provided URL should be absolute and contain the protocol to use, e.g. <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
+<div class="line">Note: The provided URL should be absolute and contain the <a class="reference external" href="https://">https://</a> protocol. IP addresses are not supported, neither localhost. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
 <div class="line">URLs without a protocol will be rejected.</div>
 </div>
 <p>Type: str</p>
@@ -6214,7 +6214,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <code class="descname">return_url</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.cash_payment_product1503_specific_input.CashPaymentProduct1503SpecificInput.return_url" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The URL that the customer is redirect to after the payment flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.</div>
-<div class="line">Note: The provided URL should be absolute and contain the protocol to use, e.g. <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
+<div class="line">Note: The provided URL should be absolute and contain the <a class="reference external" href="https://">https://</a> protocol. IP addresses are not supported, neither localhost. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
 <div class="line">URLs without a protocol will be rejected.</div>
 </div>
 <p>Type: str</p>
@@ -7102,6 +7102,8 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <code class="descname">return_url</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.create_mandate_with_return_url.CreateMandateWithReturnUrl.return_url" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">Return URL to use if the mandate signing requires redirection.</div>
+<div class="line">Note: The provided URL should be absolute and contain the <a class="reference external" href="https://">https://</a> protocol. IP addresses are not supported, neither localhost. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
+<div class="line">URLs without a protocol will be rejected.</div>
 </div>
 <p>Type: str</p>
 </dd></dl>
@@ -8699,6 +8701,61 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dl class="method">
 <dt id="worldline.connect.sdk.v1.domain.customer_token_with_contact_details.CustomerTokenWithContactDetails.to_dictionary">
 <code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/customer_token_with_contact_details.html#CustomerTokenWithContactDetails.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.customer_token_with_contact_details.CustomerTokenWithContactDetails.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-worldline.connect.sdk.v1.domain.cybersource_decision_manager"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.cybersource_decision_manager.</code><code class="descname">CybersourceDecisionManager</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/cybersource_decision_manager.html#CybersourceDecisionManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">This object contains the results of the Cybersource Decision Manager assessment. Cybersource is a fraud detection tool leveraging data networks, configurable rules, intelligence, and device fingerprinting to identify risky transactions.</div>
+</div>
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.clause_name">
+<code class="descname">clause_name</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.clause_name" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Name of the clause within the applied policy that was triggered during the evaluation of this transaction.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.fraud_score">
+<code class="descname">fraud_score</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.fraud_score" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Result of the Cybersource Decision Manager check. This contains the normalized fraud score from a scale of 0 to 100. A higher score indicates an increased risk of fraud.</div>
+</div>
+<p>Type: int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/cybersource_decision_manager.html#CybersourceDecisionManager.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.policy_applied">
+<code class="descname">policy_applied</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.policy_applied" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Name of the policy that was applied during the evaluation of this transaction.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.reason_codes">
+<code class="descname">reason_codes</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.reason_codes" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">List of one or more reason codes.</div>
+</div>
+<p>Type: list[str]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/cybersource_decision_manager.html#CybersourceDecisionManager.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager.to_dictionary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -10517,6 +10574,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.fraud_results.</code><code class="descname">FraudResults</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/fraud_results.html#FraudResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.fraud_results.FraudResults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.fraud_results.FraudResults.cybersource_decision_manager">
+<code class="descname">cybersource_decision_manager</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.fraud_results.FraudResults.cybersource_decision_manager" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">This object contains the results of the Cybersource Decision Manager assessment. Cybersource is a fraud detection tool leveraging data networks, configurable rules, intelligence, and device fingerprinting to identify risky transactions.</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager" title="worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.cybersource_decision_manager.CybersourceDecisionManager</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.fraud_results.FraudResults.fraud_service_result">
 <code class="descname">fraud_service_result</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.fraud_results.FraudResults.fraud_service_result" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -11317,7 +11383,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <code class="descname">return_url</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.hosted_checkout_specific_input.HostedCheckoutSpecificInput.return_url" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The URL that the customer is redirect to after the payment flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.</div>
-<div class="line">Note: The provided URL should be absolute and contain the protocol to use, e.g. <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
+<div class="line">Note: The provided URL should be absolute and contain the <a class="reference external" href="https://">https://</a> protocol. IP addresses are not supported, neither localhost. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
 <div class="line">URLs without a protocol will be rejected.</div>
 </div>
 <p>Type: str</p>
@@ -11564,7 +11630,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <code class="descname">return_url</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.hosted_mandate_management_specific_input.HostedMandateManagementSpecificInput.return_url" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The URL that the customer is redirect to after the mandate flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.</div>
-<div class="line">Note: The provided URL should be absolute and contain the protocol to use, e.g. <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
+<div class="line">Note: The provided URL should be absolute and contain the <a class="reference external" href="https://">https://</a> protocol. IP addresses are not supported, neither localhost. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
 <div class="line">URLs without a protocol will be rejected.</div>
 </div>
 <p>Type: str</p>
@@ -13574,6 +13640,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <div class="line">Name of the policy that was applied on during the evaluation of this transaction.</div>
 </div>
 <p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.microsoft_fraud_results.MicrosoftFraudResults.reason_codes">
+<code class="descname">reason_codes</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.microsoft_fraud_results.MicrosoftFraudResults.reason_codes" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">List of one or more reason codes.</div>
+</div>
+<p>Type: list[str]</p>
 </dd></dl>
 
 <dl class="method">
@@ -18229,7 +18304,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <code class="descname">return_url</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirect_payment_method_specific_input.RedirectPaymentMethodSpecificInput.return_url" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The URL that the customer is redirect to after the payment flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.</div>
-<div class="line">Note: The provided URL should be absolute and contain the protocol to use, e.g. <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
+<div class="line">Note: The provided URL should be absolute and contain the <a class="reference external" href="https://">https://</a> protocol. IP addresses are not supported, neither localhost. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
 <div class="line">URLs without a protocol will be rejected.</div>
 </div>
 <p>Type: str</p>
@@ -18706,7 +18781,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <code class="descname">return_url</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirection_data.RedirectionData.return_url" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The URL that the customer is redirect to after the payment flow has finished. You can add any number of key value pairs in the query string that, for instance help you to identify the customer when they return to your site. Please note that we will also append some additional key value pairs that will also help you with this identification process.</div>
-<div class="line">Note: The provided URL should be absolute and contain the protocol to use, e.g. <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
+<div class="line">Note: The provided URL should be absolute and contain the <a class="reference external" href="https://">https://</a> protocol. IP addresses are not supported, neither localhost. For use on mobile devices a custom protocol can be used in the form of <em>protocol</em>://. This protocol must be registered on the device first.</div>
 <div class="line">URLs without a protocol will be rejected.</div>
 </div>
 <p>Type: str</p>
