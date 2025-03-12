@@ -1948,6 +1948,13 @@ API Reference
     :special-members:
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
+.. automodule:: worldline.connect.sdk.v1.domain.network_token_data
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
 .. automodule:: worldline.connect.sdk.v1.domain.non_sepa_direct_debit_payment_method_specific_input
     :members:
     :show-inheritance:

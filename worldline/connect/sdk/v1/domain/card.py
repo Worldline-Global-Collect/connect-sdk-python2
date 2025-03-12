@@ -27,7 +27,18 @@ class Card(CardWithoutCvv):
     @property
     def partial_pin(self):
         """
-        | The first 2 digits of the card's PIN code. May be optionally submitted for South Korean cards (paymentProductIds 180, 181, 182, 183, 184, 185 and 186). Submitting this property may improve your authorization rate.
+        | The first 2 digits of the card's PIN code. May be optionally submitted for the following payment products:
+        
+        * BC Card (paymentProductId 180)
+        * Hana Card (paymentProductId 181)
+        * Hyundai Card (paymentProductId 182)
+        * KB Card (paymentProductId 183)
+        * Lotte Card (paymentProductId 184)
+        * NH Card (paymentProductId 185)
+        * Samsung Card (paymentProductId 186)
+        * Shinhan Card (paymentProductId 187)
+        
+        | Submitting this property may improve your authorization rate.
 
         Type: str
         """
