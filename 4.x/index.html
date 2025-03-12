@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.3.0 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.4.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -5593,7 +5593,20 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.card.Card.partial_pin">
 <code class="descname">partial_pin</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card.Card.partial_pin" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
-<div class="line">The first 2 digits of the card’s PIN code. May be optionally submitted for South Korean cards (paymentProductIds 180, 181, 182, 183, 184, 185 and 186). Submitting this property may improve your authorization rate.</div>
+<div class="line">The first 2 digits of the card’s PIN code. May be optionally submitted for the following payment products:</div>
+</div>
+<ul class="simple">
+<li>BC Card (paymentProductId 180)</li>
+<li>Hana Card (paymentProductId 181)</li>
+<li>Hyundai Card (paymentProductId 182)</li>
+<li>KB Card (paymentProductId 183)</li>
+<li>Lotte Card (paymentProductId 184)</li>
+<li>NH Card (paymentProductId 185)</li>
+<li>Samsung Card (paymentProductId 186)</li>
+<li>Shinhan Card (paymentProductId 187)</li>
+</ul>
+<div class="line-block">
+<div class="line">Submitting this property may improve your authorization rate.</div>
 </div>
 <p>Type: str</p>
 </dd></dl>
@@ -5906,12 +5919,30 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.network_token_data">
+<code class="descname">network_token_data</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.network_token_data" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object holding data that describes a network token.</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData" title="worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.network_token_used">
 <code class="descname">network_token_used</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.network_token_used" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">Indicates if a network token was used during the payment.</div>
 </div>
 <p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.payment_account_reference">
+<code class="descname">payment_account_reference</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.payment_account_reference" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A unique reference to the primary account number. Payment Account Reference provides a consolidated view of transactions associated with a PAN and its affiliated tokens, making it easier to identify customers and their associated transactions across payment channels.</div>
+</div>
+<p>Type: str</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -14174,6 +14205,52 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.mobile_three_d_secure_challenge_parameters.MobileThreeDSecureChallengeParameters.to_dictionary">
 <code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/mobile_three_d_secure_challenge_parameters.html#MobileThreeDSecureChallengeParameters.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_three_d_secure_challenge_parameters.MobileThreeDSecureChallengeParameters.to_dictionary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-worldline.connect.sdk.v1.domain.network_token_data"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.network_token_data.</code><code class="descname">NetworkTokenData</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/network_token_data.html#NetworkTokenData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">Object holding data that describes a network token</div>
+</div>
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/network_token_data.html#NetworkTokenData.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.network_token">
+<code class="descname">network_token</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.network_token" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The network token alternative for the full Permanent Account Number. To receive a non-obfuscated network token please contact your account manager.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/network_token_data.html#NetworkTokenData.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.token_expiry_date">
+<code class="descname">token_expiry_date</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.token_expiry_date" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The expiry date of the network token.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.token_reference_id">
+<code class="descname">token_reference_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.network_token_data.NetworkTokenData.token_reference_id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A unique identifier that can be used with Visa Token Service (VTS) or Mastercard Digital Enablement Service (MDES) to retrieve token details. It remains valid as long as the token is valid. Note: A prefix “V:” is added to show that this is a network token for a Visa product and “M:” to show that this is a network token for a Mastercard product. </div>
+</div>
+<p>Type: str</p>
+</dd></dl>
 
 </dd></dl>
 

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.card &#8212; connect-sdk-python2 4.3.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.card &#8212; connect-sdk-python2 4.4.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -62,7 +62,18 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">partial_pin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        | The first 2 digits of the card&#39;s PIN code. May be optionally submitted for South Korean cards (paymentProductIds 180, 181, 182, 183, 184, 185 and 186). Submitting this property may improve your authorization rate.</span>
+<span class="sd">        | The first 2 digits of the card&#39;s PIN code. May be optionally submitted for the following payment products:</span>
+<span class="sd">        </span>
+<span class="sd">        * BC Card (paymentProductId 180)</span>
+<span class="sd">        * Hana Card (paymentProductId 181)</span>
+<span class="sd">        * Hyundai Card (paymentProductId 182)</span>
+<span class="sd">        * KB Card (paymentProductId 183)</span>
+<span class="sd">        * Lotte Card (paymentProductId 184)</span>
+<span class="sd">        * NH Card (paymentProductId 185)</span>
+<span class="sd">        * Samsung Card (paymentProductId 186)</span>
+<span class="sd">        * Shinhan Card (paymentProductId 187)</span>
+<span class="sd">        </span>
+<span class="sd">        | Submitting this property may improve your authorization rate.</span>
 
 <span class="sd">        Type: str</span>
 <span class="sd">        &quot;&quot;&quot;</span>
