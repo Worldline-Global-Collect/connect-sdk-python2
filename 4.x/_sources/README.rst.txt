@@ -51,13 +51,13 @@ To install the SDK using pip, execute the following command:
 
 Alternatively, you can install the SDK from a source distribution file:
 
-#. Download the latest version of the Python SDK from GitHub. Choose the ``connect-sdk-python2-x.y.z.zip`` file from the `releases <https://github.com/Worldline-Global-Collect/connect-sdk-python2/releases>`__ page, where ``x.y.z`` is the version number.
+#. Download the latest version of the Python SDK from GitHub. Choose the ``connect_sdk_python2-x.y.z.tar.gz`` file from the `releases <https://github.com/Worldline-Global-Collect/connect-sdk-python2/releases>`__ page, where ``x.y.z`` is the version number.
 
 #. Execute the following command in the folder where the SDK was downloaded to:
 
    .. code:: bash
 
-      pip install connect-sdk-python2-x.y.z.zip
+      pip install connect_sdk_python2-x.y.z.tar.gz
 
 Uninstalling
 ------------

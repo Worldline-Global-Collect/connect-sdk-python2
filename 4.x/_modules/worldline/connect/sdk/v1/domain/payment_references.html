@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.payment_references &#8212; connect-sdk-python2 4.4.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.payment_references &#8212; connect-sdk-python2 4.5.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -43,6 +43,7 @@
 
 <div class="viewcode-block" id="PaymentReferences"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.payment_references.PaymentReferences">[docs]</a><span class="k">class</span> <span class="nc">PaymentReferences</span><span class="p">(</span><span class="n">DataObject</span><span class="p">):</span>
 
+    <span class="n">__merchant_capture_reference</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__merchant_order_id</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__merchant_reference</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__payment_reference</span> <span class="o">=</span> <span class="kc">None</span>
@@ -50,6 +51,19 @@
     <span class="n">__provider_merchant_id</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__provider_reference</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__reference_orig_payment</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">merchant_capture_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | Your unique reference of the capture that is also returned in our report files. This is almost always used for your reconciliation of our report files.</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__merchant_capture_reference</span>
+
+    <span class="nd">@merchant_capture_reference</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">merchant_capture_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__merchant_capture_reference</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">merchant_order_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -144,6 +158,8 @@
 
 <div class="viewcode-block" id="PaymentReferences.to_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.payment_references.PaymentReferences.to_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">PaymentReferences</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">merchant_capture_reference</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;merchantCaptureReference&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">merchant_capture_reference</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">merchant_order_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;merchantOrderId&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">merchant_order_id</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">merchant_reference</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -162,6 +178,8 @@
 
 <div class="viewcode-block" id="PaymentReferences.from_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.payment_references.PaymentReferences.from_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">PaymentReferences</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;merchantCaptureReference&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">merchant_capture_reference</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;merchantCaptureReference&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;merchantOrderId&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">merchant_order_id</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;merchantOrderId&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;merchantReference&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.capture &#8212; connect-sdk-python2 4.4.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.capture &#8212; connect-sdk-python2 4.5.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -65,13 +65,17 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        | Current high-level status of the payment in a human-readable form. Possible values are :</span>
+<span class="sd">        | Current high-level status of the captures in a human-readable form. Possible values are:</span>
 <span class="sd">        </span>
-<span class="sd">        * CAPTURE_REQUESTED - The transaction is in the queue to be captured.</span>
-<span class="sd">        * CAPTURED - The transaction has been captured and we have received online confirmation.</span>
-<span class="sd">        * CANCELLED - You have cancelled the transaction.</span>
-<span class="sd">        * REJECTED_CAPTURE - We or one of our downstream acquirers/providers have rejected the capture request.</span>
-<span class="sd">        * REVERSED - The transaction has been reversed.</span>
+<span class="sd">        * CREATED - The capture has been created on our side</span>
+<span class="sd">        * CAPTURE_REQUESTED - The transaction is in the queue to be captured</span>
+<span class="sd">        * CAPTURED - The transaction has been captured and we have received online confirmation</span>
+<span class="sd">        * PAID - We have matched the incoming funds to the transaction</span>
+<span class="sd">        * CANCELLED - You have cancelled the capture</span>
+<span class="sd">        * REJECTED_CAPTURE - The capture has been rejected</span>
+<span class="sd">        * REVERSED - The capture has been reversed</span>
+<span class="sd">        * CHARGEBACK_NOTIFICATION - We have received a notification of chargeback and this status informs you that your account will be debited for a particular transaction</span>
+<span class="sd">        * CHARGEBACKED - The transaction has been chargebacked</span>
 <span class="sd">        </span>
 <span class="sd">        </span>
 <span class="sd">        | Please see Statuses &lt;https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html&gt; for a full overview of possible values.</span>
@@ -87,8 +91,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">status_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        | This object has the numeric representation of the current capture status, timestamp of last status change and performable action on the current payment resource.</span>
-<span class="sd">        | In case of failed payments and negative scenarios, detailed error information is listed.</span>
+<span class="sd">        | This object has the numeric representation of the current capture status, timestamp of last status change and performable action on the current capture resource. In case of failed captures and negative scenarios, detailed error information is listed.</span>
 
 <span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.capture_status_output.CaptureStatusOutput`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
