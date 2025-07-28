@@ -44,6 +44,7 @@ class AccountFundingRecipient(DataObject):
         * iban = International Bank Account Number, is a standard international numbering system for identifying bank accounts.
         * bicNumber = Bank Identification Code is a number that is used to identify a specific bank.
         * giftCard = Gift card is a type of prepaid card that contains a specific amount of money that can be used at participating stores and marketplaces.
+        * phoneNumber = The phone number of the recipient.
 
         Type: str
         """

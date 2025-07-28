@@ -27,7 +27,8 @@ class DeviceFingerprintResponse(DataObject):
     @property
     def html(self):
         """
-        | Contains the ready-to-use device fingerprint collector script. You have to inject it into your page and call it when the customer presses the final payment submit button. You should only call it once per payment request.
+        | Contains the ready-to-use device fingerprint collector script. You have to inject it into your page and call it when the customer presses the final payment submit button. For Cybersource, the script must be added to the body of the page.
+        | You should only call it once per payment request.
 
         Type: str
         """

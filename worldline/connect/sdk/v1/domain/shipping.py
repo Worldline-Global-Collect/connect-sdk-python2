@@ -14,9 +14,11 @@ class Shipping(DataObject):
 
     __address = None
     __address_indicator = None
+    __carrier = None
     __comments = None
     __email_address = None
     __first_usage_date = None
+    __instructions = None
     __is_first_usage = None
     __shipped_from_zip = None
     __tracking_number = None
@@ -57,6 +59,19 @@ class Shipping(DataObject):
         self.__address_indicator = value
 
     @property
+    def carrier(self):
+        """
+        | Indicates the carrier that will deliver the products.
+
+        Type: str
+        """
+        return self.__carrier
+
+    @carrier.setter
+    def carrier(self, value):
+        self.__carrier = value
+
+    @property
     def comments(self):
         """
         | Comments included during shipping
@@ -94,6 +109,29 @@ class Shipping(DataObject):
     @first_usage_date.setter
     def first_usage_date(self, value):
         self.__first_usage_date = value
+
+    @property
+    def instructions(self):
+        """
+        | The delivery instructions or preferences for the shipment. The instructions that informed the delivery carrier about handling requirements, delivery methods, and any special considerations to ensure successful delivery. Possible values:
+        |  
+        * signature-required = A signature is required upon delivery.
+        * identification-required = Recipient needs to provide identification.
+        * contactless-delivery = Delivery should be contactless.
+        * leave-at-door = Leave the package at the recipient's door.
+        * leave-at-curb = Leave the package at the curbside.
+        * leave-with-neighbor = Leave the package with a neighbor.
+        * express = Expedite the delivery process.
+        * tracked = The delivery is tracked with real-time updates.
+        * untracked = The delivery is untracked, with no real-time updates.
+
+        Type: str
+        """
+        return self.__instructions
+
+    @instructions.setter
+    def instructions(self, value):
+        self.__instructions = value
 
     @property
     def is_first_usage(self):
@@ -166,12 +204,16 @@ class Shipping(DataObject):
             dictionary['address'] = self.address.to_dictionary()
         if self.address_indicator is not None:
             dictionary['addressIndicator'] = self.address_indicator
+        if self.carrier is not None:
+            dictionary['carrier'] = self.carrier
         if self.comments is not None:
             dictionary['comments'] = self.comments
         if self.email_address is not None:
             dictionary['emailAddress'] = self.email_address
         if self.first_usage_date is not None:
             dictionary['firstUsageDate'] = self.first_usage_date
+        if self.instructions is not None:
+            dictionary['instructions'] = self.instructions
         if self.is_first_usage is not None:
             dictionary['isFirstUsage'] = self.is_first_usage
         if self.shipped_from_zip is not None:
@@ -191,12 +233,16 @@ class Shipping(DataObject):
             self.address = value.from_dictionary(dictionary['address'])
         if 'addressIndicator' in dictionary:
             self.address_indicator = dictionary['addressIndicator']
+        if 'carrier' in dictionary:
+            self.carrier = dictionary['carrier']
         if 'comments' in dictionary:
             self.comments = dictionary['comments']
         if 'emailAddress' in dictionary:
             self.email_address = dictionary['emailAddress']
         if 'firstUsageDate' in dictionary:
             self.first_usage_date = dictionary['firstUsageDate']
+        if 'instructions' in dictionary:
+            self.instructions = dictionary['instructions']
         if 'isFirstUsage' in dictionary:
             self.is_first_usage = dictionary['isFirstUsage']
         if 'shippedFromZip' in dictionary:

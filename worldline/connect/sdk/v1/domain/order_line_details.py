@@ -14,10 +14,12 @@ class OrderLineDetails(DataObject):
     __naics_commodity_code = None
     __product_category = None
     __product_code = None
+    __product_image_url = None
     __product_name = None
     __product_price = None
     __product_sku = None
     __product_type = None
+    __product_url = None
     __quantity = None
     __tax_amount = None
     __unit = None
@@ -102,6 +104,19 @@ class OrderLineDetails(DataObject):
         self.__product_code = value
 
     @property
+    def product_image_url(self):
+        """
+        | The URL of the image of the purchased product.
+
+        Type: str
+        """
+        return self.__product_image_url
+
+    @product_image_url.setter
+    def product_image_url(self, value):
+        self.__product_image_url = value
+
+    @property
     def product_name(self):
         """
         | The name of the product. The '+' character is not allowed in this property for transactions that are processed by TechProcess Payment Platform.
@@ -153,6 +168,19 @@ class OrderLineDetails(DataObject):
     @product_type.setter
     def product_type(self, value):
         self.__product_type = value
+
+    @property
+    def product_url(self):
+        """
+        | The URL of the product page on your website.
+
+        Type: str
+        """
+        return self.__product_url
+
+    @product_url.setter
+    def product_url(self, value):
+        self.__product_url = value
 
     @property
     def quantity(self):
@@ -208,6 +236,8 @@ class OrderLineDetails(DataObject):
             dictionary['productCategory'] = self.product_category
         if self.product_code is not None:
             dictionary['productCode'] = self.product_code
+        if self.product_image_url is not None:
+            dictionary['productImageUrl'] = self.product_image_url
         if self.product_name is not None:
             dictionary['productName'] = self.product_name
         if self.product_price is not None:
@@ -216,6 +246,8 @@ class OrderLineDetails(DataObject):
             dictionary['productSku'] = self.product_sku
         if self.product_type is not None:
             dictionary['productType'] = self.product_type
+        if self.product_url is not None:
+            dictionary['productUrl'] = self.product_url
         if self.quantity is not None:
             dictionary['quantity'] = self.quantity
         if self.tax_amount is not None:
@@ -238,6 +270,8 @@ class OrderLineDetails(DataObject):
             self.product_category = dictionary['productCategory']
         if 'productCode' in dictionary:
             self.product_code = dictionary['productCode']
+        if 'productImageUrl' in dictionary:
+            self.product_image_url = dictionary['productImageUrl']
         if 'productName' in dictionary:
             self.product_name = dictionary['productName']
         if 'productPrice' in dictionary:
@@ -246,6 +280,8 @@ class OrderLineDetails(DataObject):
             self.product_sku = dictionary['productSku']
         if 'productType' in dictionary:
             self.product_type = dictionary['productType']
+        if 'productUrl' in dictionary:
+            self.product_url = dictionary['productUrl']
         if 'quantity' in dictionary:
             self.quantity = dictionary['quantity']
         if 'taxAmount' in dictionary:

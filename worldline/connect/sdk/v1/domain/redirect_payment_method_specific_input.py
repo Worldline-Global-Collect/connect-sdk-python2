@@ -6,6 +6,7 @@
 from worldline.connect.sdk.v1.domain.abstract_redirect_payment_method_specific_input import AbstractRedirectPaymentMethodSpecificInput
 from worldline.connect.sdk.v1.domain.redirect_payment_product4101_specific_input import RedirectPaymentProduct4101SpecificInput
 from worldline.connect.sdk.v1.domain.redirect_payment_product809_specific_input import RedirectPaymentProduct809SpecificInput
+from worldline.connect.sdk.v1.domain.redirect_payment_product838_specific_input import RedirectPaymentProduct838SpecificInput
 from worldline.connect.sdk.v1.domain.redirect_payment_product840_specific_input import RedirectPaymentProduct840SpecificInput
 from worldline.connect.sdk.v1.domain.redirect_payment_product861_specific_input import RedirectPaymentProduct861SpecificInput
 from worldline.connect.sdk.v1.domain.redirect_payment_product863_specific_input import RedirectPaymentProduct863SpecificInput
@@ -19,6 +20,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     __is_recurring = None
     __payment_product4101_specific_input = None
     __payment_product809_specific_input = None
+    __payment_product838_specific_input = None
     __payment_product840_specific_input = None
     __payment_product861_specific_input = None
     __payment_product863_specific_input = None
@@ -66,6 +68,19 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     @payment_product809_specific_input.setter
     def payment_product809_specific_input(self, value):
         self.__payment_product809_specific_input = value
+
+    @property
+    def payment_product838_specific_input(self):
+        """
+        | Object containing specific input required for Klarna payments (Payment product ID 838)
+
+        Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product838_specific_input.RedirectPaymentProduct838SpecificInput`
+        """
+        return self.__payment_product838_specific_input
+
+    @payment_product838_specific_input.setter
+    def payment_product838_specific_input(self, value):
+        self.__payment_product838_specific_input = value
 
     @property
     def payment_product840_specific_input(self):
@@ -170,6 +185,8 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
             dictionary['paymentProduct4101SpecificInput'] = self.payment_product4101_specific_input.to_dictionary()
         if self.payment_product809_specific_input is not None:
             dictionary['paymentProduct809SpecificInput'] = self.payment_product809_specific_input.to_dictionary()
+        if self.payment_product838_specific_input is not None:
+            dictionary['paymentProduct838SpecificInput'] = self.payment_product838_specific_input.to_dictionary()
         if self.payment_product840_specific_input is not None:
             dictionary['paymentProduct840SpecificInput'] = self.payment_product840_specific_input.to_dictionary()
         if self.payment_product861_specific_input is not None:
@@ -200,6 +217,11 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct809SpecificInput']))
             value = RedirectPaymentProduct809SpecificInput()
             self.payment_product809_specific_input = value.from_dictionary(dictionary['paymentProduct809SpecificInput'])
+        if 'paymentProduct838SpecificInput' in dictionary:
+            if not isinstance(dictionary['paymentProduct838SpecificInput'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct838SpecificInput']))
+            value = RedirectPaymentProduct838SpecificInput()
+            self.payment_product838_specific_input = value.from_dictionary(dictionary['paymentProduct838SpecificInput'])
         if 'paymentProduct840SpecificInput' in dictionary:
             if not isinstance(dictionary['paymentProduct840SpecificInput'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct840SpecificInput']))

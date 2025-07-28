@@ -14,6 +14,8 @@ class RiskAssessmentsTest(unittest.TestCase):
     """Test if the risk assessments service functions"""
     def test_risk_assessments(self):
         """Test if the risk assessments service functions"""
+        self.skipTest("Risk assessments are not available for pre-prod sandbox accounts")
+
         bank_account_bban = BankAccountBban()
         bank_account_bban.country_code = "DE"
         bank_account_bban.account_number = "0532013000"

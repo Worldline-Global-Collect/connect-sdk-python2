@@ -22,10 +22,12 @@ jobs:
         run: pip install twine requests==2.* requests-toolbelt==0.*
       - name: Build
         run: python setup.py sdist --formats gztar --dist-dir .
+      - name: Rename for PEP 625 compatibility
+        run: mv "connect-sdk-python2-${SDK_VERSION}.tar.gz" "connect_sdk_python2-${SDK_VERSION}.tar.gz"
       - name: Verify
-        run: twine check "connect-sdk-python2-${SDK_VERSION}.tar.gz"
+        run: twine check "connect_sdk_python2-${SDK_VERSION}.tar.gz"
       - name: Deploy
-        run: twine upload --username "${PYPI_USERNAME}" --password "${PYPI_PASSWORD}" "connect-sdk-python2-${SDK_VERSION}.tar.gz"
+        run: twine upload --username "${PYPI_USERNAME}" --password "${PYPI_PASSWORD}" "connect_sdk_python2-${SDK_VERSION}.tar.gz"
         env:
           PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
           PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}

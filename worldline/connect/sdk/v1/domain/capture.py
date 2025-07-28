@@ -30,13 +30,17 @@ class Capture(AbstractOrderStatus):
     @property
     def status(self):
         """
-        | Current high-level status of the payment in a human-readable form. Possible values are :
+        | Current high-level status of the captures in a human-readable form. Possible values are:
         
-        * CAPTURE_REQUESTED - The transaction is in the queue to be captured.
-        * CAPTURED - The transaction has been captured and we have received online confirmation.
-        * CANCELLED - You have cancelled the transaction.
-        * REJECTED_CAPTURE - We or one of our downstream acquirers/providers have rejected the capture request.
-        * REVERSED - The transaction has been reversed.
+        * CREATED - The capture has been created on our side
+        * CAPTURE_REQUESTED - The transaction is in the queue to be captured
+        * CAPTURED - The transaction has been captured and we have received online confirmation
+        * PAID - We have matched the incoming funds to the transaction
+        * CANCELLED - You have cancelled the capture
+        * REJECTED_CAPTURE - The capture has been rejected
+        * REVERSED - The capture has been reversed
+        * CHARGEBACK_NOTIFICATION - We have received a notification of chargeback and this status informs you that your account will be debited for a particular transaction
+        * CHARGEBACKED - The transaction has been chargebacked
         
         
         | Please see Statuses <https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/statuses.html> for a full overview of possible values.
@@ -52,8 +56,7 @@ class Capture(AbstractOrderStatus):
     @property
     def status_output(self):
         """
-        | This object has the numeric representation of the current capture status, timestamp of last status change and performable action on the current payment resource.
-        | In case of failed payments and negative scenarios, detailed error information is listed.
+        | This object has the numeric representation of the current capture status, timestamp of last status change and performable action on the current capture resource. In case of failed captures and negative scenarios, detailed error information is listed.
 
         Type: :class:`worldline.connect.sdk.v1.domain.capture_status_output.CaptureStatusOutput`
         """

@@ -4,12 +4,14 @@
 # https://apireference.connect.worldline-solutions.com/
 #
 from worldline.connect.sdk.domain.data_object import DataObject
+from worldline.connect.sdk.v1.domain.capture_payment_order import CapturePaymentOrder
 
 
 class CapturePaymentRequest(DataObject):
 
     __amount = None
     __is_final = None
+    __order = None
 
     @property
     def amount(self):
@@ -41,12 +43,27 @@ class CapturePaymentRequest(DataObject):
     def is_final(self, value):
         self.__is_final = value
 
+    @property
+    def order(self):
+        """
+        | Order object containing order related data
+
+        Type: :class:`worldline.connect.sdk.v1.domain.capture_payment_order.CapturePaymentOrder`
+        """
+        return self.__order
+
+    @order.setter
+    def order(self, value):
+        self.__order = value
+
     def to_dictionary(self):
         dictionary = super(CapturePaymentRequest, self).to_dictionary()
         if self.amount is not None:
             dictionary['amount'] = self.amount
         if self.is_final is not None:
             dictionary['isFinal'] = self.is_final
+        if self.order is not None:
+            dictionary['order'] = self.order.to_dictionary()
         return dictionary
 
     def from_dictionary(self, dictionary):
@@ -55,4 +72,9 @@ class CapturePaymentRequest(DataObject):
             self.amount = dictionary['amount']
         if 'isFinal' in dictionary:
             self.is_final = dictionary['isFinal']
+        if 'order' in dictionary:
+            if not isinstance(dictionary['order'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['order']))
+            value = CapturePaymentOrder()
+            self.order = value.from_dictionary(dictionary['order'])
         return self
