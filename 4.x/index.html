@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.5.0 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 4.6.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -16699,6 +16699,34 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 
 </dd></dl>
 
+<span class="target" id="module-worldline.connect.sdk.v1.domain.payment_product866_specific_output"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.payment_product866_specific_output.</code><code class="descname">PaymentProduct866SpecificOutput</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/payment_product866_specific_output.html#PaymentProduct866SpecificOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">Alipay+ (payment product 866) specific details</div>
+</div>
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/payment_product866_specific_output.html#PaymentProduct866SpecificOutput.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/payment_product866_specific_output.html#PaymentProduct866SpecificOutput.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput.wallet_used">
+<code class="descname">wallet_used</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput.wallet_used" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The wallet your customer used when completing the payment with Alipay+.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-worldline.connect.sdk.v1.domain.payment_product_display_hints"></span><dl class="class">
 <dt id="worldline.connect.sdk.v1.domain.payment_product_display_hints.PaymentProductDisplayHints">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.payment_product_display_hints.</code><code class="descname">PaymentProductDisplayHints</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/payment_product_display_hints.html#PaymentProductDisplayHints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product_display_hints.PaymentProductDisplayHints" title="Permalink to this definition">¶</a></dt>
@@ -18683,6 +18711,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <div class="line">PayPal (payment product 840) specific details</div>
 </div>
 <p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.payment_product840_specific_output.PaymentProduct840SpecificOutput" title="worldline.connect.sdk.v1.domain.payment_product840_specific_output.PaymentProduct840SpecificOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.payment_product840_specific_output.PaymentProduct840SpecificOutput</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.redirect_payment_method_specific_output.RedirectPaymentMethodSpecificOutput.payment_product866_specific_output">
+<code class="descname">payment_product866_specific_output</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.redirect_payment_method_specific_output.RedirectPaymentMethodSpecificOutput.payment_product866_specific_output" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Alipay+ (payment product 866) specific details</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput" title="worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput</span></code></a></p>
 </dd></dl>
 
 <dl class="method">

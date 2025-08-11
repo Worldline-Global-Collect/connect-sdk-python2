@@ -2214,6 +2214,13 @@ API Reference
     :special-members:
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
+.. automodule:: worldline.connect.sdk.v1.domain.payment_product866_specific_output
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
 .. automodule:: worldline.connect.sdk.v1.domain.payment_product_display_hints
     :members:
     :show-inheritance:

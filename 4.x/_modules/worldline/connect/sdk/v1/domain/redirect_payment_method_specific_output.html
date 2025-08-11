@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.redirect_payment_method_specific_output &#8212; connect-sdk-python2 4.5.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.redirect_payment_method_specific_output &#8212; connect-sdk-python2 4.6.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -46,6 +46,7 @@
 <span class="kn">from</span> <span class="nn">worldline.connect.sdk.v1.domain.payment_product806_specific_output</span> <span class="kn">import</span> <span class="n">PaymentProduct806SpecificOutput</span>
 <span class="kn">from</span> <span class="nn">worldline.connect.sdk.v1.domain.payment_product836_specific_output</span> <span class="kn">import</span> <span class="n">PaymentProduct836SpecificOutput</span>
 <span class="kn">from</span> <span class="nn">worldline.connect.sdk.v1.domain.payment_product840_specific_output</span> <span class="kn">import</span> <span class="n">PaymentProduct840SpecificOutput</span>
+<span class="kn">from</span> <span class="nn">worldline.connect.sdk.v1.domain.payment_product866_specific_output</span> <span class="kn">import</span> <span class="n">PaymentProduct866SpecificOutput</span>
 
 
 <div class="viewcode-block" id="RedirectPaymentMethodSpecificOutput"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.redirect_payment_method_specific_output.RedirectPaymentMethodSpecificOutput">[docs]</a><span class="k">class</span> <span class="nc">RedirectPaymentMethodSpecificOutput</span><span class="p">(</span><span class="n">AbstractPaymentMethodSpecificOutput</span><span class="p">):</span>
@@ -58,6 +59,7 @@
     <span class="n">__payment_product806_specific_output</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__payment_product836_specific_output</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__payment_product840_specific_output</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__payment_product866_specific_output</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__token</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="nd">@property</span>
@@ -165,6 +167,19 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product840_specific_output</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">payment_product866_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | Alipay+ (payment product 866) specific details</span>
+
+<span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product866_specific_output</span>
+
+    <span class="nd">@payment_product866_specific_output</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">payment_product866_specific_output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product866_specific_output</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | ID of the token. This property is populated when the payment was done with a token or when the payment was tokenized.</span>
@@ -195,6 +210,8 @@
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct836SpecificOutput&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_product836_specific_output</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_product840_specific_output</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct840SpecificOutput&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_product840_specific_output</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_product866_specific_output</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct866SpecificOutput&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_product866_specific_output</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">token</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">token</span>
         <span class="k">return</span> <span class="n">dictionary</span></div>
@@ -238,6 +255,11 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;value </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> is not a dictionary&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct840SpecificOutput&#39;</span><span class="p">]))</span>
             <span class="n">value</span> <span class="o">=</span> <span class="n">PaymentProduct840SpecificOutput</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">payment_product840_specific_output</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct840SpecificOutput&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;paymentProduct866SpecificOutput&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct866SpecificOutput&#39;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;value </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> is not a dictionary&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct866SpecificOutput&#39;</span><span class="p">]))</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">PaymentProduct866SpecificOutput</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">payment_product866_specific_output</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct866SpecificOutput&#39;</span><span class="p">])</span>
         <span class="k">if</span> <span class="s1">&#39;token&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="bp">self</span></div></div>
