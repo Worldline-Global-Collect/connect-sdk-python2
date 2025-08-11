@@ -11,6 +11,7 @@ from worldline.connect.sdk.v1.domain.payment_product3201_specific_output import 
 from worldline.connect.sdk.v1.domain.payment_product806_specific_output import PaymentProduct806SpecificOutput
 from worldline.connect.sdk.v1.domain.payment_product836_specific_output import PaymentProduct836SpecificOutput
 from worldline.connect.sdk.v1.domain.payment_product840_specific_output import PaymentProduct840SpecificOutput
+from worldline.connect.sdk.v1.domain.payment_product866_specific_output import PaymentProduct866SpecificOutput
 
 
 class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
@@ -23,6 +24,7 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     __payment_product806_specific_output = None
     __payment_product836_specific_output = None
     __payment_product840_specific_output = None
+    __payment_product866_specific_output = None
     __token = None
 
     @property
@@ -130,6 +132,19 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
         self.__payment_product840_specific_output = value
 
     @property
+    def payment_product866_specific_output(self):
+        """
+        | Alipay+ (payment product 866) specific details
+
+        Type: :class:`worldline.connect.sdk.v1.domain.payment_product866_specific_output.PaymentProduct866SpecificOutput`
+        """
+        return self.__payment_product866_specific_output
+
+    @payment_product866_specific_output.setter
+    def payment_product866_specific_output(self, value):
+        self.__payment_product866_specific_output = value
+
+    @property
     def token(self):
         """
         | ID of the token. This property is populated when the payment was done with a token or when the payment was tokenized.
@@ -160,6 +175,8 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             dictionary['paymentProduct836SpecificOutput'] = self.payment_product836_specific_output.to_dictionary()
         if self.payment_product840_specific_output is not None:
             dictionary['paymentProduct840SpecificOutput'] = self.payment_product840_specific_output.to_dictionary()
+        if self.payment_product866_specific_output is not None:
+            dictionary['paymentProduct866SpecificOutput'] = self.payment_product866_specific_output.to_dictionary()
         if self.token is not None:
             dictionary['token'] = self.token
         return dictionary
@@ -203,6 +220,11 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct840SpecificOutput']))
             value = PaymentProduct840SpecificOutput()
             self.payment_product840_specific_output = value.from_dictionary(dictionary['paymentProduct840SpecificOutput'])
+        if 'paymentProduct866SpecificOutput' in dictionary:
+            if not isinstance(dictionary['paymentProduct866SpecificOutput'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct866SpecificOutput']))
+            value = PaymentProduct866SpecificOutput()
+            self.payment_product866_specific_output = value.from_dictionary(dictionary['paymentProduct866SpecificOutput'])
         if 'token' in dictionary:
             self.token = dictionary['token']
         return self
