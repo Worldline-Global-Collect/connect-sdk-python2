@@ -18,7 +18,7 @@ jobs:
       image: python:2.7.18-buster
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: code
           persist-credentials: false
@@ -42,7 +42,7 @@ jobs:
           name: docs
           path: code/docs
       - name: Checkout pages
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: gh-pages
           path: pages

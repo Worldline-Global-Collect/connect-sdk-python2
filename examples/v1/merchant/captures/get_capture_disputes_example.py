@@ -5,17 +5,13 @@
 import os
 
 from worldline.connect.sdk.factory import Factory
-from worldline.connect.sdk.v1.merchant.payments.get_payment_params import GetPaymentParams
 
 
-class GetPaymentExample(object):
+class GetCaptureDisputesExample(object):
 
     def example(self):
         with self.__get_client() as client:
-            query = GetPaymentParams()
-            query.return_operations = True
-
-            response = client.v1().merchant('merchantId').payments().get('paymentId', query)
+            response = client.v1().merchant('merchantId').captures().disputes('captureId')
 
     @staticmethod
     def __get_client():

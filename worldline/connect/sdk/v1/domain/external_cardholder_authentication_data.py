@@ -39,7 +39,12 @@ class ExternalCardholderAuthenticationData(DataObject):
     @property
     def applied_exemption(self):
         """
-        | Exemption code from Carte Bancaire (130) (unknown possible values so far -free format).
+        | When you request an exemptions via your non-Worldline 3D Secure provider successfully, you need to provide in this property the exemption that was granted, in combination with all 3DS results given by issuer.
+        | Possible values:
+        
+        * transaction-risk-analysis - You have determined that this transaction is of low risk and are willing to take the liability. Please note that your fraud rate needs to stay below thresholds to allow your use of this exemption.
+        * low-value - The value of the transaction is below 30 EUR. Please note that the issuer will still require every 5th low-value transaction pithing 24 hours to be strongly authenticated. The issuer will also keep track of the cumulative amount authorized on the card. When this exceeds 100 EUR strong customer authentication is also required.
+        * whitelist - You have been whitelisted by the customer at the issuer.
 
         Type: str
         """
@@ -132,6 +137,10 @@ class ExternalCardholderAuthenticationData(DataObject):
         * 1.0.2
         * 2.1.0
         * 2.2.0
+        * 2.3
+        * 2.3.0
+        * 2.3.1
+        * 2.3.1.1
 
         Type: str
         """

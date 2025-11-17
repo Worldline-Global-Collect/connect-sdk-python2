@@ -10,11 +10,25 @@ from worldline.connect.sdk.v1.domain.dispute_status_output import DisputeStatusO
 
 class Dispute(DataObject):
 
+    __capture_id = None
     __dispute_output = None
     __id = None
     __payment_id = None
     __status = None
     __status_output = None
+
+    @property
+    def capture_id(self):
+        """
+        | The ID of the capture that is being disputed.
+
+        Type: str
+        """
+        return self.__capture_id
+
+    @capture_id.setter
+    def capture_id(self, value):
+        self.__capture_id = value
 
     @property
     def dispute_output(self):
@@ -83,6 +97,8 @@ class Dispute(DataObject):
 
     def to_dictionary(self):
         dictionary = super(Dispute, self).to_dictionary()
+        if self.capture_id is not None:
+            dictionary['captureId'] = self.capture_id
         if self.dispute_output is not None:
             dictionary['disputeOutput'] = self.dispute_output.to_dictionary()
         if self.id is not None:
@@ -97,6 +113,8 @@ class Dispute(DataObject):
 
     def from_dictionary(self, dictionary):
         super(Dispute, self).from_dictionary(dictionary)
+        if 'captureId' in dictionary:
+            self.capture_id = dictionary['captureId']
         if 'disputeOutput' in dictionary:
             if not isinstance(dictionary['disputeOutput'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['disputeOutput']))
