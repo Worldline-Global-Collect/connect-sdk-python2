@@ -1,0 +1,312 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>worldline.connect.sdk.v1.domain.order_type_information &#8212; connect-sdk-python2 5.0.0 documentation</title>
+    <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for worldline.connect.sdk.v1.domain.order_type_information</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1">#</span>
+<span class="c1"># This class was auto-generated from the API references found at</span>
+<span class="c1"># https://apireference.connect.worldline-solutions.com/</span>
+<span class="c1">#</span>
+<span class="kn">from</span> <span class="nn">worldline.connect.sdk.domain.data_object</span> <span class="kn">import</span> <span class="n">DataObject</span>
+
+
+<div class="viewcode-block" id="OrderTypeInformation"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.order_type_information.OrderTypeInformation">[docs]</a><span class="k">class</span> <span class="nc">OrderTypeInformation</span><span class="p">(</span><span class="n">DataObject</span><span class="p">):</span>
+
+    <span class="n">__funding_type</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__payment_code</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__purchase_type</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__transaction_type</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__usage_type</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">funding_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | Identifies the funding type being authenticated. Possible values are:</span>
+<span class="sd">        </span>
+<span class="sd">        * personToPerson = When it is person to person funding (P2P)</span>
+<span class="sd">        * agentCashOut = When fund is being paid out to final recipient in Cash by company&#39;s agent.</span>
+<span class="sd">        * businessToConsumer = When fund is being transferred from business to consumer (B2C)</span>
+<span class="sd">        * businessToBusiness = When fund is being transferred from business to business (B2B)</span>
+<span class="sd">        * prefundingStagedWallet = When funding is being used to load the funds into the wallet account.</span>
+<span class="sd">        * storedValueDigitalWallet = When funding is being used to load the funds into a stored value digital wallet.</span>
+<span class="sd">        * fundingGiftCardForPersonalUse = When funding a gift card for personal use.</span>
+<span class="sd">        * fundingGiftCardForSomeoneElse = When funding a gift card for someone else.</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__funding_type</span>
+
+    <span class="nd">@funding_type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">funding_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__funding_type</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">payment_code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | Payment code to support account funding transactions. Possible values are:</span>
+<span class="sd">        </span>
+<span class="sd">        * accountManagement</span>
+<span class="sd">        * paymentAllowance</span>
+<span class="sd">        * settlementOfAnnuity</span>
+<span class="sd">        * unemploymentDisabilityBenefit</span>
+<span class="sd">        * businessExpenses</span>
+<span class="sd">        * bonusPayment</span>
+<span class="sd">        * busTransportRelatedBusiness</span>
+<span class="sd">        * cashManagementTransfer</span>
+<span class="sd">        * paymentOfCableTVBill</span>
+<span class="sd">        * governmentInstituteIssued</span>
+<span class="sd">        * creditCardPayment</span>
+<span class="sd">        * creditCardBill</span>
+<span class="sd">        * charity</span>
+<span class="sd">        * collectionPayment</span>
+<span class="sd">        * commercialPayment</span>
+<span class="sd">        * commission</span>
+<span class="sd">        * compensation</span>
+<span class="sd">        * copyright</span>
+<span class="sd">        * debitCardPayment</span>
+<span class="sd">        * deposit</span>
+<span class="sd">        * dividend</span>
+<span class="sd">        * studyFees</span>
+<span class="sd">        * electricityBill</span>
+<span class="sd">        * energies</span>
+<span class="sd">        * generalFees</span>
+<span class="sd">        * ferry</span>
+<span class="sd">        * foreignExchange</span>
+<span class="sd">        * gasBill</span>
+<span class="sd">        * unemployedCompensation</span>
+<span class="sd">        * governmentPayment</span>
+<span class="sd">        * healthInsurance</span>
+<span class="sd">        * reimbursementCreditCard</span>
+<span class="sd">        * reimbursementDebitCard</span>
+<span class="sd">        * carInsurancePremium</span>
+<span class="sd">        * insuranceClaim</span>
+<span class="sd">        * installment</span>
+<span class="sd">        * insurancePremium</span>
+<span class="sd">        * investmentPayment</span>
+<span class="sd">        * intraCompany</span>
+<span class="sd">        * interest</span>
+<span class="sd">        * incomeTax</span>
+<span class="sd">        * investment</span>
+<span class="sd">        * laborInsurance</span>
+<span class="sd">        * licenseFree</span>
+<span class="sd">        * lifeInsurance</span>
+<span class="sd">        * loan</span>
+<span class="sd">        * medicalServices</span>
+<span class="sd">        * mobilePersonToBusiness</span>
+<span class="sd">        * mobilePersonToPerson</span>
+<span class="sd">        * mobileTopUp</span>
+<span class="sd">        * notSpecified</span>
+<span class="sd">        * other</span>
+<span class="sd">        * anotherTelecomBill</span>
+<span class="sd">        * payroll</span>
+<span class="sd">        * pensionFundContribution</span>
+<span class="sd">        * pensionPayment</span>
+<span class="sd">        * telephoneBill</span>
+<span class="sd">        * propertyInsurance</span>
+<span class="sd">        * generalLease</span>
+<span class="sd">        * rent</span>
+<span class="sd">        * railwayPayment</span>
+<span class="sd">        * royalties</span>
+<span class="sd">        * salary</span>
+<span class="sd">        * savingsPayment</span>
+<span class="sd">        * securities</span>
+<span class="sd">        * socialSecurity</span>
+<span class="sd">        * study</span>
+<span class="sd">        * subscription</span>
+<span class="sd">        * supplierPayment</span>
+<span class="sd">        * taxRefund</span>
+<span class="sd">        * taxPayment</span>
+<span class="sd">        * telecommunicationsBill</span>
+<span class="sd">        * tradeServices</span>
+<span class="sd">        * treasuryPayment</span>
+<span class="sd">        * travelPayment</span>
+<span class="sd">        * utilityBill</span>
+<span class="sd">        * valueAddedTaxPayment</span>
+<span class="sd">        * withHolding</span>
+<span class="sd">        * waterBill</span>
+<span class="sd">        </span>
+<span class="sd">        | .</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_code</span>
+
+    <span class="nd">@payment_code</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">payment_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payment_code</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">purchase_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | Possible values are:</span>
+<span class="sd">        </span>
+<span class="sd">        * physical</span>
+<span class="sd">        * digital</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__purchase_type</span>
+
+    <span class="nd">@purchase_type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">purchase_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__purchase_type</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">transaction_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | Identifies the type of transaction being authenticated.Possible values are:</span>
+<span class="sd">        </span>
+<span class="sd">        * purchase = The purpose of the transaction is to purchase goods or services (Default)</span>
+<span class="sd">        * check-acceptance = The purpose of the transaction is to accept a &#39;check&#39;/&#39;cheque&#39;</span>
+<span class="sd">        * account-funding = The purpose of the transaction is to fund an account</span>
+<span class="sd">        * quasi-cash = The purpose of the transaction is to buy a quasi cash type product that is representative of actual cash such as money orders, traveler&#39;s checks, foreign currency, lottery tickets or casino gaming chips</span>
+<span class="sd">        * prepaid-activation-or-load = The purpose of the transaction is to activate or load a prepaid card</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__transaction_type</span>
+
+    <span class="nd">@transaction_type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">transaction_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__transaction_type</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">usage_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | Possible values are:</span>
+<span class="sd">        </span>
+<span class="sd">        * private</span>
+<span class="sd">        * commercial</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__usage_type</span>
+
+    <span class="nd">@usage_type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">usage_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__usage_type</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="OrderTypeInformation.to_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.order_type_information.OrderTypeInformation.to_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">OrderTypeInformation</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">funding_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;fundingType&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">funding_type</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentCode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_code</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">purchase_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;purchaseType&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">purchase_type</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;transactionType&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_type</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">usage_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;usageType&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">usage_type</span>
+        <span class="k">return</span> <span class="n">dictionary</span></div>
+
+<div class="viewcode-block" id="OrderTypeInformation.from_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.order_type_information.OrderTypeInformation.from_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">OrderTypeInformation</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;fundingType&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">funding_type</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;fundingType&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;paymentCode&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">payment_code</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentCode&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;purchaseType&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">purchase_type</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;purchaseType&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;transactionType&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transaction_type</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;transactionType&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;usageType&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">usage_type</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;usageType&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span></div></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../../../index.html">connect-sdk-python2</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../../../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;Copyright (c) 2016 Global Collect Services B.V..
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
