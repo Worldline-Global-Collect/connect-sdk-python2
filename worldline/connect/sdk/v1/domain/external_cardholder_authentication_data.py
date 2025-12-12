@@ -96,15 +96,27 @@ class ExternalCardholderAuthenticationData(DataObject):
     @property
     def eci(self):
         """
-        | Electronic Commerce Indicator provides authentication validation results returned after AUTHENTICATIONVALIDATION
+        | **ECI (Electronic Commerce Indicator)** indicates the level of authentication obtained for a transaction. Possible values for each level of authentication are listed below. 
         
-        * 0 = No authentication, Internet (no liability shift, not a 3D Secure transaction)
-        * 1 = Authentication attempted (MasterCard)
-        * 2 = Successful authentication (MasterCard)
-        * 5 = Successful authentication (Visa, Diners Club, Amex)
-        * 6 = Authentication attempted (Visa, Diners Club, Amex)
-        * 7 = No authentication, Internet (no liability shift, not a 3D Secure transaction)
-        * (empty) = Not checked or not enrolled
+        * **For ValidationResult = Y (Successful Authentication)**
+        
+        * MC &#8594; ECI 02
+        * Visa, CB, Amex, JCB, DCI, UPI &#8594; ECI 05
+        
+        
+        * **For ValidationResult = A (Attempt)**
+        
+        * MC &#8594; ECI 01
+        * Visa, Amex, JCB, DCI, UPI &#8594; ECI 06
+        * CB &#8594; 06 (or null from ACS - populate as 06)
+        
+        
+        * **For ValidationResult = I (Exemption Accepted)**- for all below values, ECI must be sent with the resulted CAVV
+        
+        * MC &#8594; ECI 06 (PSD2 Exemption)
+        * Visa &#8594; ECI 07 (TRA Exemption) or ECI 05 (other exemptions)
+        * CB, JCB, UPI &#8594; ECI 05
+        * Amex, DCI &#8594; ECI 05/0
 
         Type: int
         """
@@ -168,7 +180,11 @@ class ExternalCardholderAuthenticationData(DataObject):
     @property
     def validation_result(self):
         """
-        | The 3D Secure authentication result from your 3D Secure provider.
+        | The transaction status given by the 3D Secure provider. Possible values below: 
+        
+        * Y: Cardholder successfully authenticated
+        * A: Authentication attempt (merchant attempted, issuer not participating or ACS unavailable)
+        * I: Informational only (SCA exemption accepted)
 
         Type: str
         """

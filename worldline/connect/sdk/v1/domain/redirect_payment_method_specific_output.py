@@ -9,7 +9,6 @@ from worldline.connect.sdk.v1.domain.bank_account_iban import BankAccountIban
 from worldline.connect.sdk.v1.domain.fraud_results import FraudResults
 from worldline.connect.sdk.v1.domain.payment_product3201_specific_output import PaymentProduct3201SpecificOutput
 from worldline.connect.sdk.v1.domain.payment_product806_specific_output import PaymentProduct806SpecificOutput
-from worldline.connect.sdk.v1.domain.payment_product836_specific_output import PaymentProduct836SpecificOutput
 from worldline.connect.sdk.v1.domain.payment_product840_specific_output import PaymentProduct840SpecificOutput
 from worldline.connect.sdk.v1.domain.payment_product866_specific_output import PaymentProduct866SpecificOutput
 
@@ -22,7 +21,6 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     __fraud_results = None
     __payment_product3201_specific_output = None
     __payment_product806_specific_output = None
-    __payment_product836_specific_output = None
     __payment_product840_specific_output = None
     __payment_product866_specific_output = None
     __token = None
@@ -106,19 +104,6 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
         self.__payment_product806_specific_output = value
 
     @property
-    def payment_product836_specific_output(self):
-        """
-        | Sofort (payment product 836) specific details
-
-        Type: :class:`worldline.connect.sdk.v1.domain.payment_product836_specific_output.PaymentProduct836SpecificOutput`
-        """
-        return self.__payment_product836_specific_output
-
-    @payment_product836_specific_output.setter
-    def payment_product836_specific_output(self, value):
-        self.__payment_product836_specific_output = value
-
-    @property
     def payment_product840_specific_output(self):
         """
         | PayPal (payment product 840) specific details
@@ -171,8 +156,6 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             dictionary['paymentProduct3201SpecificOutput'] = self.payment_product3201_specific_output.to_dictionary()
         if self.payment_product806_specific_output is not None:
             dictionary['paymentProduct806SpecificOutput'] = self.payment_product806_specific_output.to_dictionary()
-        if self.payment_product836_specific_output is not None:
-            dictionary['paymentProduct836SpecificOutput'] = self.payment_product836_specific_output.to_dictionary()
         if self.payment_product840_specific_output is not None:
             dictionary['paymentProduct840SpecificOutput'] = self.payment_product840_specific_output.to_dictionary()
         if self.payment_product866_specific_output is not None:
@@ -210,11 +193,6 @@ class RedirectPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct806SpecificOutput']))
             value = PaymentProduct806SpecificOutput()
             self.payment_product806_specific_output = value.from_dictionary(dictionary['paymentProduct806SpecificOutput'])
-        if 'paymentProduct836SpecificOutput' in dictionary:
-            if not isinstance(dictionary['paymentProduct836SpecificOutput'], dict):
-                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct836SpecificOutput']))
-            value = PaymentProduct836SpecificOutput()
-            self.payment_product836_specific_output = value.from_dictionary(dictionary['paymentProduct836SpecificOutput'])
         if 'paymentProduct840SpecificOutput' in dictionary:
             if not isinstance(dictionary['paymentProduct840SpecificOutput'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct840SpecificOutput']))

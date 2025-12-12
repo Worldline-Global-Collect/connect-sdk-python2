@@ -8,7 +8,23 @@ from worldline.connect.sdk.domain.data_object import DataObject
 
 class RefundReferences(DataObject):
 
+    __descriptor = None
     __merchant_reference = None
+
+    @property
+    def descriptor(self):
+        """
+        | Descriptive text that is used towards customer during refund. The maximum allowed length varies per payment product:   
+        
+        * Wero - 50 characters
+
+        Type: str
+        """
+        return self.__descriptor
+
+    @descriptor.setter
+    def descriptor(self, value):
+        self.__descriptor = value
 
     @property
     def merchant_reference(self):
@@ -25,12 +41,16 @@ class RefundReferences(DataObject):
 
     def to_dictionary(self):
         dictionary = super(RefundReferences, self).to_dictionary()
+        if self.descriptor is not None:
+            dictionary['descriptor'] = self.descriptor
         if self.merchant_reference is not None:
             dictionary['merchantReference'] = self.merchant_reference
         return dictionary
 
     def from_dictionary(self, dictionary):
         super(RefundReferences, self).from_dictionary(dictionary)
+        if 'descriptor' in dictionary:
+            self.descriptor = dictionary['descriptor']
         if 'merchantReference' in dictionary:
             self.merchant_reference = dictionary['merchantReference']
         return self

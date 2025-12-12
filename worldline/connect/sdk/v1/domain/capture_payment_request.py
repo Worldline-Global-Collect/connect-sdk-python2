@@ -20,6 +20,7 @@ class CapturePaymentRequest(DataObject):
         | The amount can be lower than the amount that was authorized, but not higher.
         | If left empty, the full amount will be captured and the request will be final.
         | If the full amount is captured, the request will also be final.
+        | On the GlobalCollect Payment Platform value must be greater than zero.
 
         Type: long
         """

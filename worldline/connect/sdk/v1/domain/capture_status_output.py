@@ -12,11 +12,25 @@ class CaptureStatusOutput(DataObject):
     | This object has the numeric representation of the current capture status, timestamp of last status change and performable action on the current capture resource. In case of failed captures and negative scenarios, detailed error information is listed.
     """
 
+    __is_final = None
     __is_refundable = None
     __is_retriable = None
     __provider_raw_output = None
     __status_code = None
     __status_code_change_date_time = None
+
+    @property
+    def is_final(self):
+        """
+        | This property indicates whether this is the final capture of this transaction.
+
+        Type: bool
+        """
+        return self.__is_final
+
+    @is_final.setter
+    def is_final(self, value):
+        self.__is_final = value
 
     @property
     def is_refundable(self):
@@ -92,6 +106,8 @@ class CaptureStatusOutput(DataObject):
 
     def to_dictionary(self):
         dictionary = super(CaptureStatusOutput, self).to_dictionary()
+        if self.is_final is not None:
+            dictionary['isFinal'] = self.is_final
         if self.is_refundable is not None:
             dictionary['isRefundable'] = self.is_refundable
         if self.is_retriable is not None:
@@ -109,6 +125,8 @@ class CaptureStatusOutput(DataObject):
 
     def from_dictionary(self, dictionary):
         super(CaptureStatusOutput, self).from_dictionary(dictionary)
+        if 'isFinal' in dictionary:
+            self.is_final = dictionary['isFinal']
         if 'isRefundable' in dictionary:
             self.is_refundable = dictionary['isRefundable']
         if 'isRetriable' in dictionary:
