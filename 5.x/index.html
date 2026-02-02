@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 5.2.0 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 5.2.1 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -2662,6 +2662,82 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 
 </dd></dl>
 
+<span class="target" id="module-worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.</code><code class="descname">AbstractMobilePaymentMethodSpecificInput</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/abstract_mobile_payment_method_specific_input.html#AbstractMobilePaymentMethodSpecificInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput" title="worldline.connect.sdk.v1.domain.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput</span></code></a></p>
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.authorization_mode">
+<code class="descname">authorization_mode</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.authorization_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.customer_reference">
+<code class="descname">customer_reference</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.customer_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/abstract_mobile_payment_method_specific_input.html#AbstractMobilePaymentMethodSpecificInput.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.initial_scheme_transaction_id">
+<code class="descname">initial_scheme_transaction_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.initial_scheme_transaction_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.recurring">
+<code class="descname">recurring</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.recurring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.card_recurrence_details.CardRecurrenceDetails" title="worldline.connect.sdk.v1.domain.card_recurrence_details.CardRecurrenceDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.card_recurrence_details.CardRecurrenceDetails</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.requires_approval">
+<code class="descname">requires_approval</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.requires_approval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.skip_fraud_service">
+<code class="descname">skip_fraud_service</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.skip_fraud_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/abstract_mobile_payment_method_specific_input.html#AbstractMobilePaymentMethodSpecificInput.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.token">
+<code class="descname">token</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.tokenize">
+<code class="descname">tokenize</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.unscheduled_card_on_file_requestor">
+<code class="descname">unscheduled_card_on_file_requestor</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.unscheduled_card_on_file_requestor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.unscheduled_card_on_file_sequence_indicator">
+<code class="descname">unscheduled_card_on_file_sequence_indicator</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.unscheduled_card_on_file_sequence_indicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-worldline.connect.sdk.v1.domain.abstract_order_status"></span><dl class="class">
 <dt id="worldline.connect.sdk.v1.domain.abstract_order_status.AbstractOrderStatus">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.abstract_order_status.</code><code class="descname">AbstractOrderStatus</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/abstract_order_status.html#AbstractOrderStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_order_status.AbstractOrderStatus" title="Permalink to this definition">¶</a></dt>
@@ -4498,6 +4574,34 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 
 </dd></dl>
 
+<span class="target" id="module-worldline.connect.sdk.v1.domain.automatic_reload_billing_details"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.automatic_reload_billing_details.</code><code class="descname">AutomaticReloadBillingDetails</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/automatic_reload_billing_details.html#AutomaticReloadBillingDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails" title="worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails</span></code></a></p>
+<div class="line-block">
+<div class="line">An object that contains the reload amount and balance threshold for the automatic reload payment.</div>
+</div>
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails.automatic_reload_payment_threshold_amount">
+<code class="descname">automatic_reload_payment_threshold_amount</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails.automatic_reload_payment_threshold_amount" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The balance an account reaches for the automatic reload amount to be applied.</div>
+</div>
+<p>Type: long</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/automatic_reload_billing_details.html#AutomaticReloadBillingDetails.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/automatic_reload_billing_details.html#AutomaticReloadBillingDetails.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-worldline.connect.sdk.v1.domain.bank_account"></span><dl class="class">
 <dt id="worldline.connect.sdk.v1.domain.bank_account.BankAccount">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.bank_account.</code><code class="descname">BankAccount</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/bank_account.html#BankAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.bank_account.BankAccount" title="Permalink to this definition">¶</a></dt>
@@ -4984,6 +5088,28 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dl class="method">
 <dt id="worldline.connect.sdk.v1.domain.bank_transfer_payout_method_specific_input.BankTransferPayoutMethodSpecificInput.to_dictionary">
 <code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/bank_transfer_payout_method_specific_input.html#BankTransferPayoutMethodSpecificInput.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.bank_transfer_payout_method_specific_input.BankTransferPayoutMethodSpecificInput.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-worldline.connect.sdk.v1.domain.base_billing_details"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.base_billing_details.</code><code class="descname">BaseBillingDetails</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/base_billing_details.html#BaseBillingDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails.description">
+<code class="descname">description</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/base_billing_details.html#BaseBillingDetails.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/base_billing_details.html#BaseBillingDetails.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails.to_dictionary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -9186,6 +9312,52 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 
 </dd></dl>
 
+<span class="target" id="module-worldline.connect.sdk.v1.domain.deferred_billing_details"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.deferred_billing_details.</code><code class="descname">DeferredBillingDetails</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/deferred_billing_details.html#DeferredBillingDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails" title="worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails</span></code></a></p>
+<div class="line-block">
+<div class="line">An object that contains details about the deferred payment.</div>
+</div>
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.deferred_payment_date">
+<code class="descname">deferred_payment_date</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.deferred_payment_date" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The date of the payment in in YYYYMMDD format that will take place in the future.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.free_cancellation_date">
+<code class="descname">free_cancellation_date</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.free_cancellation_date" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The date until which customers can cancel their recurring payment without charges in YYYYMMDDHH24MISS format.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.free_cancellation_date_time_zone">
+<code class="descname">free_cancellation_date_time_zone</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.free_cancellation_date_time_zone" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The IANA timezone identifier that provides the correct local context for interpreting the free cancellation deadline displayed on the payment sheet.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/deferred_billing_details.html#DeferredBillingDetails.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/deferred_billing_details.html#DeferredBillingDetails.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-worldline.connect.sdk.v1.domain.device_fingerprint_details"></span><dl class="class">
 <dt id="worldline.connect.sdk.v1.domain.device_fingerprint_details.DeviceFingerprintDetails">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.device_fingerprint_details.</code><code class="descname">DeviceFingerprintDetails</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/device_fingerprint_details.html#DeviceFingerprintDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.device_fingerprint_details.DeviceFingerprintDetails" title="Permalink to this definition">¶</a></dt>
@@ -10218,6 +10390,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <li>Visa, CB, Amex, JCB, DCI, UPI &amp;#8594; ECI 05</li>
 <li><strong>For ValidationResult = A (Attempt)</strong></li>
 <li>MC &amp;#8594; ECI 01</li>
+<li>MC &amp;#8594; ECI 04</li>
 <li>Visa, Amex, JCB, DCI, UPI &amp;#8594; ECI 06</li>
 <li>CB &amp;#8594; 06 (or null from ACS - populate as 06)</li>
 <li><strong>For ValidationResult = I (Exemption Accepted)</strong>- for all below values, ECI must be sent with the resulted CAVV</li>
@@ -10925,8 +11098,18 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.frequency.Frequency.interval">
 <code class="descname">interval</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.frequency.Frequency.interval" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
-<div class="line">The interval between recurring payments specified as days, weeks, quarters, or years.</div>
+<div class="line">The interval between recurring payments specified as days, weeks, quarters, or years.  </div>
 </div>
+<div class="line-block">
+<div class="line">Allowed values: </div>
+</div>
+<ul class="simple">
+<li>days</li>
+<li>weeks</li>
+<li>months</li>
+<li>quarters</li>
+<li>years</li>
+</ul>
 <p>Type: str</p>
 </dd></dl>
 
@@ -13914,33 +14097,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <span class="target" id="module-worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input"></span><dl class="class">
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.</code><code class="descname">MobilePaymentMethodSpecificInput</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/mobile_payment_method_specific_input.html#MobilePaymentMethodSpecificInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput" title="worldline.connect.sdk.v1.domain.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput</span></code></a></p>
-<dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.authorization_mode">
-<code class="descname">authorization_mode</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.authorization_mode" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">Determines the type of the authorization that will be used. Allowed values:</div>
-</div>
-<ul class="simple">
-<li>FINAL_AUTHORIZATION - The payment creation results in an authorization that is ready for capture. Final authorizations can’t be reversed and need to be captured for the full amount within 7 days.</li>
-<li>PRE_AUTHORIZATION - The payment creation results in a pre-authorization that is ready for capture. Pre-authortizations can be reversed and can be captured within 30 days. The capture amount can be lower than the authorized amount.</li>
-<li>SALE - The payment creation results in an authorization that is already captured at the moment of approval.</li>
-</ul>
-<div class="line-block">
-<div class="line">Only used with some acquirers, ingnored for acquirers that don’t support this. In case the acquirer doesn’t allow this to be specified the authorizationMode is ‘unspecified’, which behaves similar to a final authorization.</div>
-</div>
-<p>Type: str</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.customer_reference">
-<code class="descname">customer_reference</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.customer_reference" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">Reference of the customer for the payment (purchase order #, etc.). Only used with some acquirers.</div>
-</div>
-<p>Type: str</p>
-</dd></dl>
-
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput" title="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput</span></code></a></p>
 <dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.decrypted_payment_data">
 <code class="descname">decrypted_payment_data</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.decrypted_payment_data" title="Permalink to this definition">¶</a></dt>
@@ -13972,35 +14129,39 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dd></dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.is_recurring">
+<code class="descname">is_recurring</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.is_recurring" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates if this transaction is of a one-off or a recurring type</div>
+</div>
+<ul class="simple">
+<li>true - This is recurring</li>
+<li>false - This is one-off</li>
+</ul>
+<p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.merchant_initiated_reason_indicator">
+<code class="descname">merchant_initiated_reason_indicator</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.merchant_initiated_reason_indicator" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates reason behind the merchant initiated transaction. These are industry specific.</div>
+<div class="line">Possible values:</div>
+</div>
+<ul class="simple">
+<li>delayedCharges - Delayed charges are performed to process a supplemental account charge after original services have been rendered and respective payment has been processed. This is typically used in hotel, cruise lines and vehicle rental environments to perform a supplemental payment after the original services are rendered.</li>
+<li>noShow - Cardholders can use their cards to make a guaranteed reservation with certain merchant segments. A guaranteed reservation ensures that the reservation will be honored and allows a merchant to perform a No Show transaction to charge the cardholder a penalty according to the merchant’s cancellation policy. For merchants that accept token-based payment credentials to guarantee a reservation, it is necessary to perform a customer initiated (Account Verification) at the time of reservation to be able perform a No Show transaction later.</li>
+</ul>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.payment_product320_specific_input">
 <code class="descname">payment_product320_specific_input</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.payment_product320_specific_input" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">Object containing information specific to Google Pay</div>
 </div>
 <p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input.MobilePaymentProduct320SpecificInput" title="worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input.MobilePaymentProduct320SpecificInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input.MobilePaymentProduct320SpecificInput</span></code></a></p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.requires_approval">
-<code class="descname">requires_approval</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.requires_approval" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>true = the payment requires approval before the funds will be captured using the Capture payment &lt;<a class="reference external" href="https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payments/approve.html">https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payments/approve.html</a>&gt; API</li>
-<li>false = the payment does not require approval, and the funds will be captured automatically</li>
-</ul>
-<p>Type: bool</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.skip_fraud_service">
-<code class="descname">skip_fraud_service</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input.MobilePaymentMethodSpecificInput.skip_fraud_service" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>true = Fraud scoring will be skipped for this transaction</li>
-<li>false = Fraud scoring will not be skipped for this transaction</li>
-</ul>
-<div class="line-block">
-<div class="line">Note: This is only possible if your account in our system is setup for Fraud scoring and if your configuration in our system allows you to override it per transaction.</div>
-</div>
-<p>Type: bool</p>
 </dd></dl>
 
 <dl class="method">
@@ -14013,33 +14174,7 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <span class="target" id="module-worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout"></span><dl class="class">
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.</code><code class="descname">MobilePaymentMethodSpecificInputHostedCheckout</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/mobile_payment_method_specific_input_hosted_checkout.html#MobilePaymentMethodSpecificInputHostedCheckout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput" title="worldline.connect.sdk.v1.domain.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.abstract_payment_method_specific_input.AbstractPaymentMethodSpecificInput</span></code></a></p>
-<dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.authorization_mode">
-<code class="descname">authorization_mode</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.authorization_mode" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">Determines the type of the authorization that will be used. Allowed values:</div>
-</div>
-<ul class="simple">
-<li>FINAL_AUTHORIZATION - The payment creation results in an authorization that is ready for capture. Final authorizations can’t be reversed and need to be captured for the full amount within 7 days.</li>
-<li>PRE_AUTHORIZATION - The payment creation results in a pre-authorization that is ready for capture. Pre-authortizations can be reversed and can be captured within 30 days. The capture amount can be lower than the authorized amount.</li>
-<li>SALE - The payment creation results in an authorization that is already captured at the moment of approval.</li>
-</ul>
-<div class="line-block">
-<div class="line">Only used with some acquirers, ingnored for acquirers that don’t support this. In case the acquirer doesn’t allow this to be specified the authorizationMode is ‘unspecified’, which behaves similar to a final authorization.</div>
-</div>
-<p>Type: str</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.customer_reference">
-<code class="descname">customer_reference</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.customer_reference" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line">Reference of the customer for the payment (purchase order #, etc.). Only used with some acquirers.</div>
-</div>
-<p>Type: str</p>
-</dd></dl>
-
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput" title="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput</span></code></a></p>
 <dl class="method">
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.from_dictionary">
 <code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/mobile_payment_method_specific_input_hosted_checkout.html#MobilePaymentMethodSpecificInputHostedCheckout.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.from_dictionary" title="Permalink to this definition">¶</a></dt>
@@ -14061,29 +14196,6 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <div class="line">Object containing information specific to Google Pay (paymentProductId 320)</div>
 </div>
 <p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input_hosted_checkout.MobilePaymentProduct320SpecificInputHostedCheckout" title="worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input_hosted_checkout.MobilePaymentProduct320SpecificInputHostedCheckout"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.mobile_payment_product320_specific_input_hosted_checkout.MobilePaymentProduct320SpecificInputHostedCheckout</span></code></a></p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.requires_approval">
-<code class="descname">requires_approval</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.requires_approval" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>true = the payment requires approval before the funds will be captured using the Capture payment &lt;<a class="reference external" href="https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payments/approve.html">https://apireference.connect.worldline-solutions.com/s2sapi/v1/en_US/python/payments/approve.html</a>&gt; API</li>
-<li>false = the payment does not require approval, and the funds will be captured automatically</li>
-</ul>
-<p>Type: bool</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.skip_fraud_service">
-<code class="descname">skip_fraud_service</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_input_hosted_checkout.MobilePaymentMethodSpecificInputHostedCheckout.skip_fraud_service" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>true = Fraud scoring will be skipped for this transaction</li>
-<li>false = Fraud scoring will not be skipped for this transaction</li>
-</ul>
-<div class="line-block">
-<div class="line">Note: This is only possible if your account in our system is setup for Fraud scoring and if your configuration in our system allows you to override it per transaction.</div>
-</div>
-<p>Type: bool</p>
 </dd></dl>
 
 <dl class="method">
@@ -14121,6 +14233,16 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dd></dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.initial_scheme_transaction_id">
+<code class="descname">initial_scheme_transaction_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.initial_scheme_transaction_id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The unique scheme transactionId of the initial transaction that was performed with SCA.</div>
+<div class="line">Should be stored by the merchant to allow it to be submitted in future transactions.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.network">
 <code class="descname">network</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.network" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -14139,6 +14261,16 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.scheme_transaction_id">
+<code class="descname">scheme_transaction_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.scheme_transaction_id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The unique scheme transactionId of this transaction.</div>
+<div class="line">Should be stored by the merchant to allow it to be submitted in future transactions. Use this value in case the initialSchemeTransactionId property is empty.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.three_d_secure_results">
 <code class="descname">three_d_secure_results</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.three_d_secure_results" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -14151,6 +14283,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.to_dictionary">
 <code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/mobile_payment_method_specific_output.html#MobilePaymentMethodSpecificOutput.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.to_dictionary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.token">
+<code class="descname">token</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.token" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">If a token was used for or created during the payment, then the ID of that token.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -16437,6 +16578,94 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 
 </dd></dl>
 
+<span class="target" id="module-worldline.connect.sdk.v1.domain.payment_product302_specific_input"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.payment_product302_specific_input.</code><code class="descname">PaymentProduct302SpecificInput</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/payment_product302_specific_input.html#PaymentProduct302SpecificInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.automatic_reload_billing">
+<code class="descname">automatic_reload_billing</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.automatic_reload_billing" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">An object that contains the reload amount and balance threshold for the automatic reload payment.</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails" title="worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.automatic_reload_billing_details.AutomaticReloadBillingDetails</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.billing_agreement">
+<code class="descname">billing_agreement</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.billing_agreement" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A localized description shown to inform the user about the billing terms before authorization. It can include details or conditions of payment, and may describe how customer can cancel payments. </div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.deferred_billing">
+<code class="descname">deferred_billing</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.deferred_billing" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">An object that contains details about the deferred payment.</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails" title="worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/payment_product302_specific_input.html#PaymentProduct302SpecificInput.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.management_url">
+<code class="descname">management_url</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.management_url" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A URL to a web page where the customer can update or delete the payment method for the recurring, deferred or automatic reload payment made with Apple Pay.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.payment_description">
+<code class="descname">payment_description</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.payment_description" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The description of the payment used to identify the transaction purpose.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.regular_billing">
+<code class="descname">regular_billing</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.regular_billing" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">An object that contains the regular billing cycle for the recurring payment, including start and end dates, an interval, and an interval count.</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails" title="worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/payment_product302_specific_input.html#PaymentProduct302SpecificInput.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.token_notification_url">
+<code class="descname">token_notification_url</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.token_notification_url" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">A URL you provide to receive life-cycle notifications from the Apple Pay servers about the Apple Pay merchant token for the recurring payment. </div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.trial_billing">
+<code class="descname">trial_billing</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput.trial_billing" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">An object that contains the trial billing cycle for the recurring payment.</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails" title="worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-worldline.connect.sdk.v1.domain.payment_product3201_specific_output"></span><dl class="class">
 <dt id="worldline.connect.sdk.v1.domain.payment_product3201_specific_output.PaymentProduct3201SpecificOutput">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.payment_product3201_specific_output.</code><code class="descname">PaymentProduct3201SpecificOutput</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/payment_product3201_specific_output.html#PaymentProduct3201SpecificOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product3201_specific_output.PaymentProduct3201SpecificOutput" title="Permalink to this definition">¶</a></dt>
@@ -18519,6 +18748,25 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 
 </dd></dl>
 
+<span class="target" id="module-worldline.connect.sdk.v1.domain.recurring_billing_details"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.recurring_billing_details.</code><code class="descname">RecurringBillingDetails</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/recurring_billing_details.html#RecurringBillingDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails" title="worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.base_billing_details.BaseBillingDetails</span></code></a></p>
+<div class="line-block">
+<div class="line">An object that contains the regular billing cycle for the recurring payment, including start and end dates, an interval, and an interval count.</div>
+</div>
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/recurring_billing_details.html#RecurringBillingDetails.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/recurring_billing_details.html#RecurringBillingDetails.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.recurring_billing_details.RecurringBillingDetails.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-worldline.connect.sdk.v1.domain.recurring_payments_data"></span><dl class="class">
 <dt id="worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.recurring_payments_data.</code><code class="descname">RecurringPaymentsData</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/recurring_payments_data.html#RecurringPaymentsData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData" title="Permalink to this definition">¶</a></dt>
@@ -18539,12 +18787,39 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dd></dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.payment_product302_specific_input">
+<code class="descname">payment_product302_specific_input</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.payment_product302_specific_input" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The object containing information specific to Apple Pay</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput" title="worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.recurring_end_date">
+<code class="descname">recurring_end_date</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.recurring_end_date" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The date that the recurring payment ends in YYYYMMDD format.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.recurring_interval">
 <code class="descname">recurring_interval</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.recurring_interval" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The object containing the frequency and interval between recurring payments.</div>
 </div>
 <p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.frequency.Frequency" title="worldline.connect.sdk.v1.domain.frequency.Frequency"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.frequency.Frequency</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.recurring_start_date">
+<code class="descname">recurring_start_date</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.recurring_start_date" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The date that the first recurring payment starts in YYYYMMDD format.</div>
+</div>
+<p>Type: str</p>
 </dd></dl>
 
 <dl class="method">
@@ -22058,6 +22333,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <p>Type: bool</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.trial_information.TrialInformation.start_date">
+<code class="descname">start_date</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.trial_information.TrialInformation.start_date" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The date that the trial period starts in YYYYMMDD format.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="worldline.connect.sdk.v1.domain.trial_information.TrialInformation.to_dictionary">
 <code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/trial_information.html#TrialInformation.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.trial_information.TrialInformation.to_dictionary" title="Permalink to this definition">¶</a></dt>
@@ -23793,7 +24077,7 @@ or the service that you’re trying to reach is temporary unavailable (HTTP stat
 <dt id="worldline.connect.sdk.v1.merchant.payments.get_payment_params.GetPaymentParams.return_operations">
 <code class="descname">return_operations</code><a class="headerlink" href="#worldline.connect.sdk.v1.merchant.payments.get_payment_params.GetPaymentParams.return_operations" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
-<div class="line">If set to true, in the response of this call you will get an array called operations, that will include objects for captures and refunds associated with the given paymentId.</div>
+<div class="line">This property only works for the multiple partial captures payments. If set to true, in the response of this call you will get an array called operations, that will include objects for captures and refunds associated with the given paymentId.</div>
 </div>
 <p>Type: bool</p>
 </dd></dl>

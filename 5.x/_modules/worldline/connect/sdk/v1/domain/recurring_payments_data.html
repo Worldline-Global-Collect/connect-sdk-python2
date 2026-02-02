@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.recurring_payments_data &#8212; connect-sdk-python2 5.2.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.recurring_payments_data &#8212; connect-sdk-python2 5.2.1 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -40,6 +40,7 @@
 <span class="c1">#</span>
 <span class="kn">from</span> <span class="nn">worldline.connect.sdk.domain.data_object</span> <span class="kn">import</span> <span class="n">DataObject</span>
 <span class="kn">from</span> <span class="nn">worldline.connect.sdk.v1.domain.frequency</span> <span class="kn">import</span> <span class="n">Frequency</span>
+<span class="kn">from</span> <span class="nn">worldline.connect.sdk.v1.domain.payment_product302_specific_input</span> <span class="kn">import</span> <span class="n">PaymentProduct302SpecificInput</span>
 <span class="kn">from</span> <span class="nn">worldline.connect.sdk.v1.domain.trial_information</span> <span class="kn">import</span> <span class="n">TrialInformation</span>
 
 
@@ -53,8 +54,37 @@
 <span class="sd">    | You still need to submit all the recurring payment-related data in the corresponding payment product-specific input. (example: cardPaymentMethodSpecificInput.recurring and cardPaymentMethodSpecificInput.isRecurring)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+    <span class="n">__payment_product302_specific_input</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__recurring_end_date</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__recurring_interval</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__recurring_start_date</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__trial_information</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">payment_product302_specific_input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | The object containing information specific to Apple Pay</span>
+
+<span class="sd">        Type: :class:`worldline.connect.sdk.v1.domain.payment_product302_specific_input.PaymentProduct302SpecificInput`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product302_specific_input</span>
+
+    <span class="nd">@payment_product302_specific_input</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">payment_product302_specific_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__payment_product302_specific_input</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recurring_end_date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | The date that the recurring payment ends in YYYYMMDD format.</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__recurring_end_date</span>
+
+    <span class="nd">@recurring_end_date</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">recurring_end_date</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__recurring_end_date</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">recurring_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -68,6 +98,19 @@
     <span class="nd">@recurring_interval</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">recurring_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__recurring_interval</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recurring_start_date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | The date that the first recurring payment starts in YYYYMMDD format.</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__recurring_start_date</span>
+
+    <span class="nd">@recurring_start_date</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">recurring_start_date</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__recurring_start_date</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">trial_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -84,19 +127,34 @@
 
 <div class="viewcode-block" id="RecurringPaymentsData.to_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.to_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">RecurringPaymentsData</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_product302_specific_input</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct302SpecificInput&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_product302_specific_input</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">recurring_end_date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;recurringEndDate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recurring_end_date</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">recurring_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;recurringInterval&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recurring_interval</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">recurring_start_date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;recurringStartDate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">recurring_start_date</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">trial_information</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;trialInformation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trial_information</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">dictionary</span></div>
 
 <div class="viewcode-block" id="RecurringPaymentsData.from_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.recurring_payments_data.RecurringPaymentsData.from_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">RecurringPaymentsData</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;paymentProduct302SpecificInput&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct302SpecificInput&#39;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;value </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> is not a dictionary&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct302SpecificInput&#39;</span><span class="p">]))</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">PaymentProduct302SpecificInput</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">payment_product302_specific_input</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentProduct302SpecificInput&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;recurringEndDate&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recurring_end_date</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;recurringEndDate&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;recurringInterval&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;recurringInterval&#39;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;value </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> is not a dictionary&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;recurringInterval&#39;</span><span class="p">]))</span>
             <span class="n">value</span> <span class="o">=</span> <span class="n">Frequency</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">recurring_interval</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;recurringInterval&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;recurringStartDate&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recurring_start_date</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;recurringStartDate&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;trialInformation&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;trialInformation&#39;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;value </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> is not a dictionary&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;trialInformation&#39;</span><span class="p">]))</span>
