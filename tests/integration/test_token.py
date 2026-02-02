@@ -1,5 +1,7 @@
 import unittest
 
+from datetime import date, timedelta
+
 from tests.integration import init_utils
 from tests.integration.init_utils import MERCHANT_ID
 
@@ -14,6 +16,8 @@ from worldline.connect.sdk.v1.merchant.tokens.delete_token_params import DeleteT
 
 class TokenTest(unittest.TestCase):
     def test_token(self):
+        expiry_date = (date.today() + timedelta(365 / 2)).strftime("%m%y")
+
         billing_address = Address()
         billing_address.country_code = "NL"
         customer = CustomerToken()
@@ -22,7 +26,7 @@ class TokenTest(unittest.TestCase):
         card_without_ccv.cardholder_name = "Jan"
         card_without_ccv.issue_number = "12"
         card_without_ccv.card_number = "4567350000427977"
-        card_without_ccv.expiry_date = "1225"
+        card_without_ccv.expiry_date = expiry_date
         card_data = TokenCardData()
         card_data.card_without_cvv = card_without_ccv
         card = TokenCard()
