@@ -408,6 +408,13 @@ API Reference
     :special-members:
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
+.. automodule:: worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
 .. automodule:: worldline.connect.sdk.v1.domain.abstract_order_status
     :members:
     :show-inheritance:
@@ -674,6 +681,13 @@ API Reference
     :special-members:
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
+.. automodule:: worldline.connect.sdk.v1.domain.automatic_reload_billing_details
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
 .. automodule:: worldline.connect.sdk.v1.domain.bank_account
     :members:
     :show-inheritance:
@@ -759,6 +773,13 @@ API Reference
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
 .. automodule:: worldline.connect.sdk.v1.domain.bank_transfer_payout_method_specific_input
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
+.. automodule:: worldline.connect.sdk.v1.domain.base_billing_details
     :members:
     :show-inheritance:
     :undoc-members:
@@ -1305,6 +1326,13 @@ API Reference
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
 .. automodule:: worldline.connect.sdk.v1.domain.decrypted_payment_data
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
+.. automodule:: worldline.connect.sdk.v1.domain.deferred_billing_details
     :members:
     :show-inheritance:
     :undoc-members:
@@ -2158,6 +2186,13 @@ API Reference
     :special-members:
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
+.. automodule:: worldline.connect.sdk.v1.domain.payment_product302_specific_input
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
 .. automodule:: worldline.connect.sdk.v1.domain.payment_product3201_specific_output
     :members:
     :show-inheritance:
@@ -2481,6 +2516,13 @@ API Reference
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
 .. automodule:: worldline.connect.sdk.v1.domain.range_validator
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
+.. automodule:: worldline.connect.sdk.v1.domain.recurring_billing_details
     :members:
     :show-inheritance:
     :undoc-members:

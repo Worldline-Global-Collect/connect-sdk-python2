@@ -19,7 +19,7 @@ class GetPaymentParams(ParamRequest):
     @property
     def return_operations(self):
         """
-        | If set to true, in the response of this call you will get an array called operations, that will include objects for captures and refunds associated with the given paymentId.
+        | This property only works for the multiple partial captures payments. If set to true, in the response of this call you will get an array called operations, that will include objects for captures and refunds associated with the given paymentId.
 
         Type: bool
         """

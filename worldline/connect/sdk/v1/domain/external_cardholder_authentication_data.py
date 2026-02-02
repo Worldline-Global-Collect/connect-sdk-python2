@@ -107,6 +107,7 @@ class ExternalCardholderAuthenticationData(DataObject):
         * **For ValidationResult = A (Attempt)**
         
         * MC &#8594; ECI 01
+        * MC &#8594; ECI 04
         * Visa, Amex, JCB, DCI, UPI &#8594; ECI 06
         * CB &#8594; 06 (or null from ACS - populate as 06)
         

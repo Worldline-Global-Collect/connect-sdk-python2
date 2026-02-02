@@ -17,7 +17,15 @@ class Frequency(DataObject):
     @property
     def interval(self):
         """
-        | The interval between recurring payments specified as days, weeks, quarters, or years.
+        | The interval between recurring payments specified as days, weeks, quarters, or years.  
+        
+        | Allowed values: 
+        
+        * days
+        * weeks
+        * months
+        * quarters
+        * years
 
         Type: str
         """
