@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.deferred_billing_details &#8212; connect-sdk-python2 5.2.1 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.deferred_billing_details &#8212; connect-sdk-python2 5.3.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -46,9 +46,23 @@
 <span class="sd">    | An object that contains details about the deferred payment.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+    <span class="n">__deferred_payment_amount</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__deferred_payment_date</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__free_cancellation_date</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__free_cancellation_date_time_zone</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">deferred_payment_amount</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | Amount in cents and always having 2 decimals. The amount to be paid on the deferred payment date. If omitted, defaults to the total order amount.</span>
+
+<span class="sd">        Type: long</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__deferred_payment_amount</span>
+
+    <span class="nd">@deferred_payment_amount</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">deferred_payment_amount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__deferred_payment_amount</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">deferred_payment_date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -91,6 +105,8 @@
 
 <div class="viewcode-block" id="DeferredBillingDetails.to_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.to_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">DeferredBillingDetails</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">deferred_payment_amount</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;deferredPaymentAmount&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deferred_payment_amount</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">deferred_payment_date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;deferredPaymentDate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deferred_payment_date</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">free_cancellation_date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -101,6 +117,8 @@
 
 <div class="viewcode-block" id="DeferredBillingDetails.from_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.deferred_billing_details.DeferredBillingDetails.from_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">DeferredBillingDetails</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;deferredPaymentAmount&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">deferred_payment_amount</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;deferredPaymentAmount&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;deferredPaymentDate&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">deferred_payment_date</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;deferredPaymentDate&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;freeCancellationDate&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
