@@ -121,6 +121,7 @@ class FindProductsParams(ParamRequest):
         * productsWithoutFields - Don't return products that require any additional data to be captured
         * productsWithoutInstructions - Don't return products that show instructions
         * productsWithRedirects - Don't return products that require a redirect to a 3rd party. Note that products that involve potential redirects related to 3D Secure authentication are not hidden
+        * clickToPayConfigurationFields - Don't return configuration parameters for each scheme supporting Click to Pay
 
         Type: list[str]
         """

@@ -6,6 +6,7 @@
 from worldline.connect.sdk.domain.data_object import DataObject
 from worldline.connect.sdk.v1.domain.account_on_file import AccountOnFile
 from worldline.connect.sdk.v1.domain.authentication_indicator import AuthenticationIndicator
+from worldline.connect.sdk.v1.domain.click_to_pay_configuration import ClickToPayConfiguration
 from worldline.connect.sdk.v1.domain.payment_product302_specific_data import PaymentProduct302SpecificData
 from worldline.connect.sdk.v1.domain.payment_product320_specific_data import PaymentProduct320SpecificData
 from worldline.connect.sdk.v1.domain.payment_product863_specific_data import PaymentProduct863SpecificData
@@ -17,12 +18,14 @@ class PaymentProduct(DataObject):
 
     __accounts_on_file = None
     __acquirer_country = None
+    __allows_click_to_pay = None
     __allows_installments = None
     __allows_recurring = None
     __allows_tokenization = None
     __authentication_indicator = None
     __auto_tokenized = None
     __can_be_iframed = None
+    __click_to_pay_configuration = None
     __device_fingerprint_enabled = None
     __display_hints = None
     __fields = None
@@ -66,6 +69,22 @@ class PaymentProduct(DataObject):
     @acquirer_country.setter
     def acquirer_country(self, value):
         self.__acquirer_country = value
+
+    @property
+    def allows_click_to_pay(self):
+        """
+        | Indicates if the product supports Click to Pay: 
+        
+        * true - This payment supports Click to Pay
+        * false - This payment does not support Click to Pay
+
+        Type: bool
+        """
+        return self.__allows_click_to_pay
+
+    @allows_click_to_pay.setter
+    def allows_click_to_pay(self, value):
+        self.__allows_click_to_pay = value
 
     @property
     def allows_installments(self):
@@ -159,6 +178,19 @@ class PaymentProduct(DataObject):
     @can_be_iframed.setter
     def can_be_iframed(self, value):
         self.__can_be_iframed = value
+
+    @property
+    def click_to_pay_configuration(self):
+        """
+        | Object containing the configuration parameters for each scheme supporting Click to Pay for the provided country and currency combination. These parameters initialize SRC System SDK for the scheme. This object is only returned for card products with allowsClickToPay set to true.
+
+        Type: :class:`worldline.connect.sdk.v1.domain.click_to_pay_configuration.ClickToPayConfiguration`
+        """
+        return self.__click_to_pay_configuration
+
+    @click_to_pay_configuration.setter
+    def click_to_pay_configuration(self, value):
+        self.__click_to_pay_configuration = value
 
     @property
     def device_fingerprint_enabled(self):
@@ -413,6 +445,8 @@ class PaymentProduct(DataObject):
                     dictionary['accountsOnFile'].append(element.to_dictionary())
         if self.acquirer_country is not None:
             dictionary['acquirerCountry'] = self.acquirer_country
+        if self.allows_click_to_pay is not None:
+            dictionary['allowsClickToPay'] = self.allows_click_to_pay
         if self.allows_installments is not None:
             dictionary['allowsInstallments'] = self.allows_installments
         if self.allows_recurring is not None:
@@ -425,6 +459,8 @@ class PaymentProduct(DataObject):
             dictionary['autoTokenized'] = self.auto_tokenized
         if self.can_be_iframed is not None:
             dictionary['canBeIframed'] = self.can_be_iframed
+        if self.click_to_pay_configuration is not None:
+            dictionary['clickToPayConfiguration'] = self.click_to_pay_configuration.to_dictionary()
         if self.device_fingerprint_enabled is not None:
             dictionary['deviceFingerprintEnabled'] = self.device_fingerprint_enabled
         if self.display_hints is not None:
@@ -475,6 +511,8 @@ class PaymentProduct(DataObject):
                 self.accounts_on_file.append(value.from_dictionary(element))
         if 'acquirerCountry' in dictionary:
             self.acquirer_country = dictionary['acquirerCountry']
+        if 'allowsClickToPay' in dictionary:
+            self.allows_click_to_pay = dictionary['allowsClickToPay']
         if 'allowsInstallments' in dictionary:
             self.allows_installments = dictionary['allowsInstallments']
         if 'allowsRecurring' in dictionary:
@@ -490,6 +528,11 @@ class PaymentProduct(DataObject):
             self.auto_tokenized = dictionary['autoTokenized']
         if 'canBeIframed' in dictionary:
             self.can_be_iframed = dictionary['canBeIframed']
+        if 'clickToPayConfiguration' in dictionary:
+            if not isinstance(dictionary['clickToPayConfiguration'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['clickToPayConfiguration']))
+            value = ClickToPayConfiguration()
+            self.click_to_pay_configuration = value.from_dictionary(dictionary['clickToPayConfiguration'])
         if 'deviceFingerprintEnabled' in dictionary:
             self.device_fingerprint_enabled = dictionary['deviceFingerprintEnabled']
         if 'displayHints' in dictionary:

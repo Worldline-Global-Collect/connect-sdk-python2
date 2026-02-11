@@ -119,6 +119,7 @@ class GetProductParams(ParamRequest):
         * fields - Don't return any data on fields of the payment product
         * accountsOnFile - Don't return any accounts on file data
         * translations - Don't return any label texts associated with the payment products
+        * clickToPayConfigurationFields - Don't return configuration parameters for each scheme supporting Click to Pay
 
         Type: list[str]
         """

@@ -23,19 +23,13 @@ class OrderReferences(DataObject):
         
         * AIB - 22 characters
         * American Express - 25 characters
-        * Atos Origin BNP - 15 characters
-        * Barclays - 25 characters
-        * Catella - 22 characters
-        * CBA - 20 characters
-        * Elavon - 25 characters
-        * First Data - 25 characters
+        * Bambora - 22 characters
+        * First Data APAC and AUS - 25 characters
+        * Chase - not supported
         * INICIS (INIPAY) - 22-30 characters
-        * JCB - 25 characters
-        * Merchant Solutions - 22-25 characters
-        * Payvision (EU & HK) - 25 characters
-        * SEB Euroline - 22 characters
-        * Sub1 Argentina - 15 characters
-        * Wells Fargo - 25 characters
+        * Lidio - 30 characters
+        * Worldline TAP UK - 22 characters
+        * Worldline TAP EU - 22 characters
         
         | Note that we advise you to use 22 characters as the max length as beyond this our experience is that issuers will start to truncate. We currently also only allow per API call overrides for AIB and Barclays
         | For alternative payment products the maximum allowed length varies per payment product:
@@ -45,12 +39,9 @@ class OrderReferences(DataObject):
         * 802 Nordea ePayment Finland - 234 characters
         * 809 iDeal - 32 characters
         * 840 PayPal - 127 characters
-        * 841 WebMoney - 175 characters
-        * 849 Yandex - 64 characters
         * 861 Alipay - 256 characters
         * 863 WeChat Pay - 32 characters
-        * 880 BOKU - 20 characters
-        * 8580 Qiwi - 255 characters
+        * 900 Wero - 50 characters
         * 1504 Konbini - 80 characters
         
         | All other payment products don't support a descriptor.

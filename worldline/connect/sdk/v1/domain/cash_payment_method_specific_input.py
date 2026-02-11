@@ -6,6 +6,8 @@
 from worldline.connect.sdk.v1.domain.abstract_cash_payment_method_specific_input import AbstractCashPaymentMethodSpecificInput
 from worldline.connect.sdk.v1.domain.cash_payment_product1503_specific_input import CashPaymentProduct1503SpecificInput
 from worldline.connect.sdk.v1.domain.cash_payment_product1504_specific_input import CashPaymentProduct1504SpecificInput
+from worldline.connect.sdk.v1.domain.cash_payment_product1506_specific_input import CashPaymentProduct1506SpecificInput
+from worldline.connect.sdk.v1.domain.cash_payment_product1508_specific_input import CashPaymentProduct1508SpecificInput
 from worldline.connect.sdk.v1.domain.cash_payment_product1521_specific_input import CashPaymentProduct1521SpecificInput
 from worldline.connect.sdk.v1.domain.cash_payment_product1522_specific_input import CashPaymentProduct1522SpecificInput
 from worldline.connect.sdk.v1.domain.cash_payment_product1523_specific_input import CashPaymentProduct1523SpecificInput
@@ -17,6 +19,8 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
 
     __payment_product1503_specific_input = None
     __payment_product1504_specific_input = None
+    __payment_product1506_specific_input = None
+    __payment_product1508_specific_input = None
     __payment_product1521_specific_input = None
     __payment_product1522_specific_input = None
     __payment_product1523_specific_input = None
@@ -50,6 +54,32 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
     @payment_product1504_specific_input.setter
     def payment_product1504_specific_input(self, value):
         self.__payment_product1504_specific_input = value
+
+    @property
+    def payment_product1506_specific_input(self):
+        """
+        | Object that holds the specific data for Pago Facil in Argentina (payment product 1506)
+
+        Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_product1506_specific_input.CashPaymentProduct1506SpecificInput`
+        """
+        return self.__payment_product1506_specific_input
+
+    @payment_product1506_specific_input.setter
+    def payment_product1506_specific_input(self, value):
+        self.__payment_product1506_specific_input = value
+
+    @property
+    def payment_product1508_specific_input(self):
+        """
+        | Object that holds the specific data for Rapipago in Argentina (payment product 1508)
+
+        Type: :class:`worldline.connect.sdk.v1.domain.cash_payment_product1508_specific_input.CashPaymentProduct1508SpecificInput`
+        """
+        return self.__payment_product1508_specific_input
+
+    @payment_product1508_specific_input.setter
+    def payment_product1508_specific_input(self, value):
+        self.__payment_product1508_specific_input = value
 
     @property
     def payment_product1521_specific_input(self):
@@ -122,6 +152,10 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
             dictionary['paymentProduct1503SpecificInput'] = self.payment_product1503_specific_input.to_dictionary()
         if self.payment_product1504_specific_input is not None:
             dictionary['paymentProduct1504SpecificInput'] = self.payment_product1504_specific_input.to_dictionary()
+        if self.payment_product1506_specific_input is not None:
+            dictionary['paymentProduct1506SpecificInput'] = self.payment_product1506_specific_input.to_dictionary()
+        if self.payment_product1508_specific_input is not None:
+            dictionary['paymentProduct1508SpecificInput'] = self.payment_product1508_specific_input.to_dictionary()
         if self.payment_product1521_specific_input is not None:
             dictionary['paymentProduct1521SpecificInput'] = self.payment_product1521_specific_input.to_dictionary()
         if self.payment_product1522_specific_input is not None:
@@ -146,6 +180,16 @@ class CashPaymentMethodSpecificInput(AbstractCashPaymentMethodSpecificInput):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct1504SpecificInput']))
             value = CashPaymentProduct1504SpecificInput()
             self.payment_product1504_specific_input = value.from_dictionary(dictionary['paymentProduct1504SpecificInput'])
+        if 'paymentProduct1506SpecificInput' in dictionary:
+            if not isinstance(dictionary['paymentProduct1506SpecificInput'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct1506SpecificInput']))
+            value = CashPaymentProduct1506SpecificInput()
+            self.payment_product1506_specific_input = value.from_dictionary(dictionary['paymentProduct1506SpecificInput'])
+        if 'paymentProduct1508SpecificInput' in dictionary:
+            if not isinstance(dictionary['paymentProduct1508SpecificInput'], dict):
+                raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct1508SpecificInput']))
+            value = CashPaymentProduct1508SpecificInput()
+            self.payment_product1508_specific_input = value.from_dictionary(dictionary['paymentProduct1508SpecificInput'])
         if 'paymentProduct1521SpecificInput' in dictionary:
             if not isinstance(dictionary['paymentProduct1521SpecificInput'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['paymentProduct1521SpecificInput']))
