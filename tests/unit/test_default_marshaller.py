@@ -31,7 +31,7 @@ class DefaultMarshallerTest(unittest.TestCase):
         json = marshaller.marshal(dummy_object)
         unmarshalled = marshaller.unmarshal(json, JsonDummy)
 
-        self.assertEqual(True, unmarshalled.bar)
+        self.assertTrue(unmarshalled.bar)
         self.assertEqual(01, unmarshalled.boo)
         self.assertEqual("close", unmarshalled.far)
         self.assertEqual("hiddenfoo", unmarshalled.foo.foo.foo)

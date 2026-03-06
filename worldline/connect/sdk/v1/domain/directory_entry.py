@@ -48,7 +48,7 @@ class DirectoryEntry(DataObject):
         * short - These issuers should be presented at the top of the list
         * long - These issuers should be presented after the issuers marked as short
         
-        | Note: this is only filled if supported by the payment product. Currently only iDeal (809) support this. Sorting within the groups should be done alphabetically.
+        | Note: this is only filled if supported by the payment product. Currently only iDEAL | Wero (809) support this. Sorting within the groups should be done alphabetically.
 
         Type: str
         """

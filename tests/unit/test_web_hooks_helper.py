@@ -109,11 +109,11 @@ class WebhooksHelperTest(unittest.TestCase):
 
         self.assertEqual("PAID", event.payment.status)
         self.assertIsNotNone(event.payment.status_output)
-        self.assertEqual(False, event.payment.status_output.is_cancellable)
+        self.assertFalse(event.payment.status_output.is_cancellable)
         self.assertEqual("COMPLETED", event.payment.status_output.status_category)
         self.assertEqual(1000, event.payment.status_output.status_code)
         self.assertEqual("20170202112414", event.payment.status_output.status_code_change_date_time)
-        self.assertEqual(True, event.payment.status_output.is_authorized)
+        self.assertTrue(event.payment.status_output.is_authorized)
 
     def test_unmarshal_string_invalid_body(self):
         helper = self.__create_helper()

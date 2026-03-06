@@ -37,7 +37,7 @@ class OrderReferences(DataObject):
         * 402 e-Przelewy - 30 characters
         * 404 INICIS - 80 characters
         * 802 Nordea ePayment Finland - 234 characters
-        * 809 iDeal - 32 characters
+        * 809 iDEAL | Wero - 32 characters
         * 840 PayPal - 127 characters
         * 861 Alipay - 256 characters
         * 863 WeChat Pay - 32 characters

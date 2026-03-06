@@ -8,7 +8,7 @@ from worldline.connect.sdk.domain.data_object import DataObject
 
 class RedirectPaymentProduct809SpecificInput(DataObject):
     """
-    | Please find below specific input fields for payment product 809 (iDeal)
+    | Please find below specific input fields for payment product 809 (iDEAL | Wero)
     """
 
     __expiration_period = None

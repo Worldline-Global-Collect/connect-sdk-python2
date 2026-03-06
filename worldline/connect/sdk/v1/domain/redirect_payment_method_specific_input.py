@@ -59,7 +59,7 @@ class RedirectPaymentMethodSpecificInput(AbstractRedirectPaymentMethodSpecificIn
     @property
     def payment_product809_specific_input(self):
         """
-        | Object containing specific input required for Dutch iDeal payments (Payment product ID 809)
+        | Object containing specific input required for Dutch iDEAL | Wero payments (Payment product ID 809)
 
         Type: :class:`worldline.connect.sdk.v1.domain.redirect_payment_product809_specific_input.RedirectPaymentProduct809SpecificInput`
         """
