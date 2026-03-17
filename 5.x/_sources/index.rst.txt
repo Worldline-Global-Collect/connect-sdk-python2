@@ -975,6 +975,13 @@ API Reference
     :special-members:
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
+.. automodule:: worldline.connect.sdk.v1.domain.cash_payment_product1502_specific_input
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
 .. automodule:: worldline.connect.sdk.v1.domain.cash_payment_product1503_specific_input
     :members:
     :show-inheritance:
@@ -1025,6 +1032,13 @@ API Reference
     :exclude-members: __dict__,__weakref__,__module__,__get__
 
 .. automodule:: worldline.connect.sdk.v1.domain.cash_payment_product1524_specific_input
+    :members:
+    :show-inheritance:
+    :undoc-members:
+    :special-members:
+    :exclude-members: __dict__,__weakref__,__module__,__get__
+
+.. automodule:: worldline.connect.sdk.v1.domain.cash_payment_product1525_specific_input
     :members:
     :show-inheritance:
     :undoc-members:
