@@ -8,19 +8,8 @@ from worldline.connect.sdk.domain.data_object import DataObject
 
 class ClickToPaySchemeConfigurationBase(DataObject):
 
-    __src_dpa_id = None
     __src_initiator_id = None
-
-    @property
-    def src_dpa_id(self):
-        """
-        Type: str
-        """
-        return self.__src_dpa_id
-
-    @src_dpa_id.setter
-    def src_dpa_id(self, value):
-        self.__src_dpa_id = value
+    __srci_dpa_id = None
 
     @property
     def src_initiator_id(self):
@@ -33,18 +22,29 @@ class ClickToPaySchemeConfigurationBase(DataObject):
     def src_initiator_id(self, value):
         self.__src_initiator_id = value
 
+    @property
+    def srci_dpa_id(self):
+        """
+        Type: str
+        """
+        return self.__srci_dpa_id
+
+    @srci_dpa_id.setter
+    def srci_dpa_id(self, value):
+        self.__srci_dpa_id = value
+
     def to_dictionary(self):
         dictionary = super(ClickToPaySchemeConfigurationBase, self).to_dictionary()
-        if self.src_dpa_id is not None:
-            dictionary['srcDpaId'] = self.src_dpa_id
         if self.src_initiator_id is not None:
             dictionary['srcInitiatorId'] = self.src_initiator_id
+        if self.srci_dpa_id is not None:
+            dictionary['srciDpaId'] = self.srci_dpa_id
         return dictionary
 
     def from_dictionary(self, dictionary):
         super(ClickToPaySchemeConfigurationBase, self).from_dictionary(dictionary)
-        if 'srcDpaId' in dictionary:
-            self.src_dpa_id = dictionary['srcDpaId']
         if 'srcInitiatorId' in dictionary:
             self.src_initiator_id = dictionary['srcInitiatorId']
+        if 'srciDpaId' in dictionary:
+            self.srci_dpa_id = dictionary['srciDpaId']
         return self

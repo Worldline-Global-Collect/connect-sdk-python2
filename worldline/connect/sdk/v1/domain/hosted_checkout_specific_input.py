@@ -10,6 +10,7 @@ from worldline.connect.sdk.v1.domain.recurring_payments_data import RecurringPay
 
 class HostedCheckoutSpecificInput(DataObject):
 
+    __allow_click_to_pay = None
     __is_recurring = None
     __locale = None
     __payment_product_filters = None
@@ -20,6 +21,24 @@ class HostedCheckoutSpecificInput(DataObject):
     __tokens = None
     __validate_shopping_cart = None
     __variant = None
+
+    @property
+    def allow_click_to_pay(self):
+        """
+        | Controls whether the Click to Pay flow is initiated. 
+        
+        * true: initiate the Click to Pay user experience.
+        * false: do not initiate the Click to Pay user experience.
+        
+        |   Note: Effective only if you are onboarded to use Click to Pay.
+
+        Type: bool
+        """
+        return self.__allow_click_to_pay
+
+    @allow_click_to_pay.setter
+    def allow_click_to_pay(self, value):
+        self.__allow_click_to_pay = value
 
     @property
     def is_recurring(self):
@@ -168,6 +187,8 @@ class HostedCheckoutSpecificInput(DataObject):
 
     def to_dictionary(self):
         dictionary = super(HostedCheckoutSpecificInput, self).to_dictionary()
+        if self.allow_click_to_pay is not None:
+            dictionary['allowClickToPay'] = self.allow_click_to_pay
         if self.is_recurring is not None:
             dictionary['isRecurring'] = self.is_recurring
         if self.locale is not None:
@@ -192,6 +213,8 @@ class HostedCheckoutSpecificInput(DataObject):
 
     def from_dictionary(self, dictionary):
         super(HostedCheckoutSpecificInput, self).from_dictionary(dictionary)
+        if 'allowClickToPay' in dictionary:
+            self.allow_click_to_pay = dictionary['allowClickToPay']
         if 'isRecurring' in dictionary:
             self.is_recurring = dictionary['isRecurring']
         if 'locale' in dictionary:

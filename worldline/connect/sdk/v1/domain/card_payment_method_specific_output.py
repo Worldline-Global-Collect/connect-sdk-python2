@@ -17,6 +17,7 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
 
     __authorisation_code = None
     __card = None
+    __click_to_pay_used = None
     __fraud_results = None
     __initial_scheme_transaction_id = None
     __network_token_data = None
@@ -51,6 +52,19 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     @card.setter
     def card(self, value):
         self.__card = value
+
+    @property
+    def click_to_pay_used(self):
+        """
+        | Indicates if a Click to Pay token was used during the payment.
+
+        Type: bool
+        """
+        return self.__click_to_pay_used
+
+    @click_to_pay_used.setter
+    def click_to_pay_used(self, value):
+        self.__click_to_pay_used = value
 
     @property
     def fraud_results(self):
@@ -164,6 +178,8 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             dictionary['authorisationCode'] = self.authorisation_code
         if self.card is not None:
             dictionary['card'] = self.card.to_dictionary()
+        if self.click_to_pay_used is not None:
+            dictionary['clickToPayUsed'] = self.click_to_pay_used
         if self.fraud_results is not None:
             dictionary['fraudResults'] = self.fraud_results.to_dictionary()
         if self.initial_scheme_transaction_id is not None:
@@ -191,6 +207,8 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['card']))
             value = CardEssentials()
             self.card = value.from_dictionary(dictionary['card'])
+        if 'clickToPayUsed' in dictionary:
+            self.click_to_pay_used = dictionary['clickToPayUsed']
         if 'fraudResults' in dictionary:
             if not isinstance(dictionary['fraudResults'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['fraudResults']))
