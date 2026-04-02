@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 5.5.0 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 5.6.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -6031,6 +6031,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_input.CardPaymentMethodSpecificInput.click_to_pay">
+<code class="descname">click_to_pay</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_input.CardPaymentMethodSpecificInput.click_to_pay" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object holding data that is required to process card transaction with Click to Pay.</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput" title="worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_input.CardPaymentMethodSpecificInput.external_cardholder_authentication_data">
 <code class="descname">external_cardholder_authentication_data</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_input.CardPaymentMethodSpecificInput.external_cardholder_authentication_data" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -6157,6 +6166,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <div class="line">Object containing card details</div>
 </div>
 <p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.card_essentials.CardEssentials" title="worldline.connect.sdk.v1.domain.card_essentials.CardEssentials"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.card_essentials.CardEssentials</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.click_to_pay_used">
+<code class="descname">click_to_pay_used</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.click_to_pay_used" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates if a Click to Pay token was used during the payment.</div>
+</div>
+<p>Type: bool</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6869,6 +6887,34 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 
 </dd></dl>
 
+<span class="target" id="module-worldline.connect.sdk.v1.domain.click_to_pay_input"></span><dl class="class">
+<dt id="worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput">
+<em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.click_to_pay_input.</code><code class="descname">ClickToPayInput</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/click_to_pay_input.html#ClickToPayInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
+<div class="line-block">
+<div class="line">Object holding data that is required to process card transaction with Click to Pay.</div>
+</div>
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput.checkout_response_signature">
+<code class="descname">checkout_response_signature</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput.checkout_response_signature" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The checkoutResponseSignature is a token (JWS) that signs the Checkout response returned by the SRC System after a successful Click to Pay payment. It is used to call the Click to Pay SRCI Server Payload API.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput.from_dictionary">
+<code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/click_to_pay_input.html#ClickToPayInput.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput.from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput.to_dictionary">
+<code class="descname">to_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/click_to_pay_input.html#ClickToPayInput.to_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.click_to_pay_input.ClickToPayInput.to_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <span class="target" id="module-worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base"></span><dl class="class">
 <dt id="worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.</code><code class="descname">ClickToPaySchemeConfigurationBase</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/click_to_pay_scheme_configuration_base.html#ClickToPaySchemeConfigurationBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase" title="Permalink to this definition">¶</a></dt>
@@ -6879,14 +6925,14 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase.src_dpa_id">
-<code class="descname">src_dpa_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase.src_dpa_id" title="Permalink to this definition">¶</a></dt>
+<dt id="worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase.src_initiator_id">
+<code class="descname">src_initiator_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase.src_initiator_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: str</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase.src_initiator_id">
-<code class="descname">src_initiator_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase.src_initiator_id" title="Permalink to this definition">¶</a></dt>
+<dt id="worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase.srci_dpa_id">
+<code class="descname">srci_dpa_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.click_to_pay_scheme_configuration_base.ClickToPaySchemeConfigurationBase.srci_dpa_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: str</p>
 </dd></dl>
 
@@ -11962,6 +12008,22 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dt id="worldline.connect.sdk.v1.domain.hosted_checkout_specific_input.HostedCheckoutSpecificInput">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.v1.domain.hosted_checkout_specific_input.</code><code class="descname">HostedCheckoutSpecificInput</code><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/hosted_checkout_specific_input.html#HostedCheckoutSpecificInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.hosted_checkout_specific_input.HostedCheckoutSpecificInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#worldline.connect.sdk.domain.data_object.DataObject" title="worldline.connect.sdk.domain.data_object.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.domain.data_object.DataObject</span></code></a></p>
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.hosted_checkout_specific_input.HostedCheckoutSpecificInput.allow_click_to_pay">
+<code class="descname">allow_click_to_pay</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.hosted_checkout_specific_input.HostedCheckoutSpecificInput.allow_click_to_pay" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Controls whether the Click to Pay flow is initiated. </div>
+</div>
+<ul class="simple">
+<li>true: initiate the Click to Pay user experience.</li>
+<li>false: do not initiate the Click to Pay user experience.</li>
+</ul>
+<div class="line-block">
+<div class="line">Note: Effective only if you are onboarded to use Click to Pay.</div>
+</div>
+<p>Type: bool</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="worldline.connect.sdk.v1.domain.hosted_checkout_specific_input.HostedCheckoutSpecificInput.from_dictionary">
 <code class="descname">from_dictionary</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/v1/domain/hosted_checkout_specific_input.html#HostedCheckoutSpecificInput.from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.v1.domain.hosted_checkout_specific_input.HostedCheckoutSpecificInput.from_dictionary" title="Permalink to this definition">¶</a></dt>
