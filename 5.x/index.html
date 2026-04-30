@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 5.6.0 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 5.7.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -131,9 +131,9 @@ First, some environment variables need to be set:</p>
 <p>Note: in the current version of the unit tests, two errors will pop up ([Errno 10053] for Windows and [Errno 32] for Linux), indicating that there was a client disconnect. These errors occur during cleanup of the tests and do not hinder the tests in any way, and should therefore be ignored.</p>
 </div>
 </div>
-<div class="section" id="module-worldline.connect.sdk.api_resource">
-<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-worldline.connect.sdk.api_resource" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-worldline.connect.sdk.api_resource"></span><dl class="class">
 <dt id="worldline.connect.sdk.api_resource.ApiResource">
 <em class="property">class </em><code class="descclassname">worldline.connect.sdk.api_resource.</code><code class="descname">ApiResource</code><span class="sig-paren">(</span><em>parent=None</em>, <em>communicator=None</em>, <em>path_context=None</em>, <em>client_meta_info=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/worldline/connect/sdk/api_resource.html#ApiResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#worldline.connect.sdk.api_resource.ApiResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -5592,6 +5592,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <div class="line">Object that holds all reference properties that are linked to this transaction</div>
 </div>
 <p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.capture_payment_order_references.CapturePaymentOrderReferences" title="worldline.connect.sdk.v1.domain.capture_payment_order_references.CapturePaymentOrderReferences"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.capture_payment_order_references.CapturePaymentOrderReferences</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.capture_payment_order.CapturePaymentOrder.shipping">
+<code class="descname">shipping</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.capture_payment_order.CapturePaymentOrder.shipping" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Object containing shipping related data</div>
+</div>
+<p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.shipping.Shipping" title="worldline.connect.sdk.v1.domain.shipping.Shipping"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.shipping.Shipping</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
@@ -16624,6 +16633,19 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <ul class="simple">
 <li>true - This payment supports installments</li>
 <li>false - This payment does not support installments</li>
+</ul>
+<p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.payment_product.PaymentProduct.allows_multiple_partial_captures">
+<code class="descname">allows_multiple_partial_captures</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.payment_product.PaymentProduct.allows_multiple_partial_captures" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates if the payment product supports multiple partial captures</div>
+</div>
+<ul class="simple">
+<li>true - This payment product supports multiple partial captures</li>
+<li>false - This payment payment does not support multiple partial captures</li>
 </ul>
 <p>Type: bool</p>
 </dd></dl>
