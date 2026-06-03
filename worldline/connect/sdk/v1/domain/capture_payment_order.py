@@ -6,7 +6,7 @@
 from worldline.connect.sdk.domain.data_object import DataObject
 from worldline.connect.sdk.v1.domain.capture_payment_order_additional_input import CapturePaymentOrderAdditionalInput
 from worldline.connect.sdk.v1.domain.capture_payment_order_references import CapturePaymentOrderReferences
-from worldline.connect.sdk.v1.domain.shipping import Shipping
+from worldline.connect.sdk.v1.domain.capture_payment_shipping import CapturePaymentShipping
 
 
 class CapturePaymentOrder(DataObject):
@@ -46,7 +46,7 @@ class CapturePaymentOrder(DataObject):
         """
         | Object containing shipping related data
 
-        Type: :class:`worldline.connect.sdk.v1.domain.shipping.Shipping`
+        Type: :class:`worldline.connect.sdk.v1.domain.capture_payment_shipping.CapturePaymentShipping`
         """
         return self.__shipping
 
@@ -79,6 +79,6 @@ class CapturePaymentOrder(DataObject):
         if 'shipping' in dictionary:
             if not isinstance(dictionary['shipping'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['shipping']))
-            value = Shipping()
+            value = CapturePaymentShipping()
             self.shipping = value.from_dictionary(dictionary['shipping'])
         return self
