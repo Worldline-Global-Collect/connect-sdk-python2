@@ -343,7 +343,7 @@ class Communicator(LoggingCapable, ObfuscationCapable):
             self.__throw_exception(status, body, headers, request_path)
 
     def __throw_exception(self, status, body, headers, request_path):
-        if body is not None and not self.__is_json(headers):
+        if body and not self.__is_json(headers):
             cause = ResponseException(status, body, headers)
             if status == NOT_FOUND:
                 raise NotFoundException(cause, "The requested resource was not found; invalid path: " + request_path)
