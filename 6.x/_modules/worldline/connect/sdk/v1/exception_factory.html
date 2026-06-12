@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.exception_factory &#8212; connect-sdk-python2 6.0.0 documentation</title>
+    <title>worldline.connect.sdk.v1.exception_factory &#8212; connect-sdk-python2 6.0.1 documentation</title>
     <link rel="stylesheet" href="../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
@@ -87,6 +87,8 @@
                                            <span class="n">response_body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
                                            <span class="n">response</span><span class="o">=</span><span class="n">error_object</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">create_exception_from_response_fields</span><span class="p">(</span><span class="n">error_object</span><span class="o">.</span><span class="n">error_id</span><span class="p">,</span> <span class="n">error_object</span><span class="o">.</span><span class="n">errors</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">error_object</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">create_exception_from_response_fields</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="p">[])</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">error_object</span><span class="p">,</span> <span class="n">ErrorResponse</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unsupported error object encountered: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error_object</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
 
