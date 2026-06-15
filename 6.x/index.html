@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 6.0.1 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 6.1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -11866,6 +11866,22 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <div class="line">Output of the retrieval of the IIN details request</div>
 </div>
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.get_iin_details_response.GetIINDetailsResponse.bin_product_type">
+<code class="descname">bin_product_type</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.get_iin_details_response.GetIINDetailsResponse.bin_product_type" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Indicates the type or segments of consumer’s BIN is issued. It helps to offer targeted benefits to the consumers, and helps to request exemption for additional authentications. The possible values are: </div>
+</div>
+<ul class="simple">
+<li>CONSUMER</li>
+<li>COMMERCIAL</li>
+<li>VIRTUAL</li>
+<li>ALL</li>
+<li>OTHER</li>
+</ul>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.get_iin_details_response.GetIINDetailsResponse.co_brands">
 <code class="descname">co_brands</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.get_iin_details_response.GetIINDetailsResponse.co_brands" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -11900,6 +11916,15 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <li>false - The payment product is not allowed in the submitted context. Note that in this case, none of the brands of the card will be allowed in the submitted context.</li>
 </ul>
 <p>Type: bool</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.get_iin_details_response.GetIINDetailsResponse.issuer_name">
+<code class="descname">issuer_name</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.get_iin_details_response.GetIINDetailsResponse.issuer_name" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The name of the card issuer associated with the card.</div>
+</div>
+<p>Type: str</p>
 </dd></dl>
 
 <dl class="attribute">
