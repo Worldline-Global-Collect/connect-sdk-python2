@@ -12,10 +12,31 @@ class GetIINDetailsResponse(DataObject):
     | Output of the retrieval of the IIN details request
     """
 
+    __bin_product_type = None
     __co_brands = None
     __country_code = None
     __is_allowed_in_context = None
+    __issuer_name = None
     __payment_product_id = None
+
+    @property
+    def bin_product_type(self):
+        """
+        | Indicates the type or segments of consumer's BIN is issued. It helps to offer targeted benefits to the consumers, and helps to request exemption for additional authentications. The possible values are: 
+        
+        * CONSUMER
+        * COMMERCIAL
+        * VIRTUAL
+        * ALL
+        * OTHER
+
+        Type: str
+        """
+        return self.__bin_product_type
+
+    @bin_product_type.setter
+    def bin_product_type(self, value):
+        self.__bin_product_type = value
 
     @property
     def co_brands(self):
@@ -61,6 +82,19 @@ class GetIINDetailsResponse(DataObject):
         self.__is_allowed_in_context = value
 
     @property
+    def issuer_name(self):
+        """
+        | The name of the card issuer associated with the card.
+
+        Type: str
+        """
+        return self.__issuer_name
+
+    @issuer_name.setter
+    def issuer_name(self, value):
+        self.__issuer_name = value
+
+    @property
     def payment_product_id(self):
         """
         | The payment product identifier associated with the card. If the card has multiple brands, then we select the most appropriate payment product based on your configuration and the payment context, if you submitted one.
@@ -76,6 +110,8 @@ class GetIINDetailsResponse(DataObject):
 
     def to_dictionary(self):
         dictionary = super(GetIINDetailsResponse, self).to_dictionary()
+        if self.bin_product_type is not None:
+            dictionary['binProductType'] = self.bin_product_type
         if self.co_brands is not None:
             dictionary['coBrands'] = []
             for element in self.co_brands:
@@ -85,12 +121,16 @@ class GetIINDetailsResponse(DataObject):
             dictionary['countryCode'] = self.country_code
         if self.is_allowed_in_context is not None:
             dictionary['isAllowedInContext'] = self.is_allowed_in_context
+        if self.issuer_name is not None:
+            dictionary['issuerName'] = self.issuer_name
         if self.payment_product_id is not None:
             dictionary['paymentProductId'] = self.payment_product_id
         return dictionary
 
     def from_dictionary(self, dictionary):
         super(GetIINDetailsResponse, self).from_dictionary(dictionary)
+        if 'binProductType' in dictionary:
+            self.bin_product_type = dictionary['binProductType']
         if 'coBrands' in dictionary:
             if not isinstance(dictionary['coBrands'], list):
                 raise TypeError('value \'{}\' is not a list'.format(dictionary['coBrands']))
@@ -102,6 +142,8 @@ class GetIINDetailsResponse(DataObject):
             self.country_code = dictionary['countryCode']
         if 'isAllowedInContext' in dictionary:
             self.is_allowed_in_context = dictionary['isAllowedInContext']
+        if 'issuerName' in dictionary:
+            self.issuer_name = dictionary['issuerName']
         if 'paymentProductId' in dictionary:
             self.payment_product_id = dictionary['paymentProductId']
         return self
