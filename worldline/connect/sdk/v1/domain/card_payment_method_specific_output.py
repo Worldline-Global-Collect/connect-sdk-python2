@@ -22,10 +22,12 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     __initial_scheme_transaction_id = None
     __network_token_data = None
     __network_token_used = None
+    __original_transaction_link_id = None
     __payment_account_reference = None
     __scheme_transaction_id = None
     __three_d_secure_results = None
     __token = None
+    __transaction_link_id = None
 
     @property
     def authorisation_code(self):
@@ -120,6 +122,21 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
         self.__network_token_used = value
 
     @property
+    def original_transaction_link_id(self):
+        """
+        | The unique Mastercard transactionLinkId of the initial transaction. Strongly advised to be submitted for any merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).
+        
+        | If the originalTransactionLinkId is empty, we will, where possible, apply the best available match.
+
+        Type: str
+        """
+        return self.__original_transaction_link_id
+
+    @original_transaction_link_id.setter
+    def original_transaction_link_id(self, value):
+        self.__original_transaction_link_id = value
+
+    @property
     def payment_account_reference(self):
         """
         | A unique reference to the primary account number. Payment Account Reference provides a consolidated view of transactions associated with a PAN and its affiliated tokens, making it easier to identify customers and their associated transactions across payment channels.
@@ -172,6 +189,22 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
     def token(self, value):
         self.__token = value
 
+    @property
+    def transaction_link_id(self):
+        """
+        | The unique Mastercard transactionLinkId of this transaction.
+        | Should be stored by you for a first cardholderInitiated (unscheduledCardOnFileRequestor) or zero-value authorization transaction.
+        
+        | Use this value as the originalTransactionLinkId for any subsequent merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).
+
+        Type: str
+        """
+        return self.__transaction_link_id
+
+    @transaction_link_id.setter
+    def transaction_link_id(self, value):
+        self.__transaction_link_id = value
+
     def to_dictionary(self):
         dictionary = super(CardPaymentMethodSpecificOutput, self).to_dictionary()
         if self.authorisation_code is not None:
@@ -188,6 +221,8 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             dictionary['networkTokenData'] = self.network_token_data.to_dictionary()
         if self.network_token_used is not None:
             dictionary['networkTokenUsed'] = self.network_token_used
+        if self.original_transaction_link_id is not None:
+            dictionary['originalTransactionLinkId'] = self.original_transaction_link_id
         if self.payment_account_reference is not None:
             dictionary['paymentAccountReference'] = self.payment_account_reference
         if self.scheme_transaction_id is not None:
@@ -196,6 +231,8 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             dictionary['threeDSecureResults'] = self.three_d_secure_results.to_dictionary()
         if self.token is not None:
             dictionary['token'] = self.token
+        if self.transaction_link_id is not None:
+            dictionary['transactionLinkId'] = self.transaction_link_id
         return dictionary
 
     def from_dictionary(self, dictionary):
@@ -223,6 +260,8 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             self.network_token_data = value.from_dictionary(dictionary['networkTokenData'])
         if 'networkTokenUsed' in dictionary:
             self.network_token_used = dictionary['networkTokenUsed']
+        if 'originalTransactionLinkId' in dictionary:
+            self.original_transaction_link_id = dictionary['originalTransactionLinkId']
         if 'paymentAccountReference' in dictionary:
             self.payment_account_reference = dictionary['paymentAccountReference']
         if 'schemeTransactionId' in dictionary:
@@ -234,4 +273,6 @@ class CardPaymentMethodSpecificOutput(AbstractPaymentMethodSpecificOutput):
             self.three_d_secure_results = value.from_dictionary(dictionary['threeDSecureResults'])
         if 'token' in dictionary:
             self.token = dictionary['token']
+        if 'transactionLinkId' in dictionary:
+            self.transaction_link_id = dictionary['transactionLinkId']
         return self

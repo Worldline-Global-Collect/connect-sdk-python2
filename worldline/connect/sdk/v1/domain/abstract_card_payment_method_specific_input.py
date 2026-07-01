@@ -13,6 +13,7 @@ class AbstractCardPaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput)
     __authorization_mode = None
     __customer_reference = None
     __initial_scheme_transaction_id = None
+    __original_transaction_link_id = None
     __recurring = None
     __recurring_payment_sequence_indicator = None
     __requires_approval = None
@@ -68,6 +69,17 @@ class AbstractCardPaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput)
     @initial_scheme_transaction_id.setter
     def initial_scheme_transaction_id(self, value):
         self.__initial_scheme_transaction_id = value
+
+    @property
+    def original_transaction_link_id(self):
+        """
+        Type: str
+        """
+        return self.__original_transaction_link_id
+
+    @original_transaction_link_id.setter
+    def original_transaction_link_id(self, value):
+        self.__original_transaction_link_id = value
 
     @property
     def recurring(self):
@@ -206,6 +218,8 @@ class AbstractCardPaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput)
             dictionary['customerReference'] = self.customer_reference
         if self.initial_scheme_transaction_id is not None:
             dictionary['initialSchemeTransactionId'] = self.initial_scheme_transaction_id
+        if self.original_transaction_link_id is not None:
+            dictionary['originalTransactionLinkId'] = self.original_transaction_link_id
         if self.recurring is not None:
             dictionary['recurring'] = self.recurring.to_dictionary()
         if self.recurring_payment_sequence_indicator is not None:
@@ -240,6 +254,8 @@ class AbstractCardPaymentMethodSpecificInput(AbstractPaymentMethodSpecificInput)
             self.customer_reference = dictionary['customerReference']
         if 'initialSchemeTransactionId' in dictionary:
             self.initial_scheme_transaction_id = dictionary['initialSchemeTransactionId']
+        if 'originalTransactionLinkId' in dictionary:
+            self.original_transaction_link_id = dictionary['originalTransactionLinkId']
         if 'recurring' in dictionary:
             if not isinstance(dictionary['recurring'], dict):
                 raise TypeError('value \'{}\' is not a dictionary'.format(dictionary['recurring']))
