@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>worldline.connect.sdk.v1.domain.card_payment_method_specific_output &#8212; connect-sdk-python2 6.1.0 documentation</title>
+    <title>worldline.connect.sdk.v1.domain.card_payment_method_specific_output &#8212; connect-sdk-python2 6.2.0 documentation</title>
     <link rel="stylesheet" href="../../../../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
@@ -57,10 +57,12 @@
     <span class="n">__initial_scheme_transaction_id</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__network_token_data</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__network_token_used</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__original_transaction_link_id</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__payment_account_reference</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__scheme_transaction_id</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__three_d_secure_results</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">__token</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">__transaction_link_id</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">authorisation_code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -155,6 +157,21 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__network_token_used</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">original_transaction_link_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | The unique Mastercard transactionLinkId of the initial transaction. Strongly advised to be submitted for any merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).</span>
+<span class="sd">        </span>
+<span class="sd">        | If the originalTransactionLinkId is empty, we will, where possible, apply the best available match.</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__original_transaction_link_id</span>
+
+    <span class="nd">@original_transaction_link_id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">original_transaction_link_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__original_transaction_link_id</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">payment_account_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        | A unique reference to the primary account number. Payment Account Reference provides a consolidated view of transactions associated with a PAN and its affiliated tokens, making it easier to identify customers and their associated transactions across payment channels.</span>
@@ -207,6 +224,22 @@
     <span class="k">def</span> <span class="nf">token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__token</span> <span class="o">=</span> <span class="n">value</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">transaction_link_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        | The unique Mastercard transactionLinkId of this transaction.</span>
+<span class="sd">        | Should be stored by you for a first cardholderInitiated (unscheduledCardOnFileRequestor) or zero-value authorization transaction.</span>
+<span class="sd">        </span>
+<span class="sd">        | Use this value as the originalTransactionLinkId for any subsequent merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).</span>
+
+<span class="sd">        Type: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__transaction_link_id</span>
+
+    <span class="nd">@transaction_link_id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">transaction_link_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__transaction_link_id</span> <span class="o">=</span> <span class="n">value</span>
+
 <div class="viewcode-block" id="CardPaymentMethodSpecificOutput.to_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.to_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">to_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dictionary</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">CardPaymentMethodSpecificOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">authorisation_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -223,6 +256,8 @@
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;networkTokenData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">network_token_data</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">network_token_used</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;networkTokenUsed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">network_token_used</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">original_transaction_link_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;originalTransactionLinkId&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">original_transaction_link_id</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_account_reference</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentAccountReference&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">payment_account_reference</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheme_transaction_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -231,6 +266,8 @@
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;threeDSecureResults&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">three_d_secure_results</span><span class="o">.</span><span class="n">to_dictionary</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">token</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">token</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_link_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;transactionLinkId&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_link_id</span>
         <span class="k">return</span> <span class="n">dictionary</span></div>
 
 <div class="viewcode-block" id="CardPaymentMethodSpecificOutput.from_dictionary"><a class="viewcode-back" href="../../../../../../index.html#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.from_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">from_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
@@ -258,6 +295,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">network_token_data</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;networkTokenData&#39;</span><span class="p">])</span>
         <span class="k">if</span> <span class="s1">&#39;networkTokenUsed&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">network_token_used</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;networkTokenUsed&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;originalTransactionLinkId&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">original_transaction_link_id</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;originalTransactionLinkId&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;paymentAccountReference&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">payment_account_reference</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;paymentAccountReference&#39;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s1">&#39;schemeTransactionId&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
@@ -269,6 +308,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">three_d_secure_results</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">from_dictionary</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;threeDSecureResults&#39;</span><span class="p">])</span>
         <span class="k">if</span> <span class="s1">&#39;token&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;transactionLinkId&#39;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transaction_link_id</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s1">&#39;transactionLinkId&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="bp">self</span></div></div>
 </pre></div>
 

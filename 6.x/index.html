@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 6.1.0 documentation</title>
+    <title>Worldline Connect Python SDK &#8212; connect-sdk-python2 6.2.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -2521,6 +2521,12 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.original_transaction_link_id">
+<code class="descname">original_transaction_link_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.original_transaction_link_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.recurring">
 <code class="descname">recurring</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_card_payment_method_specific_input.AbstractCardPaymentMethodSpecificInput.recurring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <a class="reference internal" href="#worldline.connect.sdk.v1.domain.card_recurrence_details.CardRecurrenceDetails" title="worldline.connect.sdk.v1.domain.card_recurrence_details.CardRecurrenceDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">worldline.connect.sdk.v1.domain.card_recurrence_details.CardRecurrenceDetails</span></code></a></p>
@@ -2686,6 +2692,12 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.initial_scheme_transaction_id">
 <code class="descname">initial_scheme_transaction_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.initial_scheme_transaction_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.original_transaction_link_id">
+<code class="descname">original_transaction_link_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.abstract_mobile_payment_method_specific_input.AbstractMobilePaymentMethodSpecificInput.original_transaction_link_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: str</p>
 </dd></dl>
 
@@ -6281,6 +6293,18 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.original_transaction_link_id">
+<code class="descname">original_transaction_link_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.original_transaction_link_id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The unique Mastercard transactionLinkId of the initial transaction. Strongly advised to be submitted for any merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).</div>
+</div>
+<div class="line-block">
+<div class="line">If the originalTransactionLinkId is empty, we will, where possible, apply the best available match.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.payment_account_reference">
 <code class="descname">payment_account_reference</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.payment_account_reference" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -6318,6 +6342,19 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <code class="descname">token</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.token" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">If a token was used for or created during the payment, then the ID of that token.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.transaction_link_id">
+<code class="descname">transaction_link_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.card_payment_method_specific_output.CardPaymentMethodSpecificOutput.transaction_link_id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The unique Mastercard transactionLinkId of this transaction.</div>
+<div class="line">Should be stored by you for a first cardholderInitiated (unscheduledCardOnFileRequestor) or zero-value authorization transaction.</div>
+</div>
+<div class="line-block">
+<div class="line">Use this value as the originalTransactionLinkId for any subsequent merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).</div>
 </div>
 <p>Type: str</p>
 </dd></dl>
@@ -14664,6 +14701,18 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.original_transaction_link_id">
+<code class="descname">original_transaction_link_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.original_transaction_link_id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The unique Mastercard transactionLinkId of the initial transaction. Strongly advised to be submitted for any merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).</div>
+</div>
+<div class="line-block">
+<div class="line">If the originalTransactionLinkId is empty, we will, where possible, apply the best available match.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.payment_data">
 <code class="descname">payment_data</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.payment_data" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
@@ -14701,6 +14750,19 @@ It includes a timestamp in yyyy-MM-ddTHH:mm:ss format in the system time zone.</
 <code class="descname">token</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.token" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">If a token was used for or created during the payment, then the ID of that token.</div>
+</div>
+<p>Type: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.transaction_link_id">
+<code class="descname">transaction_link_id</code><a class="headerlink" href="#worldline.connect.sdk.v1.domain.mobile_payment_method_specific_output.MobilePaymentMethodSpecificOutput.transaction_link_id" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">The unique Mastercard transactionLinkId of this transaction.</div>
+<div class="line">Should be stored by you for a first cardholderInitiated (unscheduledCardOnFileRequestor) or zero-value authorization transaction.</div>
+</div>
+<div class="line-block">
+<div class="line">Use this value as the originalTransactionLinkId for any subsequent merchantInitiated (unscheduledCardOnFileRequestor) or recurring transaction (recurringPaymentSequenceIndicator set to recurring or in case of a last recurring transaction to last).</div>
 </div>
 <p>Type: str</p>
 </dd></dl>
