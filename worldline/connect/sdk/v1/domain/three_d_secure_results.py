@@ -45,7 +45,7 @@ class ThreeDSecureResults(DataObject):
     @property
     def applied_exemption(self):
         """
-        | Exemption code from Carte Bancaire (130) (unknown possible values so far -free format)
+        | Exemption code from Cartes Bancaires (130) (unknown possible values so far -free format)
 
         Type: str
         """
@@ -123,7 +123,7 @@ class ThreeDSecureResults(DataObject):
     @property
     def scheme_risk_score(self):
         """
-        | Global score calculated by the Carte Bancaire (130) Scoring platform. Possible values from 0 to 99
+        | Global score calculated by the Cartes Bancaires (130) Scoring platform. Possible values from 0 to 99
 
         Type: int
         """

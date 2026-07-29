@@ -8,43 +8,43 @@ from worldline.connect.sdk.domain.data_object import DataObject
 
 class AbstractRedirectPaymentProduct838SpecificInput(DataObject):
 
-    __interoperability_data = None
-    __interoperability_token = None
+    __network_data = None
+    __network_session_token = None
 
     @property
-    def interoperability_data(self):
+    def network_data(self):
         """
         Type: str
         """
-        return self.__interoperability_data
+        return self.__network_data
 
-    @interoperability_data.setter
-    def interoperability_data(self, value):
-        self.__interoperability_data = value
+    @network_data.setter
+    def network_data(self, value):
+        self.__network_data = value
 
     @property
-    def interoperability_token(self):
+    def network_session_token(self):
         """
         Type: str
         """
-        return self.__interoperability_token
+        return self.__network_session_token
 
-    @interoperability_token.setter
-    def interoperability_token(self, value):
-        self.__interoperability_token = value
+    @network_session_token.setter
+    def network_session_token(self, value):
+        self.__network_session_token = value
 
     def to_dictionary(self):
         dictionary = super(AbstractRedirectPaymentProduct838SpecificInput, self).to_dictionary()
-        if self.interoperability_data is not None:
-            dictionary['interoperabilityData'] = self.interoperability_data
-        if self.interoperability_token is not None:
-            dictionary['interoperabilityToken'] = self.interoperability_token
+        if self.network_data is not None:
+            dictionary['networkData'] = self.network_data
+        if self.network_session_token is not None:
+            dictionary['networkSessionToken'] = self.network_session_token
         return dictionary
 
     def from_dictionary(self, dictionary):
         super(AbstractRedirectPaymentProduct838SpecificInput, self).from_dictionary(dictionary)
-        if 'interoperabilityData' in dictionary:
-            self.interoperability_data = dictionary['interoperabilityData']
-        if 'interoperabilityToken' in dictionary:
-            self.interoperability_token = dictionary['interoperabilityToken']
+        if 'networkData' in dictionary:
+            self.network_data = dictionary['networkData']
+        if 'networkSessionToken' in dictionary:
+            self.network_session_token = dictionary['networkSessionToken']
         return self

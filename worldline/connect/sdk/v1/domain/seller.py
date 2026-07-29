@@ -188,6 +188,7 @@ class Seller(DataObject):
         * citizen-ship
         * col-identity-card
         * alien-registration
+        * rfc
 
         Type: str
         """
