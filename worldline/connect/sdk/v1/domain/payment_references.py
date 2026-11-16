@@ -9,6 +9,7 @@ from worldline.connect.sdk.domain.data_object import DataObject
 class PaymentReferences(DataObject):
 
     __merchant_capture_reference = None
+    __merchant_customer_id = None
     __merchant_order_id = None
     __merchant_reference = None
     __payment_reference = None
@@ -29,6 +30,19 @@ class PaymentReferences(DataObject):
     @merchant_capture_reference.setter
     def merchant_capture_reference(self, value):
         self.__merchant_capture_reference = value
+
+    @property
+    def merchant_customer_id(self):
+        """
+        | Your identifier for the customer. It can be used as a search criteria in the GlobalCollect Payment Console and is also included in the GlobalCollect report files. It is used in the fraud-screening process for payments on the Ogone Payment Platform.
+
+        Type: str
+        """
+        return self.__merchant_customer_id
+
+    @merchant_customer_id.setter
+    def merchant_customer_id(self, value):
+        self.__merchant_customer_id = value
 
     @property
     def merchant_order_id(self):
@@ -125,6 +139,8 @@ class PaymentReferences(DataObject):
         dictionary = super(PaymentReferences, self).to_dictionary()
         if self.merchant_capture_reference is not None:
             dictionary['merchantCaptureReference'] = self.merchant_capture_reference
+        if self.merchant_customer_id is not None:
+            dictionary['merchantCustomerId'] = self.merchant_customer_id
         if self.merchant_order_id is not None:
             dictionary['merchantOrderId'] = self.merchant_order_id
         if self.merchant_reference is not None:
@@ -145,6 +161,8 @@ class PaymentReferences(DataObject):
         super(PaymentReferences, self).from_dictionary(dictionary)
         if 'merchantCaptureReference' in dictionary:
             self.merchant_capture_reference = dictionary['merchantCaptureReference']
+        if 'merchantCustomerId' in dictionary:
+            self.merchant_customer_id = dictionary['merchantCustomerId']
         if 'merchantOrderId' in dictionary:
             self.merchant_order_id = dictionary['merchantOrderId']
         if 'merchantReference' in dictionary:

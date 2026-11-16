@@ -36,7 +36,7 @@ class FindPaymentsParams(ParamRequest):
     @property
     def merchant_reference(self):
         """
-        | Your unique transaction reference to filter on. The maximum length is 52 characters for payments that are processed by WL Online Payment Acceptance platform.
+        | Your unique transaction reference to filter on.
 
         Type: str
         """
